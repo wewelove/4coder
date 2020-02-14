@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/fcoder/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/fcoder/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/fcoder/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/fcoder/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/fcoder/css/main.css">
+
+
+<link rel="stylesheet" href="/fcoder/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wewelove.github.io","root":"/fcoder/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="好好学习，天天向上">
+<meta property="og:type" content="website">
+<meta property="og:title" content="思学 - Sixue">
+<meta property="og:url" content="http://wewelove.github.io/fcoder/index.html">
+<meta property="og:site_name" content="思学 - Sixue">
+<meta property="og:description" content="好好学习，天天向上">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Hao">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content=" NexT">
+<meta property="article:tag" content=" php">
+<meta property="article:tag" content=" laravel">
+<meta property="article:tag" content=" yii2">
+<meta property="article:tag" content=" css">
+<meta property="article:tag" content=" js">
+<meta property="article:tag" content=" sass">
+<meta property="article:tag" content=" vue.js">
+<meta property="article:tag" content=" antd">
+<meta property="article:tag" content=" docker">
+<meta property="article:tag" content=" mysql">
+<meta property="article:tag" content=" ubuntu">
+<meta property="article:tag" content=" java">
+<meta property="article:tag" content=" spring">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://wewelove.github.io/fcoder/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
+  };
+</script>
+
+  <title>思学 - Sixue</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/fcoder/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">思学 - Sixue</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">学而不思则罔，思而不学则怠</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/fcoder/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/fcoder/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/fcoder/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/fcoder/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/fcoder/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wewelove.github.io/fcoder/2020/02/12/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/fcoder/images/avatar.png">
+      <meta itemprop="name" content="Hao">
+      <meta itemprop="description" content="好好学习，天天向上">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="思学 - Sixue">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/fcoder/2020/02/12/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-12 21:58:26" itemprop="dateCreated datePublished" datetime="2020-02-12T21:58:26+08:00">2020-02-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wewelove.github.io/fcoder/2020/02/11/mermaid/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/fcoder/images/avatar.png">
+      <meta itemprop="name" content="Hao">
+      <meta itemprop="description" content="好好学习，天天向上">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="思学 - Sixue">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/fcoder/2020/02/11/mermaid/" class="post-title-link" itemprop="url">为 Hexo 添加 Mermaid 图表功能</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-11 13:29:06 / 修改时间：14:41:09" itemprop="dateCreated datePublished" datetime="2020-02-11T13:29:06+08:00">2020-02-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/fcoder/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <pre class="mermaid">graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;</pre>
+
+
+<pre class="mermaid">sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail...
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!</pre>
+
+
+<pre class="mermaid">gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d</pre>
+
+<pre class="mermaid">gitGraph:
+options
+{
+    "nodeSpacing": 150,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch</pre>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wewelove.github.io/fcoder/2020/02/11/elementaryos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/fcoder/images/avatar.png">
+      <meta itemprop="name" content="Hao">
+      <meta itemprop="description" content="好好学习，天天向上">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="思学 - Sixue">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/fcoder/2020/02/11/elementaryos/" class="post-title-link" itemprop="url">Elementary OS 使用心得</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-11 12:36:21 / 修改时间：13:48:36" itemprop="dateCreated datePublished" datetime="2020-02-11T12:36:21+08:00">2020-02-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/fcoder/categories/os/" itemprop="url" rel="index">
+                    <span itemprop="name">系统</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>快速、开源的 Windows / macOS 替代方案。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+<li><a href="https://www.virtualbox.org/" target="_blank" rel="noopener">VirtualBox</a></li>
+<li><a href="https://elementaryos.cn/" target="_blank" rel="noopener">Elementary OS</a></li>
+</ul>
+<h2 id="使用-apt-add-repository-增加第三方软件包源"><a href="#使用-apt-add-repository-增加第三方软件包源" class="headerlink" title="使用 apt-add-repository 增加第三方软件包源"></a>使用 <code>apt-add-repository</code> 增加第三方软件包源</h2><p>安装某些软件时需要增加第三方软件包源，如 <code>elementary-tweaks</code> 系统调整工具。使用 <code>add-apt-repository</code> 要先安装以下软件包：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install python-software-properties</span><br><span class="line">$ sudo apt-get install software-properties-common</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用-gdebi-安装-deb-软件包"><a href="#使用-gdebi-安装-deb-软件包" class="headerlink" title="使用 gdebi 安装 deb 软件包"></a>使用 <code>gdebi</code> 安装 <code>deb</code> 软件包</h2><p>安装已编译二进制 <code>deb</code> 软件包时，要用到 <code>gdebi</code> 工具：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install gdebi</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-fcitx-小企鹅输入法"><a href="#安装-fcitx-小企鹅输入法" class="headerlink" title="安装 fcitx 小企鹅输入法"></a>安装 <code>fcitx</code> 小企鹅输入法</h2><p>安装软件包及配置工具：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install fcitx fcitx-config-gtk fcitx-pinyin </span><br><span class="line">$ sudo apt-get install fcitx-table-all</span><br><span class="line">$ sudo apt-get install im-config</span><br></pre></td></tr></table></figure>
+
+<p>此时请重启系统，再通过 <code>im-config</code> 命令将 <code>fcitx</code> 设置为默认输入法。  </p>
+<p><img src="http://static.oschina.net/uploads/space/2014/0420/143810_3tva_561214.png" alt="配置输入法"></p>
+<h2 id="安装-elementary-tweaks-系统调整工具"><a href="#安装-elementary-tweaks-系统调整工具" class="headerlink" title="安装 elementary-tweaks 系统调整工具"></a>安装 <code>elementary-tweaks</code> 系统调整工具</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-add-repository -y  ppa:philip.scott/elementary-tweaks</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install elementary-tweaks</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后在 <strong>系统配置</strong> 中打开，详情请参考 <a href="http://www.elementaryos-fr.org/documentation/customisation/elementary-tweak/" target="_blank" rel="noopener">官方</a></p>
+<h2 id="常用软件包"><a href="#常用软件包" class="headerlink" title="常用软件包"></a>常用软件包</h2><ul>
+<li><a href="http://www.google.cn/chrome/browser/desktop/index.html" target="_blank" rel="noopener">Google Chrome</a></li>
+<li><a href="http://get.opera.com/ftp/pub/opera/desktop/" target="_blank" rel="noopener">Opera</a></li>
+<li><a href="http://www.sublimetext.com" target="_blank" rel="noopener">Sbulime Text</a> </li>
+<li><a href="https://code.visualstudio.com" target="_blank" rel="noopener">Vs Code</a></li>
+<li><a href="https://lnmp.org" target="_blank" rel="noopener">LNMP</a></li>
+<li><a href="https://git-scm.com" target="_blank" rel="noopener">Git</a></li>
+<li><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wewelove.github.io/fcoder/2020/02/11/mariadb-install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/fcoder/images/avatar.png">
+      <meta itemprop="name" content="Hao">
+      <meta itemprop="description" content="好好学习，天天向上">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="思学 - Sixue">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/fcoder/2020/02/11/mariadb-install/" class="post-title-link" itemprop="url">MariaDB 数据库安装设置</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-11 12:14:57 / 修改时间：13:47:40" itemprop="dateCreated datePublished" datetime="2020-02-11T12:14:57+08:00">2020-02-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/fcoder/categories/database/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="Ubuntu18-系统"><a href="#Ubuntu18-系统" class="headerlink" title="Ubuntu18 系统"></a>Ubuntu18 系统</h3><ol>
+<li><p>设置 MariaDB 仓库</p>
+<p> 默认情况下 MariaDB 的包没有在 Ubuntu 仓库中，请参考 MariaDB 官方进行设置 <a href="https://downloads.mariadb.org/mariadb/repositories/#mirror=neusoft" target="_blank" rel="noopener"><strong>移步</strong></a>。<br> 参考官方设置时请选择有效的仓库镜像地址，下面选择的是清华大学镜像，测试可用。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install software-properties-common</span><br><span class="line">$ sudo apt-key adv --fetch-keys <span class="string">'https://mariadb.org/mariadb_release_signing_key.asc'</span></span><br><span class="line">$ sudo add-apt-repository <span class="string">'deb [arch=amd64,arm64,ppc64el] http://mirror.its.dal.ca/mariadb/repo/10.4/ubuntu bionic main'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装</p>
+<p> 安装过程中要输入 MariaDB 的 <code>root</code> 密码。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install mariadb-server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>基本操作</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 链接</span></span><br><span class="line">$ mysql -u root -p</span><br><span class="line"><span class="comment"># 停止</span></span><br><span class="line">$ sudo /etc/init.d/mysql stop</span><br><span class="line"><span class="comment"># 启动</span></span><br><span class="line">$ sudo /etc/init.d/mysql start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">$ sudo /etc/init.d/mysql restart</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><h3 id="设置-MariaDB-开启远程访问"><a href="#设置-MariaDB-开启远程访问" class="headerlink" title="设置 MariaDB 开启远程访问"></a>设置 MariaDB 开启远程访问</h3><ol>
+<li><p>检查有没有设置防火墙或者 iptables 规则</p>
+</li>
+<li><p>检查 3306 端口是否打开</p>
+<p> 检查端口状态，下面输出说明端口只在 <code>127.0.0.1</code> 上监听，所以无法通过其它 IP 访问。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ netstat -an | grep 3306</span><br><span class="line">tcp    0   0  127.0.0.1:3306    0.0.0.0:*     LISTEN</span><br></pre></td></tr></table></figure>
+
+<p> 解决办法：修改 <code>/etc/mysql/my.cnf</code> 文件，打开文件找到下面一行内容。<br> 可以将 <code>127.0.0.1</code> 换成合适的 IP，建议直接将此行注释掉。</p>
+ <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Instead of skip-networking the default is now to listen only on</span></span><br><span class="line"><span class="comment"># localhost which is more compatible and is not less secure.</span></span><br><span class="line"><span class="attr">bind-address</span>  = <span class="number">127.0</span>.<span class="number">0.1</span></span><br></pre></td></tr></table></figure>
+
+<p> 重启 MariaDB 服务，再次检测：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /etc/init.d/mysql restart</span><br><span class="line">$ netstat -an | grep 3306</span><br><span class="line">tcp    0   0  0.0.0.0:3306    0.0.0.0:*     LISTEN</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>给 MariaDB 用户 root 分配远程访问权限</p>
+<p> 测试时如果输出如下内容，说明不允许链接服务器。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -h 192.168.0.101 -u root -p</span><br><span class="line">Enter password:</span><br><span class="line">ERROR 1130 (00000): Host <span class="string">'Ubuntu-Fvlo.Server'</span> is not allowed to connect to this MySQL server</span><br></pre></td></tr></table></figure>
+
+<p> 解决办法：给 root 用户分配远程访问的权限，密码设置为 <code>123456</code>。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -u root -p</span><br><span class="line">Enter password:</span><br><span class="line">Welcome to the MariaDB monitor.  Commands end with ; or \g.</span><br><span class="line">Your MariaDB connection id is 28</span><br><span class="line">Server version: 5.5.51-MariaDB-1~trusty mariadb.org binary distribution</span><br><span class="line">......</span><br><span class="line">MariaDB [(none)]&gt; grant all on *.* to root@<span class="string">'%'</span> identified by <span class="string">'123456'</span>;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<p> 再次测试，成功。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -h 192.168.0.101 -u root -p</span><br><span class="line">Enter password:</span><br><span class="line">Welcome to the MariaDB monitor.  Commands end with ; or \g.</span><br><span class="line">Your MariaDB connection id is 28</span><br><span class="line">Server version: 5.5.51-MariaDB-1~trusty mariadb.org binary distribution</span><br><span class="line">......</span><br><span class="line">MariaDB [(none)]&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>CentOS6.6 要关闭防火强<br><code>service iptables stop</code> # 停止<br><code>chkconfig iptables off</code> # 禁用  </p>
+</blockquote>
+</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.cnblogs.com/beanmoon/p/3173924.html" target="_blank" rel="noopener">MySQL 数据库无法远程连接的解决办法</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wewelove.github.io/fcoder/2020/02/11/cmder-windows/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/fcoder/images/avatar.png">
+      <meta itemprop="name" content="Hao">
+      <meta itemprop="description" content="好好学习，天天向上">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="思学 - Sixue">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/fcoder/2020/02/11/cmder-windows/" class="post-title-link" itemprop="url">Cmder Windows 系统命令行工具</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-11 11:59:14 / 修改时间：13:48:14" itemprop="dateCreated datePublished" datetime="2020-02-11T11:59:14+08:00">2020-02-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/fcoder/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Cmder-安装"><a href="#Cmder-安装" class="headerlink" title="Cmder 安装"></a>Cmder 安装</h2><ul>
+<li><a href="http://cmder.net" target="_blank" rel="noopener">Cmder</a></li>
+<li><a href="https://github.com/cmderdev/cmder" target="_blank" rel="noopener">Cmder In GitHub</a></li>
+</ul>
+<p>从官网下载 <code>Cmder</code> 解压到任意目录即完成安装。</p>
+<h2 id="添加右键"><a href="#添加右键" class="headerlink" title="添加右键"></a>添加右键</h2><p>以管理员方式打开命令行窗口，进入 <code>Cmder</code> 安装目录，即 <code>Cmder.exe</code> 所在目录，执行以下操作。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.jeffjade.com/2016/01/13/2016-01-13-windows-software-cmder/" target="_blank" rel="noopener">Windows 下必备神器之 Cmder</a></li>
+<li><a href="http://bg.biedalian.com/2014/09/11/cmder.html" target="_blank" rel="noopener">逆天神器 Cmder</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wewelove.github.io/fcoder/2019/04/15/redmine-installation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/fcoder/images/avatar.png">
+      <meta itemprop="name" content="Hao">
+      <meta itemprop="description" content="好好学习，天天向上">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="思学 - Sixue">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/fcoder/2019/04/15/redmine-installation/" class="post-title-link" itemprop="url">Redmine 项目管理 - 手动安装</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-04-15 10:24:05" itemprop="dateCreated datePublished" datetime="2019-04-15T10:24:05+08:00">2019-04-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-11 15:41:45" itemprop="dateModified" datetime="2020-02-11T15:41:45+08:00">2020-02-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/fcoder/categories/project/" itemprop="url" rel="index">
+                    <span itemprop="name">项目管理</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+<li>系统 Ubuntu18.04 Server LTS</li>
+</ul>
+<p>系统没有安装 Apache 或 MySQL</p>
+<h2 id="安装方法一：包"><a href="#安装方法一：包" class="headerlink" title="安装方法一：包"></a>安装方法一：包</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wewelove.github.io/fcoder/2017/12/05/yii2-i18n/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/fcoder/images/avatar.png">
+      <meta itemprop="name" content="Hao">
+      <meta itemprop="description" content="好好学习，天天向上">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="思学 - Sixue">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/fcoder/2017/12/05/yii2-i18n/" class="post-title-link" itemprop="url">Yii2 多语言配置 - i18n 国际化</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-12-05 11:36:14" itemprop="dateCreated datePublished" datetime="2017-12-05T11:36:14+08:00">2017-12-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-11 15:42:17" itemprop="dateModified" datetime="2020-02-11T15:42:17+08:00">2020-02-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/fcoder/categories/backend/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>国际化 <code>i18n</code> 是 <code>Yii2</code> 的核心组件，应用 <code>bootstrap</code> 时 <code>i18n</code> 就会被实例化。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// yii2/base/Application.php</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">coreComponents</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> [</span><br><span class="line">        <span class="string">'log'</span> =&gt; [<span class="string">'class'</span> =&gt; <span class="string">'yii\log\Dispatcher'</span>],</span><br><span class="line">        <span class="string">'view'</span> =&gt; [<span class="string">'class'</span> =&gt; <span class="string">'yii\web\View'</span>],</span><br><span class="line">        <span class="string">'formatter'</span> =&gt; [<span class="string">'class'</span> =&gt; <span class="string">'yii\i18n\Formatter'</span>],</span><br><span class="line">        <span class="string">'i18n'</span> =&gt; [<span class="string">'class'</span> =&gt; <span class="string">'yii\i18n\I18N'</span>],</span><br><span class="line">        <span class="string">'mailer'</span> =&gt; [<span class="string">'class'</span> =&gt; <span class="string">'yii\swiftmailer\Mailer'</span>],</span><br><span class="line">        <span class="string">'urlManager'</span> =&gt; [<span class="string">'class'</span> =&gt; <span class="string">'yii\web\UrlManager'</span>],</span><br><span class="line">        <span class="string">'assetManager'</span> =&gt; [<span class="string">'class'</span> =&gt; <span class="string">'yii\web\AssetManager'</span>],</span><br><span class="line">        <span class="string">'security'</span> =&gt; [<span class="string">'class'</span> =&gt; <span class="string">'yii\base\Security'</span>],</span><br><span class="line">    ];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>默认情况 <code>i18n</code> 会把实现交给 <code>yii\i18n\PhpMessageSource</code> 类，这也是项目中最常用的方式。在不修改应用配置的情况下，只需要将多语言的 php 文件放到 <code>@app/messages</code> 目录下即可。如 <code>zh-CN</code> 中文配置 <code>@app/messages/zh-CN/app.php</code>，文件名必须为 <code>app.php</code>。</p>
+<p>除此外还有 <a href="http://www.yiichina.com/doc/api/2.0/yii-i18n-dbmessagesource" target="_blank" rel="noopener"><code>yii\i18n\GettextMessageSource</code></a> 和 <a href="http://www.yiichina.com/doc/api/2.0/yii-i18n-gettextmessagesource" target="_blank" rel="noopener"><code>yii\i18n\DbMessageSource</code></a> 可用。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// yii2/i18n/I18N.php</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">parent</span>::init();</span><br><span class="line">    <span class="keyword">if</span> (!<span class="keyword">isset</span>(<span class="keyword">$this</span>-&gt;translations[<span class="string">'yii'</span>]) &amp;&amp; !<span class="keyword">isset</span>(<span class="keyword">$this</span>-&gt;translations[<span class="string">'yii*'</span>])) &#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;translations[<span class="string">'yii'</span>] = [</span><br><span class="line">            <span class="string">'class'</span> =&gt; <span class="string">'yii\i18n\PhpMessageSource'</span>,</span><br><span class="line">            <span class="string">'sourceLanguage'</span> =&gt; <span class="string">'en-US'</span>,</span><br><span class="line">            <span class="string">'basePath'</span> =&gt; <span class="string">'@yii/messages'</span>,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!<span class="keyword">isset</span>(<span class="keyword">$this</span>-&gt;translations[<span class="string">'app'</span>]) &amp;&amp; !<span class="keyword">isset</span>(<span class="keyword">$this</span>-&gt;translations[<span class="string">'app*'</span>])) &#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;translations[<span class="string">'app'</span>] = [</span><br><span class="line">            <span class="string">'class'</span> =&gt; <span class="string">'yii\i18n\PhpMessageSource'</span>,</span><br><span class="line">            <span class="string">'sourceLanguage'</span> =&gt; Yii::$app-&gt;sourceLanguage,</span><br><span class="line">            <span class="string">'basePath'</span> =&gt; <span class="string">'@app/messages'</span>,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如何配置，如何使用？关键要理解 <code>i18n</code> 是如何根据配置文件加载多语言文件的。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// yii2/i18n/I18N.php</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getMessageSource</span><span class="params">($category)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 判断 $category 在配置中是否存在</span></span><br><span class="line">    <span class="comment">// 1. 先进行完全匹配</span></span><br><span class="line">    <span class="comment">// 2. 再匹配结尾带 * 的配置</span></span><br><span class="line">    <span class="comment">// 3. 最后直接引用 * 配置</span></span><br><span class="line">    <span class="comment">// 如果某步成功，就把任务交给 PhpMessageSource，</span></span><br><span class="line">    <span class="comment">// 并将 $category 传递给 PhpMessageSource</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// yii2/i18n/PhpMessageSource.php</span></span><br><span class="line"><span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">getMessageFilePath</span><span class="params">($category, $language)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// PhpMessageSource 关键任务是找到多语言文件的路径</span></span><br><span class="line">    <span class="comment">// 根据 $category 获取多语言文件的路径</span></span><br><span class="line">    <span class="comment">// 1. 先从 fileMap 配置中获取路径</span></span><br><span class="line">    <span class="comment">// 2. 再用 $category 拼接路径</span></span><br><span class="line">    <span class="comment">// loadMessages() 方法根据路径加载多语言数据返回 I18N</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
+<li><p>简单配置</p>
+<p> 配置文件如下：</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'i18n'</span> =&gt; [ </span><br><span class="line">    <span class="string">'translations'</span> =&gt; [ </span><br><span class="line">        <span class="string">'demo'</span> =&gt; [ </span><br><span class="line">            <span class="string">'class'</span> =&gt; <span class="string">'yii\i18n\PhpMessageSource'</span>, </span><br><span class="line">            <span class="string">'basePath'</span> =&gt; <span class="string">'@app/messages'</span>,</span><br><span class="line">        ],</span><br><span class="line">    ],</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+
+<p> 文件存放位置：</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@app/messages/zh-CN/demo.php</span><br></pre></td></tr></table></figure>
+
+<p> 引用：</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yii::t(<span class="string">'demo'</span>, <span class="string">'key'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分层级，通过文件目录实现</p>
+<p> 配置文件如下：</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'i18n'</span> =&gt; [ </span><br><span class="line">    <span class="string">'translations'</span> =&gt; [ </span><br><span class="line">        <span class="string">'demo*'</span> =&gt; [ </span><br><span class="line">            <span class="string">'class'</span> =&gt; <span class="string">'yii\i18n\PhpMessageSource'</span>, </span><br><span class="line">            <span class="string">'basePath'</span> =&gt; <span class="string">'@app/messages'</span>,</span><br><span class="line">        ],</span><br><span class="line">    ],</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+
+<p> 文件存放位置：</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@app/messages/zh-CN/demo/common.php</span><br></pre></td></tr></table></figure>
+
+<p> 引用：</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yii::t(<span class="string">'demo/common'</span>, <span class="string">'key'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分层级，通过配置实现</p>
+<p> 配置文件如下：</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'i18n'</span> =&gt; [ </span><br><span class="line">    <span class="string">'translations'</span> =&gt; [ </span><br><span class="line">        <span class="string">'demo*'</span> =&gt; [ </span><br><span class="line">            <span class="string">'class'</span> =&gt; <span class="string">'yii\i18n\PhpMessageSource'</span>, </span><br><span class="line">            <span class="string">'basePath'</span> =&gt; <span class="string">'@app/messages'</span>,</span><br><span class="line">            <span class="string">'fileMap'</span> =&gt; [</span><br><span class="line">                <span class="comment">// 文件名应该与键名对应，即 common.php</span></span><br><span class="line">                <span class="comment">// 此处只是为了说明问题</span></span><br><span class="line">                <span class="string">'demo/common'</span> =&gt; <span class="string">'main.php'</span></span><br><span class="line">            ]</span><br><span class="line">        ],</span><br><span class="line">    ],</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+
+<p> 文件存放位置：</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@app/messages/zh-CN/main.php</span><br></pre></td></tr></table></figure>
+
+<p> 引用：</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yii::t(<span class="string">'demo/common'</span>, <span class="string">'key'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模块中独立配置</p>
+<p> 在模块入口文件 Module.php 中，增加如下代码</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">parent</span>::init();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ( !<span class="keyword">isset</span>(Yii::$app-&gt;get(<span class="string">'i18n'</span>)-&gt;translations[<span class="string">'demo*'</span>]) ) &#123;</span><br><span class="line">        Yii::$app-&gt;get(<span class="string">'i18n'</span>)-&gt;translations[<span class="string">'demo*'</span>] = [</span><br><span class="line">            <span class="string">'class'</span> =&gt; <span class="string">'yii\i18n\PhpMessageSource'</span>, </span><br><span class="line">            <span class="string">'basePath'</span> =&gt; <span class="keyword">__DIR__</span> . <span class="string">'/messages'</span>, </span><br><span class="line">            <span class="string">'fileMap'</span> =&gt; [</span><br><span class="line">                <span class="string">'demo/common'</span> =&gt; <span class="string">'common.php'</span>,</span><br><span class="line">            ],</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> 多语言文件放在模块的 <code>./messages/</code> 目录下。</p>
+<p> 引用：</p>
+ <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yii::t(<span class="string">'demo/common'</span>, <span class="string">'key'</span>);</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wewelove.github.io/fcoder/2017/11/02/vbox-guest-additions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/fcoder/images/avatar.png">
+      <meta itemprop="name" content="Hao">
+      <meta itemprop="description" content="好好学习，天天向上">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="思学 - Sixue">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/fcoder/2017/11/02/vbox-guest-additions/" class="post-title-link" itemprop="url">VirtualBox 实现目录共享</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-11-02 08:33:58" itemprop="dateCreated datePublished" datetime="2017-11-02T08:33:58+08:00">2017-11-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-11 15:42:07" itemprop="dateModified" datetime="2020-02-11T15:42:07+08:00">2020-02-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/fcoder/categories/maintenance/" itemprop="url" rel="index">
+                    <span itemprop="name">运维</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ol>
+<li>VirtualBox 5.1.30</li>
+<li>主机 Windows 10</li>
+<li>虚拟机 Ubutnu Sever 16.04</li>
+</ol>
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>实现主机目录与虚拟机共享，虚拟机搭建测试环境，目录指向共享目录，主机中编码开发。测试环境可以在团队中共享。</p>
+<h2 id="安装-VBoxGuestAdditions"><a href="#安装-VBoxGuestAdditions" class="headerlink" title="安装 VBoxGuestAdditions"></a>安装 VBoxGuestAdditions</h2><ol>
+<li><p>准备</p>
+<p> 安装 <code>kernel headers</code> 和 <code>build tools</code>，执行如下命令。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 请使用 root 用户操作</span><br><span class="line">apt-get install build-essential module-assistant</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装 </p>
+<p> 将 VBoxGuestAdditions.iso 文件解压上传到虚拟机后安装，VBoxGuestAdditions.iso 文件可以在 VirtualBox 安装目录中找到。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 请使用 root 用户操作</span><br><span class="line">cd VBoxGuestAdditions</span><br><span class="line">chmod a+x VBoxLinuxAdditions.run</span><br><span class="line">.&#x2F;VBoxLinuxAdditions.run </span><br><span class="line"># 安装完成后重启虚拟机</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="目录共享"><a href="#目录共享" class="headerlink" title="目录共享"></a>目录共享</h2><ol>
+<li><p>配置共享目录</p>
+<p> <img src="/fcoder/images/vbox-guest-additions-01.png" alt="vbox-guest-additions-01"> </p>
+</li>
+<li><p>挂载共享目录</p>
+<p> 虚拟机中新建 <code>/www/wwwroot</code> 目录作为挂载点。 </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p &#x2F;www&#x2F;wwwroot</span><br></pre></td></tr></table></figure>
+
+<p> 将虚拟机 <code>/rec/rc.local</code> 文件下载，添加如下内容，然后上传覆盖原文件。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mount -t vboxsf wwwroot &#x2F;www&#x2F;wwwroot</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>wwwroot</code> 为上一步配置的 <code>共享文件夹名称</code></p>
+</blockquote>
+</li>
+<li><p>检查效果</p>
+<p> 完成以上两步后重启虚拟机，然后看看 <code>/www/wwwroot</code> 目录与主机 <code>wwwroot</code> 目录内容是否相同。</p>
+</li>
+</ol>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><ol>
+<li><p>软链接错误</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;www&#x2F;wwwroot</span><br><span class="line">ln -s &#x2F;home&#x2F;website website</span><br><span class="line">ln: failed to create symbolic link &#96;website&#39;: Read-only file system</span><br></pre></td></tr></table></figure>
+
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># php 项目提示如下错误</span><br><span class="line">symlink(): Read-only file system</span><br></pre></td></tr></table></figure>
+
+<p> 解决办法:</p>
+<p> 在主机中以管理员权限执行如下命令:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage setextradata &quot;VM-NAME&quot; VBoxInternal2&#x2F;SharedFoldersEnableSymlinksCreate&#x2F;SHARE-FOLDER 1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>请将 VirtualBox 安装目录加入环境变更 Path 中<br><code>VM-NAME</code> 虚拟机名称，<code>SHARE-FOLDER</code> 为共享文件夹名称</p>
+</blockquote>
+<p> 同样以管理员权限执行如下命令，以无界面方式启动/停止虚拟机：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage startvm &quot;VM-NAME&quot; --type headless</span><br><span class="line">VBoxManage controlvm &quot;VM-NAME&quot; poweroff</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wewelove.github.io/fcoder/2017/09/26/composer-start/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/fcoder/images/avatar.png">
+      <meta itemprop="name" content="Hao">
+      <meta itemprop="description" content="好好学习，天天向上">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="思学 - Sixue">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/fcoder/2017/09/26/composer-start/" class="post-title-link" itemprop="url">Composer 入手</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-09-26 11:44:02" itemprop="dateCreated datePublished" datetime="2017-09-26T11:44:02+08:00">2017-09-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-11 11:24:13" itemprop="dateModified" datetime="2020-02-11T11:24:13+08:00">2020-02-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/fcoder/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
+<li><a href="https://getcomposer.org" target="_blank" rel="noopener">官方</a></li>
+<li><a href="http://www.phpcomposer.com" target="_blank" rel="noopener">中文网</a></li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li><p>Linux / Unix / OSX 系统</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载安装程序</span></span><br><span class="line">php -r <span class="string">"copy('https://getcomposer.org/installer', 'composer-setup.php');"</span></span><br><span class="line"><span class="comment"># 校验安装程序，此步可以忽略</span></span><br><span class="line">php -r <span class="string">"if (hash_file('SHA384', 'composer-setup.php') === '55d6ead61b29c7bdee5cccfb50076874187bd9f21f65d8991d46ec5cc90518f447387fb9f76ebae1fbbacf329e583e30') &#123; echo 'Installer verified'; &#125; else &#123; echo 'Installer corrupt'; unlink('composer-setup.php'); &#125; echo PHP_EOL;"</span></span><br><span class="line"><span class="comment"># 运行安装程序</span></span><br><span class="line">php composer-setup.php</span><br><span class="line"><span class="comment"># 删除安装程序</span></span><br><span class="line">php -r <span class="string">"unlink('composer-setup.php');"</span></span><br><span class="line"><span class="comment"># 全局安装</span></span><br><span class="line">mv composer.phar /usr/<span class="built_in">local</span>/bin/composer</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果出错请尝试使用 <code>sudo</code> 执行。</p>
+</blockquote>
+</li>
+<li><p>Windows 系统</p>
+<p> 下载并且运行 <a href="https://getcomposer.org/Composer-Setup.exe" target="_blank" rel="noopener">Composer-Setup.exe</a>，它将安装最新版本的 Composer ，并设置好系统的环境变量，因此你可以在任何目录下直接使用 composer 命令。</p>
+</li>
+</ol>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ol>
+<li><p>修改 Packagist 镜像源</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置只在当前项目生效</span></span><br><span class="line">composer config repo.packagist composer https://mirrors.aliyun.com/composer/</span><br><span class="line"><span class="comment"># 取消当前项目配置</span></span><br><span class="line">composer config --<span class="built_in">unset</span> repos.packagist</span><br></pre></td></tr></table></figure>
+
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置全局生效</span></span><br><span class="line">composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/</span><br><span class="line"><span class="comment"># 取消全局配置</span></span><br><span class="line">composer config -g --<span class="built_in">unset</span> repos.packagist</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wewelove.github.io/fcoder/2017/09/26/yii2-start/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/fcoder/images/avatar.png">
+      <meta itemprop="name" content="Hao">
+      <meta itemprop="description" content="好好学习，天天向上">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="思学 - Sixue">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/fcoder/2017/09/26/yii2-start/" class="post-title-link" itemprop="url">Yii2 框架入手</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-09-26 10:13:32" itemprop="dateCreated datePublished" datetime="2017-09-26T10:13:32+08:00">2017-09-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-04-09 08:42:35" itemprop="dateModified" datetime="2019-04-09T08:42:35+08:00">2019-04-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/fcoder/categories/backend/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Yii 是一个高性能，基于组件的 PHP 框架，用于快速开发现代 Web 应用程序。 名字 Yii （读作 易）在中文里有“极致简单与不断演变”两重含义， 也可看作 Yes It Is! 的缩写。</p>
+<ul>
+<li><a href="http://www.yiiframework.com/doc-2.0/guide-index.html" target="_blank" rel="noopener">权威指南 - EN</a></li>
+<li><a href="http://www.yiiframework.com/doc-2.0/index.html" target="_blank" rel="noopener">API文档 - EN</a></li>
+<li><a href="http://www.yiichina.com/" target="_blank" rel="noopener">中文社区</a></li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>推荐使用 <code>composer</code> 安装，如果还没有安装 <code>composer</code> 请 <a href="/fcoder/2017/09/26/composer-start/">移步</a>。</p>
+<p>先安装 <a href="https://github.com/francoispluchino/composer-asset-plugin" target="_blank" rel="noopener">Composer Asset Plugin</a> 插件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer global require fxp&#x2F;composer-asset-plugin</span><br></pre></td></tr></table></figure>
+
+<p>选择所需的 Yii2 应用模板进行安装：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Basic </span></span><br><span class="line">composer create-project yiisoft/yii2-app-basic yii-basic</span><br><span class="line"><span class="comment"># Advanced</span></span><br><span class="line">composer create-project yiisoft/yii2-app-advanced yii-advanced</span><br></pre></td></tr></table></figure>
+
+<p>进入项目目录并初始化：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ ./init</span><br><span class="line">Yii Application Initialization Tool v1.0</span><br><span class="line"></span><br><span class="line">Which environment <span class="keyword">do</span> you want the application to be initialized <span class="keyword">in</span>?</span><br><span class="line"></span><br><span class="line">  [0] Development</span><br><span class="line">  [1] Production</span><br><span class="line"></span><br><span class="line">  Your choice [0-1, or <span class="string">"q"</span> to quit] 0</span><br><span class="line"></span><br><span class="line">  Initialize the application under <span class="string">'Development'</span> environment? [yes|no] yes</span><br><span class="line"></span><br><span class="line">  Start initialization ...</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上面初始化项目为开发状态。</p>
+</blockquote>
+<p>配置数据库信息，迁移数据：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开配置文件</span></span><br><span class="line"><span class="comment"># common\config\main-local.php</span></span><br><span class="line"><span class="string">'components'</span> =&gt; [</span><br><span class="line">    <span class="string">'db'</span> =&gt; [</span><br><span class="line">        <span class="string">'class'</span> =&gt; <span class="string">'yii\db\Connection'</span>,</span><br><span class="line">        <span class="string">'dsn'</span> =&gt; <span class="string">'mysql:host=localhost;dbname=yii2advanced'</span>,</span><br><span class="line">        <span class="string">'username'</span> =&gt; <span class="string">'root'</span>,</span><br><span class="line">        <span class="string">'password'</span> =&gt; <span class="string">'root'</span>,</span><br><span class="line">        <span class="string">'charset'</span> =&gt; <span class="string">'utf8'</span>,</span><br><span class="line">        <span class="string">'tablePrefix'</span> =&gt; <span class="string">'yii_'</span></span><br><span class="line">    ],</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 迁移数据</span></span><br><span class="line">$ ./yii migrate</span><br><span class="line">Yii Migration Tool (based on Yii v2.0.12)</span><br><span class="line"></span><br><span class="line">Creating migration <span class="built_in">history</span> table <span class="string">"yii_migration"</span>...Done.</span><br><span class="line">Total 1 new migration to be applied:</span><br><span class="line">        m130524_201442_init</span><br><span class="line"></span><br><span class="line">Apply the above migration? (yes|no) [no]:yes</span><br><span class="line">*** applying m130524_201442_init</span><br><span class="line">    &gt; create table &#123;&#123;%user&#125;&#125; ... <span class="keyword">done</span> (time: 0.020s)</span><br><span class="line">*** applied m130524_201442_init (time: 0.035s)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 migration was applied.</span><br><span class="line"></span><br><span class="line">Migrated up successfully.</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h2><p>使用 Apache 服务器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 将 path&#x2F;to&#x2F;basic&#x2F;web 修改为项目的实际目录</span><br><span class="line">DocumentRoot &quot;path&#x2F;to&#x2F;basic&#x2F;web&quot;</span><br><span class="line"></span><br><span class="line">&lt;Directory &quot;path&#x2F;to&#x2F;basic&#x2F;web&quot;&gt;</span><br><span class="line">    # 开启 mod_rewrite 用于美化 URL 功能的支持</span><br><span class="line">    RewriteEngine on</span><br><span class="line">    # 如果请求的是真实存在的文件或目录，直接访问</span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">    RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">    # 如果请求的不是真实文件或目录，分发请求至 index.php</span><br><span class="line">    RewriteRule . index.php</span><br><span class="line">&lt;&#x2F;Directory&gt;</span><br></pre></td></tr></table></figure>
+
+<p>或使用 Nginx 服务器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># 将 path&#x2F;to&#x2F;basic&#x2F;web 修改为项目的实际目录</span><br><span class="line">server &#123;</span><br><span class="line">    charset utf-8;</span><br><span class="line">    client_max_body_size 128M;</span><br><span class="line"></span><br><span class="line">    listen 80; ## listen for ipv4</span><br><span class="line">    #listen [::]:80 default_server ipv6only&#x3D;on; ## listen for ipv6</span><br><span class="line"></span><br><span class="line">    server_name mysite.local;</span><br><span class="line">    root        &#x2F;path&#x2F;to&#x2F;basic&#x2F;web;</span><br><span class="line">    index       index.php;</span><br><span class="line"></span><br><span class="line">    access_log  &#x2F;path&#x2F;to&#x2F;basic&#x2F;log&#x2F;access.log;</span><br><span class="line">    error_log   &#x2F;path&#x2F;to&#x2F;basic&#x2F;log&#x2F;error.log;</span><br><span class="line"></span><br><span class="line">    location &#x2F; &#123;</span><br><span class="line">        try_files $uri $uri&#x2F; &#x2F;index.php$is_args$args;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        include fastcgi_params;</span><br><span class="line">        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;</span><br><span class="line">        fastcgi_pass 127.0.0.1:9000;</span><br><span class="line">        #fastcgi_pass unix:&#x2F;var&#x2F;run&#x2F;php5-fpm.sock;</span><br><span class="line">        try_files $uri &#x3D;404;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location ~* &#x2F;\. &#123;</span><br><span class="line">        deny all;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="验证测试"><a href="#验证测试" class="headerlink" title="验证测试"></a>验证测试</h2><p>浏览器中 <a href="http://localhost" target="_blank" rel="noopener">打开</a>，如下图。</p>
+<p><img src="/fcoder/images/yii2-start-01.png" alt="yii2-start-01"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/fcoder/page/2/">2</a><a class="extend next" rel="next" href="/fcoder/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hao"
+      src="/fcoder/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Hao</p>
+  <div class="site-description" itemprop="description">好好学习，天天向上</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/fcoder/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/fcoder/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/fcoder/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wewelove" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wewelove" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wewelove88@gmail.com" title="E-Mail → mailto:wewelove88@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">思学</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/fcoder/lib/anime.min.js"></script>
+  <script src="/fcoder/lib/velocity/velocity.min.js"></script>
+  <script src="/fcoder/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/fcoder/js/utils.js"></script>
+
+<script src="/fcoder/js/motion.js"></script>
+
+
+<script src="/fcoder/js/schemes/pisces.js"></script>
+
+
+<script src="/fcoder/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/fcoder/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'neutral',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+
+</body>
+</html>
