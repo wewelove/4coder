@@ -20,18 +20,25 @@
     var CONFIG = {"hostname":"wewelove.github.io","root":"/fcoder/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="环境 系统 Ubuntu18.04 Server LTS  系统没有安装 Apache 或 MySQL 安装方法一：包">
+  <meta name="description" content="环境 系统 Ubuntu18.04 Server LTS  系统没有安装 Apache 或 MySQL   安装 安装APACHE2  123456sudo apt updatesudo apt install apache2 libapache2-mod-passengersudo systemctl stop apache2.servicesudo systemctl start apache">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redmine 项目管理 - 手动安装">
 <meta property="og:url" content="http://wewelove.github.io/fcoder/2019/04/15/redmine-installation/index.html">
 <meta property="og:site_name" content="思学 - Sixue">
-<meta property="og:description" content="环境 系统 Ubuntu18.04 Server LTS  系统没有安装 Apache 或 MySQL 安装方法一：包">
+<meta property="og:description" content="环境 系统 Ubuntu18.04 Server LTS  系统没有安装 Apache 或 MySQL   安装 安装APACHE2  123456sudo apt updatesudo apt install apache2 libapache2-mod-passengersudo systemctl stop apache2.servicesudo systemctl start apache">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://wewelove.github.io/fcoder/images/npm-package-publish-01.webp">
+<meta property="og:image" content="http://wewelove.github.io/fcoder/images/npm-package-publish-02.webp">
+<meta property="og:image" content="http://wewelove.github.io/fcoder/images/npm-package-publish-03.webp">
+<meta property="og:image" content="http://wewelove.github.io/fcoder/images/npm-package-publish-04.webp">
+<meta property="og:image" content="http://wewelove.github.io/fcoder/images/npm-package-publish-05.webp">
+<meta property="og:image" content="http://wewelove.github.io/fcoder/images/npm-package-publish-06.webp">
 <meta property="article:published_time" content="2019-04-15T02:24:05.000Z">
-<meta property="article:modified_time" content="2020-02-11T07:41:45.243Z">
+<meta property="article:modified_time" content="2020-06-06T08:33:39.632Z">
 <meta property="article:author" content="Hao">
 <meta property="article:tag" content="redmine">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://wewelove.github.io/fcoder/images/npm-package-publish-01.webp">
 
 <link rel="canonical" href="http://wewelove.github.io/fcoder/2019/04/15/redmine-installation/">
 
@@ -215,7 +222,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-11 15:41:45" itemprop="dateModified" datetime="2020-02-11T15:41:45+08:00">2020-02-11</time>
+                <time title="修改时间：2020-06-06 16:33:39" itemprop="dateModified" datetime="2020-06-06T16:33:39+08:00">2020-06-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -241,10 +248,81 @@
 
       
         <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
-<li>系统 Ubuntu18.04 Server LTS</li>
+<li><p>系统 Ubuntu18.04 Server LTS</p>
+</li>
+<li><p>系统没有安装 Apache 或 MySQL</p>
+</li>
 </ul>
-<p>系统没有安装 Apache 或 MySQL</p>
-<h2 id="安装方法一：包"><a href="#安装方法一：包" class="headerlink" title="安装方法一：包"></a>安装方法一：包</h2>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>安装APACHE2</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install apache2 libapache2-mod-passenger</span><br><span class="line"></span><br><span class="line">sudo systemctl stop apache2.service</span><br><span class="line">sudo systemctl start apache2.service</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> apache2.service</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>安装数据库MYSQL</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server</span><br><span class="line"></span><br><span class="line">sudo systemctl stop mysql.service</span><br><span class="line">sudo systemctl start mysql.service</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> mysql.service</span><br></pre></td></tr></table></figure>
+
+<p>运行以下命令以保护MYSQL服务器的安全：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql_secure_installation         </span><br><span class="line"></span><br><span class="line">New password: (输入密码)</span><br><span class="line">Re-enter new password: (重复输入)</span><br><span class="line">Remove anonymous users? [Y/n]: Y</span><br><span class="line">Disallow root login remotely? [Y/n]: Y</span><br><span class="line">Remove <span class="built_in">test</span> database and access to it? [Y/n]:  Y</span><br><span class="line">Reload privilege tables now? [Y/n]:  Y</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>创建 REDMINE 数据库</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql -u root -p</span><br><span class="line"></span><br><span class="line">mysql&gt; create database redmine;</span><br><span class="line">mysql&gt; create user <span class="string">'redmine'</span>@<span class="string">'localhost'</span> identified by <span class="string">'123456'</span>;</span><br><span class="line">mysql&gt; grant all on redmine.* to <span class="string">'redmine'</span>@<span class="string">'localhost'</span> identified by <span class="string">'123456'</span> with grant option;</span><br><span class="line">mysql&gt; flush privileges;</span><br><span class="line">mysql&gt; <span class="built_in">exit</span>;</span><br></pre></td></tr></table></figure>
+
+<p>创建用户或授权时有可能报如下错误：</p>
+<p>ERROR 1819 (HY000): Your password does not satisfy the current policy requirements<br>这是由于密码太简单，不满足安全策略造成的。查看MYSQL初始的密码策略：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show variables like <span class="string">'validate_password%'</span>;</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| Variable_name                        | Value |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| validate_password_check_user_name    | OFF   |</span><br><span class="line">| validate_password_dictionary_file    |       |</span><br><span class="line">| validate_password_length             | 6     |</span><br><span class="line">| validate_password_mixed_case_count   | 1     |</span><br><span class="line">| validate_password_number_count       | 1     |</span><br><span class="line">| validate_password_policy             | LOW   |</span><br><span class="line">| validate_password_special_char_count | 1     |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">7 rows <span class="keyword">in</span> <span class="built_in">set</span> (0.41 sec)</span><br></pre></td></tr></table></figure>
+
+<p>解决办法：1. 设置更复杂的密码，2. 降低安全策略：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> global validate_password_policy=LOW;</span><br><span class="line"><span class="built_in">set</span> global validate_password_length=6;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>安装REDMINE</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install redmine redmine-mysql</span><br></pre></td></tr></table></figure>
+
+<p><img src="/fcoder/images/npm-package-publish-01.webp" alt=""></p>
+<p><img src="/fcoder/images/npm-package-publish-02.webp" alt=""></p>
+<p><img src="/fcoder/images/npm-package-publish-03.webp" alt=""></p>
+<p><img src="/fcoder/images/npm-package-publish-04.webp" alt=""></p>
+<p>在安装过程中，系统将要求配置REDMINE，选择YES，然后继续。数据库选择MYSQL；接下来为REMIND实例创建一个密码以在数据库中注册，密码为上面创建的数据库用户的密码；接下来，安装GEM、BLUNDLER软件包。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo gem update</span><br><span class="line">sudo gem install bundler</span><br></pre></td></tr></table></figure>
+
+<p>更新过程中会报如下错误，不过暂时可以忽略。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Fetching: mysql2-0.5.3.gem (100%)</span><br><span class="line">Building native extensions. This could take a <span class="keyword">while</span>...</span><br><span class="line">ERROR:  Error installing mysql2:</span><br><span class="line">    ERROR: Failed to build gem native extension.</span><br><span class="line"></span><br><span class="line">    current directory: /var/lib/gems/2.5.0/gems/mysql2-0.5.3/ext/mysql2</span><br><span class="line">/usr/bin/ruby2.5 -r ./siteconf20200414-8181-7u476x.rb extconf.rb</span><br><span class="line">mkmf.rb can<span class="string">'t find header files for ruby at /usr/lib/ruby/include/ruby.h</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">extconf failed, exit code 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Gem files will remain installed in /var/lib/gems/2.5.0/gems/mysql2-0.5.3 for inspection.</span></span><br><span class="line"><span class="string">Results logged to /var/lib/gems/2.5.0/extensions/x86_64-linux/2.5.0/mysql2-0.5.3/gem_make.out</span></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>为REDMINE设置APACHE2站点。首先运行以下命令创建指向REDMINE文档根目录的软链接：</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /usr/share/redmine/public /var/www/html/redmine</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>配置APACHE2</li>
+</ol>
+<p>运行以下命令以打开PASSENGER.CONF文件：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apache2/mods-available/passenger.conf</span><br></pre></td></tr></table></figure>
+
+<p>然后将突出显示的行添加到文件中并保存：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mod_passenger.c&gt;</span><br><span class="line">    PassengerDefaultUser www-data</span><br><span class="line">    PassengerRoot &#x2F;usr&#x2F;lib&#x2F;ruby&#x2F;vendor_ruby&#x2F;phusion_passenger&#x2F;locations.ini</span><br><span class="line">    PassengerDefaultRuby &#x2F;usr&#x2F;bin&#x2F;ruby</span><br><span class="line">&lt;&#x2F;IfModule&gt;</span><br></pre></td></tr></table></figure>
+
+<p>为REDMINE配置APACHE2站点配置文件。该文件将控制用户访问REDMINE内容的方式。运行以下命令以创建一个名为REDMINE.CONF的新配置文件：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apache2/sites-available/redmine.conf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">     ServerAdmin redmime@demo.com</span><br><span class="line">     DocumentRoot &#x2F;var&#x2F;www&#x2F;html&#x2F;redmine</span><br><span class="line">     ServerName demo.com</span><br><span class="line">     ServerAlias redmine.demo.com</span><br><span class="line"></span><br><span class="line">     &lt;Directory &#x2F;var&#x2F;www&#x2F;html&#x2F;redmine&gt;</span><br><span class="line">         RailsBaseURI &#x2F;redmine</span><br><span class="line">         PassengerResolveSymlinksInDocumentRoot on</span><br><span class="line">     &lt;&#x2F;Directory&gt;</span><br><span class="line"></span><br><span class="line">     ErrorLog $&#123;APACHE_LOG_DIR&#125;&#x2F;error.log</span><br><span class="line">     CustomLog $&#123;APACHE_LOG_DIR&#125;&#x2F;access.log combined</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>启用REDMINE站点</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo a2ensite redmine.conf</span><br><span class="line">sudo systemctl restart apache2.service</span><br></pre></td></tr></table></figure>
+
+<p>访问页面：<a href="http://redmine.demo.com/" target="_blank" rel="noopener">http://redmine.demo.com/</a></p>
+<p><img src="/fcoder/images/npm-package-publish-05.webp" alt=""></p>
+<p>登录账户密码：admin/admin</p>
+<p><img src="/fcoder/images/npm-package-publish-06.webp" alt=""></p>
+<p>首次登陆要求修改密码</p>
+
     </div>
 
     
@@ -329,7 +407,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装方法一：包"><span class="nav-number">2.</span> <span class="nav-text">安装方法一：包</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
