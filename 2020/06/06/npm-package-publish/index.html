@@ -20,20 +20,24 @@
     var CONFIG = {"hostname":"wewelove.github.io","root":"/fcoder/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="为什么字典表某些变量在多个地方使用，而且一般是固定的，但是随着系统升级和后期变化，可能需要改变，如果这些变量写死在代码里面将会变得难以维护。 有的做法是使用枚举或者 Constants 常量类来实现，这种情况下在量少的前提是没问题的，但是一旦随着系统的开发拓展，后期将无法维护，甚至命名困难。 所以通常把字典放在数据库，这样后期的维护变更就比较简单,也可以在不用修改代码的情况下修改配置。 但是，放在">
+  <meta name="description" content="注册 NPM 账号点击 注册账号，并完成邮箱验证。 初始化 NPM 项目123456# 创建项目目录mkdir &lt;project&gt;# 进入项目目录cd &lt;project&gt;# 初始化项目npm init  执行上述命令，根据提示输入相关信息，完成后目录下会生成 package.json 文件，内容如下： 1234567891011121314&amp;#123;  &quot;name&quot;: &quot;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="字典表设计">
-<meta property="og:url" content="http://wewelove.github.io/fcoder/2017/07/22/dictionary-table/index.html">
+<meta property="og:title" content="NPM 包发布流程">
+<meta property="og:url" content="http://wewelove.github.io/fcoder/2020/06/06/npm-package-publish/index.html">
 <meta property="og:site_name" content="思学 - Sixue">
-<meta property="og:description" content="为什么字典表某些变量在多个地方使用，而且一般是固定的，但是随着系统升级和后期变化，可能需要改变，如果这些变量写死在代码里面将会变得难以维护。 有的做法是使用枚举或者 Constants 常量类来实现，这种情况下在量少的前提是没问题的，但是一旦随着系统的开发拓展，后期将无法维护，甚至命名困难。 所以通常把字典放在数据库，这样后期的维护变更就比较简单,也可以在不用修改代码的情况下修改配置。 但是，放在">
+<meta property="og:description" content="注册 NPM 账号点击 注册账号，并完成邮箱验证。 初始化 NPM 项目123456# 创建项目目录mkdir &lt;project&gt;# 进入项目目录cd &lt;project&gt;# 初始化项目npm init  执行上述命令，根据提示输入相关信息，完成后目录下会生成 package.json 文件，内容如下： 1234567891011121314&amp;#123;  &quot;name&quot;: &quot;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2017-07-22T04:13:01.000Z">
-<meta property="article:modified_time" content="2020-02-11T07:46:22.699Z">
+<meta property="article:published_time" content="2020-06-06T07:47:02.000Z">
+<meta property="article:modified_time" content="2020-06-06T07:54:48.649Z">
 <meta property="article:author" content="Hao">
-<meta property="article:tag" content="dictionary">
+<meta property="article:tag" content="npm">
+<meta property="article:tag" content="package">
+<meta property="article:tag" content="publish">
+<meta property="article:tag" content="包">
+<meta property="article:tag" content="发布">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://wewelove.github.io/fcoder/2017/07/22/dictionary-table/">
+<link rel="canonical" href="http://wewelove.github.io/fcoder/2020/06/06/npm-package-publish/">
 
 
 <script id="page-configurations">
@@ -45,7 +49,7 @@
   };
 </script>
 
-  <title>字典表设计 | 思学 - Sixue</title>
+  <title>NPM 包发布流程 | 思学 - Sixue</title>
   
 
 
@@ -185,7 +189,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wewelove.github.io/fcoder/2017/07/22/dictionary-table/">
+    <link itemprop="mainEntityOfPage" href="http://wewelove.github.io/fcoder/2020/06/06/npm-package-publish/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/fcoder/images/avatar.png">
@@ -198,7 +202,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          字典表设计
+          NPM 包发布流程
         </h1>
 
         <div class="post-meta">
@@ -207,26 +211,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2017-07-22 12:13:01" itemprop="dateCreated datePublished" datetime="2017-07-22T12:13:01+08:00">2017-07-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-11 15:46:22" itemprop="dateModified" datetime="2020-02-11T15:46:22+08:00">2020-02-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/fcoder/categories/database/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
-                  </a>
-                </span>
+              <time title="创建时间：2020-06-06 15:47:02 / 修改时间：15:54:48" itemprop="dateCreated datePublished" datetime="2020-06-06T15:47:02+08:00">2020-06-06</time>
             </span>
 
           
@@ -240,80 +227,34 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="为什么字典表"><a href="#为什么字典表" class="headerlink" title="为什么字典表"></a>为什么字典表</h2><p>某些变量在多个地方使用，而且一般是固定的，但是随着系统升级和后期变化，可能需要改变，如果这些变量写死在代码里面将会变得难以维护。</p>
-<p>有的做法是使用枚举或者 Constants 常量类来实现，这种情况下在量少的前提是没问题的，但是一旦随着系统的开发拓展，后期将无法维护，甚至命名困难。</p>
-<p>所以通常把字典放在数据库，这样后期的维护变更就比较简单,也可以在不用修改代码的情况下修改配置。</p>
-<p>但是，放在数据库又有着频繁访问数据库的问题，这不是我们希望的，这时候通常做法就是加缓存，降低访问数据库的频率。</p>
-<h2 id="字典表的设计"><a href="#字典表的设计" class="headerlink" title="字典表的设计"></a>字典表的设计</h2><p>通常分成两张表来实现，一个是字典类型，一个是字典</p>
-<p>字典类型表: <code>SYS_DICT_TYPE</code></p>
-<table>
-<thead>
-<tr>
-<th>字段名</th>
-<th>类型</th>
-<th>作用</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>code</td>
-<td>varchar</td>
-<td>编码</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>name</td>
-<td>varchar</td>
-<td>类型</td>
-<td>-</td>
-</tr>
-</tbody></table>
-<p>字典表 : <code>SYS_DICT</code></p>
-<table>
-<thead>
-<tr>
-<th>字段名</th>
-<th>类型</th>
-<th>作用</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>code</td>
-<td>varchar</td>
-<td>编码</td>
-<td>主键</td>
-</tr>
-<tr>
-<td>type_code</td>
-<td>varchar</td>
-<td>类型 code</td>
-<td>外键</td>
-</tr>
-<tr>
-<td>name</td>
-<td>varchar</td>
-<td>字典名</td>
-<td>展示用</td>
-</tr>
-<tr>
-<td>value</td>
-<td>varchar</td>
-<td>字典值</td>
-<td>使用值</td>
-</tr>
-<tr>
-<td>fixed</td>
-<td>int</td>
-<td>是否是固定的</td>
-<td>default 0 不固定，固定的话用 1</td>
-</tr>
-</tbody></table>
-<p>以上是字典表的关键列和结构的设计，根据不同系统不同业务自定其他列。</p>
-<blockquote>
-<p>作者：SevenLin1993<br>链接：<a href="http://www.jianshu.com/p/0034802afc1f" target="_blank" rel="noopener">http://www.jianshu.com/p/0034802afc1f</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-</blockquote>
+        <h2 id="注册-NPM-账号"><a href="#注册-NPM-账号" class="headerlink" title="注册 NPM 账号"></a>注册 NPM 账号</h2><p>点击 <a href="https://www.npmjs.com/signup" target="_blank" rel="noopener">注册账号</a>，并完成邮箱验证。</p>
+<h2 id="初始化-NPM-项目"><a href="#初始化-NPM-项目" class="headerlink" title="初始化 NPM 项目"></a>初始化 NPM 项目</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建项目目录</span></span><br><span class="line">mkdir &lt;project&gt;</span><br><span class="line"><span class="comment"># 进入项目目录</span></span><br><span class="line"><span class="built_in">cd</span> &lt;project&gt;</span><br><span class="line"><span class="comment"># 初始化项目</span></span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
 
+<p>执行上述命令，根据提示输入相关信息，完成后目录下会生成 <code>package.json</code> 文件，内容如下：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"demo"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"A demo projcet of npm."</span>,</span><br><span class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"keywords"</span>: [</span><br><span class="line">    <span class="string">"npm"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"author"</span>: <span class="string">"hao"</span>,</span><br><span class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>name：项目名称</li>
+<li>version： 版本号</li>
+<li>description: 项目描述</li>
+<li>main：包入口文件，默认为 index.js</li>
+<li>repository：代码存放地址（一般是 git 地址）</li>
+<li>keywords：项目关键字，便于搜索</li>
+<li>author：作者</li>
+<li>license：授权协议</li>
+</ul>
+<p>详情请参考：<a href="https://docs.npmjs.com/files/package.json" target="_blank" rel="noopener">package.json</a></p>
+<h2 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h2><p>如果你使用的是 taobao 源，要先切换到官方源：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm 官方源</span></span><br><span class="line">npm config <span class="built_in">set</span> registry=http://registry.npmjs.org</span><br><span class="line"><span class="comment"># taobao 源</span></span><br><span class="line">npm config <span class="built_in">set</span> registry http://registry.npm.taobao.org/</span><br></pre></td></tr></table></figure>
+
+<p>添加用户，根据提示输入账号信息：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm adduer</span><br></pre></td></tr></table></figure>
+
+<h2 id="发布-NPM-包"><a href="#发布-NPM-包" class="headerlink" title="发布 NPM 包"></a>发布 NPM 包</h2><p>登陆，根据提示输入用户名和密码：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm login</span><br></pre></td></tr></table></figure>
+
+<p>发布：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -322,7 +263,11 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/fcoder/tags/dictionary/" rel="tag"># dictionary</a>
+              <a href="/fcoder/tags/npm/" rel="tag"># npm</a>
+              <a href="/fcoder/tags/package/" rel="tag"># package</a>
+              <a href="/fcoder/tags/publish/" rel="tag"># publish</a>
+              <a href="/fcoder/tags/%E5%8C%85/" rel="tag"># 包</a>
+              <a href="/fcoder/tags/%E5%8F%91%E5%B8%83/" rel="tag"># 发布</a>
           </div>
 
         
@@ -331,13 +276,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/fcoder/2017/04/11/git-start/" rel="prev" title="使用 GitHub 托管自己的项目">
-      <i class="fa fa-chevron-left"></i> 使用 GitHub 托管自己的项目
+    <a href="/fcoder/2020/02/11/mermaid/" rel="prev" title="为 Hexo 添加 Mermaid 图表功能">
+      <i class="fa fa-chevron-left"></i> 为 Hexo 添加 Mermaid 图表功能
     </a></div>
-      <div class="post-nav-item">
-    <a href="/fcoder/2017/08/25/ngrok-sunny/" rel="next" title="国产 ngrok 穿透内网, 开发测试神器 - sunny">
-      国产 ngrok 穿透内网, 开发测试神器 - sunny <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -398,7 +340,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么字典表"><span class="nav-number">1.</span> <span class="nav-text">为什么字典表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典表的设计"><span class="nav-number">2.</span> <span class="nav-text">字典表的设计</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注册-NPM-账号"><span class="nav-number">1.</span> <span class="nav-text">注册 NPM 账号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化-NPM-项目"><span class="nav-number">2.</span> <span class="nav-text">初始化 NPM 项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加用户"><span class="nav-number">3.</span> <span class="nav-text">添加用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布-NPM-包"><span class="nav-number">4.</span> <span class="nav-text">发布 NPM 包</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -551,7 +493,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'fcoder',
       owner       : 'wewelove',
       admin       : ['wewelove'],
-      id          : 'f0aa57fc78990646355dfda8730532ca',
+      id          : '5ff732c60c447b756d2652fdddcb8556',
         language: 'zh-CN',
       distractionFreeMode: true
     });

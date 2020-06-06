@@ -1,22 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/fcoder/2020/02/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    <title>NPM 包发布流程</title>
+    <url>/fcoder/2020/06/06/npm-package-publish/</url>
+    <content><![CDATA[<h2 id="注册-NPM-账号"><a href="#注册-NPM-账号" class="headerlink" title="注册 NPM 账号"></a>注册 NPM 账号</h2><p>点击 <a href="https://www.npmjs.com/signup" target="_blank" rel="noopener">注册账号</a>，并完成邮箱验证。</p>
+<h2 id="初始化-NPM-项目"><a href="#初始化-NPM-项目" class="headerlink" title="初始化 NPM 项目"></a>初始化 NPM 项目</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建项目目录</span></span><br><span class="line">mkdir &lt;project&gt;</span><br><span class="line"><span class="comment"># 进入项目目录</span></span><br><span class="line"><span class="built_in">cd</span> &lt;project&gt;</span><br><span class="line"><span class="comment"># 初始化项目</span></span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>执行上述命令，根据提示输入相关信息，完成后目录下会生成 <code>package.json</code> 文件，内容如下：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"demo"</span>,</span><br><span class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"A demo projcet of npm."</span>,</span><br><span class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"keywords"</span>: [</span><br><span class="line">    <span class="string">"npm"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"author"</span>: <span class="string">"hao"</span>,</span><br><span class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<ul>
+<li>name：项目名称</li>
+<li>version： 版本号</li>
+<li>description: 项目描述</li>
+<li>main：包入口文件，默认为 index.js</li>
+<li>repository：代码存放地址（一般是 git 地址）</li>
+<li>keywords：项目关键字，便于搜索</li>
+<li>author：作者</li>
+<li>license：授权协议</li>
+</ul>
+<p>详情请参考：<a href="https://docs.npmjs.com/files/package.json" target="_blank" rel="noopener">package.json</a></p>
+<h2 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h2><p>如果你使用的是 taobao 源，要先切换到官方源：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># npm 官方源</span></span><br><span class="line">npm config <span class="built_in">set</span> registry=http://registry.npmjs.org</span><br><span class="line"><span class="comment"># taobao 源</span></span><br><span class="line">npm config <span class="built_in">set</span> registry http://registry.npm.taobao.org/</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>添加用户，根据提示输入账号信息：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm adduer</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
+<h2 id="发布-NPM-包"><a href="#发布-NPM-包" class="headerlink" title="发布 NPM 包"></a>发布 NPM 包</h2><p>登陆，根据提示输入用户名和密码：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm login</span><br></pre></td></tr></table></figure>
+
+<p>发布：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm publish</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>npm</tag>
+        <tag>package</tag>
+        <tag>publish</tag>
+        <tag>包</tag>
+        <tag>发布</tag>
+      </tags>
   </entry>
   <entry>
     <title>为 Hexo 添加 Mermaid 图表功能</title>
