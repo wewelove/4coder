@@ -1,0 +1,3199 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>作业100题（二）</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<input id="bb" type="hidden" value="z01" />
+
+		<div class="fixed-top bg-white border-bottom">
+			<div class="container">
+				<a href="./index.html" class="float-left text-secondary">首页</a>
+				<a href="#dingbu" class="float-right text-secondary">顶部</a>
+				<h5 class="st_content_tit">作业100题二</h5>
+				<div class="input-group mb-3">
+					<input type="number" class="form-control" id="search" placeholder="输入题号查询" />
+					<div class="input-group-append">
+						<button id="search-btn" class="btn btn-outline-secondary" type="button">查询</button>
+						<button id="reset-btn" class="btn btn-outline-secondary" type="button">重置</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="check_answer">
+			<div class="btn-group btn-group-sm">
+				<button id="czst" type="button" class="btn btn-danger">重做</button>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-secondary" id="check_wei">未</button>
+				<button type="button" class="btn btn-secondary" id="check_quan">全</button>
+				<button type="button" class="btn btn-secondary" id="check_dui">对</button>
+				<button type="button" class="btn btn-secondary" id="check_cuo">错</button>
+				<button type="button" class="btn btn-secondary" id="check_tong" data-toggle="modal" data-target="#tongji">统</button>
+			</div>
+		</div>
+
+		<div class="modal" id="tongji">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">统计信息</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>正确：<span id="t_dui"></span></p>
+						<p>错误：<span id="t_cuo"></span></p>
+						<p>未做：<span id="t_wei"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="dingbu" class="container">
+			<div class="st_danxuan" id="radio_anchor">
+				<div class="st_content_txt" id="tm1">
+					<div class="st_content_txt_tm">
+						<span>1、</span>
+
+						根据迄今为止取得的项目进展，项目团队希望改变他们在项目开始时选择的风险管理方法，项目经理本应该怎么做？<br>Based on project progress made to date,a project team
+						wants to change the risk management approach they chose at the beginning of the project.The project manager
+						approves this request to ensure project success,and project activities continue.What should the project
+						manager have done instead? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：查阅风险管理计划，并鼓励项目团队遵循项目的约定变更控制流程<br>Referred to the risk management plan,and
+								encouraged the project team to follow the project’s agreed-upon change control process. </li>
+							<li>
+								<input type="radio"> B：拒绝进行变更，因为这种方法已经获得相关方的同意<br>Refuse to make the changes,as the approach was already
+								agreed-upon by the stakeholders </li>
+							<li>
+								<input type="radio"> C：告诉项目团队，风险管理方法是根据项目需求确定的，不能改变<br>Told the project team that the risk management
+								approach was determined based oil the needs of the project and cannot be change </li>
+							<li>
+								<input type="radio"> D：因项目团队确定新的风险管理方法而奖励团队<br>Rewarded the project team for identifying a new risk
+								management approach. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：项目管理计划调整，按照流程，需遵循实施整体变更控制过程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm2">
+					<div class="st_content_txt_tm">
+						<span>2、</span>
+
+						由于缺乏资金，一个项目在启动阶段被终止，项目经理必须对项目收尾。项目经理首先应该做什么？<br>Due to lack of funding, a project is terminated during its
+						initiation phase and the project manager must close the project. What should the project manager do first?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：查阅沟通管理计划，适当地通知所有相关方<br>Refer to the communication management plan to properly
+								inform all stakeholders </li>
+							<li>
+								<input type="radio"> B：审查组织的项目收尾指南<br>Review the communication’s project closure guidelines </li>
+							<li>
+								<input type="radio"> C：执行风险分析，确定终止项目的潜在影响<br>Perform a risk analysis to determine the potential impact of
+								the termination the project </li>
+							<li>
+								<input type="radio"> D：结束所有项目采购过程<br>Close all project procurement processes </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：4.6结束项目或阶段子过程输入前的内容：“如果项目在完工前就提前终止，结束项目或阶段过程还需要制定程序，来调查和记录提前终止的原因。为了实现上述目的，项目经理应该引导所有合适的相关方参与本过程。” </div>
+
+				</div>
+				<div class="st_content_txt" id="tm3">
+					<div class="st_content_txt_tm">
+						<span>3、</span>
+
+						在经验教训会议上，团队的反馈非常积极，项目经理意识到这是因为团队不想损失可能获得的奖金。若要获得团队的诚实反馈，项目经理应该怎么做？<br>During a lessons learned meeting, team
+						feedback is overwhelmingly positive, The project manager realizes that this is because the team does not want
+						to jeopardize a possible bonus.
+						What should the project manager do to obtain honest feedback from the team? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：进行匿名电子调查<br>Conduct an anonymous electronic survey </li>
+							<li>
+								<input type="radio"> B：使用分析技术收集绩效和其他指标<br>Use analytical techniques to collect performance and other
+								metrics </li>
+							<li>
+								<input type="radio"> C：让发起人参与获得独立评估<br>Engage the sponsors to contain an independent assessment </li>
+							<li>
+								<input type="radio"> D：正视团队成员的明显偏差<br>Confront team members about their obvious bias </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：德尔菲技术：采用匿名或背靠背的方式，能使每一位专家独立地作出自已地判断，不会受到其他干扰因素影响。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm4">
+					<div class="st_content_txt_tm">
+						<span>4、</span>
+
+						在一次项目会议期间，团队得知项目所需的一台设备的成本降低，成本管理计划已获得批准。项目经理应该怎么做？<br>During a project meeting,the team realizes that there
+						is a cost reduction for one piece of equipment required for the project.The cost management plan has already
+						been approveWhat should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：继续执行项目而不通知变更控制委员会（CCB)<br>Move forward with the project without notifying the
+								change control board(CCB) </li>
+							<li>
+								<input type="radio"> B：遵循变更管理计划，并要求变更控制委员会批准成本变更<br>Follow the change management plan and ask the CCB to
+								approve the cost change </li>
+							<li>
+								<input type="radio"> C：更新变更管理计划，以包含该成本变更<br>Update the change management plan to include the cost change
+							</li>
+							<li>
+								<input type="radio"> D：将该成本降低事宜通知变更控制委员会，并继续执行项目<br>Inform the CCB about the cost reduction and forward
+								with the project </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：涉及到变更问题，需要走变更程序。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm5">
+					<div class="st_content_txt_tm">
+						<span>5、</span>
+
+						在项目启动阶段，项目经理审查了经验教训知识库。项目经理得知，之前有一个项目由于不断的范围蔓延而失败，这个项目无法负担额外的时间或预算。为避免项目失败，项目经理应该怎么做？<br>During a project’s
+						initiating phase, the project manager reviews the lessons learned knowledge base. The project manager learned
+						that a previous project failed due to constant scope creep. This project cannot afford additional time or
+						budget.
+						What should the project manager do to avoid project failure? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：拒绝所有超出范围的变更请求<br>Reject all out-of-scope change requests. </li>
+							<li>
+								<input type="radio"> B：管理关键相关方的期望<br>Manage key stakeholders’ expectations. </li>
+							<li>
+								<input type="radio"> C：将该信息升级上报给发起人<br>Escalate this information to the sponsor. </li>
+							<li>
+								<input type="radio"> D：包含严格和正式的过程批准变更<br>Include strict and formal process approval changes. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：确定好项目基准后，所有的变更都遵守项目整体变更控制流程，可以有效的防止项目范围蔓延。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm6">
+					<div class="st_content_txt_tm">
+						<span>6、</span>
+
+						在项目收尾过程中，项目经理得知他们必须快速加入一个更高优先级的项目。如果立即启动项目，这个新项目将为公司来200万美元的增量价值。项目经理应该怎么做？<br>During project closure, the
+						project manager learns that they must quickly join a higher-priority project. This new project will bring the
+						company US$2 million in incremental value if started immediately.
+						What should the project manager do ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：关闭所有风险并转到新项目<br>Close out all risks and move on to the new project </li>
+							<li>
+								<input type="radio"> B：将剩余任务委托给替代资源<br>Delegate the remaining tasks to an alternate resource </li>
+							<li>
+								<input type="radio"> C：确保所有相关项目文件均已存档<br>Ensure that all relevant project documents are archived </li>
+							<li>
+								<input type="radio"> D：执行项目标杆对照<br>Perform project bench marking </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：一个项目结束和另一个新项目的开启同时存在，要先结束项目工作。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm7">
+					<div class="st_content_txt_tm">
+						<span>7、</span>
+
+						项目执行期间，客户请求进行一个小变更。在执行高层级审查后，开发人员确定进行变更所需的工作影响较小且可被吸收。
+						项目经理下一步应该怎么做？<br>During project execution，the customer requests a minor change , After performing a high-level
+						review, the developer determines that the effort to make the change has minimal impact and can be absorbeWhat
+						should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：要求开发人员继续进行修改<br>Ask the developer to proceed with the modification </li>
+							<li>
+								<input type="radio"> B：签发变更请求<br>Issue a change request </li>
+							<li>
+								<input type="radio"> C：更新问题日志<br>Update the issue log </li>
+							<li>
+								<input type="radio"> D：向所有项目相关方沟通提议的变更<br>Communicate the proposed change to all stakeholders </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：审查所有变更请求，批准变更，管理对可交付成果、组织过程资产、项目文件和项目管理计划的变更，并对变更处理结果进行沟通的过程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm8">
+					<div class="st_content_txt_tm">
+						<span>8、</span>
+
+						在项目执行期间，团队成员提出纠正措施，帮助满足项目需求。项目经理应该怎么做？<br>During project execution# team members proposes to corrective action
+						to help meet project
+						requirements..What should the project manager do </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将其包含在经验教训数据库中<br>Include it in the lessons learned database </li>
+							<li>
+								<input type="radio"> B：遵循变更管理计划<br>Follows the change management plan </li>
+							<li>
+								<input type="radio"> C：将其正确地记录在问题日志中<br>Property document it in the issue log </li>
+							<li>
+								<input type="radio"> D：更新项目管理计划<br>Update project management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：审查所有变更请求，批准变更，管理对可交付成果、组织过程资产、 项目文件和项目管理计划的变更，并对变更处理结果进行沟通的过程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm9">
+					<div class="st_content_txt_tm">
+						<span>9、</span>
+
+						在执行阶段，项目经理意识到需要偏离项目管理计划才能实现理想的项目成果。项目经理下一步应该怎么做？<br>During the execution phase, a project manager realizes
+						that a deviation from the project management plan is required to achieve desired project outcomes. What should
+						the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新项目进度计划<br>Update the project schedule </li>
+							<li>
+								<input type="radio"> B：执行实施<br>Execute the Implementation </li>
+							<li>
+								<input type="radio"> C：提交变更请求<br>Submit a change request </li>
+							<li>
+								<input type="radio"> D：修改项目基准<br>Modify the project baselines </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析： 纠正措施。为使项目工作绩效重新与项目管理计划一致，而进行的有目的的活动。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm10">
+					<div class="st_content_txt_tm">
+						<span>10、</span>
+
+						在一个为期两年的新高速公路建设项目的前八个月中,由于缺乏一种机械，项目落后于 进度计划。这属于哪一种事业环境因素？<br>During the first eight months of a two-year
+						project to build a new highway, the project fails behind schedule due to a lack of machinery. To what
+						enterprise environment factor can this be attributed? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：组织结构<br>Organizational structure </li>
+							<li>
+								<input type="radio"> B：基础设施<br>Infrastructure </li>
+							<li>
+								<input type="radio"> C：相关方风险界值<br>Stakeholder risk threshold </li>
+							<li>
+								<input type="radio"> D：可持续性<br>Sustainability </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：机械，属于基础设施。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm11">
+					<div class="st_content_txt_tm">
+						<span>11、</span>
+
+						对于一个软件开发项目，大部分功能都已经过客户同意。该客户也是一位相关方，负责审查需求规格书。项目开始后，该客户的老板(之前未被识别为一位相关方)参与项目要求对批准的需求进行变更。这导致项目发生严重返工并延长时间表。项目经理应该怎么做？<br>For
+						a software development project,most of functions have been agreed upon by the customer.This customer is also a
+						stakeholder is responsible for reviewing the requirement specifications.After the project starts ,the
+						customer’s boss.Who was unidentified as a stakeholder,become involved in the project and demands changes to
+						the approved requirements.This causes significant rework and extends the timeline. What should the project
+						manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将其添加进风险登记册<br>Add this to the risk register. </li>
+							<li>
+								<input type="radio"> B：向变更控制委员会(CCB)提交一项变更<br>Submit a change to the change control board(CCB). </li>
+							<li>
+								<input type="radio"> C：修订项目管理计划，以包含这些更新<br>Revise the project management plan to include the updates.
+							</li>
+							<li>
+								<input type="radio"> D：规划时间和资源的缓冲区，以补偿预期之外的变更请求<br>Plan a buffer for time and resources to compensate for
+								unexpected change requests </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：变更请求是关于修改任何文件、可交付成果或基准的正式提议。如果在开展项目工作时发现问 题，就可提出变更请求，对项目政策或程序、项目或产品范围、项目成本或预算、项目进度计划、
+						项目或产品结果的质量进行修改。其他变更请求包括必要的预防措施或纠正措施，用来防止以后的 不利后果。任何项目相关方都可以提出变更请求，应该通过实施整体变更控制过程对变 更请求进行审查和处理。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm12">
+					<div class="st_content_txt_tm">
+						<span>12、</span>
+
+						在为期六个月项目的第三个月，一位高级经理要求项目经理在不影响成本和时间的情况下增加一项新功能。项目经理应该怎么做？<br>In the third month of a six months project, a
+						senior manager asks the project manager to include anew feature without impacting cost and time. What should
+						the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新范围计划，包含新功能<br>Update the project plan to include the new feature </li>
+							<li>
+								<input type="radio"> B：创建变更请求并评估影响<br>Create a change request and evaluates the impacts </li>
+							<li>
+								<input type="radio"> C：与发起人讨论该请求<br>Discussed the request with the sponsor </li>
+							<li>
+								<input type="radio"> D：更新项目文件<br>Update the project documents </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：变更请求是关于修改任何文件、可交付成果或基准的正式提议。如果在开展项目工作时发现问 题，就可提出变更请求，对项目政策或程序、项目或产品范围、项目成本或预算、项目进度计划、
+						项目或产品结果的质量进行修改。其他变更请求包括必要的预防措施或纠正措施，用来防止以后的 不利后果。任何项目相关方都可以提出变更请求，应该通过实施整体变更控制过程对变 更请求进行审查和处理。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm13">
+					<div class="st_content_txt_tm">
+						<span>13、</span>
+
+						项目团队成员习惯于在制定好的变更控制过程之外进行变更。在一次团队会议上，向公司董事会发出另一个变更请求。
+						项目经理应该怎么做？<br>Project team members are used to performing changes outside of tho established change control
+						process. In a team meeting,another change request was issued to the company board of directors.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：接受该变更请求，并继续管理项目以满足需求和进度<br>Accept the change request and continue to manage the
+								project to meet its requirements and schedule </li>
+							<li>
+								<input type="radio"> B：通知请求者应该通过变更控制过程来处理变更<br>Notify the requester that the change should be handled
+								through the change control process </li>
+							<li>
+								<input type="radio"> C：召开一次团队建设会议，希望团队在所有变更之后重新走回正轨<br>Conduct a team-building session and hope that the
+								team gets back on track after all the changes </li>
+							<li>
+								<input type="radio"> D：向项目发起人询问有关变更和项目绩效的详细信息
+								<br>Ask the project sponsor for details about changes and project performance </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：题目描述两个问题，一是非流程变更问题，二是团队问题，答案都对时，按优先级排。先解决目前的问题，再解决团队问题，即先纠正，后预防。选B后C。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm14">
+					<div class="st_content_txt_tm">
+						<span>14、</span>
+
+						为一个关键业务系统开发新楼房将影响500名用户。项目经理希望确认项目相关方对项目的参与程度, 并传递关于关键里程碑的信息。项目经理应该怎样实现这个目标？<br>The development of a new
+						building for a critical business system will affect 500 users. The project manager wants to confirm
+						stakeholder commitment to the project and relay information regarding key milestones.
+						How can the project manager accomplish this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：召开项目启动大会<br>Hold a kick-off meeting </li>
+							<li>
+								<input type="radio"> B：开展一次团队建设活动<br>Conduct a team building activity </li>
+							<li>
+								<input type="radio"> C：实施认可与奖励计划<br>Implement a accreditation and rewards program </li>
+							<li>
+								<input type="radio"> D：审查项目章程<br>Review the project charter </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：确定相关方参与程度，应该用相关方参与评估矩阵，选项中没有。传递关键里程碑信息，应该用Kick-off meeting，同时获得相关方的承诺。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm15">
+					<div class="st_content_txt_tm">
+						<span>15、</span>
+
+						—家咨询公司的负责人发起一个项目，拟开发一种新的业务，以增加市场份额和收入，由于该公司很成功，管理团队和顾问并不认为需要新的业务模式,并要求在启动项自之前提供项目概念。应该用什么来制定项目概念？<br>The owner
+						of a consulting company initiates a project to develop a new business model that will increase market share
+						and revenue .because the company has been successful，the management team and concept before initiation. What
+						should be used to develop the project concept? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：A头脑风暴<br>Brainstorming </li>
+							<li>
+								<input type="radio"> B：专家判断<br>Expert judgment </li>
+							<li>
+								<input type="radio"> C：六西格玛技术<br>Six Sigma technique </li>
+							<li>
+								<input type="radio"> D：预测<br>Forecasting </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：书中原话“制定项目章程时可通过头脑风暴向相关方、主题专家和团队成员收集数据、解决方案或创意”。
+						由于公司成功，管理团队有经验，可以说是专家，加上顾问，已经给出判断，也就是说，已经作了专家判断，不需要新业务。那再选B就重复了。建议选A，对于新业务，应充分收集数据信息。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm16">
+					<div class="st_content_txt_tm">
+						<span>16、</span>
+
+						项目发起人通知项目经理一种产品可能会对客户产生不利于健康的影响。因此，发起人要求改变生产材料。项目经理应该怎么做？<br>The project sponsor informs the project manager
+						that a product could have a adverse health effects on customers.Because of this,the sponsor asks to change
+						production materialism. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：通过遵循实施整体变更控制过程，进一步调查该事项<br>Investigate the matter further by following the Perform
+								Integrated Change Control process </li>
+							<li>
+								<input type="radio"> B：立即实施这项变更并提交正式文档的变更请求<br>Implement the change immediately and submit a change
+								request for formal documentation </li>
+							<li>
+								<input type="radio"> C：停止当前工作，并启动实施整体变更控制过程<br>Stop current work and initiate the Perform Integrated
+								Change Control process </li>
+							<li>
+								<input type="radio"> D：拒绝该请求，因为已超出范围<br>Rejected the request because it is outside of scope </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析:本题除了考变更，还要注意风险，由于是发起人一家之言，停止当前工作不恰当，应对此风险进一步识别。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm17">
+					<div class="st_content_txt_tm">
+						<span>17、</span>
+
+						为了增加销售量，销售部门需要开发一个新项目，项目团队之前没有执行过类似项目。项目经理首先应该做什么？<br>To increase sales, the sales department requires the
+						development of a new project. The project team has not performed a similar project before.
+						What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查其他公司类似项目的经验教训<br>Review other companies lessons of learned from similar projects
+							</li>
+							<li>
+								<input type="radio"> B：为销售部门开会讨论需求<br>Meet with the sales department to discuss requirements </li>
+							<li>
+								<input type="radio"> C：定义项目的主要可交付成果<br>Define the project’s key deliverables </li>
+							<li>
+								<input type="radio"> D：参与制定项目章程<br>Participate in the development of the charter </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：没有经验，需要查阅历史经验，即组织过程资产，同时组织过程资产是制定项目章程的输入。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm18">
+					<div class="st_content_txt_tm">
+						<span>18、</span>
+
+						变更控制委员会（CCB）拒绝变更请求时，项目经理应该更新什么？<br>What should the project manager update when the Change Control Board (CCB)
+						rejects the change request? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：风险登记册<br>Risk Register </li>
+							<li>
+								<input type="radio"> B：需求跟踪矩阵<br>Requirements Tracking Matrix </li>
+							<li>
+								<input type="radio"> C：变更管理计划<br>Change Control Plan </li>
+							<li>
+								<input type="radio"> D：变更日志<br>Change Log </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析:无论变更是被批准，还是推迟，还是否决，其状态都应记录在变更日志中。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm19">
+					<div class="st_content_txt_tm">
+						<span>19、</span>
+
+						团队成员之间关于具体任务的争议暂时搁置，然而，在稍后的项目阶段，这个争议升级成一个更大的问题。
+						若要预防这个问题，项目经理应该事先更新什么？<br>The dispute over specific tasks between team members has been put on hold for
+						temporary, however, at a later stage of the project, this controversy is escalated into a bigger problem.
+						To prevent this problem, what should the project manager update in advance? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：问题日志<br>Problem Log </li>
+							<li>
+								<input type="radio"> B：项目状态报告<br>Project Status Report </li>
+							<li>
+								<input type="radio"> C：会议纪要<br>Meeting Minutes </li>
+							<li>
+								<input type="radio"> D：风险登记册<br>Risk Register </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析:题目强调的是问题的跟进及处理，因争议而暂时搁置，说明是已经识别的问题，应该记录在问题日志中；同时，在更新问题日志的时候应该落实跟进的责任人，避免团队成员产生争议。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm20">
+					<div class="st_content_txt_tm">
+						<span>20、</span>
+
+						为过去三个月创建一份运行率报告的项目估计需要20个小时。这时客户要求增加三个月的预算。
+						由于这项工作更复杂，需要额外工作，项目经理应该怎么做？<br>It takes about 20 hours to create an operating rate report for the past three
+						months. At this point, the customer requests the forecast for another three months.　
+						Because this task is more complicated and requires extra work, what should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：对客户解释这项请求的影响<br>To explain the impact of this request to the customer </li>
+							<li>
+								<input type="radio"> B：接受该请求并按比例延长基准<br>To accept the request and extend the benchmark proportionally
+							</li>
+							<li>
+								<input type="radio"> C：要求客户签发一份正式的变更请求<br>To require the customers to issue a formal change request </li>
+							<li>
+								<input type="radio"> D：与客户一起澄清项目范围<br>To clarify the project scope with the customer </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：客户要求增加三个月预算，属于变更请求。项目经理应该要求客户正式提交变更请求，经CCB审批后决定是否实施变更。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm21">
+					<div class="st_content_txt_tm">
+						<span>21、</span>
+
+						项目相关方担心几个风险，但无法确定哪种风险影响最大。
+						项目经理应使用什么工具或技术来解决相关方的问题？<br>Project stakeholders are concerned about several risks, but can't determine,which
+						will have the greatest impact.What tool or technique should the project manager use to address the
+						stakeholders concerns? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：龙卷风图<br>Tornado diagram </li>
+							<li>
+								<input type="radio"> B：决策树分析<br>Decision tree analysis </li>
+							<li>
+								<input type="radio"> C：优势、劣势、机会与威胁(SWOT)分析<br>Strengths, weaknesses, opportunities,and
+								threats(SWOT)analysis </li>
+							<li>
+								<input type="radio"> D：石川图<br>Ishikawa diagram </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：定量风险分析的常用工具：龙卷风图。敏感性分析的结果通常用龙卷风图来表示。在该图中，标出定量风险分析模型中的每项要素与其能影响的项目结果之间的关联系数。这些要素可包括单个项目风险、易变的项目活动，或具体的不明确性来源。每个要素按关联强度降序排列，形成典型的龙卷风形状。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm22">
+					<div class="st_content_txt_tm">
+						<span>22、</span>
+
+						—家咨询公司的负责人启动一个项目来扩大公司提供的服务数量，这公司具有竞争优势出色的企业知识以及卓越的声誉，高管团队担心增加新服务导致产生负面的业务结果。
+						若要评估负面业务结果的可能性和影响，项目经理应该使用什么？<br>The owner of a consulting company initiates a project to the expand the
+						number of services the company provides.The executive team is concerned about the potential for negative
+						business outcomes associated with adding new services.
+						To evaluate the probability and impact of negative business outcomes,project manager should the project
+						manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：因果图<br>Cause-and-affect diagram </li>
+							<li>
+								<input type="radio"> B：预测<br>Forecasting </li>
+							<li>
+								<input type="radio"> C：制定决策<br>Decision making </li>
+							<li>
+								<input type="radio"> D：风险评估矩阵<br>Risk assessment matrix </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：风险概率评估考虑的是特定风险发生的可能性，而风险影响评估考虑的是风险对一项或多项项目目标的潜在影响，如进度、成本、质量或绩效。威胁将产生负面的影
+						响，机会将产生正面的影响。要对每个已识别的单个项目风险进行概率和影响评估。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm23">
+					<div class="st_content_txt_tm">
+						<span>23、</span>
+
+						项目经理、团队成员以及若干相关方共同参与一次风险研讨会。已经根据风险管理计划 生成并提供一份风险报告。若要为各个项目风险进行优先级排序，现在必须执行哪一项分析？<br>The project manager, team
+						members, and Several stakeholders participated in a risk workshop.A risk report was produced and delivered
+						according to the risk management plan.
+						What analysis must now be performed to prioritize individual project risks? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：定量风险分析<br>Quantitative risk </li>
+							<li>
+								<input type="radio"> B：根本原因分析<br>Root cause </li>
+							<li>
+								<input type="radio"> C：偏差分析<br>Variance </li>
+							<li>
+								<input type="radio"> D：定性风险分析<br>Qualitative risk </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：实施定性风险分析通过评估单个项目风险发生的概率和影响以及其它特征，对风险进行优先级拍讯，从而为后续分析或行动提供基础的过程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm24">
+					<div class="st_content_txt_tm">
+						<span>24、</span>
+
+						在考虑一个新项目风险时,项目经理将风险矩阵应用于人为因素所做的贡献。项目经理发现，团队成员的态度在风险厌恶和风险追求之间存在很大差异。项目经理应该怎么做？<br>When considering risks for a
+						new project, the project manager applies the risk matrix to contributions made by human factors. The project
+						manager identifies that team members’ attitudes vary greatly between risk-averse and risk-seeking.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将其添加到风险登记册中，因为团队成员风险态度之间的巨大差距很可能会影响到项目 团队的绩效<br>Add it to the risk register because
+								the wide gap between team members’ risk attitudes has a high probability of impacting project team
+								performance. </li>
+							<li>
+								<input type="radio"> B：将其添加到风险登记册中，因为这个问题很重要，需要列出<br>Add it to the risk register because it is important
+								to list. </li>
+							<li>
+								<input type="radio"> C：不要将其添加到风险登记册中，因为团队成员风险态度通常对团队绩效或项目执行影响不大<br>Do not add it to the risk register
+								because team member risk attitudes generally have little effect on team performance or project execution.
+							</li>
+							<li>
+								<input type="radio"> D：与团队一起内部处理风险态度<br>Handle the risk attitudes internally with the team. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：发现新风险，凡发现新风险，都应登记入册。风险登记册记录已识别单个项目风险的详细信息。随着实施定性风险分析、规划风险应对、实
+						施风险应对和监督风险等过程的开展，这些过程的结果也要记进风险登记册。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm25">
+					<div class="st_content_txt_tm">
+						<span>25、</span>
+
+						在识别一个新项目的风险时，项目团队考虑到以下内容：
+						一次罕见的自然灾害可能会撞击建筑物并导致建筑物倒塌。
+						当下核心存储所有项目技术数据的数据库已过时，并可能会失效。项目经理应该怎么做？<br>While identifying risks on a new project, the project team
+						considers the following;
+						0 An unusual natural disaster might hit the building and cause it to fall.
+						The primary existing database storing all the project’s technical data is outdated and might fail.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：请求将项目转移给另一个地理区域的团队<br>Request the project to be transferred to a team in another
+								geographical are </li>
+							<li>
+								<input type="radio"> B：建议取消该项目<br>Advice the project to be cancele </li>
+							<li>
+								<input type="radio"> C：将该风险添加进风险登记册<br>Add the risks to the risk register. </li>
+							<li>
+								<input type="radio"> D：通知发起人这两种风险的概率和影响都非常低<br>Inform the sponsor that the probability and impact are very
+								low for both risks. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：识别到项目风险时，首先更新风险登记册，然后再制定应对措施并按照触发机制执行。发现新风险，凡发现新风险，都应登记入册。风险登记册记录已识别单个项目风险的详细信息。随着实施定性风险分析、规划风险应对、实施风险应对和监督风险等过程的开展，这些过程的结果也要记进风险登记册。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm26">
+					<div class="st_content_txt_tm">
+						<span>26、</span>
+
+						在开始一个新项目时，项目经理意识到客户需求与其组织通常执行的类似项目有很大不同，该项目在工作完成之前将不会获得大量资金，将在项目完成时提供全额资金。
+						项目经理先应该怎么做？<br>While starting a new project , the project manager realizes that customer requirements are
+						significantly different from similar projeffs their organizaticm typically executes. The project will not
+						receive significant funding until the work is completed,at which point full funding will be available.
+						What should the project manager do first ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与客户开会以确定获得资金所需的最小范围<br>Meet with the customer to establish the minimum scope
+								required to secure fun ding. </li>
+							<li>
+								<input type="radio"> B：审查成本估算以降低项目风险<br>Review the cost estimate to reduce the project risk. </li>
+							<li>
+								<input type="radio"> C：要求释放管理储备金以支付额外资金<br>Request a release of the management reserve to pay for the
+								additional funds。 </li>
+							<li>
+								<input type="radio"> D：更新风险登记册以记录资金缺乏情况<br>Update the risk register to document the lack of funding. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：获得客户的资金，在数额上存在不确定性，按风险管理流程，先识别记录入册。风险登记册记录风险类别，以及对应的措施。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm27">
+					<div class="st_content_txt_tm">
+						<span>27、</span>
+
+						为公共活动提供IT基础设施设备的某公司已被选中为一个国家的国庆活动提供设备。该公司只能在截止日期前提供50%的设备。项目经理找到可以提供剩余设备的另一个供应商。项目经理应使用什么风险策略？<br>A company
+						providing IT infrastructure equipment for public events has been selected to provide equipment for the
+						National Day Event in a country. The Company only provides 50% of the equipment by the deadline. The project
+						manager finds another supplier that can provide the remaining equipment. What risk strategy should the project
+						manager take? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：减轻<br>Mitigation </li>
+							<li>
+								<input type="radio"> B：分享<br>Sharing </li>
+							<li>
+								<input type="radio"> C：回避<br>Avoidance </li>
+							<li>
+								<input type="radio"> D：转移<br>Transfer </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析:找多一家供应商后，对项目的影响大大减轻。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm28">
+					<div class="st_content_txt_tm">
+						<span>28、</span>
+
+						在发起人批准项目后，任命了项目经理。项目经理应首先审查下列哪一项？&lt;br/&gt;After the sponsor approves the project, the project manager is
+						appointed. Which of the following items should be reviewed by the project manager first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：供应商合同&lt;br/&gt;Supplier Contract </li>
+							<li>
+								<input type="radio"> B：经批准的项目章程&lt;br/&gt; Approved Project Charter </li>
+							<li>
+								<input type="radio"> C：批准项目预算&lt;br/&gt;Approved Project Budget </li>
+							<li>
+								<input type="radio"> D：客户需求&lt;br/&gt;Customer Requirements </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B解析：先了解项目目标，权力和责任边界。这些高层次的内容都在项目章程中。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm29">
+					<div class="st_content_txt_tm">
+						<span>29、</span>
+
+						在评估项目活动现状的会议中，团队发现存在一些影响可交付成果的风险。项目经理应该怎么做？<br>During a meeting to assess the current status of project
+						activities,the team discovers that there are some risks that will influence the deliverables.What should the
+						project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：跟踪已发现的风险，识别和分析新风险，并评估整个项目的风险过程有效性<br>Track the discovered risks,identify and
+								analyze new risks,and evaluate risk process effectiveness throughout the project. </li>
+							<li>
+								<input type="radio"> B：记录风险管理信息用于经验教训<br>Record risk management information for lessons learned purposes.
+							</li>
+							<li>
+								<input type="radio"> C：记录监督风险过程的影响和有效性<br>Record the impact on and effectiveness of the Monitor Risks
+								process. </li>
+							<li>
+								<input type="radio"> D：制定风险分解结构(RBS)已包含任何新风险<br>Draw up
+								the risk breakdown structure(RBS) to include any new risks. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK（6）P417-11.7 监督风险。监督风险是整个项目期间，监督商定的风险应对计划的实施 、跟踪已识别风险、识别和分析风险，以评估风险管理有效性的过程。对于新发现的风险，应先识别风险，再登记风险登记册。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm30">
+					<div class="st_content_txt_tm">
+						<span>30、</span>
+
+						项目经理正在管理一个项目，已开发一项由公司发起的新社区活动。有几个相互竞争的优先事项和重要的逻辑细节，由于安全的优先级最高，项目团队与一位安全主题专家(SME)签订合同，他们一起创建了一个风险矩阵，并发现整体风险评分低于预期。为什么整体风险评分低于预期？<br>A
+						project manager is leading a project to develop a new company-sponsored community event. There are several
+						competing priorities and significant logical details. Since security is the top priority, the project team
+						contracts a security subject matter expert(SME). Together they create a risk matrix and discover that the
+						overall risk level is lower than expecte
+						Why was the overall risk score lower than expected? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：主题专家为风险登记册做贡献，团队能够减轻安全风险<br>The SME contributed to the risk register and the team
+								was able to mitigate the security risks. </li>
+							<li>
+								<input type="radio"> B：该团队接受了安全风险，因为其他风险较低<br>The team accepted the security risks because the other risks
+								were low. </li>
+							<li>
+								<input type="radio"> C：项目经理将该威胁的所有权转移给第三方<br>The project manager transferred the ownership of the threat
+								to a third party. </li>
+							<li>
+								<input type="radio"> D：项目经理修改了风险应对计划<br>The project manager revised the risk response plan. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析:PMBOK（6）P441-11.5.2.1 可以就具体单个项目风险向特定主题专家征求意见，风险得到控制，所以降低。选项C，主题专家只是起到咨询作用，并不是供应商，所以不是风险转移。BD 都没有依据。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm31">
+					<div class="st_content_txt_tm">
+						<span>31、</span>
+
+						一个项目团队在周末对一个项目升级进行测试。客户指定的质量保证测试人员未能出席调试测试以及进行签署同意，测试人员和直线经理都联系不上，团队经常完成这些项目，并且经过大量测试后，确信该设施将在周一上午完美运行。
+						项目经理应该怎么做？<br>A project team is commissioning a project upgrade over the weekenThe client-appointed quality
+						assurance tester fails to be present for commissioning testing and sign-off. Neither the tester nor the line
+						manager can be contacte The team, frequently engaged in similar projects with extensive testing experience,is
+						confident that the facility will perform flawlessly on Monday morning. What should the project mananger do?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：指示团队中止升级，并安排周一上午与项目发起人进行紧急评审会<br>Instruct the team to suspend the upgrade,and
+								schedule an emergency review meeting with the project sponsor for Monday morning. </li>
+							<li>
+								<input type="radio"> B：让团队保持待命状态，以防万一在周一上午之前可以联系到测试人员<br>Keep the team on standby in case the tester can
+								be reached before Monday morning. </li>
+							<li>
+								<input type="radio"> C：指示客户团队的一位成员代替指定的测试人员进行验收测试以及签署同意<br>Instruct a member of the client team to conduct
+								the acceptance testing and sign-off in place of the appointed tester. </li>
+							<li>
+								<input type="radio"> D：按照升级上报流程获得授权签署同意这项升级的测试人员<br>Follow the escalation process to obtain a tester
+								authorized to sign off on the upgrade. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK（6）P442-11.5.2.4 如果项目团队或项目发起人认为某威胁不在项目范围内，或提议的应对措施超出了项目经理的权限，就应该采用上报策略。以获得授权。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm32">
+					<div class="st_content_txt_tm">
+						<span>32、</span>
+
+						若要管理整个项目生命周期不确定性, 项目经理应该怎么做来识别、分析风险并为风险优先级排序？<br>To manage uncertainly throughout a project’s life cycle,what
+						should a project manager do to identify,analyze,and prioritize risks? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查过往项目的经验教训<br>Review lessons learned from previous projects. </li>
+							<li>
+								<input type="radio"> B：每周与项目相关方开会<br>Meet weekly with project stakeholders. </li>
+							<li>
+								<input type="radio"> C：创建风险登记册，并定义风险应对策略<br>Create a risk register,and define risk response strategies.
+							</li>
+							<li>
+								<input type="radio"> D：执行风险评估<br>Perform a risk assessment. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P417-11.2.3.1风险登记册记录已识别单个项目风险的详细信息。随着实施定性风险分析、规划风险应对、实施风险应对和监督风险等过程的开展，这些过程的结果也要记进风险登记册。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm33">
+					<div class="st_content_txt_tm">
+						<span>33、</span>
+
+						一个项目依赖于企业主提供资源来执行一项重要任务。由于削减预算会影响他们获取所需资源的能力，一些企业主可能会反对这一要求。
+						项目经理下一步应该怎么做？<br>A project is dependent upon business owners providing resources to perform an important
+						task.Since budget cuts will affect their ability to hire the needed resources,some business owners may
+						potentially object to this requirement.
+						What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：执行概率与影响评估<br>Perform a probability and impact assessment. </li>
+							<li>
+								<input type="radio"> B：更新资源管理计划<br>Update the resource management plan. </li>
+							<li>
+								<input type="radio"> C：使用管理储备来获取更多资源<br>Use the management reserve to hire more resources. </li>
+							<li>
+								<input type="radio"> D：在风险登记册中添加一个风险<br>Add a risk to the risk register. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：Pmbok 11.2识别风险
+						新风险出现，识别到新风险，应首先登记在风险登记册中。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm34">
+					<div class="st_content_txt_tm">
+						<span>34、</span>
+
+						IT小组拒收一个项目可交付成果，称其不符合现有过程。项目团队认为，对该可交付成果进行返工会导致项目交付延迟三周时间。
+						项目经理应该怎么做？<br>An IT group rejects a project deliverable citing noncompliance with existing processes.The
+						project team believes that reworking the deliverable would delay project delivery by three weeks.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：在风险登记册和问题日志中记录该拒收<br>Document the rejection in the risk register and issue log.
+							</li>
+							<li>
+								<input type="radio"> B：向IT小组沟通返工影响<br>Communicate the impact of the rework to the IT group. </li>
+							<li>
+								<input type="radio"> C：将该问题上报给项目发起人<br>Escalate the issue to the project sponsor. </li>
+							<li>
+								<input type="radio"> D：请IT经理对问题进行根本原因分析<br>Ask the IT manager to conduct a root cause analysis of the
+								issue. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK（6）P417-11.2.3.1，P418-11.2.3.3记录发现的新问题或当前问题的变化。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm35">
+					<div class="st_content_txt_tm">
+						<span>35、</span>
+
+						一位项目经理正在管理一个项目，该项目在一个专业的专用设施中对技术工艺进行现代化改造。这项新技术将与旧技术共存。项目经理进行研究，以确定过去是否做过类似项目，但无法找到任何信息。
+						项目经理应该如何识别整合新旧技术的潜在挑战？<br>A project manager is leading a project to modernize technology in a specialized,
+						proprietary facility. This new technology will coexist with the old technology. The project manager conducts,
+						research to determine if similar past projects were done, but is unable to find any information.
+						What should the project manager do to identify potential challenges by intergrating the new and old
+						technologies? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：创建一份效益建议书，以增强旧技术从而与新技术保持同等水平<br>Create a benefits proposal to enhance the old
+								technology and keep. </li>
+							<li>
+								<input type="radio"> B：与设施工作人员开会，以讨论旧技术<br>Meet with the facility staff to discuss the old technology.
+							</li>
+							<li>
+								<input type="radio"> C：为项目团队技术人员制定沟通管理计划<br>Develop a communications management plan for the project team
+								technical staff </li>
+							<li>
+								<input type="radio"> D：与设施工作人员一起执行实施定量风险分析过程<br>Implement the perform quantitative Risk Analysis process
+								with the facility. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P416-11.2.2.6会议。题目问题如何识别风险（潜在挑战）,风险更多来自旧技术现有情况，但没有信息，B更好。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm36">
+					<div class="st_content_txt_tm">
+						<span>36、</span>
+
+						公司首席财务官通过电子邮件向项目团队询问项目信息，沟通管理计划规定，项目经理应该每两周向高级管理团队提交项目状态。项目经理应该怎么做？<br>A company CFO emails a project team
+						member asking for information,about the project’s progress.The communications management plan states that the
+						project manager should present the project status to the senior management team biweekly.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：指示团队成员尽快发送所需的信息<br>Instruct the team member to send the required information as
+								soon as possible. </li>
+							<li>
+								<input type="radio"> B：遵守沟通管理计划并指示团队成员不要回复<br>Comply with the communications management plan and direct
+								the team member not to reply. </li>
+							<li>
+								<input type="radio"> C：发送必要的信息并询问首席财务官是否应修改沟通管理计划<br>Send the required information and ask the CFO if the
+								communications management plan should be revise </li>
+							<li>
+								<input type="radio"> D：向高级管理团队发送电子邮件，要求他们不要直接联系团队成员<br>Email the senior management team asking them to
+								retrain from directly contacting team
+								members. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P393-10.3.3.2 CFO 向团队成员索取项目信息，说明我们给他提供的信息不能满足其信息需求，属于沟通问题，必要时应采取变更请求，变更沟通管理计划。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm37">
+					<div class="st_content_txt_tm">
+						<span>37、</span>
+
+						一位不支持的新相关方加入一个正在执行的项目，若要帮助改善与该相关方的沟通。项目经理应该怎么做？<br>A new unsupportive stakeholder joins a project during
+						execution. What should the project manager do to help improve communications with this stakeholder? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：进行沟通风格评估，以确定与该相关方沟通的最佳方式<br>Conduct a communication styles assessment to determine
+								the best way to communicate with the stakeholder. </li>
+							<li>
+								<input type="radio"> B：召开一次团队会议，将相关方介绍给其他团队成员<br>Hold a team meeting to introduce the stakeholder to the
+								other team meifibers. </li>
+							<li>
+								<input type="radio"> C：修订相关方参与计划以满足新的相关方需求<br>Revise the stakeholder engagement plan to meet the new
+								stakeholder 's needs </li>
+							<li>
+								<input type="radio"> D：与其他相关方谈话，以确定与该新相关方的最佳沟通方式<br>Speak with the other stakeholders to determine how
+								best to communicate with the new stakeholder </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK（6）P375-10.1.2.6规划沟通活动时，用于评估沟通风格并识别偏好的沟通方法、形式和内容的一种技术。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm38">
+					<div class="st_content_txt_tm">
+						<span>38、</span>
+
+						客户对某个可交付成果的变更感到惊讶。项目经理解释说，这一变更是通过电子邮件沟通的，客户有可能还没有阅读电子邮件。项目经理事先应该采取哪一项不同做法？<br>A customer is surprised about a
+						change made to a deliverable. The project manager explains that this change was communicated via email, and
+						that there is a possibility that the email has not yet been rea
+						What should the project manager have done differently? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：确保已完成沟通循环，并要求客户确认已收到信息<br>Ensured that the communication cycle was completed, and
+								asked the customer to confirm receipt of the information </li>
+							<li>
+								<input type="radio"> B：发送一封跟进电子邮件已确定客户是否阅读了第一封电子邮件，并获得已阅读确认<br>Sent a follow-up email to determine if the
+								customer read the first email, and obtained a read confirmation </li>
+							<li>
+								<input type="radio"> C：给客户打电话(而不是通过电子邮件)告诉客户所有详细信息，并要求他们发送确认信<br>Called, rather than emailed, the customer
+								with all details, and asked them to send a confirmation </li>
+							<li>
+								<input type="radio"> D：制定沟通管理计划<br>Developed the communications management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：沟通管理计划里面包含了沟通的语言、用什么形式沟通。题目显示客户是没有阅读电子邮件的，项目经理与客户对于这个沟通的形式没有达成共识，应该事先在制定沟通管理计划的时候确认好 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm39">
+					<div class="st_content_txt_tm">
+						<span>39、</span>
+
+						在项目规划期间，跨文化团队的项目经理希望减少因现场和虚拟团队成员之间的误解而可能造成的延误。项目经理下一步应该怎么做？<br>During project planning, the project manager of
+						a cross-cultural team wants to reduce the possible delays caused by misunderstandings among on-site and
+						virtual team members. What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：对外部相关方开会<br>Meet with the external stakeholders. </li>
+							<li>
+								<input type="radio"> B：定义需沟通的信息<br>Define the information to be communicate </li>
+							<li>
+								<input type="radio"> C：设置焦点小组<br>Set up a focus group. </li>
+							<li>
+								<input type="radio"> D：安排引导式研讨会<br>Facilitate a workshop. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：“虚拟团队”和“误解”都指向沟通管理计划。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm40">
+					<div class="st_content_txt_tm">
+						<span>40、</span>
+
+						一位关键相关方参与项目启动大会，但缺席随后的审查会议。
+						项目经理应该怎么做？<br>A key stakeholder attends the project kick-off meeting, but is absent from subsequent review
+						meetings.
+						What should the project manager do ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新沟通管理计划，以便将该相关方从审查会议参加名单中删除<br>Update the communications management plan to remove
+								the stakeholder from the attendance list for review meetings. </li>
+							<li>
+								<input type="radio"> B：将该相关方从相关方登记册中删除，因为他们对项目没有兴趣<br>Remove the stakeholder from the stakeholder register
+								since they are not intereste </li>
+							<li>
+								<input type="radio"> C：通过绩效报告和会议记录继续与该相关方沟通<br>Continue to communicate with the relevant parties through
+								performance reports and meeting recor </li>
+							<li>
+								<input type="radio"> D：审查相关方参与计划，并提交变更请求以修订该计划<br>Review the stakeholder engagement plan, and submit a
+								change request to revise it. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：因为是关键相关方参与了一个会，没有参与另一个会，是信息沟通存在问题。因此要当成沟通问题而非相关方问题。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm41">
+					<div class="st_content_txt_tm">
+						<span>41、</span>
+
+						在一个软件开发项目中，一名团队成员不能完成分配的任务,这阻碍了与其他组件的集成，并导致错过里程碑。该团队成员未向项目经理告知有关其任务的任何问题。
+						若要向发起人沟通该问题，项目经理首先应该做什么？<br>During a software development project, one team member fails to complete assigned
+						tasks, which prevents integration with other components and causes a milestone to be misse The team member did
+						not inform the project manager about problems with tasks.
+						What should the project manager do first to communicate this to the sponsors? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：在每周状态报告中包含更新的项目进度计划<br>Include an updated project schedule i it the weekly Status
+								report. </li>
+							<li>
+								<input type="radio"> B：安排与发起人开会，告知他们这个问题，并提出恢复计划<br>Schedule a meeting with the sponsor to inform them of
+								the issue and present a recovery plan. </li>
+							<li>
+								<input type="radio"> C：将其作为一项已实现的风险添加到风险登记册中，并将更新后的风险登记册发送给发起人<br>Add it to the risk register as a
+								materialized risk and send the updated risk register to the
+								sponsor. </li>
+							<li>
+								<input type="radio"> D：将延迟问题上报给发起人，告知他们该团队成员未能完成分配的任务<br>Escalate the delay to the sponsor, informing them
+								that the team member failed to complete the assigned tasks. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B。
+						解析：PMBOK（6），P388的10.3监督沟通。团队成员延误了里程碑还不汇报，给领导汇报这种坏消息时要有解决方案，并且不能推脱责任，B相对恰当。C应是更新问题日志而不是风险登记册，因为此时已发生，且此前未识别。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm42">
+					<div class="st_content_txt_tm">
+						<span>42、</span>
+
+						在收到项目管理办公室(PMO)规定工作包必须由一家预先批准的海外单位执行后，项目经理更新了风险登记册，为了减轻本地和海外团队之间沟通不畅的风险，项目经理任命一名海外协调员作为单一联络点。
+						应该更新哪项计划来描述两个团队之间的互动？<br>After receiving a project management office ( PMO )mandate that work packages must be
+						performed by a preapproved offshore unit ,the project manager updates the risk register.To mitigate the risk
+						of miscommunication between local and offshore teams ,the project manager appoints an offshore coordinator as
+						a single point of contact.
+						What plan should be updated to describe the interactions between the two teams ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目管理计划<br>Project management </li>
+							<li>
+								<input type="radio"> B：相关方参与计划<br>Stakeholder engagement </li>
+							<li>
+								<input type="radio"> C：风险管理计划<br>Risk management plan </li>
+							<li>
+								<input type="radio"> D：沟通管理计划<br>Communications management </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK（6）P390-10.3.1.1题目描述问题是关键信息的传递，属于沟通范畴，包括两个团队之间的互动，也是沟通问题，找沟通管理计划。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm43">
+					<div class="st_content_txt_tm">
+						<span>43、</span>
+
+						在一个里程碑评审会议上，一位相关方抱怨他们不了解项目状态报告,相关方认为这些报告不包含与其部门相关的信息。
+						若要解决这种情况，项目经理应该怎么做？<br>During a milestone review meeting, a stakeholder complains that they do not understand
+						the project status reports, The stakeholder believes that these reports do not contain information relevant to
+						their department.
+						What should the project manager do to address this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与相关方开会以确定他们的报告需求<br>Meet with the stakeholder to determine their reporting needs.
+							</li>
+							<li>
+								<input type="radio"> B：与该相关方安排定期会议，以避免未来的抱怨<br>Arrange a regulating meeting with this stakeholder to avoid
+								future complaints. </li>
+							<li>
+								<input type="radio"> C：更新沟通管理计划，以解决相关方担忧的问题<br>Update the communications management plan to address the
+								stakeholder’s concerns. </li>
+							<li>
+								<input type="radio"> D：修订风险管理计划以减轻未来的类似情况<br>Revise the risk management plan to mitigate similar
+								situations in the future. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C。解析：PMBOK（10）P379，典型的沟通管理问题。抱怨来自与对沟���的方式不认同，需要更新沟通管理计划。故选C。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm44">
+					<div class="st_content_txt_tm">
+						<span>44、</span>
+
+						在第一次团队会议期间，一名新任命的项目经理在讨论项目问题时发现了一些问题。项目经理可以从哪里获得有关团队建设的信息？<br>During the first team meeting, a newly appointed
+						project manager finds some problems when discussing the project problems. Where can the project manager get
+						information about team building? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：团队绩效评价<br>Team performance evaluation </li>
+							<li>
+								<input type="radio"> B：项目资源管理计划<br>Project Resources Management Plan </li>
+							<li>
+								<input type="radio"> C：问题日志<br>Problem log </li>
+							<li>
+								<input type="radio"> D：工作绩效报告<br>Working performance report </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：项目管理计划，是指导性的文件，资源管理计划里有关于如何团建的指导信息。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm45">
+					<div class="st_content_txt_tm">
+						<span>45、</span>
+
+						在项目执行阶段，由于缺乏承诺、对结果和责任漠不关心，团队成员之间发生冲突。成本绩效指数(CPI)开始下降。项目经理应该怎么做？<br>In the project implementation phase, due to
+						lack of commitment, indifference to results and responsibilities, and conflicts between team members, the cost
+						performance index (CPI) begins to decline. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：鼓励建设性讨论，与团队开会, 解决项目目标的合理性，并定期开展团队绩效评估<br>To encourage constructive discussions,
+								meet with the team, solve the rationality of the project objectives, and perform team performance
+								evaluation on a regularly basis </li>
+							<li>
+								<input type="radio"> B：将这种情况上报给指导委员会<br>To report this to the Steering Committee </li>
+							<li>
+								<input type="radio"> C：鼓励建设性讨论，在问题日志中添加该冲突，并记录纠正措施<br>To encourage constructive discussions, add these
+								conflicts to the Problem Log, and document corrective actions </li>
+							<li>
+								<input type="radio"> D：与管理层和同事讨论该问题，并更新经验教训<br>To discuss this problem with the management and colleagues
+								and update lessons learned </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析:A面对解决问题。当目标过高，缺乏信息时，就没人敢承诺，所以解决目标合理性是没有毛病的。因未超出项目经理权限，B排除，C不如A全面，D不符合冲突解决的原则，先私下后公开正式。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm46">
+					<div class="st_content_txt_tm">
+						<span>46、</span>
+
+						一个复杂项目拥有100多名内部和外部团队成员。在项目过程中，团队成员不断向项目经理询问有哪些资源分配给高层级以及低层级活动的相关信息。他们还要求内部和外部团队成员之间更明确的分工。
+						哪一项将对项目经理有帮助？<br>A complex project has more than 100 internal and external team members.During the
+						project,team members constantly ask the project manager for information on which resources are assigned to
+						high-and low-level activities.They also request clearer divisions between internal and external members.
+						What would help the project manager? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：责任分配矩阵(RAM)<br>Responsibility assignment matrix(RAM) </li>
+							<li>
+								<input type="radio"> B：资源管理计划<br>Resource management plan </li>
+							<li>
+								<input type="radio"> C：资源日历<br>Resource calendars </li>
+							<li>
+								<input type="radio"> D：资源分配技能<br>Resource allocation skills </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK 9.1.2.2 责任分配矩阵。责任分配矩阵显示了分配给每个工作包的项目资源，用于说明工作包或活动与项目团队成员之间的关系，避免最终负责人或工作职权不清。如果团队是由内部和外部人员组成，RACI
+						矩阵对明确划分角色和职责特别有用。题目显示，该项目由多名内部及外部成员组成，这个情况责任分配矩阵帮助较大。。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm47">
+					<div class="st_content_txt_tm">
+						<span>47、</span>
+
+						实践敏捷方法的开发负责人被任命为一个项目的迭代经理，该负责人与使用瀑布式方法的业务分析师密切合作，但这两个方法的差异已经开始对团队绩效产生负面影响，项目经理分别与开发负责人和业务分析师就这种情况进行会面，但未能解决问题。
+						项目经理下一步应该怎么做？<br>A development leader, who practices agile methodology, is assigned as the iteration manager
+						for a project.This leader works closely with a business analyst who uses the waterfall methodology. The
+						differences in these methodologies have begun to negatively impact team performance. The project manager meets
+						individually with the development lead and business analyst about the situation, but fails to resolve the
+						issue. </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与业务分析师的经理谈话<br>Speak with the business analyst’s manager. </li>
+							<li>
+								<input type="radio"> B：请求提供一位具有敏捷方法经验的新业务分析师<br>Request a new business analyst with experience in the
+								agile methodology. </li>
+							<li>
+								<input type="radio"> C：为业务分析师提供敏捷方法团队的培训<br>Train the business analyst on the agile methodology. </li>
+							<li>
+								<input type="radio"> D：与业务分析师和开发负责人一起召开一次联合会议<br>Conduct a joint meeting with the business analyst and
+								development team. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK（6）P348-9.5.2.1冲突管理-合作/解决问题。利用合作/解决问题的方法解决项目中的冲突，选项D比较合适。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm48">
+					<div class="st_content_txt_tm">
+						<span>48、</span>
+
+						一名新聘用的团队成员难以适应其角色。这导致项目活动落后于进度。
+						项目经理应该如何帮助解决这个问题？<br>A newly hired team member is experience difficulty adjusting to his role .This is causing
+						project activities to lag behind schedule.
+						What should the project manager do to help resolve this issue? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：允许其他团队成员决定最佳方法<br>Allow other team members to decide the best approach. </li>
+							<li>
+								<input type="radio"> B：支持团队成员并提供任何必要的建议<br>Support the team member and provide any necessary suggestions.
+							</li>
+							<li>
+								<input type="radio"> C：将该团队成员的一些工作委派给其他团队的成员<br>Delegate some of this team member’s work to other
+								teammember. </li>
+							<li>
+								<input type="radio"> D：提醒该团队成员其工作职责和项目时间表<br>Remind this team member of his work responsibilities and
+								project timelines. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P341-9.4.2.4团队成员无法进入角色，应考虑采取人际关系与团队技能，为团队成员提供支持。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm49">
+					<div class="st_content_txt_tm">
+						<span>49、</span>
+
+						一个外部项目资源告知项目经理他们的合同即将到期。项目经理应该查看哪份文件来确认该信息并解决这个问题？<br>An outside project resource advises the project manager
+						that their contract is about to expire.What document should the project manager review to check this
+						information and resolve the issue? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：组织图<br>Organization chart. </li>
+							<li>
+								<input type="radio"> B：资源管理计划<br>Resouce management plan. </li>
+							<li>
+								<input type="radio"> C：项目合同<br>Project contract. </li>
+							<li>
+								<input type="radio"> D：组织过程资产<br>Organizational process assets. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P318-9.1.3.1资源管理计划。作为项目管理计划的一部分，资源管理计划提供了关于如何分类、分配、管理和释放项目资源的指南。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm50">
+					<div class="st_content_txt_tm">
+						<span>50、</span>
+
+						相关方指示项目经理将项目A团队的一位关键资源调到项目B的团队，项目经理首先应该怎么做？<br>A stakeholder instructs a project manager to transfer a key
+						resource from project A's team to project B's team.What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与该相关方协商，以使用该关键资源<br>Negotiate with the stakeholder to use the key resource. </li>
+							<li>
+								<input type="radio"> B：咨询其他相关方以反驳该提议<br>Consult with other stakeholders to counter the proposal. </li>
+							<li>
+								<input type="radio"> C：评估该请求的影响，并签发一项变更请求<br>Assess the impact of the request,and issue a change request.
+							</li>
+							<li>
+								<input type="radio"> D：如果该关键资源不可用，建议取消该项目<br>Propose canceling the project if the key resources is
+								unavailable. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P357-9.6.3.2如果控制资源过程出现变更请求，或者推荐的纠正措施或预防措施影响了项目管理计划的任何组成部分或项目文件，项目经理应提交变更请求。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm51">
+					<div class="st_content_txt_tm">
+						<span>51、</span>
+
+						项目的团队成员正在执行工作，但由于工作超负荷而无法满足截止日期。为了缓解这种情况，团队又增加了五个资源。
+						这描述的是哪个团队建设阶段？<br>Team members on a project are performing, but fail to meet deadlines due to work overloaFive
+						more resources are added to the team to ease the situation.
+						What development stage does this describe? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：成熟阶段 <br>Performing </li>
+							<li>
+								<input type="radio"> B：规范阶段<br>Norming </li>
+							<li>
+								<input type="radio"> C：震荡阶段<br>Storming </li>
+							<li>
+								<input type="radio"> D：形成阶段<br>Forming </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：新人加入团队，属于形成阶段。PMBOK（6）P338-9.4在本阶段，团队成员相互认识，并了解项目情况及他们在项目中的正式角色与职责。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm52">
+					<div class="st_content_txt_tm">
+						<span>52、</span>
+
+						—名团队成员感到很担心，因为一名关键技术专家对一项关键的依赖关系不配合。项目经理与该专家会面，了解情况并制定解决方案。
+						项目经理使用了什么技术来解决这种情况？<br>A team member is concerned because a key techniques expert is uncooperative with a
+						critical dependency. The project manager meets with the expert to understand the situation and develop a
+						solution.
+						What technical did the project manager use to resolve this situation? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：缓和/包容<br><br>Smooth/accommodate </li>
+							<li>
+								<input type="radio"> B：妥协/调解<br>Compromise/reconcile </li>
+							<li>
+								<input type="radio"> C：合作/解决<br>Collaborate/problem solve </li>
+							<li>
+								<input type="radio"> D：强迫/命令<br>Force/direct </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P348-9.5.2.1合作/解决问题是冲突管理的首选方式。“...会面，了解情况并制定解决方案”，说明用的是“合作/解决”策略。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm53">
+					<div class="st_content_txt_tm">
+						<span>53、</span>
+
+						一位关键资源在项目执行期间辞职。项目经理首先应该怎么做？<br>A key resource resigns during project execution.What should the project
+						manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新进度计划<br>Update the schedule. </li>
+							<li>
+								<input type="radio"> B：执行影响分析<br>Conduct an impact analysis. </li>
+							<li>
+								<input type="radio"> C：通知相关方<br>Inform the stakeholders. </li>
+							<li>
+								<input type="radio"> D：提交变更请求<br>Submit a change request. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：应首先更新资源管理计划，选项没有，可以选分析影响。A错；C，未必需要；D未必需要。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm54">
+					<div class="st_content_txt_tm">
+						<span>54、</span>
+
+						一位新项目经理在项目规划阶段加入项目。在审核项目文件后，项目经理发现项目管理计划是最后一份创建的文件。
+						项目经理应该查阅哪一份文件来分配资源以实施该计划？<br>A new project manager joins a project during its planning phase. Upon reviewing
+						the project documents, the project manager discovers that the project management plan was the last document
+						create
+						What should the project manager reference to assign resources to implement the plan? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：资源日历<br>Resource calendars </li>
+							<li>
+								<input type="radio"> B：范围管理计划<br>Scope management plan </li>
+							<li>
+								<input type="radio"> C：项目组织图<br>Project organization chart </li>
+							<li>
+								<input type="radio"> D：资源管理计划<br>Resource management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK（6）P318-9.1.3.1作为项目管理计划的一部分，资源管理计划提供了关于如何分类、分配、管理和释放项目资源的指南。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm55">
+					<div class="st_content_txt_tm">
+						<span>55、</span>
+
+						一位团队成员在要求的时间内工作，但是交付的工作成果不足，项目经理首先应该怎么做？<br>A team member is working the required hours, but is delivering
+						inadequate output. What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：通知人力资源部门，该团队成员表现不佳<br>Notify the human resource department that the team member is
+								under performing. </li>
+							<li>
+								<input type="radio"> B：与该团队成员会面，以确定低绩效的原因<br>Meet with the team member to determine the reasons for low
+								performance. </li>
+							<li>
+								<input type="radio"> C：将该团队成员的一些工作分配给其他队成员<br>Allocate some of the team member's work to other team
+								members. </li>
+							<li>
+								<input type="radio"> D：告知该团队成员不交付工作的后果<br>Advise the team member of the consequences for not delivermg the
+								work. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：团队成员工作不力，先了解原因，再决定措施。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm56">
+					<div class="st_content_txt_tm">
+						<span>56、</span>
+
+						一家跨国公司正在本地开发一款实用新技术平台数字产品。该平台的唯一一名专家位于公司总部，负责向不同国家提供支持。
+						本地项目经理如何能够确保这位专家的参与?<br>A multinational company is locally developing a digital product,using a new technology
+						platform. The only expert on this platform is located in the company’s headquarters, and they are responsible
+						for providing support to different countries.
+						How can the local project manager ensure the involvem i of this expert? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：设计一份旅行时间表，以便及时提供现场支持<br>Design a travel schedule so that timely,onsite assistance
+								can be provide </li>
+							<li>
+								<input type="radio"> B：使用虚拟环境将该专家包含在团队中<br>Include the expert on the team using a virtual environment.
+							</li>
+							<li>
+								<input type="radio"> C：要求项目发起人任命该专家为团队的全职成员<br>Ask the project sponsor to assign the expert as a full-time
+								member of the team. </li>
+							<li>
+								<input type="radio"> D：要求团队成员根据需要与该专家联系，作为一种外部专业知识来源<br>Ask team members to contact the expert as an
+								extemal T rtise so%ce on an as-needed bal . </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：9.3.2.4 虚拟团队
+						虚拟团队的使用为招募项目团队成员提供了新的可能性。虚拟团队可定义为具有共同目标、在完成角色任务的过程中很少或没有时间面对面工作的一群人。现代沟通技术（如电子邮件、电话会议、社交媒体、网络会议和视频会议等）使虚拟团队成为可行。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm57">
+					<div class="st_content_txt_tm">
+						<span>57、</span>
+
+						由于技术已在其他工厂运行，省略了一个项目的用户验收测试。但是，在该技术实施后不能按预期起作用。项目经理应该怎么做？<br>User acceptance tests on a project have been
+						omitted since the technology is operational at other factories.However,after implementation,the technology is
+						not working as expecte
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：查看缺陷报告以确定并解决问题<br>Review the defect report ti identify and solve issue. </li>
+							<li>
+								<input type="radio"> B：提交变更请求<br>Submit a change request. </li>
+							<li>
+								<input type="radio"> C：执行根本原因分析，以确定纠正措施<br>Conduct a root cause analysis to identify corrective actions.
+							</li>
+							<li>
+								<input type="radio"> D：使用测试脚本来解决问题<br>Use test scripts to resolve the issue. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析:由于是不能按预期起作用，说明绩效有偏差，选C，根本原因分析后，采到“纠正”措施。A干扰性很大，但题目没说是缺陷。B在C之后，D是具体的解决措施，在B之后。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm58">
+					<div class="st_content_txt_tm">
+						<span>58、</span>
+
+						在开发软件解决方案期间，测试团队检测到一个错误。在采取任何纠正措施之前，项目经理应该怎么做？<br>The test team detects an error during the development of a
+						software solution. What should the project manager do before taking any corrective action? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：分析所需纠正措施的影响并将其记录在问题日志中<br>To analyze the impact of the required corrective actions
+								and record them in the Problem Log </li>
+							<li>
+								<input type="radio"> B：与项目相关方重新谈判需求，并更新项目管理计划<br>To re-negotiate the needs with the project stakeholders
+								and update the project management plan </li>
+							<li>
+								<input type="radio"> C：检查经验教训并识别减轻策略<br>To review lessons learned and identify mitigation strategies </li>
+							<li>
+								<input type="radio"> D：审查项目管理计划并检查质量要求<br>To review the project management plan and check the quality
+								requirements </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：识别到质量问题后，应先更新问题日志。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm59">
+					<div class="st_content_txt_tm">
+						<span>59、</span>
+
+						在项目第一个里程碑的阶段退出会议期间，质量管理团队只提出一些缺陷。当被问及测试过程程序时，团队确认只有一个批准的测试要求。项目经理应该怎么做？<br>During the exit phase of the first
+						project milestone, the quality control team only raises some defects. When asked about the test process, the
+						team confirms that there is only one approved test requirement. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：执行实施管理质量过程<br>To execute and implement the management of quality process </li>
+							<li>
+								<input type="radio"> B：考虑更换项目的测试主管<br>To consider replacing the testing supervisor </li>
+							<li>
+								<input type="radio"> C：更新测试要求<br>To update test requirements </li>
+							<li>
+								<input type="radio"> D：部署自动化测试工具<br>To deploy automated test tools </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：由于是一个阶段结束，仍存在缺陷以及程序不完善，应开展质量审计，以持续改善，但答案里没有审计，可选管理质量。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm60">
+					<div class="st_content_txt_tm">
+						<span>60、</span>
+
+						一份绩效报告显示产品规格有偏差。项目经理召开一次紧急会议，会议期间,所有团队成员都就这种偏差可能的原因提供建议。团队使用的是什么工具或技术？<br>A performance report indicates a
+						variation from a product's specifications.The project manager calls an emergency meeting during which all team
+						members offer suggestions for the possible cause of the variance.
+						What tool or technique is the team using? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：因果图<br>Cause-and-effect diagram </li>
+							<li>
+								<input type="radio"> B：根本原因分析<br>Root cause analysis(RCA) </li>
+							<li>
+								<input type="radio"> C：散点图<br>Scatter diagram </li>
+							<li>
+								<input type="radio"> D：矩阵图<br>Matrix diggram </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P292-8.2.2.2数据分析-根本原因分析。根本原因分析是确定引起偏差、缺陷或风险的根本原因的一种分析技术。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm61">
+					<div class="st_content_txt_tm">
+						<span>61、</span>
+
+						项目经理正在对产品属性进行测试。项目经理应该使用什么来确认合规性？<br>A project manager is conducting testing on product attributes.What should
+						the project manager use to validate compliance? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：质量审计<br>Quality audits </li>
+							<li>
+								<input type="radio"> B：质量报告<br>Quality reports </li>
+							<li>
+								<input type="radio"> C：质量核对单<br>Quality checklists </li>
+							<li>
+								<input type="radio"> D：质量测量指标<br>Quality metrics </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK（6）P287-8.1.3.2质量测量指标专用于描述项目或产品属性，以及控制质量过程将如何验证符合程度。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm62">
+					<div class="st_content_txt_tm">
+						<span>62、</span>
+
+						一位项目经理加入一个正在进行的项目。在一次每周状态会上，团队通知项目经理，项目计划中规定将在收尾阶段执行质量保证。项目经理应该怎么做？<br>A project manager joins an ongoing
+						project. At a weekly status meeting, the team informs the project manager that quality assurance will be
+						carried out at the end of the project plan. What should a project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：继续执行当期的质量保证计划，并确保项目按时、按预算完成<br>Continue to implement the current quality assurance
+								plan and ensure that the project is completed on time and on budget. </li>
+							<li>
+								<input type="radio"> B：重新审视质量保证并在完成每个可交付成果时更新项目计划<br>Review quality assurance activities and update the
+								proj t plan as each deliverable is complete </li>
+							<li>
+								<input type="radio"> C：使用质量保证来衡量项目团队绩效<br>Use quality assurance to measure project team performance. </li>
+							<li>
+								<input type="radio"> D：在整个项目的生命周期中定期执行质量保证<br>Perform quality assurance periodically throughout the
+								project’s life cycle. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK288 8.2管理质量
+						管理质量是把组织的质量政策用于项目，并将质量管理计划转化为可执行的质量活动的过程。本过程的主要作用是，提高实现质量目标的可能性，以及识别无效过程和导致质量低劣的原因。本过程需要在整个项目期间开展。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm63">
+					<div class="st_content_txt_tm">
+						<span>63、</span>
+
+						项目经理在安排一次站会时得知，为项目采购的产品和选定的软件版本不兼容，需要进行大量操作才能使产品兼容。项目经理首先应该怎么做？<br>While facilitating a stand-up, the project
+						manager learns that a product acquired for the project is incompatible with the selected software version.
+						There is a considerable amount of work required to make the product compatible.
+						What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：向项目团队成员发送一封电子邮箱指示他们加班工作以满足截止日期<br>Email project team members instructing them to
+								work overtime to meet the deadline. </li>
+							<li>
+								<input type="radio"> B：执行根本原因分析，并更新项目文件<br>Perform a root cause analysis, and update project docuroents.
+							</li>
+							<li>
+								<input type="radio"> C：与团队开会以确定合适的纠正措施<br>Meet with the team to determine the appropriate corrective
+								action. </li>
+							<li>
+								<input type="radio"> D：将该问题通知所有相关方，并提交变更请求<br>Inform all stakeholders of the issue, and submit a change
+								request. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：先确定根本原因，再确定纠正措施。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm64">
+					<div class="st_content_txt_tm">
+						<span>64、</span>
+
+						—家公司想要设计和制造其第一款机器人产品。项目团队成员对机器人的了解有限，不知道如何定义和控制产品性能。若要确保产品性能，项目经理应该怎么做？<br>A company wants to design and build
+						the first rbbotic product. The project team members have limited knowledge in robotics, and do not know how to
+						define and control product performance.
+						What should the project manager do to ensure product performance? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：使用专家判断<br>Use expert judgment. </li>
+							<li>
+								<input type="radio"> B：更新质量测量指标<br>Update the quality metrics. </li>
+							<li>
+								<input type="radio"> C：开展统计抽样<br>Conduct statistical sampling. </li>
+							<li>
+								<input type="radio"> D：执行标杆对照<br>Perform bench-marking. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：8.1.2.2 标杆对照。标杆对照是将实际或计划的项目实践或项目的质量标准与可比项目的实践进行比较，以便识别最佳实践，形成改进意见，并为绩效考核提供依据。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm65">
+					<div class="st_content_txt_tm">
+						<span>65、</span>
+
+						—家组织中标一大型施工项目。项目团队正在实施一种不断优化执行效率的方法。项目团队应该使用什么方法作为改进基础？<br>An organization is awarded a large construction
+						project .The project team is implementing an approach to continuously optimize execution efficiency.
+						What approach should the project team use a basis for improvement ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：全面质量管理(TQM)<br>Total quality management（TQM） </li>
+							<li>
+								<input type="radio"> B：计划一实施一检查一行动(PDCA)循环<br>Plan-do-check-act ( PDCA ) cycle </li>
+							<li>
+								<input type="radio"> C：六西格玛<br>Six Sigma </li>
+							<li>
+								<input type="radio"> D：精益六西格玛<br>Lean Six Sigma </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：题目出处见 PMBOK275页倒数第三段第1-2行。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm66">
+					<div class="st_content_txt_tm">
+						<span>66、</span>
+
+						—项新功能被批准用于软件开发项目，在该功能获得批准三周后，一位团队成员得知这项新功能的开发已经超出预算。项目经理下一步应该怎么做？<br>A new functionality is approved for a
+						software development project. There weeks after approval a team member realizes that the development of this
+						new functionality is already over budget.What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：接受预算超支，因为该功能已获得批准<br>Accept the budge to overruns because it is already approve
+							</li>
+							<li>
+								<input type="radio"> B：停止开发新功能<br>Stop the development of the new function. </li>
+							<li>
+								<input type="radio"> C：提交变更请求<br>Submit a change request. </li>
+							<li>
+								<input type="radio"> D：更新成本基准<br>Update the cost baseline. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：发现成本绩效偏差，提交变更请求，以采取纠正措施。AB是变更请求里的可能方案，D是批准之后的事。题目问下一步。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm67">
+					<div class="st_content_txt_tm">
+						<span>67、</span>
+
+						项目经理正在制定一份高层级的成本估算，以便纳入项目章程。由于项目经理以前完成过类似的项目，应该使用哪一项成本估算技术？<br>A project manager is developing a high-level
+						cost estimate for inclusion in the project charter. Since the project manager previously completed similar
+						projects, what cost-estimating technique should be used? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：参数估算<br>Parametric </li>
+							<li>
+								<input type="radio"> B：类比估算<br>Analogous </li>
+							<li>
+								<input type="radio"> C：专家判断<br>Expert judgment </li>
+							<li>
+								<input type="radio"> D：自下而上估算<br>Bottom-up </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：答案：B
+						解析： 类比估算是以过去类似活动的参数值（如范围、成本、预算和持续时间等）或规模指标（如尺寸、重量和复杂性等）为基础，来估算未来活动的同类参数或指标的估算技术。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm68">
+					<div class="st_content_txt_tm">
+						<span>68、</span>
+
+						—个构建新产品的项目包含了一项设计，而该设计使用了两个现有产品的一些功能，但是，新产品需要比其前代产品更大型且更便宜。项目经理查看两个现有产品的文件，并与工程总监讨论对最终成本的影响。项目经理将使用什么技术来估算成本？<br>A
+						project to build a new product consists of a design that uses some features of the two existing products, but
+						the new product needs to be larger and cheaper than the former one. The project manager reviews the documents
+						of two existing products and discusses the impact on the final cost with the engineering director. Which
+						technique will the project manager use to estimate the cost? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：建模和成本预测<br> Modeling and Cost Forecast </li>
+							<li>
+								<input type="radio"> B：类比估算和参数估算<br>Analog Estimation and Parameter Estimation </li>
+							<li>
+								<input type="radio"> C：专家判断和成本汇总<br>Experts' Judgment and Cost Summary </li>
+							<li>
+								<input type="radio"> D：自下而上估算和计划评审技术分析<br>Make bottom-up estimation and plan the analysis of review
+								technique </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：题目提到两个现有产品对比，类比估算使用以往类似项目的参数值或属性来估算。项目的参数值和属性包括（但不限于）范围、成本、预算、持续时间和规模指标（如尺寸、重量），类比估算以这些项目参数值或属性为基础来估算当前项目的同类参数或指标。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm69">
+					<div class="st_content_txt_tm">
+						<span>69、</span>
+
+						在项目执行阶段，项目经理发现完工估算(EAC)高于完工预算(BAC)。在确认过计算的准确性后，项目经理应该做什么？<br>In the project implementation phase, the Project
+						Manager's Estimate at Completion (EAC) is higher than the Budget at Completion (BAC). What should the project
+						manager do after confirming the accuracy of the calculation? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：为项目相关方准备自下而上的EAC值<br>To prepare bottom-up EAC values for the project stakeholders
+							</li>
+							<li>
+								<input type="radio"> B：请求项目发起人批准完工偏差(VAC)预测<br>To request the project sponsor to approve the Variance at
+								Completion (VAC) </li>
+							<li>
+								<input type="radio"> C：根据EAC和BAC请求项目发起人批准成本绩效指数(CPI)<br>To request the project sponsor to approve the Cost
+								Performance Index (CPI) according to EAC and BAC </li>
+							<li>
+								<input type="radio"> D：基于完工尚需绩效指数(TCPI)的评估采取行动<br>To take action based on the assessment of the To
+								Complete Performance Index (TCPI) </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：排除法，题目已经交代，EAC的准确性项目经理已核实，A是质疑，再核算一次，与题矛盾。BC均是绩效信息，是由绩效数据分析计算得出，不需经发起人批准。
+						选择D对项目完工尚需绩效指数(TCPI)的评估，后续采取行动。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm70">
+					<div class="st_content_txt_tm">
+						<span>70、</span>
+
+						项目经理确信承包商正在请求项目范围之外的工作。
+						项目经理应该怎么做？<br>A project manager is convinced that a contract scope sprea
+						What should the project manager do ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与承包商一起审查范围说明书<br>Review the scope statement with the contractor. </li>
+							<li>
+								<input type="radio"> B：举行项目评审会议以解决项目团队的问题<br>Hold a project review meeting to address he issue with
+								project team. </li>
+							<li>
+								<input type="radio"> C：向发起人通知该问题<br>Inform the sponsor of the issue. </li>
+							<li>
+								<input type="radio"> D：创建变更请求<br>Create a change request. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：当对项目范围发生疑问时，应该首先查阅项目范围说明书。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm71">
+					<div class="st_content_txt_tm">
+						<span>71、</span>
+
+						项目经理加入一个新的价值数百万美元的项目，要求成功实施来自个部门的可交付成果。若要成功实施该项目，项目经理首先应该怎么做？<br>A project manager joins a new
+						multi-million-dollar project that requires deliverables from various departments to successfully
+						implement.What should the project manager do first to successfully implement the project? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：拜访客户以确保已为关键客户相关方识别到所有沟通渠道<br>Visit the client to ensure that all communication
+								channels have identified for key client stakeholders </li>
+							<li>
+								<input type="radio"> B：执行相关方分析并进行详细的需求会议<br>Perform a stakeholder analysis and conduct detailed
+								requirements sessions </li>
+							<li>
+								<input type="radio"> C：立即识别在该项目上工作的最佳资源<br>Immediately identity the best resource to work on the project
+							</li>
+							<li>
+								<input type="radio"> D：与已经成功向客户交付的外部供应商签订合同<br>Contract with an outside vendor who has already
+								successfully delivered to the client </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析： 想要成果实施可交付成果，必须要可以确认范围，想要确认范围必须要收集清楚需求。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm72">
+					<div class="st_content_txt_tm">
+						<span>72、</span>
+
+						项目经理与项目团队开会收集需求。团队成员向项目经理询问相关方是否熟悉项目的假设条件，制约因素和可交付成果。哪一份文件将概述这些信息？<br>The project manager meets with the
+						project team to gather requirements. Team members ask the project manager if the stakeholders are familiar
+						with the project assumptions, constraints, and deliverables. Which document will outline this information?<br>
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目范围说明书<br>Project scope statement </li>
+							<li>
+								<input type="radio"> B：工作说明书(SOW)<br>Statement of work( SOW) </li>
+							<li>
+								<input type="radio"> C：项目章程<br>Project charter </li>
+							<li>
+								<input type="radio"> D：建议邀请书(RFP)<br>Request for proposal(RFP) </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						项目章程是由项目启动者或发起人发布的，正式批准项目成立，并授权项目经理使用组织资源开
+						展项目活动的文件。它记录了关于项目和项目预期交付的产品、服务或成果的高层级信息。项目章程记录项目目的、项目概述、假设条件、制约因素，以及项目意图实现的高层级需求。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm73">
+					<div class="st_content_txt_tm">
+						<span>73、</span>
+
+						—个专业的项目团队正在管理一个大型项目。上个月，工程顾问提交了最初的设计计划给客户审查，项目经理得知该设计因未能满足客户需求而被拒绝。若要确保更有利的结果，项目经理应该事先做什么？<br>A specialized
+						project team is managing a large project last month engineering consultant submitted the initial design
+						proposal for client review.The project manager learns that the design has been rejected for failing to satisfy
+						customer needs. </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：制定项目章程<br>Developed a project charter </li>
+							<li>
+								<input type="radio"> B：召开项目启动大会<br>Conducted a kick-off meeting </li>
+							<li>
+								<input type="radio"> C：创建需求跟踪矩阵<br>Created a requirement traceability matrix </li>
+							<li>
+								<input type="radio"> D：执行相关方分析<br>Performed a stakeholder analysis </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析:需求跟踪矩阵是把产品需求从其来源连接到能满足需求的可交付成果的一种表格。需求跟踪矩阵提供了在整个项目生命周期中跟踪需求的一种方法，有助于确保需求文件中被批准的每项需求在项目结束的时候都能交付。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm74">
+					<div class="st_content_txt_tm">
+						<span>74、</span>
+
+						一家公司正在冒险进入一项新业务，但之前在该市场中没有经验，项目经理应使用什么工具或技术来收集需求？<br>A company is venturing into a new business but has no
+						previous experience in that market. What tool or technique should the project manager use to collect
+						requirements? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：原型法<br>Prototypes </li>
+							<li>
+								<input type="radio"> B：专家判断<br>Expert judgement </li>
+							<li>
+								<input type="radio"> C：产品分析<br>Production analysis </li>
+							<li>
+								<input type="radio"> D：制定决策<br>Decision making </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：由于没有经验，没有可借鉴的组织过程资产。原型法是指在实际制造预期产品之前，先造出该产品的模型，并据此征求对需求的早期反馈。原型包括微缩产品、计算机生成的二维和三维模型、实体模型或模拟。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm75">
+					<div class="st_content_txt_tm">
+						<span>75、</span>
+
+						客户在用户测试期间同意最终产品，但现在却有另一种想法。若要解决这个问题，项目经理应该查阅哪一份文件？<br>The client agreed to the final product during user
+						testing, but is now having second thoughts.What should the project manager consult to resolve this issue?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：验收标准<br>Acceptance criteria </li>
+							<li>
+								<input type="radio"> B：质量管理计划<br>Quality management plan </li>
+							<li>
+								<input type="radio"> C：需求文件<br>Requirements documentation </li>
+							<li>
+								<input type="radio"> D：项目章程<br>Project charter </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：题目没说新想法，是要推翻之前的决定，还是增加新的需求。但不管何种情况，项目经理应查看需求文件，核实是否符合原定的需求。而答案A验收标准，是默认客户反悔，只考虑一种情况。由此，需求文件是必须查阅，而验收标准是可能查阅。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm76">
+					<div class="st_content_txt_tm">
+						<span>76、</span>
+
+						项目启动后，客户合并业务单位，并识别额外需求。项目经理下一步应该怎么做？<br>After the project is kicked off, the customer merges the business
+						units and identifies additional requirements. What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：暂停项目<br>To suspend the project </li>
+							<li>
+								<input type="radio"> B：识别范围变更以及对项目的影响<br>To identify scope change and its impact on the project </li>
+							<li>
+								<input type="radio"> C：指示项目团队开始满足额外需求<br>To instruct the project team to start meeting additional
+								requirements </li>
+							<li>
+								<input type="radio"> D：更新项目管理计划和风险登记册<br>To update the project management plan and Risk Register </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：项目经理对实施整合变更控制承担最终责任，必需识别变更的原因及影响，并充分了解。并且额外需求属于对项目范围的变更，任何变更需要遵守整体变更流程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm77">
+					<div class="st_content_txt_tm">
+						<span>77、</span>
+
+						完成一个项目的第一个可交付成果后，一位相关方告知该可交付成果不满足业务需求。
+						项目经理下一步应该怎么做？<br>After completion of a project’s first deliverable,a stakeholder advises that it does not
+						fulfill the business requirements.What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查工作分解结构(WBS)字典<br>Review the work breakdown structure(WBS) dictionary. </li>
+							<li>
+								<input type="radio"> B：提交一份变更请求，以增加时间修正可交付成果<br>Submit a change request to add time to fix the
+								deliverable. </li>
+							<li>
+								<input type="radio"> C：执行确认范围过程<br>Perform the Validate Scope process. </li>
+							<li>
+								<input type="radio"> D：更新项目管理计划<br>Update the project management plan. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P163-5.5 确认范围是验收可交付成果的前提。相关方的说法需要先确认一下，要将结果和范围对比，即C。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm78">
+					<div class="st_content_txt_tm">
+						<span>78、</span>
+
+						—家公司希望与供应商签订为期15年的合同，项目经理应建议哪种合同类型?<br>A company wants to sign a 15-year contract with the supplier. Which
+						type of contract should the project manager recommend? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：固定总价合同<br>FFP </li>
+							<li>
+								<input type="radio"> B：总价加激励费用合同<br>Total price plus incentive fee contract(TPPIF) </li>
+							<li>
+								<input type="radio"> C：工料合同(T&amp;M)<br>Time and material(T&amp;M) </li>
+							<li>
+								<input type="radio"> D：总价加经济价格调整合同<br>FP-EPA </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：卖方履约期将跨越几年时间，或将以不同货币支付价款。它是总价合同的一种类型，但合同中包含了特殊条款���允许根据条件变化，如通货膨胀、某些特殊商品的成本增加（或降低），以事先确定的方式对合同价格进行最终调整。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm79">
+					<div class="st_content_txt_tm">
+						<span>79、</span>
+
+						项目经理加入一个项目，该项目具有可能会发生变更的高层级需求。项目经理识别到工作说明书(SOW)包含一个粗略的预算估算。
+						项目经理应该为该项目选择以下哪一项合同？<br>A project manager joins a project with high-level requirements that are likely to
+						change.The project manager identifies that the statement of work(SOW) contains a rough budget estimate. What
+						type of contract should the project manager suggest for this project? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：成本加奖励费用合同(CPAF)<br>Cost plus award fee(CPAF) </li>
+							<li>
+								<input type="radio"> B：总价加经济价格调整合同(FP-EPA)<br>Fixed price with economic price adjustment(FP-EPA) </li>
+							<li>
+								<input type="radio"> C：工料合同(T&amp;M)<br>Time and material(T&amp;M) </li>
+							<li>
+								<input type="radio"> D：总价加激励费用合同(FPIF)<br>Fixed price incentive fee(FPIF) </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK（6）P472-12.1.1.6 成本加奖励费用合同。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm80">
+					<div class="st_content_txt_tm">
+						<span>80、</span>
+
+						负责管理一个IT开发项目的项目经理发现，一个分包商提供的一些代码不符合项目质量标准。如果没有额外的付款保障并延长时间表，分包商拒绝更改可交付成果，而且在几周内就必须举行客户汇报会。
+						项目经理应该怎么做？<br>A project manager working on an IT development project discovers that some codes supplied by a
+						subcontractor fails to conform to project quality standards.The subcontractor refuses to change deliverables
+						without additional payment guarantees and extended timelines.A client debriefing is due in a few weeks.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将汇报会延期<br>Delay the debrief. </li>
+							<li>
+								<input type="radio"> B：暂停向该分包商付款<br>Suspend payments to the subcontractor. </li>
+							<li>
+								<input type="radio"> C：与该分包商达成妥协<br>Reach a compromise with the subcontractor. </li>
+							<li>
+								<input type="radio"> D：对该分包商提起法律行动<br>Initiate legal action against the subcontractor. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：控制采购是管理采购关系，监督合同绩效，实施必要的变更和纠偏，以及关闭合同的过程。本过程的主要作用是，确保买卖双方履行法律协议，满足项目需求。题目里分包商不符合质量标准，理解为不符合合同所要求的质量标准，构成违约，应该采用法律行动，维护合法权益。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm81">
+					<div class="st_content_txt_tm">
+						<span>81、</span>
+
+						一家组织正在签订一个重要的研发医疗保健项目，该项目的范围很可能会发生变化。由于可能对患者产生影响，可交付成果的验收标准非常重要，需要聘请一个供应商来支持这个项目。
+						项目经理应该建议哪一种合同类型？<br>An organization is entering onto a major R&amp;D health-care project for-which the scope
+						has a high probability of changing. The deliverable acceptance criteria is important due to possible impacts
+						on patients. A vendor needs to be hired to support this project.Which type of contract should the project
+						manager recommend? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：总价加激励费用合同(FPIF) <br>Fixed price incentive fee(FPlF) </li>
+							<li>
+								<input type="radio"> B：成本加激励费用合同(CPIF)<br>Cost plus incentive fee(CPIF) </li>
+							<li>
+								<input type="radio"> C：工料合同(T&amp;M)<br>Time and material(T&amp;M) </li>
+							<li>
+								<input type="radio"> D：成本加奖励费用合同(CPAF)<br>Cost plus award fee(CPAF) </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：解析：
+						Pmbok 12.1.1.6 合同类型 因为范围会发生变化，所以需要选择成本类合同，AC排除，另外由于验收标准非常重要，所以为了使供应商更快更好的完成，所以选择激励合同。故选B </div>
+
+				</div>
+				<div class="st_content_txt" id="tm82">
+					<div class="st_content_txt_tm">
+						<span>82、</span>
+
+						项目计划从另一个国家空运关键项目材料。但是，由于该地区发生重大火山爆发事件导致航班暂停两周时间，因此延迟交付。
+						若要解决这个风险并将项目带回正轨，项目经理应该怎么做？<br>Critical project materials are scheduled for delivery by air freight from
+						another country. However there is a delay in the delivery, because a major volcanic eruption in that region
+						caused flights to be suspended for two weeks.
+						What should the project manager do to resolve this and bring the project back on track? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更换供应商并从其他国家采购材料<br>Change suppliers and purchase materials from other countries.
+							</li>
+							<li>
+								<input type="radio"> B：要求供应商设法找到另一种交付方法<br>Ask the supplier to find an alternative delivery method. </li>
+							<li>
+								<input type="radio"> C：要求供应商支付延迟成本<br>&gt;Ask the supplier to pay delay cost. </li>
+							<li>
+								<input type="radio"> D：修订项目进度计划并请求延期<br>Revise the project schedule and request an extension. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：Pmbok 12.3.1.3 协议
+						协议是双方之间达成的谅解，包括对各方义务的一致理解。对照相关协议，确认其中的条款和条件的遵守情况。首先，火山爆发属于不可抗力，其次B更加直面问题。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm83">
+					<div class="st_content_txt_tm">
+						<span>83、</span>
+
+						项目经理与第三方供应商签订在六个月内交付零件的协议，项目在实施阶段被取消了。但是，供应商已经开始这个订单的工作了。
+						项目经理下一步应该怎么做？<br>A project manager has an agreement with a third-party supplier to deliver parts within six
+						months. During the implementation phase, the project is cancelle However, the supplier has already started
+						work on this order.
+						What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查合同的终止条款 <br>Review the contract's termination clause, </li>
+							<li>
+								<input type="radio"> B：进行供应商绩效评估<br>Conduct a supplier performance evaluation, </li>
+							<li>
+								<input type="radio"> C：指示供应商立即停止工作<br>Direct the supplier to stop work immediately. </li>
+							<li>
+								<input type="radio"> D：更新采购管理计划<br>Update the procurement management plan. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK489 12.3控制采购
+						协议中包含终止条款和替代争议解决方法。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm84">
+					<div class="st_content_txt_tm">
+						<span>84、</span>
+
+						项目经理发现由于一名资源过度承诺而导致一些任务未完成。项目经理意识到如果使用其他资源，将不影响到关键路径。项目经理应该采用什么来满足进度计划?<br>The project manager finds that some
+						resources were not completed due to an over-commitment of resources. The project manager is aware that if
+						other resources are used, it will not impact the critical path. What should the project manager use to meet
+						the schedule? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：假设情景分析<br>To assume the scenario analysis </li>
+							<li>
+								<input type="radio"> B：资源平衡<br>To balance resources </li>
+							<li>
+								<input type="radio"> C：快速跟进<br>To make a quick follow-up </li>
+							<li>
+								<input type="radio"> D：资源平滑<br>To smooth resources </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：题目强调将不影响到关键路径，即锁定答题区域为资源优化。其中资源平滑是一种资源优化技术，在不影响关键路径的情况下使用自由浮动时间和总浮动时间。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm85">
+					<div class="st_content_txt_tm">
+						<span>85、</span>
+
+						项目经理了解到项目进度的绩效指数(SPI)为0.77。项目经理应该怎么做？<br>The project manager knows that the schedule performance index (SPI)
+						is 0.77. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新成本基准<br>To update the cost baseline </li>
+							<li>
+								<input type="radio"> B：更新进度基准<br>To update the schedule baseline </li>
+							<li>
+								<input type="radio"> C：分析关键路径上的绩效<br>To analyze the performance on critical paths </li>
+							<li>
+								<input type="radio"> D：分析项目管理计划<br>To analyze the project management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：SPI即为进度绩效指数测量进度效率的一种指标，表示为挣值与计划价值之比。SPI小于1，为进度落后，需要分析关键路径上的绩效，进行相应的措施改进。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm86">
+					<div class="st_content_txt_tm">
+						<span>86、</span>
+
+						一个项目已完成工作的预算值低于经批准的计划工作预算。这描述的是哪一种项目情景？<br>A project work completed budget is lower than the value of the
+						approved work plan budget.What project scenario does this describe? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目的挣值(EV)大于计划价值(PV)<br>The earned value(EV) of the project is greater than the
+								planned value(PV). </li>
+							<li>
+								<input type="radio"> B：项目提前于进度<br>The project is ahead of schedule. </li>
+							<li>
+								<input type="radio"> C：项目活动落后于进度<br>Project activity is behind schedule. </li>
+							<li>
+								<input type="radio"> D：项目符合进度<br>The project is on schedule. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P226-6.6.2.1挣值分析。EV
+
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+				<div class="st_content_txt" id="tm87">
+					<div class="st_content_txt_tm">
+						<span>87、</span>
+
+						项目团队正在识别和评估一个项目的风险，该项目在范围和预算方面与上一个实施的一个项目类似。当前项目的主要区别在于可用资源更少。
+						在评估风险时，项目经理应该特别注意什么？<br>A project team is identifying and assessing risks of a project with similar scope
+						and budget of the one they implemented in the previous year. The primary difference in the current project
+						is that fewer resources will be available.
+						To what should the project manager pay particular attention when assessing the risk? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：进度计划<br>Schedule </li>
+							<li>
+								<input type="radio"> B：范围<br>Scope </li>
+							<li>
+								<input type="radio"> C：设计<br>Design </li>
+							<li>
+								<input type="radio"> D：风险登记册<br>Risk register </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK（6）P207-6.5制定进度计划。根据项目经验，组织过程资产作为制定进度计划的输入，资源不足，对进度影响最大。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm88">
+					<div class="st_content_txt_tm">
+						<span>88、</span>
+
+						一位团队成员通知项目经理，供应商延迟交付一个重要部件，由于潜在的影响，该团队成员希望项目经理允许直接通知发起人并生成与这种情况相关的警报。项目经理应该查阅哪一份计划？<br>A team member
+						notifies the project manager that an important component has been delayed by a vendor.Because of the
+						potential impact,the team member wants the project manager’s permission to inform the sponsor directly and
+						to generate an alert related to the situation. Which plan should the project manager review? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：采购管理计划<br>Procurement management plan </li>
+							<li>
+								<input type="radio"> B：沟通管理计划<br>Communications management plan </li>
+							<li>
+								<input type="radio"> C：相关方参与计划<br>Stakeholder’s engagement plan </li>
+							<li>
+								<input type="radio"> D：风险管理计划<br>Risk managemen plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK（6）P377-10.1.3.1规划沟通管理-沟通管理计划。描述将如何规划、结构化、执行与监督项目沟通，以提高沟通的有效性，包括上报的步骤。题目中，重要部件延迟交付已经成为事实，是问题不是风险。出现了延迟交付的问题，团队成员希望他可以直接向发起人报告，谁向谁怎么汇报是沟通问题。A：本题的重点是如何沟通，采购只是沟通的内容。C：本题的重点是沟通，不是相关方。D：本题的重点是沟通，不是从风险管理切入讨论问题的。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm89">
+					<div class="st_content_txt_tm">
+						<span>89、</span>
+
+						项目经理正在为相关方准备项目收尾演示，一位相关方曾有拒绝签署项目收尾的历史，在演示之前，项目经理应该怎么做？&lt;br/&gt;A project manager is preparing a project
+						closure presentation for stakeholders, One stakeholder has a history of refusing to sign off on project
+						closure. What should the project manager do prior to the presentation?<br> </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与该相关方交谈以了解任何疑虑&lt;br/&gt;Talk to the stakeholders to understand any concerns
+							</li>
+							<li>
+								<input type="radio"> B：要求所有相关方审查项目结果的详细报告&lt;br/&gt;Ask all stakeholders to review a detailed report of
+								project results </li>
+							<li>
+								<input type="radio"> C：准备对该相关方最可能关注的问题点做出回应&lt;br/&gt;Prepare a response to that stakeholders most
+								likely points of concern </li>
+							<li>
+								<input type="radio"> D：请项目发起人与该相关方进行交涉&lt;br/&gt;Ask the project sponsor to intervene with that
+								stakeholders </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：相关方问题，识别到一个可能阻碍项目的相关方，要管理相关方参与，即A。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm90">
+					<div class="st_content_txt_tm">
+						<span>90、</span>
+
+						基于不断变化的立法，项目团队识别到大量额外的需求，项目经理要求团队针对每个需求提交变更请求。项目经理下一步应该怎么做？&lt;br/&gt;Based on the changing legislation,the
+						project team identifies a large number of additional requirements,and the project manager asks the team to
+						submit a change request for each requirement.What should the project manager do next?<br> </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：变更范围和基准&lt;br/&gt; To change scope and benchmark<br> </li>
+							<li>
+								<input type="radio"> B：审查变更管理计划，并按该计划执行&lt;br/&gt;To review the change control plan and execute it as
+								per this plan </li>
+							<li>
+								<input type="radio"> C：安排召开变更控制委员会（CCB）会议，加快批准&lt;br/&gt;To arrange the Change Control Committee (CCB)
+								meeting to accelerate approval </li>
+							<li>
+								<input type="radio"> D：向发起人提交时间和成本偏差请求&lt;br/&gt;To submit the time and cost deviation requests to the
+								sponsor </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：解析：发生变更时，需要按照变更管理计划中的规定进行执行，B选项为通用答案，更加全面。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm91">
+					<div class="st_content_txt_tm">
+						<span>91、</span>
+
+						在结束采购并提供合同已完成的正式书面通知后,项目经理接下来应该做什么?&lt;br/&gt;After closing procurement and providing a formal written
+						notice that thecontract has been completed,what should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新经验教训登记册&lt;br/&gt;Update the lessons learned register </li>
+							<li>
+								<input type="radio"> B：通知相关方&lt;br/&gt;Inform the stakeholders </li>
+							<li>
+								<input type="radio"> C：启动采购审计&lt;br/&gt;Initiate procurement audits </li>
+							<li>
+								<input type="radio"> D：编写最终项目报告&lt;br/&gt;Write the final project report </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：解析：考查项目收尾阶段的输出，更新经验教训登记册。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm92">
+					<div class="st_content_txt_tm">
+						<span>92、</span>
+
+						按照最初的计划继续工作，同时认识到该项目的规模已经大到由指导委员会取代单一的项目发起人。项目经理应该怎么做来适应这种新发展？<br>Continue to work as originally planned,
+						recognizing that the project is large enough to be replaced by a single project sponsor by the Steering
+						Committee.What should the project manager do to accommodate the new development? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：认识到相关方结构发生了变化，并量身定做与这个团队的沟通<br>Recognize that there is a change in stakeholders
+								structure and tailor communications to this group </li>
+							<li>
+								<input type="radio"> B：继续按照初始计划工作，同时认识到项目现在包括其他相关方<br>Continue to work according to the initial plan
+								while recognizing that the project now includes additional stakeholders. </li>
+							<li>
+								<input type="radio"> C：为团队组织一次与新的指导委员会一起召开的会议，继续进行项目工作<br>Organize a meeting for the team with the new
+								steering committee and continue work on the project </li>
+							<li>
+								<input type="radio"> D：与新的委员会分享当前的状态报告<br>Share the current status report with the new committee </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：说明解析：PMBOK（6）P515-13.1.3.3识别相关方-项目管理计划更新。相关方发生了变化，先更新相关方登记册，因为相关方结构的变化必将引起沟通渠道的变化。选项B：其他相关方指什么，是指导员会从个人变成了团队，相关方还是指导员委员会，这个相关方应该作为一个整体。选项C：项目经理组织指导委员会一起开会，不现实，项目经理没有权限这么做。选项D：题目没有提到项目状态即状态报告。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm93">
+					<div class="st_content_txt_tm">
+						<span>93、</span>
+
+						一个项目经理完成一个主要的IT开发项目，项目经理与发布经理确认，所有系统都在工作，并且功能已经完成通过质量保证认证学习。通知客户后，项目经理下一步应该做什么？<br>A project manager
+						completes a major IT development projects.The project manager confirms with the release manager that all
+						systems are working and that functionality has been verified by the quality assurance learn.What should the
+						project manager do next after notifying the customer? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：以学习到的经验为基础更新组织知识库<br>Update the organizational knowledge base with the lessons
+								learned </li>
+							<li>
+								<input type="radio"> B：更新风险登记册、项目相关方和项目团队成员<br>Update the risk register,project stakeholders,and project
+								team members </li>
+							<li>
+								<input type="radio"> C：完成采购计划<br>Close out the procurement plan </li>
+							<li>
+								<input type="radio"> D：验证并完成发布文档<br>Verify and complete the release documentation </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：说明解析：PMBOK（6）P123-4.7结束项目或阶段。所有工作已经完成，通过质量保证认证学习，下一步结束项目，关闭项目，完成成果（文档）发布。选项A：更新组织知识库正确，但不仅仅以学习到的经验为基础，还应包括教训等。
+						选项B：项目完成不更新团队成员。 选项C：采购管理计划是规划采购过程的输出。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm94">
+					<div class="st_content_txt_tm">
+						<span>94、</span>
+
+						一个大型内容迁移项目的关键相关方对新系统的可行性表示怀疑，项目经理应该怎么做？&lt;br/&gt;The Key stakeholders of a large content migration project
+						express doubles about the viability of the new system.What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新沟通策略以说明这些问题&lt;br/&gt;update the communication strategies to address these
+								concerns </li>
+							<li>
+								<input type="radio"> B：指导该相关方支持新项目&lt;br/&gt;Instruct the stakeholder to support the new project </li>
+							<li>
+								<input type="radio"> C：与相关方举行一次研讨会，记录他们的期望、关切点和问题&lt;br/&gt;Hold a workshop with stakeholders to
+								document their expectations, concerns and issues </li>
+							<li>
+								<input type="radio"> D：开展组织意识宣传活动，以宣布内容的变化&lt;br/&gt;Conduct an Organizational awareness campaign to
+								announce content changes </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：解析：相关方问题，管理相关方参与。 会议用于讨论和处理任何与相关方参与有关的问题或关注点。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm95">
+					<div class="st_content_txt_tm">
+						<span>95、</span>
+
+						在一个价值50,000美元的项目中途，项目经理进行挣值分析(EVA)。结果显示计划价值(PV)为25,000美元，挣值(EV)为20,000美元，实际成本(AC)为15,000美元。根据这些结果，项目的状态是什么？<br>Midway
+						through a US$50,000 project manager conducts an earned value analysis(EVA). There results show that the
+						planned value (PV) is US$20,000, and the actual cost (AC) is US$15,000.
+						Based on these results, what is the project's status? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：落后于进度，并超出预算<br>Behind schedule and over budget </li>
+							<li>
+								<input type="radio"> B：落后于进度，但低于预算<br>Behind schedule and under budget </li>
+							<li>
+								<input type="radio"> C：超前于进度，并低于预算<br>Ahead of schedule and under budget </li>
+							<li>
+								<input type="radio"> D：超前于进度，但超出预算<br>Ahead of schedule and over budget </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：说明解析：PMBOK（6）P261-7.4.2.2控制成本-数据分析-挣值分析。CV=EV-AC=5000， SV=EV-PV=-5000。选项A：成本偏差CV大于0，没有超过预算。
+						选项C：进度偏差SV小于0，进度落后。 选项D：进度落后、低于预算，状态正好是反的。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm96">
+					<div class="st_content_txt_tm">
+						<span>96、</span>
+
+						项目经理接到来自供应商的电话，说由于工厂发生洪水，可交付成果将发生严重延期，项目经理下一步应该怎么做？<br>
+						The project manager received a call from the supplier saying that due to the flooding at the factory, the
+						deliverables would be seriously delaye What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：检查协议或采购订单<br>Check agreement or purchase order </li>
+							<li>
+								<input type="radio"> B：更新项目进度计划<br>Update the project schedule </li>
+							<li>
+								<input type="radio"> C：提交一份合同变更请求<br>Submit a contract change request </li>
+							<li>
+								<input type="radio"> D：确认工作说明书（SOW）<br>Confirm Statement Of Work </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：说明解析：洪水是自然灾害，检查合同/协议或采购订单中的不可抗力条款。选项B：不经过变更不能项目进度计划。
+						选项C：若合同规定了明确的不可抗力条款，执行即可，不用变更合同。选项D：工作说明书是采购前制定了，早已确认，选D不符合题目要求回答的内容。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm97">
+					<div class="st_content_txt_tm">
+						<span>97、</span>
+
+						在项目执行过程中，一位关键相关方对该项目经理实施一项风险规避策略的大量成本表示担心，项目经理应该告诉相关方什么信息？<br>During project execution, a key stakeholder
+						expresses concern about the significant cost of a risk avoidance strategy being implemented by the project
+						manager.What should the project manager tell the stakeholder? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：如果这个风险变为现实，则项目成本可能高于高风险规避策略的成本<br>If the risk is realized, the cost of the
+								project could be higher than the cost of the risk avoidance strategy </li>
+							<li>
+								<input type="radio"> B：这个风险变成现实的概率很高，因此风险规避成本是必要的<br>There is a high probability that the risk will be
+								realized an therefore, the risk avoidance counts
+								are necessary. </li>
+							<li>
+								<input type="radio"> C：这个风险在风险登记册中的优先级和影响均较高<br>The risk has a high priority and impact on the risk
+								register </li>
+							<li>
+								<input type="radio"> D：他们将终止风险规避策略以减少项目费用<br>They will terminate the risk avoidance strategy to reduce
+								project expense </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：说明解析：PMBOK（6）P447-11.5.2.4规划风险应对-规避。规避策略适用于发生概率较高，且具有严重负面影响的高优先级威胁。所以即使成本高也应该采取规避策略。选项A：题目没有提到风险变为现实的话，成本什么情况。
+						选项B：风险变成现实的概率很高，并不意味着规避成本必然高。选项D：不能因为成本高就采取风险应对措施，如果确实需要，还需采取规避的应对策略。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm98">
+					<div class="st_content_txt_tm">
+						<span>98、</span>
+
+						审查项目的高层级进度计划后，一位高级经理指出，项目经理对项目团队的核心工作时间所做的假设不正确。制定高层级项目进度计划时，项目经理应考虑什么？<br>After reviewing the project's
+						high-level schedule, a senior manager pointed out that the project manager's assumptions about the project
+						team's core working hours were incorrect. What should the project manager consider when developing a
+						high-level project schedule? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：风险因素<br>Risk factor </li>
+							<li>
+								<input type="radio"> B：组织文化<br>Organizational culture </li>
+							<li>
+								<input type="radio"> C：市场条件<br>Market conditions </li>
+							<li>
+								<input type="radio"> D：地理分布<br>Geographical distribution </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：说明解析：PMBOK（6）P78-4.1.1.3制定项目章程-事业环境因素。包括制约因素和相关方的期望和风险临界值即风险因素。高级经理指出项目团队的核心工作实践所做的假设不正确，假设不正确可能带来项目风险，因此要考虑风险因素。选项B：虽然也属于事业环境因素，但跟假设不正确关系不大。选项C：虽然也属于事业环境因素，但跟假设不正确关系不大。选项D：虽然也属于事业环境因素，但跟假设不正确关系不大。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm99">
+					<div class="st_content_txt_tm">
+						<span>99、</span>
+
+						公司的首席执行官每半年视察某个项目一次，若要确保与首席执行官的期望保持一致, 项目团队应该确认哪一项？<br>The company's CEO visits a project once every six
+						months. Which one should the project team confirm to ensure consistency with the CEO's expectations? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：相关方登记册<br>Related party register </li>
+							<li>
+								<input type="radio"> B：工作说明书（SOW）<br>Statement Of Work </li>
+							<li>
+								<input type="radio"> C：团队沟通模板<br>Team communication template </li>
+							<li>
+								<input type="radio"> D：项目预测文件<br>Project forecast file </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：说明解析：PMBOK（6）P512-13.1.3.1识别相关方-相关方登记册。包括相关方主要需求、期望等。选项B：SOW描述拟采购的产品、服务或成果，主要包括规格、所需数量、质量水平、绩效数据、履约期间、工作地点和其他要求等，不包括相关的期望。选项C：沟通模板记录相关方沟通的工具，与题目要求回答的内容不符。选项D：项目预测文件是项目监控文件，与题目要求回答的问题不符。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm100">
+					<div class="st_content_txt_tm">
+						<span>100、</span>
+
+						在制定资源管理计划时，一位项目经理得知，完成一项关键任务所需的技能组合供不应求且需求很高。项目经理将这个问题记录在资源管理计划中。若要包含这个问题，应该更新哪一份其他文件？<br>While developing
+						the resource management plan,a project manager learns that the skill not needed to complete a critical task
+						is in short supply and high demanThe project manager notes this in the resource management plan.Which other
+						file should I update to include this question? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：采购管理计划<br>Procurement management plan </li>
+							<li>
+								<input type="radio"> B：风险管理计划<br>Procurement management plan </li>
+							<li>
+								<input type="radio"> C：培训手册<br>Training manual </li>
+							<li>
+								<input type="radio"> D：团队开发过程<br>Team development process </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：定位：（理念）培训。 说明解析：所需技能供不应求且需求很高，就需要进行培训。选项A：采购管理计划是对采购的要求和规定，不包含培训内容和要求。
+						选项B：风险管理计划是对风险管理的规定，不包含培训内容和要求。选项D：团队开发过程与题目要求回答的内容不符。 </div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+
+</html>

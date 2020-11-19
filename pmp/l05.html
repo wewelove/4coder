@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>远程模考（一）</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<input id="bb" type="hidden" value="l05" />
+
+		<div class="fixed-top bg-white border-bottom">
+			<div class="container">
+				<a href="./index.html" class="float-left text-secondary">首页</a>
+				<a href="#dingbu" class="float-right text-secondary">顶部</a>
+				<h5 class="st_content_tit">范围管理</h5>
+				<div class="input-group mb-3">
+					<input type="number" class="form-control" id="search" placeholder="输入题号查询" />
+					<div class="input-group-append">
+						<button id="search-btn" class="btn btn-outline-secondary" type="button">查询</button>
+						<button id="reset-btn" class="btn btn-outline-secondary" type="button">重置</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="check_answer">
+			<div class="btn-group btn-group-sm">
+				<button id="czst" type="button" class="btn btn-danger">重做</button>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-secondary" id="check_wei">未</button>
+				<button type="button" class="btn btn-secondary" id="check_quan">全</button>
+				<button type="button" class="btn btn-secondary" id="check_dui">对</button>
+				<button type="button" class="btn btn-secondary" id="check_cuo">错</button>
+				<button type="button" class="btn btn-secondary" id="check_tong" data-toggle="modal" data-target="#tongji">统</button>
+			</div>
+		</div>
+
+		<div class="modal" id="tongji">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">统计信息</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>正确：<span id="t_dui"></span></p>
+						<p>错误：<span id="t_cuo"></span></p>
+						<p>未做：<span id="t_wei"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="dingbu" class="container">
+			<div class="st_danxuan" id="radio_anchor">
+				<div class="st_content_txt" id="tm1">
+					<div class="st_content_txt_tm">
+						<span>1、</span>
+
+						项目经理正在管理一个先进的计费系统项目。项目经理已经检查了现在的计费系统以及公司项目管理信息系统(PMIS)中的经验教训知识库。项目经理将可能收集更多的系统需求。项目经理下一步应该怎么做？<br>A project
+						manager is leading in a state-of-the art billing system project.The project manager has checked the existing
+						billing system,as well as the lessons learned repository in the company’s project management information
+						system(PMIS).The project manager would like to gather more system requirements.What should the project manager
+						do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：参考所有的行业最佳实践<br>Refer to existing industry best practices. </li>
+							<li>
+								<input type="radio"> B：咨询任何有经验的内部或外部团队<br>Consult any experienced internal or external group. </li>
+							<li>
+								<input type="radio"> C：与外部主题专家(SME)一起工作<br>Work with external subject matter experts(SMEs). </li>
+							<li>
+								<input type="radio"> D：与内部业务和技术支持资源一起工作<br>Work with internal business and technical support resources
+							</li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：排除法，A很难做不到，也没有必要，BCD都对时，就要排优先级，B相对全面。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm2">
+					<div class="st_content_txt_tm">
+						<span>2、</span>
+
+						项目团队正在努力进行可交付成果的工作，以满足计划的进度。一名团队成员发现范围蔓延正在影响项目成本。项目经理应该怎么做？<br>A project is working hard o deliverables to
+						meet the planned schedule.One team member identifies that scope creep is affecting project costs. What should
+						the project management do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：执行风险评估和范围变更管理程序<br>Perform risk assessment and scope change management procedures
+							</li>
+							<li>
+								<input type="radio"> B：允许范围蔓延，并与变更控制委员会(CCB)沟通以获得批准<br>Estimate the impact on the project and communicate
+								the findings to project stakeholders </li>
+							<li>
+								<input type="radio"> C：估算对项目的影响，并将结果传达给项目相关方<br>Estimate the impact on the project and communicate the
+								findings to project stakeholders </li>
+							<li>
+								<input type="radio"> D：调查为什么会发生范围蔓延，并立即启动变更管理程序<br>Investigate why scope creep occurred and immediately
+								initiate change management </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：题干描述范围蔓延，需要分析原因，根据情况启动变更流程。容易错选A，因为A具备风险评估，但是后半部分提到了范围变更管理程序，不太确切。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm3">
+					<div class="st_content_txt_tm">
+						<span>3、</span>
+
+						项目经理确信承包商正在请求项目范围之外的工作。
+						项目经理应该怎么做？<br>A project manager is convinced that a contract scope sprea
+						What should the project manager do ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与承包商一起审查范围说明书<br>Review the scope statement with the contractor. </li>
+							<li>
+								<input type="radio"> B：举行项目评审会议以解决项目团队的问题<br>Hold a project review meeting to address he issue with
+								project team. </li>
+							<li>
+								<input type="radio"> C：向发起人通知该问题<br>Inform the sponsor of the issue. </li>
+							<li>
+								<input type="radio"> D：创建变更请求<br>Create a change request. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：当对项目范围发生疑问时，应该首先查阅项目范围说明书。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm4">
+					<div class="st_content_txt_tm">
+						<span>4、</span>
+
+						项目经理加入一个新的价值数百万美元的项目，要求成功实施来自各部门的可交付成果。若要成功实施该项目，项目经理首先应该怎么做？<br>A project manager joins a new
+						multi-million-dollar project that requires deliverables from various departments to successfully
+						implement.What should the project manager do first to successfully implement the project? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：拜访客户以确保已为关键客户相关方识别到所有沟通渠道<br>Visit the client to ensure that all communication
+								channels have identified for key client stakeholders </li>
+							<li>
+								<input type="radio"> B：执行相关方分析并进行详细的需求会议<br>Perform a stakeholder analysis and conduct detailed
+								requirements sessions </li>
+							<li>
+								<input type="radio"> C：立即识别在该项目上工作的最佳资源<br>Immediately identity the best resource to work on the project
+							</li>
+							<li>
+								<input type="radio"> D：与已经成功向客户交付的外部供应商签订合同<br>Contract with an outside vendor who has already
+								successfully delivered to the client </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析： 想要成果实施可交付成果，必须要可以确认范围，想要确认范围必须要收集清楚需求。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm5">
+					<div class="st_content_txt_tm">
+						<span>5、</span>
+
+						项目经理与项目团队开会收集需求。团队成员向项目经理询问相关方是否熟悉项目的假设条件，制约因素和可交付成果。哪一份文件将概述这些信息？<br>The project manager meets with the
+						project team to gather requirements. Team members ask the project manager if the stakeholders are familiar
+						with the project assumptions, constraints, and deliverables. Which document will outline this information?<br>
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目范围说明书<br>Project scope statement </li>
+							<li>
+								<input type="radio"> B：工作说明书(SOW)<br>Statement of work( SOW) </li>
+							<li>
+								<input type="radio"> C：项目章程<br>Project charter </li>
+							<li>
+								<input type="radio"> D：建议邀请书(RFP)<br>Request for proposal(RFP) </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						项目章程是由项目启动者或发起人发布的，正式批准项目成立，并授权项目经理使用组织资源开
+						展项目活动的文件。它记录了关于项目和项目预期交付的产品、服务或成果的高层级信息。项目章程记录项目目的、项目概述、假设条件、制约因素，以及项目意图实现的高层级需求。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm6">
+					<div class="st_content_txt_tm">
+						<span>6、</span>
+
+						—个专业的项目团队正在管理一个大型项目。上个月，工程顾问提交了最初的设计计划给客户审查，项目经理得知该设计因未能满足客户需求而被拒绝。若要确保更有利的结果，项目经理应该事先做什么？<br>A specialized
+						project team is managing a large project last month engineering consultant submitted the initial design
+						proposal for client review.The project manager learns that the design has been rejected for failing to satisfy
+						customer needs. </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：制定项目章程<br>Developed a project charter </li>
+							<li>
+								<input type="radio"> B：召开项目启动大会<br>Conducted a kick-off meeting </li>
+							<li>
+								<input type="radio"> C：创建需求跟踪矩阵<br>Created a requirement traceability matrix </li>
+							<li>
+								<input type="radio"> D：执行相关方分析<br>Performed a stakeholder analysis </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析:需求跟踪矩阵是把产品需求从其来源连接到能满足需求的可交付成果的一种表格。需求跟踪矩阵提供了在整个项目生命周期中跟踪需求的一种方法，有助于确保需求文件中被批准的每项需求在项目结束的时候都能交付。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm7">
+					<div class="st_content_txt_tm">
+						<span>7、</span>
+
+						一家公司正在冒险进入一项新业务，但之前在该市场中没有经验，项目经理应使用什么工具或技术来收集需求？<br>A company is venturing into a new business but has no
+						previous experience in that market. What tool or technique should the project manager use to collect
+						requirements? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：原型法<br>Prototypes </li>
+							<li>
+								<input type="radio"> B：专家判断<br>Expert judgement </li>
+							<li>
+								<input type="radio"> C：产品分析<br>Production analysis </li>
+							<li>
+								<input type="radio"> D：制定决策<br>Decision making </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：由于没有经验，没有可借鉴的组织过程资产。原型法是指在实际制造预期产品之前，先造出该产品的模型，并据此征求对需求的早期反馈。原型包括微缩产品、计算机生成的二维和三维模型、实体模型或模拟。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm8">
+					<div class="st_content_txt_tm">
+						<span>8、</span>
+
+						客户在用户测试期间同意最终产品，但现在却有另一种想法。若要解决这个问题，项目经理应该查阅哪一份文件？<br>The client agreed to the final product during user
+						testing, but is now having second thoughts.What should the project manager consult to resolve this issue?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：验收标准<br>Acceptance criteria </li>
+							<li>
+								<input type="radio"> B：质量管理计划<br>Quality management plan </li>
+							<li>
+								<input type="radio"> C：需求文件<br>Requirements documentation </li>
+							<li>
+								<input type="radio"> D：项目章程<br>Project charter </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：题目没说新想法，是要推翻之前的决定，还是增加新的需求。但不管何种情况，项目经理应查看需求文件，核实是否符合原定的需求。而答案A验收标准，是默认客户反悔，只考虑一种情况。由此，需求文件是必须查阅，而验收标准是可能查阅。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm9">
+					<div class="st_content_txt_tm">
+						<span>9、</span>
+
+						项目启动后，客户合并业务单位，并识别额外需求。项目经理下一步应该怎么做？<br>After the project is kicked off, the customer merges the business
+						units and identifies additional requirements. What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：暂停项目<br>To suspend the project </li>
+							<li>
+								<input type="radio"> B：识别范围变更以及对项目的影响<br>To identify scope change and its impact on the project </li>
+							<li>
+								<input type="radio"> C：指示项目团队开始满足额外需求<br>To instruct the project team to start meeting additional
+								requirements </li>
+							<li>
+								<input type="radio"> D：更新项目管理计划和风险登记册<br>To update the project management plan and Risk Register </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：项目经理对实施整合变更控制承担最终责任，必需识别变更的原因及影响，并充分了解。并且额外需求属于对项目范围的变更，任何变更需要遵守整体变更流程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm10">
+					<div class="st_content_txt_tm">
+						<span>10、</span>
+
+						完成一个项目的第一个可交付成果后，一位相关方告知该可交付成果不满足业务需求。
+						项目经理下一步应该怎么做？<br>After completion of a project’s first deliverable,a stakeholder advises that it does not
+						fulfill the business requirements.What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查工作分解结构(WBS)字典<br>Review the work breakdown structure(WBS) dictionary. </li>
+							<li>
+								<input type="radio"> B：提交一份变更请求，以增加时间修正可交付成果<br>Submit a change request to add time to fix the
+								deliverable. </li>
+							<li>
+								<input type="radio"> C：执行确认范围过程<br>Perform the Validate Scope process. </li>
+							<li>
+								<input type="radio"> D：更新项目管理计划<br>Update the project management plan. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P163-5.5 确认范围是验收可交付成果的前提。相关方的说法需要先确认一下，要将结果和范围对比，即C。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm11">
+					<div class="st_content_txt_tm">
+						<span>11、</span>
+
+						项目经理正在执行一个涉及不同业务部门的全公司项目。在一次规划会议上，项目经理注意到每个部门的具体需求不能引起其他部门的兴趣，这影响到会议的质量。
+						若要解决这个问题，项目经理应该怎么做？<br>A project manager is running a company-wide project involving different business
+						units.During a planning session, the project manager notices that each unit's specific requirements are of no
+						interest to other units, which affects the quality of the meeting.
+						What should the project manager use to resolve specific this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：石川图和需求跟踪矩阵<br>ishikawa diagram and requirements traceability matrix </li>
+							<li>
+								<input type="radio"> B：焦点小组会议和思维导图<br>Focus groups and mind mapping </li>
+							<li>
+								<input type="radio"> C：引导和亲和图<br>Facilitation and affinity diagram </li>
+							<li>
+								<input type="radio"> D：头脑风暴和需求跟踪矩阵<br>Brainstorming and requirements traceability matrix </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：Pmbok P145
+						引导。引导与主题研讨会结合使用，把主要相关方召集在一起定义产品需求。研讨会可用于快速定义跨职能需求并协调相关方的需求差异。因为具有群体互动的特点，有效引导的研讨会有助于参与者之间建立信任、改进关系、改善沟通，从而有利于相关方达成一致意见。此外，与分别召开会议相比，研讨会能够更早发现并解决问题。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm12">
+					<div class="st_content_txt_tm">
+						<span>12、</span>
+
+						一个设施改善项目即将完成。客户提供了批准，但注意到一些小缺陷并激活保修程序，客户现在对已移交的设备要求额外批准的范围。项目经理即将开始额外范围的工作。
+						由于保修程序已生效，项目经理应查阅哪一份计划？<br>A facility improvement project is near completion. The client provided, but noted
+						some minor defects and activated the warranty. The client now requests additional approved scope to equipment
+						that has already been handed over. The project manager is about to start work on the additional scope.
+						Since the warranty is in effect, what plan should the project manager consult? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：质量管理计划<br>Quality management plan. </li>
+							<li>
+								<input type="radio"> B：变更管理计划<br>Change management plan. </li>
+							<li>
+								<input type="radio"> C：采购管理计划<br>Procurement management plan. </li>
+							<li>
+								<input type="radio"> D：需求管理计划<br>Requirement management plan. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P169-5.6.1.1项目管理计划。范围变更的指导计划，是项目管理计划——范围管理计划——变更管理计划。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm13">
+					<div class="st_content_txt_tm">
+						<span>13、</span>
+
+						一家公司计划扩大其公司网站的服务范围。项目经理开始根据批准的项目章程收集详细的需求。
+						项目经理应该怎么做才能就项目的可交付成果达成一致意见？<br>A company plans to expand the service scope of its corporate website. The
+						project manager starts to collect detailed requirements based on the approved project charter.
+						What should the project manager do to reach a group consensus on the project’s deliverabies? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与相关方和主题专家(SMEs)—起召开焦点小组会议<br>Conduct a focus group with stakeholders and subject
+								matter experts(SMEs). </li>
+							<li>
+								<input type="radio"> B：与关键相关方一起使用引导技术<br>Use facilitation skills with key stakeholders. </li>
+							<li>
+								<input type="radio"> C：与相关方一起进行头脑风暴<br>Brainstorm with the stakeholders. </li>
+							<li>
+								<input type="radio"> D：访谈关键相关方和发起人，以获取有关需求的更多信息<br>Interview key stakeholders and sponsors to obtain
+								additional information about requirements. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：Pmbok P145 5.2收集需求的工具和技术
+						引导与主题研讨会结合使用，把主要相关方召集在一起定义产品需求。研讨会可用于快速定义跨职能需求并协调相关方的需求差异。因为具有群体互动的特点，有效引导的研讨会有助于参与者之间建立信任、改进关系、改善沟通，从而有利于相关方达成一致意见。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm14">
+					<div class="st_content_txt_tm">
+						<span>14、</span>
+
+						在项目执行期间，团队识别到几个变更请求，其中包括项目成功所需的功能，这些功能未能包含在需求跟踪矩阵中。
+						若要避免这种情况，项目经理事先应该做什么？<br>During project execution, the learn identifies several change requests that include
+						functionality needed for project success. These failed to be included the requirements traceability matrix.
+						To avoid this, what should the project manager do beforehand? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：创建工作分解结构(WBS) <br>Created a work breakdown structure (WBS) </li>
+							<li>
+								<input type="radio"> B：定义范围<br>defined the scope </li>
+							<li>
+								<input type="radio"> C：核实范围<br>Validated the scope </li>
+							<li>
+								<input type="radio"> D：控制范围<br>Contro11ed the scope </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P150-5.3 需求跟踪矩阵是定义范围的输出项。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm15">
+					<div class="st_content_txt_tm">
+						<span>15、</span>
+
+						项目经理与相关方一起召开一次引导式研讨会，以收集产品需求并制定需求跟踪矩阵。系统开发人员无法参加该研讨会，但请求一份会议记录以审查和确认输出。看完会议记录后，系统开发人员反馈说列出的功能需求与用户的需求无关。
+						若要解决这种情况，项目经理应该怎么做？<br>A project manager facilitate a workshop with stakeholders to gather product
+						requirements and develop a requirements traceability matrix. The system developer was unable to attend the
+						workshop, but requested a copy of the minutes to review and validate the output. The system developer then
+						provides feedback that the listed functional requirements do not make sense when competed against the user
+						requirements.
+						What should the project manager do to address this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：建议系统开发人员参与下次审查会议<br>Advice the system developer to attend the next review meeting.
+							</li>
+							<li>
+								<input type="radio"> B：通知系统开发人员与用户一起审查需求<br>Inform the system developer to review the requirements with
+								users. </li>
+							<li>
+								<input type="radio"> C：更新需求跟踪矩阵以包含需求的相关关系<br>Update the requirements traceability matrix to include the
+								relevant relationships of the requirements. </li>
+							<li>
+								<input type="radio"> D：要求系统开发人员提交变更请求<br>Ask the system developer to submit a change request. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：Pmbok P148 5.2.3.2 需求跟踪矩阵
+						需求跟踪矩阵是把产品需求从其来源连接到能满足需求的可交付成果的一种表格。使用需求跟踪矩阵，把每个需求与业务目标或项目目标联系起来，有助于确保每个需求都具有商业价值。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm16">
+					<div class="st_content_txt_tm">
+						<span>16、</span>
+
+						一家工程咨询公司的设计师已完成设计开发并发布设计用于生产，在核实可交付成果过程中发现设计标准发生了变化，已生产的可交付成果不符合新标准。
+						若要避免这个问题，项目经理应该事先实施哪个规划过程？<br>A designer for an engineering consulting company has completes the design and
+						releases it for production. During the deliverable verification process, it is discovered that the design
+						standard was changed, and that the produced deliverable fails to comply with it.
+						What planning process should the project manager have implemented to avoid this issue? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目整合管理<br>Project Integration Management </li>
+							<li>
+								<input type="radio"> B：控制质量<br>Control Quality </li>
+							<li>
+								<input type="radio"> C：规划范围管理<br>Plan Scope Management </li>
+							<li>
+								<input type="radio"> D：规划质量管理<br>Plan Quality Management </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C。解析：PMBOK（6），P155,项目范围说明书中包含了验收标准。此题为变更的验收标准没有落实到供应商处，属于范围失控。故选C </div>
+
+				</div>
+				<div class="st_content_txt" id="tm17">
+					<div class="st_content_txt_tm">
+						<span>17、</span>
+
+						项目发起人通知项目经理，即使已完成的项目符合进度计划，在预算范围满足范围需求，但客户对最终产品感到不满意。若要避免这种情况，项目经理应该事先做什么？<br>The project sponsor informs a
+						project manager that even though a completed project was on schedule, within budget, and met scope
+						requirements, the customer is unsatisfied with the final product. What should the project manager have done to
+						avoid this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：在制定质量管理计划的同时安排更多的会议<br>Scheduled more meetings while developing a quality
+								management plan. </li>
+							<li>
+								<input type="radio"> B：确保可交付成果符合质量控制测量结果中列出的要求<br>Ensure that deliverables meet the requirements listed in
+								the quality control measurements. </li>
+							<li>
+								<input type="radio"> C：实施石川图工具<br>Implement the Ishikawa diagram tool. </li>
+							<li>
+								<input type="radio"> D：完成需求跟踪矩阵<br>Complete the requirements traceability matrix. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D。解析：PMBOK（5），P138，进度和预算均符合要求，但客户不满意，应是范围不满足，也就是客户需求跟踪落实不到位，应提前完成需求跟踪矩阵。故选D。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm18">
+					<div class="st_content_txt_tm">
+						<span>18、</span>
+
+						—家跨国公司的组织单位有大量的产品增强功能待办事项，这些产品增强功能是暂时保留的用户故事。待批准的预算申请在上周获得批准。作为初始程序的一部分，新指派的项目经理应该做什么？<br>An organization unit
+						of a multinational corporation has a very large backing of product enhancements described as user stories on
+						hol The pending budget was approved last week.
+						What should the newly assigned project manager do as part of initial procedures? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：记录项目生命周期和方法讨论需求<br>Document the project life cycle and methodology requirements
+							</li>
+							<li>
+								<input type="radio"> B：为所有用户故事制定一份进度计划<br>Prepare a schedule for all user stories </li>
+							<li>
+								<input type="radio"> C：对所有用户故事执行风险评估<br>Performa a risk assessment of at user stories </li>
+							<li>
+								<input type="radio"> D：根据以前相同产品的项目分配资源<br>Assign resource based on previous projects for the same product
+							</li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK（6）P145-5.2.2.6人际关系与团队技能-用户故事。用户故事是对所需功能的简短文字描述，经常产生于需求研讨会。用户故事描述哪个相关方将从功能中受益（角色），他需要实现什么（目标），以及他期望获得什么
+						利益（动机），通常采用敏捷开发方法。选项BC：“为所有用户故事”错误。选项D：“根据以往相同产品的项目”错误，每个项目具有独特性，经验不能照搬复用。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm19">
+					<div class="st_content_txt_tm">
+						<span>19、</span>
+
+						项目经理与项目相关方和团队成员开会，审查范围管理计划、批准的章程和其他需求文档、专家判断和引导技术用于制定所需产品的详细描述。项目经理还应使用哪一项其他输入？<br>A project manager meets
+						with project stakeholders and team members to review the scope management plan,the approved charter,and other
+						requirements documentation.Expert judgement and facilitation are used to develop a detailed description of the
+						product required.
+						What other input should the project manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：过往项目的经验教训<br>Lessons learned register from previous projects </li>
+							<li>
+								<input type="radio"> B：假设日志<br>Assumption log </li>
+							<li>
+								<input type="radio"> C：相关方登记册<br>Stakeholder register </li>
+							<li>
+								<input type="radio"> D：需求跟踪矩阵<br>Requirements traceability matrix </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：解析：PMBOK（6）P150-5.3定义范围。输入项目章程、项目管理计划、需求文件、假设日志、风险登记册等项目文件、事业环境因素和组织过程资产。选项A：过往的经验教训已经考虑到需求文档中了。
+						选项C：相关方登记册不是定义范围过程的输入。 选项D：需求跟踪矩阵不是定义范围过程的输入。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm20">
+					<div class="st_content_txt_tm">
+						<span>20、</span>
+
+						项目经理负责管理一个处于执行阶段的项目，并希望审查项目范围以进行成本结算，项目经理发现在工作分解结构(WBS)中遗漏了一项可交付成果。项目经理下一步应该怎么做？<br>A project manager assumes
+						a project during its execution stage and wants to review the project scope for cost settlement.The project
+						manager discovers that some deliverables were missed in the work breakdown structure(WBS).What should the
+						project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：询问相关方是否需要添加这些遗漏的可交付成果<br>Ask the stakeholders if these missed deliverables need to
+								be added </li>
+							<li>
+								<input type="radio"> B：请求项目管理办公室(PMO)批准这顼工作的额外资金<br>Request that the project management office(PMO)
+								approve additional funds for this work </li>
+							<li>
+								<input type="radio"> C：根据100%的规则将工作添加到WBS中，并重新计算项目总成本<br>Add the work to the WBS according to the 100
+								percent rule and recalculate the total project cost </li>
+							<li>
+								<input type="radio"> D：要求主题专家(SMEs)检查这些可交付成果是否有必要<br>Ask subject matter experts(SMEs) to check whether
+								these deliverables are necessary </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P167-5.6控制范围。监督项目和产品的范围状态，管理范围基准变更。在整个项目期间保持对范围基准的维护，且需要在整个项目期间开展。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm21">
+					<div class="st_content_txt_tm">
+						<span>21、</span>
+
+						项目经理被任命管理一个现有项目，需要了解项目可交付成果，项目经理应该参考下列哪一份文件？<br>A project manager is assigned to an existing project and needs
+						to understand the project deliverables. The project manager should refer to which of the following? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目章程<br>Project charter </li>
+							<li>
+								<input type="radio"> B：项目需求规范<br>Project requirements specification </li>
+							<li>
+								<input type="radio"> C：项目范围说明书<br>Project scope statement </li>
+							<li>
+								<input type="radio"> D：项目进度表<br>Project schedule </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C。
+						解析：PMBOK（6）P151-5.3.3.1项目范围说明书包括了产品范围描述、验收标准、可交付成果、除外责任、制约因素和假设条件。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm22">
+					<div class="st_content_txt_tm">
+						<span>22、</span>
+
+						项目经理正在努力识别一个大型项目的完整范围。项目经理应该审查什么？<br>A project manager is struggling to identify the complete scope of a large
+						project. What should the project manager review? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目进度计划<br>Project schedule </li>
+							<li>
+								<input type="radio"> B：工作分解结构(WBS)和排列活动顺序<br>Work breakdown structure (WBS) and sequence activities </li>
+							<li>
+								<input type="radio"> C：网络图<br>Network diagram </li>
+							<li>
+								<input type="radio"> D：项目章程和需求文档<br>Project charter and requirements documentation </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D。
+						解析：PMBOK（6）P150-5.3 图表。考点是定义范围的输入。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm23">
+					<div class="st_content_txt_tm">
+						<span>23、</span>
+
+						一名工程师正在从事一个设施升级项目。在项目可交付成果目的说明会上，承包商询问了多个工程师无法回答的问题。会议结束后，工程师让承包商根据他们自已对可交付成果的理解提交建议书。若要获得更为明确的可交付成果愿景，项目经理应事先完成哪一项？<br>An
+						engineer is conducting a facility upgrade project. During a meeting to explain the intent of the deliverable,
+						contractors ask multiple questions that the engineer is unable to answer. At the end of the meeting, the
+						engineer asks the contractors to submit proposals based on their own understanding of the deliverable.
+						What should the project manager have completed to obtain a clearer vision of the deliverable? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：工作分解结构(WBS)<br>Work breakdown structure(WBS) </li>
+							<li>
+								<input type="radio"> B：项目管理计划<br>Project management plan </li>
+							<li>
+								<input type="radio"> C：项目范围<br>Project scope </li>
+							<li>
+								<input type="radio"> D：项目章程<br>Project charter </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C。
+						解析：PMBOK（6）P154，项目范围说明书是对项目范围、主要可交付成果、假设条件和制约因素的描述。本题问的是甲方的PM本应该事先完成而没有完成哪一项。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm24">
+					<div class="st_content_txt_tm">
+						<span>24、</span>
+
+						项目经理应使用什么工具来向客户证明最终产品需求满足业务需求？<br>What tool should the project manager use to demonstrate to the customer that
+						the final product meets the business needs? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：工作分解结构<br>Work breakdown structure </li>
+							<li>
+								<input type="radio"> B：项目范围说明书<br>Project scope statement </li>
+							<li>
+								<input type="radio"> C：需求跟踪矩阵<br>Requirements traceability matrix </li>
+							<li>
+								<input type="radio"> D：项目管理计划<br>Project management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C。
+						解析：PMBOK（6）P148-5.2.3.2需求跟踪矩阵是把产品需求从其来源连接到能满足需求的可交付成果的一种表格。需求跟踪矩阵提供了在整个项目生命周期中跟踪需求的一种方法，有助于确保需求文件中被批准的每项需求在项目结束的时候都能交付。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm25">
+					<div class="st_content_txt_tm">
+						<span>25、</span>
+
+						创建工作分解结构（WBS）时，项目经理必须分解一项名为“招标”的任务。项目经理使用什么来进一步细分任务？<br>While creating a work breakdown structure (WBS), a
+						project manager must decompose a task titled “solicit bids.”What can the project manager use to further
+						subdivide the task? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：石川图<br>Ishikawa diagram </li>
+							<li>
+								<input type="radio"> B：关键链法(CCM)<br>Critical chain method (CCM) </li>
+							<li>
+								<input type="radio"> C：专家判断<br>Expert judgment </li>
+							<li>
+								<input type="radio"> D：类比估算<br>Analogous estimating </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C。
+						解析：PMBOK（6）P156-5.4图表。考点创建WBS的工具—专家判断。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm26">
+					<div class="st_content_txt_tm">
+						<span>26、</span>
+
+						项目经理已经在一个项目上工作了三个月，该项目是关于在公司的网站上发布了一个新功能，然而，一位关键相关方感到不满，因为可交付成果未能满足他们的期望。
+						项目经理应该参考什么文件？<br>A project manager has been working for three months on a project to launch a new
+						functionality in a company’s website.However,a key stakeholder is dissatisfied because the deliverable fails
+						to meet their expectations.
+						What document should the project manager consult? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：范围管理计划<br>Scope management plan </li>
+							<li>
+								<input type="radio"> B：项目范围说明书<br>Project scope statement </li>
+							<li>
+								<input type="radio"> C：需求跟踪矩阵<br>Requirements traceability matrix </li>
+							<li>
+								<input type="radio"> D：需求文件<br>Requirements documentation </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P148-5.2.3.2需求跟踪矩阵连接需求与项目目标。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm27">
+					<div class="st_content_txt_tm">
+						<span>27、</span>
+
+						项目经理了解到，一名团队成员变更客户需求以提供更高价值，并且实施这一变更的工作已经开始，项目经理应该怎么做？<br>A project manager learns that a learn member changed
+						a customer requirement to provide higher value and that work to implement this change has already starteWhat
+						should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将该问题上报给项目发起人<br>Escalate the issue to the project sponsor. </li>
+							<li>
+								<input type="radio"> B：指示该团队成员立即修改工作，满足客户的原始需要<br>Direct the team member to immediately revise their work
+								to meet the customer’s original requirement. </li>
+							<li>
+								<input type="radio"> C：指示该团队成员停止对变更的工作，直到收到变更控制委员会(CCB)的批准<br>Instruct the team member to stop working on
+								the change until receipt of change control board(CCB)approval. </li>
+							<li>
+								<input type="radio"> D：批准该变更，并将其记录在变更日志中<br>Approve the change and document it in the change log. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：5.6 控制范围
+						镀金，当出现镀金或范围蔓延时，项目经理应指示立即停止超出的工作，直到变更通过 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm28">
+					<div class="st_content_txt_tm">
+						<span>28、</span>
+
+						一个大型项目正处于收尾阶段，客户拒绝签署同意项目可交付成果，提及之前从未讨论过的需求，项目经理要求与客户开会，以讨论该问题。在会议之前应该查阅下列哪一项？<br>A large project is in its
+						closure phase, The client refuses to sign off on project deliverables, cititing requirements that were not
+						previously discussed, The project manager requests a meeting with the client to discuss the issue. What should
+						be consulted prior to this meeting? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：工作绩效数据<br>Work performance data </li>
+							<li>
+								<input type="radio"> B：验收标准<br>Acceptance criteria </li>
+							<li>
+								<input type="radio"> C：经验教训储存库<br>Lessons learned repository </li>
+							<li>
+								<input type="radio"> D：需求跟踪矩阵<br>Requirements traceability matrix </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：5.2.3.2 需求跟踪矩阵
+						需求跟踪矩阵是把产品需求从其来源连接到能满足需求的可交付成果的一种表格。
+						是否是新的需求，可以通过查看需求跟踪矩阵得知。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm29">
+					<div class="st_content_txt_tm">
+						<span>29、</span>
+
+						一个组织变更管理项目包含来自不同部门的相关方，项目经理与所有相关方访谈，以收集项目需求，但有些需求似乎不切实际并且超出范围。项目经理应该怎么做？<br>An organizational change
+						management project includes stakeholders from various departments, and the project manager interviews all
+						stakeholders to collect project requirements, but some appear to be unrealistic and out of scope. What should
+						a project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：记录需要澄清和分析的所有需求<br>Document all requirements to be clarified and analyzed </li>
+							<li>
+								<input type="radio"> B：从需求文件中排除低层级需求<br>Exclude the low-level requirements from the requirements document
+							</li>
+							<li>
+								<input type="radio"> C：将所有需求包含进工作说明书(SOW)中<br>included all requirements in the statement of work (SOW)
+							</li>
+							<li>
+								<input type="radio"> D：更新相关方登记册以包含这些需求<br>Update the stakeholders register to include the requirements
+							</li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：不是所有需求都要满足和实现，要管理和筛选。A没有问题；需求只分必要不必要，不分低级高级；C本末倒置；D杜撰。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm30">
+					<div class="st_content_txt_tm">
+						<span>30、</span>
+
+						在项目执行期间，项目发起人通知项目经理，现金流制约因素已经导致原始预算资金不可用。项目发起人修改资金可用性，并要求项目经理继续执行已减少活动的项目。项目经理首先应该做什么？<br>During project
+						execution,a project sponsor informs the project manager that cash flow constraints have caused the originally
+						budgeted funds to become unavailable.The project sponsor revises fund availability and asks the project
+						manager to continue the project with reduced activities.What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：生成变更请求<br>Generate a change request. </li>
+							<li>
+								<input type="radio"> B：更新项目管理计划<br>Update to project management plan. </li>
+							<li>
+								<input type="radio"> C：更新工作分解结构(WBS)&nbsp;<br>Update the work breakdown structures (WBS). </li>
+							<li>
+								<input type="radio"> D：接受请求并继续执行项目<br>Accept the request and continue the project. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：活动减少，即削减范围（是预算不够的正确做法），但削减范围属于范围变更，必须走变更流程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm31">
+					<div class="st_content_txt_tm">
+						<span>31、</span>
+
+						在项目执行两年后，项目经理确信项目范围将按照承诺交付，项目团队按计划工作，所有问题都得到迅速解决，在完成日期前两个月，首席执行官命令执行一项范围变更，项目经理应该怎么做？<br>Two years after the
+						project was implemented,the project manager is confident that the scope will be delivered as promised,The team
+						is working as planned, and all issues are resolved quickly. Two months before the completion date, the CEO
+						orders a change in scope. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：因为会对进度和预算产生负面影响，建议首席执行官重新考虑该范围变更<br>Suggest that the CEO reconsider the scope
+								change due to negative impact on schedule and budget </li>
+							<li>
+								<input type="radio"> B：向首席执行官询问该范围变更的原因，讨论潜在影响，然后采取适当的措施<br>Ask the CEO about the reasons for the scope
+								change, discuss the potential impact, and then take appropriate steps </li>
+							<li>
+								<input type="radio"> C：告知首席执行官，必须通过适当的渠道进行该范围变更<br>Inform the CEO that the scope change must be done
+								through the proper channels </li>
+							<li>
+								<input type="radio"> D：向前推进并按要求记录该范围变更<br>Move forward and document the scope change as required </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：范围变更，走变更流程。
+						5.6.3.2 变更请求
+						变更请求需要经过实施整体变更控制过程（见 4.6 节）的审查和处理 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm32">
+					<div class="st_content_txt_tm">
+						<span>32、</span>
+
+						在执行一个新产品开发项目期间，一位关键相关方要求添加一项功能，项目经理下一步应该怎么做？<br>During the execution of a new product development project, a
+						key stakeholder requests the addition of a feature. What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：分析该变更的影响<br>Analyze the impact of the change </li>
+							<li>
+								<input type="radio"> B：更新变更日志<br>Update the change log </li>
+							<li>
+								<input type="radio"> C：拒绝该变更<br>Reject the change </li>
+							<li>
+								<input type="radio"> D：寻求项目发起人的批准<br>seek the sponsor’s approval </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：变更问题，走变更流程，A符合。B更新变更日志多在变更批准或否决之后。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm33">
+					<div class="st_content_txt_tm">
+						<span>33、</span>
+
+						一家公司计划改进其计算机系统，为其用户提供增值功能。项目经理需要从位于全球各地的大量员工那里收集需求，并且需要快速周转。项目经理应该怎么做？<br>A company plans to revamp its
+						computer system to provide value-added features for its clients.The Project managers needs to collect
+						requirements from a large number of staff members located globally,and a quick turnaround is required, What
+						should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：要求所有相关方参与虚拟研讨会 <br>Invite all stakeholders to a virtual workshop </li>
+							<li>
+								<input type="radio"> B：与选中的客户一起召开现场研讨会<br>Organize on-site workshop with selected clients </li>
+							<li>
+								<input type="radio"> C：向海外员工分发问卷调查 <br>Distribute questionnaires and surveys to overseas staff </li>
+							<li>
+								<input type="radio"> D：确保收集需求符合时间限制<br>Ensure that collecting requirements will meet the time constraints
+							</li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK-5.2.2.2。向大量受众收集需求，用问卷调查。题目关键词是收集需求，定位于收集需求过程组，怎么做则是问的工具技术，题目中面向全球各地大量员工且要需要快速周转，完全符合问卷调查的特征，受众多且多样，地理位置分散，需要快速完成，选择C最为方便且能解决问题。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm34">
+					<div class="st_content_txt_tm">
+						<span>34、</span>
+
+						准备验收文件时，项目经理意识到未能包含两个功能。开发人员表示，虽然这些功能不完整，但客户不会注意到。公司需要为该开发项目开具发票并收取付款，以支付未来六个月的工资。项目经理应该怎么做？<br>While
+						preparing the acceptance document, the project manager realized that two features failed to be include The
+						Developer states that although these features are incomplete, the customers will not notice. The company needs
+						to invoice and receive payments for this project to cover salaries for the next six months. What should a
+						project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：根据开发人员的意见准备验收文件<br>Prepare the acceptance documents based on the developer’s
+								comment </li>
+							<li>
+								<input type="radio"> B：在准备验收文件之前包含这些功能<br>Include the features prior to preparing the acceptance document
+							</li>
+							<li>
+								<input type="radio"> C：审查需求管理计划<br>Review the requirements management plan </li>
+							<li>
+								<input type="radio"> D：提交变更请求<br>Submit a change requests </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：5.5确认范围，本题为职业道德问题，不能欺骗客户，有错必改。题目中表示发现功能不完整，项目范围有遗失，需要提变更请求进行补救，开发人员的说法不符合情理，道德问题，A错误，B是变更请求被批准之后的事情，题目中已发现，C不需要再去审查需求，D为正确选项。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm35">
+					<div class="st_content_txt_tm">
+						<span>35、</span>
+
+						在项目章程获得批准,实施新的会计制度之后，项目经理试图了解会计部门的结构和流程。项目经理下一步应该创建什么？<br>Following project charter approval to implement a
+						new accounting system.the project manager tries to understand the accounting department’s structure and
+						processes.What should the project manager create next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目基准<br>Project baseline </li>
+							<li>
+								<input type="radio"> B：范围管理计划<br>Scope management plan </li>
+							<li>
+								<input type="radio"> C：商业案例<br>Business case </li>
+							<li>
+								<input type="radio"> D：项目范围说明书<br>Project scope statement </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：pmbok p82 制定项目管理计划是定义、准备和协调项目计划的所有组成部分，并把它们整合为一份综合项目
+						管理计划的过程。创建项目章程之后，就是开始创建项目管理计划，只有B选项是项目管理计划的子计划。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm36">
+					<div class="st_content_txt_tm">
+						<span>36、</span>
+
+						一个项目刚刚完成启动阶段，项目经理正在开始该项目的需求收集过程。相关方都位于同一地点，但来自优先级有冲突的不同部门。之前的项目经理经常被要求在执行阶段包含新的范围，导致项目预算的计划外增加并延长商定的进度计划。在满足所有相关方需求的同时，项目经理应该如何及时收集需求？<br>A
+						project manager is beginning the requirements gathering process lot a project that has just completed the
+						initiation phase. Project stakeholders are all in the same location but come from different departments with
+						conflicting priorities. Previous project managers have often been required to include new scope during the
+						execution phase, causing unplanned increase to the project budget and delaying the upon schedule, what should
+						the project manager do to gather the requirements in a timely manner while meeting the needs of all
+						stakeholders? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与所有相关方一起召开需求收集会议，以记录初始范围，然后将其分解为可完成的小部分可管理工作<br>Conduct a requirements gathering
+								session with all stakeholders to document the initial scope and then break it into smaller pieces of
+								manageable work that can be completed </li>
+							<li>
+								<input type="radio"> B：与所有项目相关方一起召开需求收集会议，以记录全部需求，然后关闭项目工作说明书 (SOW)并拒绝任何新需求<br>Conduct a requirements
+								gathering session with all stakeholders to document full requirements, then close the statement of work
+								(SOW) and reject any new requirements </li>
+							<li>
+								<input type="radio"> C：分别与最重要的相关方开会进行需求收集，然后仅在工作说明书中更新这些相关方的新需求<br>Individually Meet with the most
+								important stakeholders for requirements gathering , then update the SOW with new requirements only from
+								these stakeholders </li>
+							<li>
+								<input type="radio"> D：单独与所有相关方开会以记录范围，然后通过变更请求过程处理任何其他高优先级需求<br>individually meet with all stakeholders
+								to document the scope, and then handle any additional high-priority requirements through the change
+								request process </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：pmbok p138-5.2收集需求。收集需求是为实现目标而确定、记录并管理相关方的需要和需求的过程。题目中问的是如何收集需求，按排除法来选只有A最合适。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm37">
+					<div class="st_content_txt_tm">
+						<span>37、</span>
+
+						在一个软件项目章程获得批准后，项目经理计划收集相关方、解决方案以及产品需求。两位关键相关方离开项目，由位于不同时区的人员取代。若要完成需求跟踪矩阵，项目经理应该怎么做？<br>After a software
+						project charter is approved, the project manager plans to gather stakeholders , solutions and product
+						requirements. Two key stakeholders leave the project and are replaced by people located in different time
+						zones. What should the project manager do to complete the requirements traceability matrix? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：使用名义小组技术收集多个地区的意见<br>Use the nominal group technique to collect multiple location
+								inputs </li>
+							<li>
+								<input type="radio"> B：安排一次联合应用设计(JAD)研讨会<br>Facilitate a joint application design (JAD) workshop </li>
+							<li>
+								<input type="radio"> C：举行多次虚拟会议<br>Conduct multiplhold virtual meetings </li>
+							<li>
+								<input type="radio"> D：执行站点顺序需求审查<br>Perform site-sequential requirements reviews </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK5.2.2 收集需求：工具与技术，引导。如何向众多相关方收集需求，用引导式研讨会,B是引导式研讨会的一种具体实践方法， </div>
+
+				</div>
+				<div class="st_content_txt" id="tm38">
+					<div class="st_content_txt_tm">
+						<span>38、</span>
+
+						项目团队已完成项目管理计划中的所有可交付成果。该团队期待尽快做出收尾决定。但是,项目经理正在努力向相关方证明该决定的合理性。
+						若要避免这个问题,项目经理应该事先做什么?<br>The project team has completed all the deliverables in the project management
+						plan.The team is expecting a closure decision to be made soon. However,the project manager is struggling to
+						justify the decision with the stakeholders.
+						What should the project manager have done to avoid this issue? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：定义项目可交付成果的验收标准<br>Defined the project deliverable's acceptance criteria。 </li>
+							<li>
+								<input type="radio"> B：确认满足发起人的期望<br>Verified that the sponsor's expectations were met。 </li>
+							<li>
+								<input type="radio"> C：在进入最终产品阶段之前解决所有客户投诉<br>Addressed all customer complaints before going into the
+								final product phase. </li>
+							<li>
+								<input type="radio"> D：确保最终产品符合承诺的业务价值<br>Ensure that the end product complied with the committed business
+								value. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参见PMBOK第6版5.5.2.1确认范围：工具与技术。检查是指开展测量、审查与确认等活动，来判断工作和可交付成果是否符合需求和产品验收标准。在收尾前，确认范围。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm39">
+					<div class="st_content_txt_tm">
+						<span>39、</span>
+
+						一个虚拟项目团队的成员在不同地点工作。一名团队成员错过其任务完成日期。项目经理发现该团队成员在添加一个其认为客户想要的小功能。
+						项目经理应该做什么?<br>A virtual project team has members working in different locations.One team has missed their
+						task's completion date.The project manager discovers that this team member has been adding a small few feature
+						that they believethe client will want.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：支持该团队成员的主动思考,并将新功能添加到可交付成果的范围中<br>Support the team member's proactive thinking,and
+								add the new feature to
+								the deliverable's scope. </li>
+							<li>
+								<input type="radio"> B：要求该团队成员停止新功能的相关工作,并核实可交付成果的范围<br>Ask the team member to discontinue work on the new
+								feature,and validate thedeliverable's scope. </li>
+							<li>
+								<input type="radio"> C：让团队集中办公,以确保尽快完成任务<br>Co-locate the team to ensure that the task is completed as
+								soon as possible. </li>
+							<li>
+								<input type="radio"> D：提出一项变更请求,以将新功能包含在范围中<br>Raise a charge request to include the new feature in the
+								scope. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：团队成员在没有变更和规划的情况下，不应接受客户的蔓延需求。此时应该重新核实可交付成果范围，及时拉回正轨。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm40">
+					<div class="st_content_txt_tm">
+						<span>40、</span>
+
+						项目经理正在领导一个涉及跨职能需求和变更的新项目,一些关键相关方正在抵制这些变更,项目经理应该做什么?<br>A project manager is leading a new project that
+						involved cross-functionalrequirements and changes.Some key stakeholders are resisting the changes.What should
+						the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：收集相关方需求<br>Gather stakeholder requirements. </li>
+							<li>
+								<input type="radio"> B：请项目管理办公室(PMO)协助<br>Ask the project management office(PMO) for assistance. </li>
+							<li>
+								<input type="radio"> C：举行引导式研讨会<br>Conduct a facilitation workshop. </li>
+							<li>
+								<input type="radio"> D：计划团队建设练习<br>Plan a team-building exercise. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：5.2.2.6引导，引导式研讨会可用于快速定义跨职能需求并协调相关方的需求差异。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm41">
+					<div class="st_content_txt_tm">
+						<span>41、</span>
+
+						一个产品按时按成本交付，并满足质量期望。但是，项目团队不确定生产的产品是否满足客户需求。下列哪一项说明了这种情况？<br>A product is delivered on time, delivered within
+						cost, and meets quality expectations. However, the project team is not sure if the product produced meet the
+						client’s requirements. Which of the following explains this situation? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：相关方之间的沟通不良<br>There was poor communication among stakeholders </li>
+							<li>
+								<input type="radio"> B：项目章程不完善<br>Project chart was incomplete </li>
+							<li>
+								<input type="radio"> C：在需求识别阶段未使用专家判断<br>Expert judgment was not used during the requirement
+								identification phase </li>
+							<li>
+								<input type="radio"> D：未更新需求跟踪矩阵<br>Requirements traceability matrix was not being updated </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：需求跟踪矩阵：把产品需求从其来源连接到能满足需求的可交付成果的一种表格。 </div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+
+</html>

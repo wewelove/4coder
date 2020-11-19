@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>远程模考（一）</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<input id="bb" type="hidden" value="l12" />
+
+		<div class="fixed-top bg-white border-bottom">
+			<div class="container">
+				<a href="./index.html" class="float-left text-secondary">首页</a>
+				<a href="#dingbu" class="float-right text-secondary">顶部</a>
+				<h5 class="st_content_tit">采购管理</h5>
+				<div class="input-group mb-3">
+					<input type="number" class="form-control" id="search" placeholder="输入题号查询" />
+					<div class="input-group-append">
+						<button id="search-btn" class="btn btn-outline-secondary" type="button">查询</button>
+						<button id="reset-btn" class="btn btn-outline-secondary" type="button">重置</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="check_answer">
+			<div class="btn-group btn-group-sm">
+				<button id="czst" type="button" class="btn btn-danger">重做</button>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-secondary" id="check_wei">未</button>
+				<button type="button" class="btn btn-secondary" id="check_quan">全</button>
+				<button type="button" class="btn btn-secondary" id="check_dui">对</button>
+				<button type="button" class="btn btn-secondary" id="check_cuo">错</button>
+				<button type="button" class="btn btn-secondary" id="check_tong" data-toggle="modal" data-target="#tongji">统</button>
+			</div>
+		</div>
+
+		<div class="modal" id="tongji">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">统计信息</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>正确：<span id="t_dui"></span></p>
+						<p>错误：<span id="t_cuo"></span></p>
+						<p>未做：<span id="t_wei"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="dingbu" class="container">
+			<div class="st_danxuan" id="radio_anchor">
+				<div class="st_content_txt" id="tm1">
+					<div class="st_content_txt_tm">
+						<span>1、</span>
+
+						客户拒绝了一项交付成果，因为它不符合约定的质量规格，项目团队调查该问题，并确定供应商提供的零件有问题，供应商拒绝纠正这种情况。项目经理应该审查什么？<br>A customer rejects a deliverable
+						because it fails to meet the agreed-upon quality specifications.The project team investigates the issue and
+						determines that vendor-provided parts are of fault.What should the project manager review? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与供应商建立的服务水平协议(SLA)<br>Service level agreement (SLA) established with the vendor
+							</li>
+							<li>
+								<input type="radio"> B：采购管理计划和合同协议<br>Procurement management plan and contract agreements </li>
+							<li>
+								<input type="radio"> C：内部质量保证报告<br>Internal quality assurance reports </li>
+							<li>
+								<input type="radio"> D：资源管理计划<br>Resource management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：审查采购管理计划，采购管理计划规定了在控制采购过程中需要开展的活动，包括管理供应商关系。索赔管理前，需审查合同协议相关条款。
+						A不全面。
+						C题目已交付经调查零件质量有问题，不需再怀疑。
+						D供应商虽然外部资源，但纳入细分的采购领域。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm2">
+					<div class="st_content_txt_tm">
+						<span>2、</span>
+
+						项目经理想要采购一些定制产品，且可以从多个供应商处获得相同等级和质量的定制产品。若要确保他们的报价具有可比性，采购包中应包含哪些内容？<br>The project manager wants to procure
+						some customized products that are available in identical grade and quality from multiple vendors. What should
+						be included in the procurement package to ensure that their offers will be comparable? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：定制产品的成本估算<br>A cost estimate of the customized products. </li>
+							<li>
+								<input type="radio"> B：详细说明所需产品必须属性和测量指标的工作说明书(SOW)<br>A statement of work (SOW) specifying the required
+								attributes and metrics of requested products </li>
+							<li>
+								<input type="radio"> C：经批准的项目范围说明书，工作分解结构(WBS)和WBS词典<br>The approved project scope statement, work
+								breakdown structure(WBS), and WBS dictionary </li>
+							<li>
+								<input type="radio"> D：风险管理计划以及风险管理审查报告<br>The risk management plan, and reports from risk management
+								reviews </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：供应商交付的产品一样，价格才有可比性。SOW就是对供应商交付物的说明。依据项目范围基准，为每次采购编制工作说明书（SOW），仅对将要包含在相关合同中的那一部分项目范围进行定义。工作说明书会充分详细地描述拟采购的产品、服务或成果，以便潜在卖方确定是否有能力提供此类产品、服务或成果。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm3">
+					<div class="st_content_txt_tm">
+						<span>3、</span>
+
+						—家公司希望与供应商签订为期15年的合同，项目经理应建议哪种合同类型?<br>A company wants to sign a 15-year contract with the supplier. Which
+						type of contract should the project manager recommend? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：固定总价合同<br>FFP </li>
+							<li>
+								<input type="radio"> B：总价加激励费用合同<br>Total price plus incentive fee contract(TPPIF) </li>
+							<li>
+								<input type="radio"> C：工料合同(T&amp;M)<br>Time and material(T&amp;M) </li>
+							<li>
+								<input type="radio"> D：总价加经济价格调整合同<br>FP-EPA </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：卖方履约期将跨越几年时间，或将以不同货币支付价款。它是总价合同的一种类型，但合同中包含了特殊条款，允许根据条件变化，如通货膨胀、某些特殊商品的成本增加（或降低），以事先确定的方式对合同价格进行最终调整。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm4">
+					<div class="st_content_txt_tm">
+						<span>4、</span>
+
+						项目经理加入一个项目，该项目具有可能会发生变更的高层级需求。项目经理识别到工作说明书(SOW)包含一个粗略的预算估算。
+						项目经理应该为该项目选择以下哪一项合同？<br>A project manager joins a project with high-level requirements that are likely to
+						change.The project manager identifies that the statement of work(SOW) contains a rough budget estimate. What
+						type of contract should the project manager suggest for this project? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：成本加奖励费用合同(CPAF)<br>Cost plus award fee(CPAF) </li>
+							<li>
+								<input type="radio"> B：总价加经济价格调整合同(FP-EPA)<br>Fixed price with economic price adjustment(FP-EPA) </li>
+							<li>
+								<input type="radio"> C：工料合同(T&amp;M)<br>Time and material(T&amp;M) </li>
+							<li>
+								<input type="radio"> D：总价加激励费用合同(FPIF)<br>Fixed price incentive fee(FPIF) </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK（6）P472-12.1.1.6 成本加奖励费用合同。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm5">
+					<div class="st_content_txt_tm">
+						<span>5、</span>
+
+						负责管理一个IT开发项目的项目经理发现，一个分包商提供的一些代码不符合项目质量标准。如果没有额外的付款保障并延长时间表，分包商拒绝更改可交付成果，而且在几周内就必须举行客户汇报会。
+						项目经理应该怎么做？<br>A project manager working on an IT development project discovers that some codes supplied by a
+						subcontractor fails to conform to project quality standards.The subcontractor refuses to change deliverables
+						without additional payment guarantees and extended timelines.A client debriefing is due in a few weeks.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将汇报会延期<br>Delay the debrief. </li>
+							<li>
+								<input type="radio"> B：暂停向该分包商付款<br>Suspend payments to the subcontractor. </li>
+							<li>
+								<input type="radio"> C：与该分包商达成妥协<br>Reach a compromise with the subcontractor. </li>
+							<li>
+								<input type="radio"> D：对该分包商提起法律行动<br>Initiate legal action against the subcontractor. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：控制采购是管理采购关系，监督合同绩效，实施必要的变更和纠偏，以及关闭合同的过程。本过程的主要作用是，确保买卖双方履行法律协议，满足项目需求。题目里分包商不符合质量标准，理解为不符合合同所要求的质量标准，构成违约，应该采用法律行动，维护合法权益。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm6">
+					<div class="st_content_txt_tm">
+						<span>6、</span>
+
+						一家组织正在签订一个重要的研发医疗保健项目，该项目的范围很可能会发生变化。由于可能对患者产生影响，可交付成果的验收标准非常重要，需要聘请一个供应商来支持这个项目。
+						项目经理应该建议哪一种合同类型？<br>An organization is entering onto a major R&amp;D health-care project for-which the scope
+						has a high probability of changing. The deliverable acceptance criteria is important due to possible impacts
+						on patients. A vendor needs to be hired to support this project.Which type of contract should the project
+						manager recommend? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：总价加激励费用合同(FPIF) <br>Fixed price incentive fee(FPlF) </li>
+							<li>
+								<input type="radio"> B：成本加激励费用合同(CPIF)<br>Cost plus incentive fee(CPIF) </li>
+							<li>
+								<input type="radio"> C：工料合同(T&amp;M)<br>Time and material(T&amp;M) </li>
+							<li>
+								<input type="radio"> D：成本加奖励费用合同(CPAF)<br>Cost plus award fee(CPAF) </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：解析：
+						Pmbok 12.1.1.6 合同类型 因为范围会发生变化，所以需要选择成本类合同，AC排除，另外由于验收标准非常重要，所以为了使供应商更快更好的完成，所以选择激励合同。故选B </div>
+
+				</div>
+				<div class="st_content_txt" id="tm7">
+					<div class="st_content_txt_tm">
+						<span>7、</span>
+
+						项目计划从另一个国家空运关键项目材料。但是，由于该地区发生重大火山爆发事件导致航班暂停两周时间，因此延迟交付。
+						若要解决这个风险并将项目带回正轨，项目经理应该怎么做？<br>Critical project materials are scheduled for delivery by air freight from
+						another country. However there is a delay in the delivery, because a major volcanic eruption in that region
+						caused flights to be suspended for two weeks.
+						What should the project manager do to resolve this and bring the project back on track? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更换供应商并从其他国家采购材料<br>Change suppliers and purchase materials from other countries.
+							</li>
+							<li>
+								<input type="radio"> B：要求供应商设法找到另一种交付方法<br>Ask the supplier to find an alternative delivery method. </li>
+							<li>
+								<input type="radio"> C：要求供应商支付延迟成本<br>&gt;Ask the supplier to pay delay cost. </li>
+							<li>
+								<input type="radio"> D：修订项目进度计划并请求延期<br>Revise the project schedule and request an extension. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：Pmbok 12.3.1.3 协议
+						协议是双方之间达成的谅解，包括对各方义务的一致理解。对照相关协议，确认其中的条款和条件的遵守情况。首先，火山爆发属于不可抗力，其次B更加直面问题。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm8">
+					<div class="st_content_txt_tm">
+						<span>8、</span>
+
+						项目经理与第三方供应商签订在六个月内交付零件的协议，项目在实施阶段被取消了。但是，供应商已经开始这个订单的工作了。
+						项目经理下一步应该怎么做？<br>A project manager has an agreement with a third-party supplier to deliver parts within six
+						months. During the implementation phase, the project is cancelle However, the supplier has already started
+						work on this order.
+						What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查合同的终止条款 <br>Review the contract's termination clause, </li>
+							<li>
+								<input type="radio"> B：进行供应商绩效评估<br>Conduct a supplier performance evaluation, </li>
+							<li>
+								<input type="radio"> C：指示供应商立即停止工作<br>Direct the supplier to stop work immediately. </li>
+							<li>
+								<input type="radio"> D：更新采购管理计划<br>Update the procurement management plan. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK489 12.3控制采购
+						协议中包含终止条款和替代争议解决方法。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm9">
+					<div class="st_content_txt_tm">
+						<span>9、</span>
+
+						在创建采购管理计划时，项目经理发现组织内部存在的某些资源正在为其他项目效力，项目经理应该怎么做来满足这种需求？<br>While creating a procurement management plan, a
+						project manager discovers that certain resources that exist within the organization are committed to other
+						projects. What should the project manager do to meet this need? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：开展自制或外购分析<br>Perform a make-or-buy analysis. </li>
+							<li>
+								<input type="radio"> B：创建工作分解结构（WBS）<br>Create a work breakdown structure(WBS). </li>
+							<li>
+								<input type="radio"> C：制定风险登记册<br>Develop a risk register. </li>
+							<li>
+								<input type="radio"> D：开始人员分配谈判<br>Start negotiations for staff assignments. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK（6）P473-12.1.2.3规划采购管理-自制或外购分析。制定自制或外购决策时应考虑的因素包括：组织当前的资源配置及其技能和能力、对专业技术的需求、不愿承担永久雇佣的义务，以及对独特技术专长的需求；还要评估与每个自制或外购决策相关的风险。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm10">
+					<div class="st_content_txt_tm">
+						<span>10、</span>
+
+						项目经理正在管理价值300万美元、涉及两个供应商的项目。项目经理为每名供应商创建了一份工作说明书(SOW)。下列哪一项需要SOW的信息?<br>The project manager is managing a $3
+						million project involving two vendors.The project manager created a Statement Of Work (SOW) for each supplier.
+						Which of the following requires SOW information? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：风险管理计划<br>Risk management plan </li>
+							<li>
+								<input type="radio"> B：合同<br>Contract </li>
+							<li>
+								<input type="radio"> C：采购管理计划<br>Procurement management plan </li>
+							<li>
+								<input type="radio"> D：供应商范围说明书<br>Supplier scope statement </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：说明解析：PMBOK（6）P477-12.1.3.4规划采购管理-采购工作说明书。充分详细描述拟采购品的性质、买方需求、或拟采用的合同形式。工作说明书包括规格、所需数量、质量水平、绩效依据、履约时间、工作地点和其他要求，包括合同构成的主要内容。选项A：风险管理计划不需要SOW做输入。选项C：采购工作说明书是规划采购管理过程的输出，采购管理计划包含要在采购过程中开展的各种活动及规定，SOW不是输入。
+						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						&nbsp;选项D：SOW中包括在合同中的部分才进行项目范围定义，供应商的范围说明书中体现包括在合同中的SOW内容，所以选B合适。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm11">
+					<div class="st_content_txt_tm">
+						<span>11、</span>
+
+						项目经理正在领导一支团队开发新的在线银行应用程序。23个月后，团队支出100,000美元，剩余预算成本只有70,000美元。目标完成日期还有12个月，但是团队期望能在9个月内就能完成。一名团队成员发现一款成熟的现货产品满足所有项目规范，能够以60,000美元的价格购买到，且能够在八个月内实施。项目经理应该考虑什么？<br>A
+						project manager is leading a team developing a new online banking application. After 23 months, the team has
+						spent US$100,000 on development and has US$70,000 of the budgeted cost remaining. The targeted completion date
+						is 12 months away, but the team expects completion in nine months. A team member identifies a proven
+						off-the-shelf product that complies with all project specifications, can be purchased for US$60,000, and can
+						be implemented within eight months.
+						What should the project manager consider? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：完工尚需绩效指数<br>The to-complete performance index(TCPI) </li>
+							<li>
+								<input type="radio"> B：客户或项目发起人验收<br>Customer or project sponsor acceptance </li>
+							<li>
+								<input type="radio"> C：开发方面已支出的金额<br>The amount already spent on development </li>
+							<li>
+								<input type="radio"> D：自制或外购分析<br>Make-or-buy analysis </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D。
+						解析：PMBOK（6）P473-12.1.2.3 考虑直接购买现货还是自行开发完成，属于自制或外购分析。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm12">
+					<div class="st_content_txt_tm">
+						<span>12、</span>
+
+						项目经理正在规划一个大型采购活动，希望在提交建议书之前与所有潜在供应商沟通。项目经理使用什么工具或技术？<br>A project manager planning a large procurement
+						activity wants to communicate with all prospective vendors before submitting a proposal. What tool or
+						technique should the project manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：投标人会议<br>Bidder conference </li>
+							<li>
+								<input type="radio"> B：卖方投标分析<br>Vendor bid analysis </li>
+							<li>
+								<input type="radio"> C：自制或外购分析<br>Make-or-buy analysis </li>
+							<li>
+								<input type="radio"> D：采购审计<br>Procurement audit </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A。
+						解析：PMBOK（6）P487-12.2.2.3投标人会议（又称承包商会议、供货商会议或投标前会议）是在投标书或建议书提交之前，在买方和所有潜在卖方之间召开的会议。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm13">
+					<div class="st_content_txt_tm">
+						<span>13、</span>
+
+						在项目执行期间，项目团队发现一个供应商的可交付成果重复出现缺陷。项目经理应该怎么做？<br>During project execution, the project team finds repeated
+						defects with a supplier’s deliverables. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：执行质量审计<br>Perform a quality audit. </li>
+							<li>
+								<input type="radio"> B：与该供应商的高级管理层讨论该问题<br>Discuss the problem with the supplier’s senior management.
+							</li>
+							<li>
+								<input type="radio"> C：审查采购协议<br>Review the procurement agreement. </li>
+							<li>
+								<input type="radio"> D：与供应商一起创建变更请求<br>Create a change request with the supplier. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P496，供应商的可交付成果重复出现缺陷问题，应优先按照协议里的相关条款给予处理。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm14">
+					<div class="st_content_txt_tm">
+						<span>14、</span>
+
+						由于关键组件供应商的频繁失误，交付团队无法履行其承诺。客户对不断违反服务水平协议(SLA)的请求表示不满，若要解决这个问题，项目经理应该怎么做？<br>A delivery teams was unable to
+						keep its commitments due to frequent slippages from a key component vendor,The client is unhappy that requests
+						continuous breach the service level agreements (sla)，what should the project manager do to resolve this?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与其他供应商合作，部署新工具来管理项目里程碑和进度计划<br>Work with another vendor to deploy a new tool to
+								manage the project milestones and schedules </li>
+							<li>
+								<input type="radio"> B：请人力资源经理获取额外的外部资源<br>Ask the human resource manager to acquire additional external
+								resources </li>
+							<li>
+								<input type="radio"> C：与采购经理会面以审查供应商协议并釆取必要的措施<br>Meet with the procurement manager to review the vendor
+								agreements and take necessary actions </li>
+							<li>
+								<input type="radio"> D：与项目集经理讨论重新创建项目里程碑和项目计划<br>Speak with the program manager about recreating the
+								project milestones and schedules </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：供应商履行合同不力，应加强对供应商的管理。A需要变更流程；BD都没有针对供应商采取措施。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm15">
+					<div class="st_content_txt_tm">
+						<span>15、</span>
+
+						在项目执行过程中，项目经理发现供应的材料晚到，且在某些时候出现错误。项目经理应该怎么做？<br>During project execution,a project manager discovers that
+						supplied materials are arriving late,and in some instances are incorrect.What should the project manager do?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新质量计划<br>Update the quality plan. </li>
+							<li>
+								<input type="radio"> B：拒绝向供应商付款<br>Refuse to pay the supplier. </li>
+							<li>
+								<input type="radio"> C：执行风险分析<br>Perform a risk analysis. </li>
+							<li>
+								<input type="radio"> D：修改项目进度计划<br>Modify the project schedule plan. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：采购问题，没有合同选项，用排除法，可以当成风险来处理。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm16">
+					<div class="st_content_txt_tm">
+						<span>16、</span>
+
+						项目经理在预算范围内按时成功收尾项目，最终产品已移交运营并对适当的文件存档,几周后，供应商提供的一个部件发生故障，但仍在保修期内，运营经理致电项目经理并要求釆取纠正措施，包括使用剩余的项目预算来支付维修费用。项目经理下一步应该怎么做？<br>A
+						Project manager successfully closes out a project on time and under budge, the final product is transferred to
+						the operation and the proper paperwork is filed, a few weeks later, a vendor-supplied part breaks.but is still
+						under warranty, the operation manager calls the project manager and demands corrective actions, including
+						using the remaining project budget to pay for repairs. What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：重新审查项目，确定是否有足够的剩余资金来支付维修费用，并执行纠正措施<br>Reopen the project ’determine if there are
+								enough remaining funds to pay for repairs.and perform corrective actions </li>
+							<li>
+								<input type="radio"> B：建议运营经理审查采购文件，并遵循供应商合同中规定的保修索赔程序<br>Advise the operation manager to review the
+								procurement documents and follow warranty claim procedures as stated in the vendor’s contract </li>
+							<li>
+								<input type="radio"> C：要求法务部门对供应商采取法律行动，以赔偿与更换和安装部件相关的成本<br>Ask the legal department to take legal action
+								against the vendor for restitution of costs associated with replacement and installation of the part </li>
+							<li>
+								<input type="radio"> D：将问题升级上报给高级管理层，以防止运营经理可能采取任何可能的行动<br>Escalate the issue to senior management for
+								protection from any potential actions the operation manager may take </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：采购问题，首先查看合同。
+						12.3.3.1 采购关闭
+						买方通常通过其授权的采购管理员，向卖方发出合同已经完成的正式书面通知。关于正式关闭采购的要求，通常已在合同条款和条件中规定，并包括在采购管理计划中。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm17">
+					<div class="st_content_txt_tm">
+						<span>17、</span>
+
+						与供应商签订合同，开发一个对公司整体市场份额至关重要的软件包。在交付软件后，一位相关方通知项目经理需求未得到满足。若要避免这个问题，项目经理应该事先做什么？<br>A vendor contracted to
+						develop a software packages that is key to company’s overall market share.Upon delivery of the software, a
+						stakeholder inform the project manager that requirements were unmet. What should the project manager have done
+						to prevent this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将该供应商包含在需求开发中，并让他们签署需求文件<br>Included the vendor in the requirements development and
+								made them sign the requirements document </li>
+							<li>
+								<input type="radio"> B：根据采购管理计划监控供应商的活动<br>Monitor the vendor’s activities according to the purchasing
+								management plan </li>
+							<li>
+								<input type="radio"> C：聘请资源在内部生产产品，以确保完全控制输出<br>Hired resources to produce the product internally to
+								ensure complete control of the output </li>
+							<li>
+								<input type="radio"> D：为供应商的公司分配一名人员，以确保在整个开发过程中遵循需求<br>Assigned a resource to the vendor's company to
+								ensure that requirements were followed throughout the development </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：pmbok p492 控制采购。供应商交付的结果不符合要求，属于控制采购没有做好导致，B属于控制采购工作。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm18">
+					<div class="st_content_txt_tm">
+						<span>18、</span>
+
+						不确定项目开发时间时，必须避免预算偏差方面的风险。这应该使用哪一个合同类型？<br>When developing a project during an uncertain times, risks regarding
+						budget deviations must be avoide What type of contract should be used? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：总价加经济价格调整合同(FP-EPA)<br>Fixed price with economic price adjustment contract (FP-EPA)
+							</li>
+							<li>
+								<input type="radio"> B：工料合同(T&amp;M)<br>Time and Material (T&amp;M) </li>
+							<li>
+								<input type="radio"> C：总价加激励费用合同(FPIF)<br>Fixed price incentive fee (FPIF) </li>
+							<li>
+								<input type="radio"> D：成本加激励费用合同(CPIF)<br>Cost plus incentive fee (CPIF) </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：12.1规划采购管理。项目的持续时间不确定，意味着可能时间很长，又要风险低，用总价加经济价格调整合同。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm19">
+					<div class="st_content_txt_tm">
+						<span>19、</span>
+
+						项目经理从项目团队和供应商处收到一连串电子邮件,争论最近收到的一个可交付成果。项目团队认为该可交付成果未能满足特定需求,但供应商却坚持他们不知道这个需求。项目经理首先应该查阅哪份文件?<br>A project
+						manager receives a chain of e-mails from the project team and vendor,arguing about a recently received
+						deliverable.The project team believes that the deliverable fails to meet a specific requirement,but the vendor
+						maintains they are unaware of this requirement.To what should the project manager first refer? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：需求管理计划<br>Requirements management plan. </li>
+							<li>
+								<input type="radio"> B：工作分解结构(WBS)<br>Work Breakdown structure(WBS). </li>
+							<li>
+								<input type="radio"> C：沟通管理计划<br>Communication management plan. </li>
+							<li>
+								<input type="radio"> D：工作说明书(SOW)<br>Statement of works(SOW). </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK477 12.1.3.4 采购工作说明书
+						工作说明书会充分详细地描述拟采购的产品、服务或成果，以便潜在卖方确定是否有能力提供此类产品、服务或成果。工作说明书的内容包括：规格、所需数量、质量水平、绩效数据、履约期间、工作地点和其他要求。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm20">
+					<div class="st_content_txt_tm">
+						<span>20、</span>
+
+						一份设备报价邀请书(RFQ)在报纸上公布了。一些供应商要求举行投标前会议,一些供应商询问有关设备类型的问题,还有一家供应商提交的报价远低于公司估算的价格。若要避免这个问题,项目经理应该事先做什么?<br>A
+						request for quotation(RFQ) for equipment is published in a newspaper.Some vendors request pre-bid
+						conferences,some ask questions about the type of equipment,and one vendor submits a quote much lower than the
+						company estimate.What should the project manager have done to avoid this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：要求有更多此设备经验的供应商<br>Requested vendors with more experience with this equipment. </li>
+							<li>
+								<input type="radio"> B：延长提交报价的时间<br>Extended the time to submit quotations. </li>
+							<li>
+								<input type="radio"> C：遵循采购管理计划<br>Followed the procurement management plan. </li>
+							<li>
+								<input type="radio"> D：将所有详情包含进工作说明书(SOW)中<br>Included all details in the procurement statement of
+								work(SOW). </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：12.1.3.7
+						独立成本估算；对于大型的采购，采购组织可以自行准备独立估算，或聘用外部专业估算师做出成本估算，并将其作为评价卖方报价的对照基准。如果二者之间存在明显差异，则可能表明采购工作说明书存在缺陷或模糊，或者潜在卖方误解了或未能完全响应采购工作说明书。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm21">
+					<div class="st_content_txt_tm">
+						<span>21、</span>
+
+						在项目规划期间,项目经理希望将尽可能多的成本超支风险转移给供应商。项目经理应使用哪一个合同类型?<br>During the project planning,the project manager wants to
+						transfer as many cost overrun risks as possible to the supplier.What type of contract should the project
+						manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：固定总价(FFP)<br>Firm fixed price(FFP). </li>
+							<li>
+								<input type="radio"> B：总价加经济价格调整(FPEPA)<br>Fixed price with economic price adjustment(FPEPA). </li>
+							<li>
+								<input type="radio"> C：成本加激励费用(CPIF)<br>Cost plus incentive fee(CPIF). </li>
+							<li>
+								<input type="radio"> D：成本加固定费用(CPFF)<br>Cost plus fixed fee(CPFF). </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：12.1.1.6合同类型，甲方优选总价类合同，由于项目经理希望将尽可能多的风险转移给供应商，则固定总价合同最符合要求。题目中并未说明是长期或者与其他国家合作的项目，不选总价加经济价格调整合同。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm22">
+					<div class="st_content_txt_tm">
+						<span>22、</span>
+
+						一个项目需要进行在一个新国家销售产品的可行性研究,项目经理应该使用什么合同类型?<br>A project requires that a feasibility study be conducted for the
+						sale of
+						products in a new country.
+						What type of contract should the project manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：成本加奖励费用合同(CPAF)<br>Cost plus award fee(CPAF). </li>
+							<li>
+								<input type="radio"> B：成本加激励费用合同(CPIF)<br>Cost plus incentive fee(CPIF). </li>
+							<li>
+								<input type="radio"> C：工料合同(T&amp;M)<br>Time and material(T&amp;M). </li>
+							<li>
+								<input type="radio"> D：总价加经济价格调整合同(FP-EPA)<br>Fixed price with economic price adjustment(FP-EPA). </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：12.1.1.6工料合同适用于无法快速编制出准确的工作说明书的情况下扩充人员，聘请专家或寻求外部支持。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm23">
+					<div class="st_content_txt_tm">
+						<span>23、</span>
+
+						一个IT项目的客户坚持使用来自某个地区供应商的许可软件,在项目开始之前,合同中定义了不同的供应商和原产国。项目经理应该做什么?<br>The client for an IT project insists on
+						using licensed software from a
+						vendor from a certain region.A different vendor and country of origin weredefined in the contract prior to the
+						project's start.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与客户分享合同协议<br> Share the contract agreement with the client. </li>
+							<li>
+								<input type="radio"> B：通知客户已经采购该软件<br>Inform the client that the software was already purchase </li>
+							<li>
+								<input type="radio"> C：从采购团队获得该地区的软件供应商清单<br>Obtain a list of software vendors from that region from the
+								procurement team. </li>
+							<li>
+								<input type="radio"> D：提出一项变更请求,以符合客户的偏好<br>Initiate a change request to comply with the client's
+								preference. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：客户的要求与已签订的合同矛盾，先用合同来说服客户。PMBOK第6版12.2.3.2协议。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm24">
+					<div class="st_content_txt_tm">
+						<span>24、</span>
+
+						收到供应商建议书后，项目经理应使用什么来确保最低报价在当前市场范围内？<br>After receiving vendor proposals, what should a project manager use to
+						ensure that the lowest price is within the current market range? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：独立估算<br>Independent estimates </li>
+							<li>
+								<input type="radio"> B：建议书评价技术<br>Proposal evaluation techniques </li>
+							<li>
+								<input type="radio"> C：专家判断<br>Expert judgment </li>
+							<li>
+								<input type="radio"> D：分析技术<br>Analytical techniques </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：对于大型的采购，采购组织可以自行准备独立估算，或聘用外部专业估算师做出成本估算，并将其作为评价卖方报价的对照基准。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm25">
+					<div class="st_content_txt_tm">
+						<span>25、</span>
+
+						在组织企业资源规划(ERP)系统中实施税务相关变更的一个项目正在进行中。在验收测试期间，财务组用户担心发票没有数字签名，财务组的主管坚持认为这种情况必须得到解决。但是，实施合作伙伴认为，这一需求未包含在工作说明书（SOW）中。
+						项目经理应该怎么做？<br>A project to implement tax-related changes in the organization of an enterprise resource
+						planning (ERP) system is underway, during the acceptance test, the Finance team users were concerned that the
+						invoice was not digitally signed and the head of the Finance Group insisted that this situation must be
+						resolve However, implementation partners believe that this requirement is not included in the Statement of
+						Work (SOW).
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：根据工作说明书的需求完成项目<br>Complete the project according to the SOW requirements. </li>
+							<li>
+								<input type="radio"> B：要求实施合作伙伴在不增加成本的情况下包含数字签名需求<br>Ask the implementation partners to include the
+								digital signature requirement at no additional cost. </li>
+							<li>
+								<input type="radio"> C：与相关方一起审查工作说明书，并在适当的情况下提出变更请求<br>Review the statement of work with the relevant
+								parties and request a change if appropriate. </li>
+							<li>
+								<input type="radio"> D：询问财务组的主管为什么没有在项目规划期间沟通这项需求<br>Ask the head of the finance team why4he requirements
+								were not communicated during project planning. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：采购问题，1、查看合同 2、查看SOW。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm26">
+					<div class="st_content_txt_tm">
+						<span>26、</span>
+
+						在一个项目的结束阶段，项目经理和供应商对所交付的工作是否符合要求存在冲突。若要解决这个问题，项目经理应该查阅哪一份文件？<br>At a project ending phase , the project
+						manager and a vendor are confiscate about whether the work delivered meets requirements. What should the
+						project manager reference to resolve this ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目章程<br>Project Charter </li>
+							<li>
+								<input type="radio"> B：建议邀请书(RFP)<br>Request for proposal（RFP） </li>
+							<li>
+								<input type="radio"> C：工作说明书(SOW)<br>Statement of work </li>
+							<li>
+								<input type="radio"> D：工作分解结构(WBS)<br>Work breakdown structure（WBS） </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：采购问题，1、查看合同 2、查看SOW。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm27">
+					<div class="st_content_txt_tm">
+						<span>27、</span>
+
+						在采购过程评审期间，项目经理发现，自项目启动以来，实施成本增加了6%，为了减少项目工作来满足预算，批准了一项变更请求。
+						项目经理应更新哪一个项目管理计划要素？<br>During the procurement process review, the project manager finds that the
+						implementation cost has increased by 6% since the project is launched, and a change request is approved to
+						reduce the project task to meet the budget.
+						Which project management plan element should the project manager update? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：采购管理计划<br>Procurement Management Plan </li>
+							<li>
+								<input type="radio"> B：变更管理计划<br>Change Management Plan </li>
+							<li>
+								<input type="radio"> C：范围管理计划<br>Scope Management Plan </li>
+							<li>
+								<input type="radio"> D：风险管理计划<br>Risk Management Plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：题目问题较费解，可以理解为哪一个计划没有做好，导致题目情景？由于题目是采购问题，选项中又没有进度、成本计划，所以A最好。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm28">
+					<div class="st_content_txt_tm">
+						<span>28、</span>
+
+						项目经理正在编写采购工作说明书(SOW),以分包新工厂的机器安装任务。项目经理应该查阅哪一份文件来确保其与项目目标一致?<br>A project manager is writing this procurement
+						statement of work(SOW)to
+						subcontract a new plant's machinery installation, Which document should the project manager refer to ensure it
+						is consistent with the project objectives? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：供方选择标准<br>Source selection criteria </li>
+							<li>
+								<input type="radio"> B：项目章程<br>Project charter. </li>
+							<li>
+								<input type="radio"> C：采购文件<br>Procurement documents. </li>
+							<li>
+								<input type="radio"> D：项目管理计划<br>Project management plan. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：4.1.3.1 项目章程对于项目成功的标准进行了说明。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm29">
+					<div class="st_content_txt_tm">
+						<span>29、</span>
+
+						在项目执行阶段,项目经理意识到一个供应商未能发送状态报告。项目经理应该做什么?<br>During a project’s execution phase,the project manager realizes
+						that one vendor has been failing to send status reports.What should the project
+						manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与该供应商交谈,以强调发送报告的重要性<br>Talk with the vendor to reinforce the importance of sending
+								reports. </li>
+							<li>
+								<input type="radio"> B：邀请该供应商参加定期的项目状态会议<br>Invite the vendor in regular project status meetings. </li>
+							<li>
+								<input type="radio"> C：审查合同的沟通需求<br>Review the contract's communication requirements. </li>
+							<li>
+								<input type="radio"> D：向供应商发送正式投诉<br>Send the vendor a formal compliant. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK12.3控制采购
+						沟通发生问题，先看计划。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm30">
+					<div class="st_content_txt_tm">
+						<span>30、</span>
+
+						在执行阶段,一个已签约的第三方供应商交付了项目的主要组件之一。虽然该供应商按时交付组件,但项目经理发现该组件未能满足批准的标准。
+						由于项目处于收尾和移交的最终阶段,项目经理应该做什么?<br>A contracted third-party vendor delivered one of the main components of the
+						project during the execution phase.Although the vendor delivered ontime,the project manager discovers that the
+						component failed to meet the approved standards.
+						Since the project is in its final phase of closure and handover,what should the
+						project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查该组件的记录和文件<br>Review the component's records and documents. </li>
+							<li>
+								<input type="radio"> B：在项目管理办公室(PMO)的指导下结束该项目<br>Close the project with guidance from the project
+								management office(PMO). </li>
+							<li>
+								<input type="radio"> C：将组件未能满足标准记录下来,将其传达给供应商,然后结束项目<br>Note that the component failed of meet
+								standards,communicate it to the
+								vendor,and close the project. </li>
+							<li>
+								<input type="radio"> D：通过查阅对供应商工作的正式验收文件来调查该问题<br>Investigate the issue by referring to the formal
+								acceptance of the vendor's
+								work. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK12.3 控制采购
+						控制采购的输入中包含质量报告，用于识别不合规的卖方过程、程序或产品。 </div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>远程模考（一）</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<input id="bb" type="hidden" value="l07" />
+
+		<div class="fixed-top bg-white border-bottom">
+			<div class="container">
+				<a href="./index.html" class="float-left text-secondary">首页</a>
+				<a href="#dingbu" class="float-right text-secondary">顶部</a>
+				<h5 class="st_content_tit">成本管理</h5>
+				<div class="input-group mb-3">
+					<input type="number" class="form-control" id="search" placeholder="输入题号查询" />
+					<div class="input-group-append">
+						<button id="search-btn" class="btn btn-outline-secondary" type="button">查询</button>
+						<button id="reset-btn" class="btn btn-outline-secondary" type="button">重置</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="check_answer">
+			<div class="btn-group btn-group-sm">
+				<button id="czst" type="button" class="btn btn-danger">重做</button>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-secondary" id="check_wei">未</button>
+				<button type="button" class="btn btn-secondary" id="check_quan">全</button>
+				<button type="button" class="btn btn-secondary" id="check_dui">对</button>
+				<button type="button" class="btn btn-secondary" id="check_cuo">错</button>
+				<button type="button" class="btn btn-secondary" id="check_tong" data-toggle="modal" data-target="#tongji">统</button>
+			</div>
+		</div>
+
+		<div class="modal" id="tongji">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">统计信息</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>正确：<span id="t_dui"></span></p>
+						<p>错误：<span id="t_cuo"></span></p>
+						<p>未做：<span id="t_wei"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="dingbu" class="container">
+			<div class="st_danxuan" id="radio_anchor">
+				<div class="st_content_txt" id="tm1">
+					<div class="st_content_txt_tm">
+						<span>1、</span>
+
+						—家制作公司正在实施一个利用新技术和新工艺生产新产品的项目。已经确定组建工作包的详细信息，并识别到每个组件的制约因素。管理层希望获得该项目的精确成本估算。项目经理应该使用什么估算技术？<br>A
+						manufacturing company is implementing a project to produce a new product using new technology and
+						processes.Details of the component work packages have been defined and constraints for each component have
+						been identifieManagement would like to obtain a precise cost estimate of the project.
+						What estimating technique should the project manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：类比估算<br>Analogous </li>
+							<li>
+								<input type="radio"> B：三点估算法<br>Three-point </li>
+							<li>
+								<input type="radio"> C：自下而上估算<br>Bottom-up </li>
+							<li>
+								<input type="radio"> D：参数估算<br>Parameter estimation </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：要求精确，排除A，制约因素不等于风险，排险B。由于工作包的英文是复数，以及管理层关注的是总成本，所以建议选C自下而上估算，更符合题意。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm2">
+					<div class="st_content_txt_tm">
+						<span>2、</span>
+
+						—项新功能被批准用于软件开发项目，在该功能获得批准三周后，一位团队成员得知这项新功能的开发已经超出预算。项目经理下一步应该怎么做？<br>A new functionality is approved for a
+						software development project. There weeks after approval a team member realizes that the development of this
+						new functionality is already over budget.What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：接受预算超支，因为该功能已获得批准<br>Accept the budge to overruns because it is already approve
+							</li>
+							<li>
+								<input type="radio"> B：停止开发新功能<br>Stop the development of the new function. </li>
+							<li>
+								<input type="radio"> C：提交变更请求<br>Submit a change request. </li>
+							<li>
+								<input type="radio"> D：更新成本基准<br>Update the cost baseline. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：发现成本绩效偏差，提交变更请求，以采取纠正措施。AB是变更请求里的可能方案，D是批准之后的事。题目问下一步。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm3">
+					<div class="st_content_txt_tm">
+						<span>3、</span>
+
+						项目经理正在制定一份高层级的成本估算，以便纳入项目章程。由于项目经理以前完成过类似的项目，应该使用哪一项成本估算技术？<br>A project manager is developing a high-level
+						cost estimate for inclusion in the project charter. Since the project manager previously completed similar
+						projects, what cost-estimating technique should be used? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：参数估算<br>Parametric </li>
+							<li>
+								<input type="radio"> B：类比估算<br>Analogous </li>
+							<li>
+								<input type="radio"> C：专家判断<br>Expert judgment </li>
+							<li>
+								<input type="radio"> D：自下而上估算<br>Bottom-up </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：答案：B
+						解析： 类比估算是以过去类似活动的参数值（如范围、成本、预算和持续时间等）或规模指标（如尺寸、重量和复杂性等）为基础，来估算未来活动的同类参数或指标的估算技术。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm4">
+					<div class="st_content_txt_tm">
+						<span>4、</span>
+
+						—个构建新产品的项目包含了一项设计，而该设计使用了两个现有产品的一些功能，但是，新产品需要比其前代产品更大型且更便宜。项目经理查看两个现有产品的文件，并与工程总监讨论对最终成本的影响。项目经理将使用什么技术来估算成本？<br>A
+						project to build a new product consists of a design that uses some features of the two existing products, but
+						the new product needs to be larger and cheaper than the former one. The project manager reviews the documents
+						of two existing products and discusses the impact on the final cost with the engineering director. Which
+						technique will the project manager use to estimate the cost? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：建模和成本预测<br> Modeling and Cost Forecast </li>
+							<li>
+								<input type="radio"> B：类比估算和参数估算<br>Analog Estimation and Parameter Estimation </li>
+							<li>
+								<input type="radio"> C：专家判断和成本汇总<br>Experts' Judgment and Cost Summary </li>
+							<li>
+								<input type="radio"> D：自下而上估算和计划评审技术分析<br>Make bottom-up estimation and plan the analysis of review
+								technique </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：题目提到两个现有产品对比，类比估算使用以往类似项目的参数值或属性来估算。项目的参数值和属性包括（但不限于）范围、成本、预算、持续时间和规模指标（如尺寸、重量），类比估算以这些项目参数值或属性为基础来估算当前项目的同类参数或指标。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm5">
+					<div class="st_content_txt_tm">
+						<span>5、</span>
+
+						在项目执行阶段，项目经理发现完工估算(EAC)高于完工预算(BAC)。在确认过计算的准确性后，项目经理应该做什么？<br>In the project implementation phase, the Project
+						Manager's Estimate at Completion (EAC) is higher than the Budget at Completion (BAC). What should the project
+						manager do after confirming the accuracy of the calculation? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：为项目相关方准备自下而上的EAC值<br>To prepare bottom-up EAC values for the project stakeholders
+							</li>
+							<li>
+								<input type="radio"> B：请求项目发起人批准完工偏差(VAC)预测<br>To request the project sponsor to approve the Variance at
+								Completion (VAC) </li>
+							<li>
+								<input type="radio"> C：根据EAC和BAC请求项目发起人批准成本绩效指数(CPI)<br>To request the project sponsor to approve the Cost
+								Performance Index (CPI) according to EAC and BAC </li>
+							<li>
+								<input type="radio"> D：基于完工尚需绩效指数(TCPI)的评估采取行动<br>To take action based on the assessment of the To
+								Complete Performance Index (TCPI) </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：排除法，题目已经交代，EAC的准确性项目经理已核实，A是质疑，再核算一次，与题矛盾。BC均是绩效信息，是由绩效数据分析计算得出，不需经发起人批准。
+						选择D对项目完工尚需绩效指数(TCPI)的评估，后续采取行动。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm6">
+					<div class="st_content_txt_tm">
+						<span>6、</span>
+
+						在为相关方准备状态报告时，项目经理发现一成本偏差为负数，该项目10%的工作已经完成,在与相关方开会之前，项目经理应该怎么做？<br>While preparing the status report for
+						stakeholders,the project manager discovers a negative cost variance for a project where 10 percent of their
+						work has been completeWhat should the project manager do prior to meeting with the stakeholders? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：预测完工估算(EAC)<br>Forecast the estimate at completion(EAC). </li>
+							<li>
+								<input type="radio"> B：启动变更控制程序<br>Initiate change control procedures. </li>
+							<li>
+								<input type="radio"> C：搁置项目直到确定应对策略<br>Put the project on hold until a response strategy is determine
+							</li>
+							<li>
+								<input type="radio"> D：使用应急储备<br>Use the contingency reserve. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK（6）P268-7.4.3.1工作绩效信息。工作绩效信息对于使用挣值分析的项目,CV、CPI、EAC、VAC和TCPI将记录在工作绩效报告中。项目向相关方发布的状态报告不光要有偏差，还要有预测，让相关方能判断情况。选项B在启动变更程序之前，要综合考虑对进度、成本、范围的影响，应先分析，后启动变更。选项C，不应在项目中采取被动消极的策略。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm7">
+					<div class="st_content_txt_tm">
+						<span>7、</span>
+
+						由于突然和极端的汇率波动，进口项目设备的成本增加了27%。项目经理应该如何减轻这个成本超支问题？<br>Due to sudden and extreme exchange rate fluctuations,the
+						cost of imported project
+						equipment has increased by 27 percent.What should the project manager do to mitigate this cost overrun? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：使用变更控制程序来吸收额外成本<br>Absorb the additional cost using change control procedures.
+							</li>
+							<li>
+								<input type="radio"> B：使用管理储备支付额外成本<br>Fund the additional cost using the management reserve. </li>
+							<li>
+								<input type="radio"> C：修改成本基准以反映当前状况<br>Revise the cost baseline to reflect current conditions </li>
+							<li>
+								<input type="radio"> D：采用应急储备补贴成本超支<br>Subsidize the cost overrun with the contingency reserve. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：突然&amp;极端提示了风险超出预期，需要动用管理储备。7.3.2.3
+						管理储备不包括在成本基准中，但属于项目总预算和资金需求的一部分。当动用管理储备资助不可预见的工作时，就要把动用的管理储备增加到成本基准中，从而导致成本基准变更。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm8">
+					<div class="st_content_txt_tm">
+						<span>8、</span>
+
+						一个项目的完工预算本(BAC)100,000美元。目前的项目报告显示该项目符合进度和预算。一位团队成员对相关工作包进行自下而上的估算，表明剩余工作将比原计划少用10,000美元， 并且仍能按进度计划交付。
+						那么完工估算(EAC)是多少？<br>A project’s budget at completion(BAC) is US$ 100,000. Current project reports show it is on
+						schedule and on budget. A team member performed a bottom-up estimate of the relevant work package, which
+						indicates that the remaining work will require US$10,000 less than originally planned and can still be
+						delivered on schedule.
+						What is the estimate at completion(EAC) ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：90,000美元<br>US$90,000 </li>
+							<li>
+								<input type="radio"> B：100,000美元<br>US$100,000 </li>
+							<li>
+								<input type="radio"> C：10,000美元<br>US$10,000 </li>
+							<li>
+								<input type="radio"> D：110,000美元<br>US$110,000 </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：预算10万，少用1万，就是用 9万就能完成。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm9">
+					<div class="st_content_txt_tm">
+						<span>9、</span>
+
+						完成一项目任务所需的设备价格上涨了 50%。
+						项目经理首先应该怎么做？<br>The price of equipment required to complete a project task increases by 50 percent.,
+						What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：提交变更请求以批准额外资金<br>Submit a change request for the approval of additional funds.
+							</li>
+							<li>
+								<input type="radio"> B：签发变更请求以减少范围，保持原始预算<br>Issue a change request to reduce the scope to maintain the
+								original budget. </li>
+							<li>
+								<input type="radio"> C：进行成本效益分析，以确定对预算的影响<br>Conduct a cost-benefit analysis to determine the impact on
+								the budget. </li>
+							<li>
+								<input type="radio"> D：与供应商协商一个较低的价格<br>Negotiate a lower price with the supplier. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：价格大幅上涨，就存在值得不值得的问题了，要进行成本效益分析，分析影响。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm10">
+					<div class="st_content_txt_tm">
+						<span>10、</span>
+
+						在估算项目成本时，项目经理与一位主题专家（SME）合作，该专家曾有低估交付项目需求所需工作的历史。然而，在所有其他领域，该主题专家是一位很好的贡献者，备受尊重，并且经常有相关方需要他。
+						若要主动减轻低估项目工作的风险，项目经理应该怎么做？<br>While estimating project costs, a project manager works with a subject matter
+						expert (SME) who has historically underestimated the effort necessary to deliver project requirements. In all
+						other areas, however, the SME is a good contributor, well respected, and often requested by stakeholder.
+						To proactively mitigate the risk of underestimation, what should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：在估算期间与该主题专家定期审查目标和需求，并使用其他资源审查提交的估算。<br>Periodically review objectives and
+								requirements with the SME during estimation and use other resources to review the submitted estimates.
+							</li>
+							<li>
+								<input type="radio"> B：通知项目相关方，该主题专家提交的任何估算必须增加20%<br>Notify project stakeholders that any estimates
+								submitted by the SME must be increased by 20% percent. </li>
+							<li>
+								<input type="radio"> C：忽略与该主题专家有关的估算问题，并继续保持该过程不变<br>Ignore previous issues with estimates from this SME
+								and continue with the process unchange </li>
+							<li>
+								<input type="radio"> D：将该主题专家从项目中排除并请求可提供更准确估算的资源<br>Remove the SME from the project and request a
+								resource who can provide more accurate estimates. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A。
+						解析：PMBOK（6），Page240,7.2成本估算。本题可使用排除法，A为正面应对，也很妥善；B直接增加20%的预算太片面；C和D 忽略或排除并没有解决问题。综上，选A。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm11">
+					<div class="st_content_txt_tm">
+						<span>11、</span>
+
+						到目前为止本该完成百分之八十的一个项目只完成了百分之七十五，项目总预算为100,000美元，已完成工作实际成本(ACWP)为72,000美元。根据这些信息可以确定什么？<br>A project that should
+						have been 80 percent completed by now is only 75 percent complete The total project budget is US$100,000 and
+						the actual cost of work performed(ACWP)is US$72,000. What can be determined from this information? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：该项目低于预算，其进度绩效指数(SPI)为0.94,成本绩效指数(CPI)为1.04<br>The project is under budget, has a
+								schedule performance index(SPI)of 0.94,and a cost performance index(CPI)of 1.04. </li>
+							<li>
+								<input type="radio"> B：该项目超出预算，其SP1为1.07，CPI为0.96<br>The project is over budget,has an SPI of 1.07, and
+								CPI of 0.96. </li>
+							<li>
+								<input type="radio"> C：该项目超出预算，其SPI为0.94，CPI为1.04<br>The project is over budget,has an SPI of 0.96, and
+								CPI of 1.04. </li>
+							<li>
+								<input type="radio"> D：该项目低于预算，其SPI为0.94, CP1为0.96<br>The project is under budget,has an SPI of 0.94, and
+								CPI of 0.96. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PV=8万，EV=7.5万，AC=7.2万，BAC=10万。
+						SPI=EV/PV=7.5/8=0.94&lt;1 CPI=EV/AC=7.5/7.2=1.04&gt;1 进度落后，成本节省。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm12">
+					<div class="st_content_txt_tm">
+						<span>12、</span>
+
+						在一个价值100万美元的项目中途，项目经理进行挣值分析(EVA),分析显示计划价值(PV)为623,000美元，挣值(EV)为523,000美元，实际成本(AC)为643,000美元。
+						根据这些数字，项目的成本偏差(CV)和进度偏差（SV）分别是多少？<br>In midway of a US$1 million project, the project manager conducts an
+						earned value analysis(EVA). The analysis shows a planned value (PV) of US$623,000, an earned value (EV) of
+						US$523,000, and an actual cost (AC) of US$643,000.Based on these numbers, what is the project’s cost variance
+						(CV)and schedule variance(SV)? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：CV =+120.000美元，SV =+100,000美元<br>CV = +US$120,000, and SV - +US$ 100,000 </li>
+							<li>
+								<input type="radio"> B：CV =+100.000美元，SV =+120,000美元<br>CV = +US$ 100,000, and SV - +US$ 120,000 </li>
+							<li>
+								<input type="radio"> C：CV =-100.000美元，SV = -120,000 元<br>CV = -US$100,000, and SV- -US$120,000 </li>
+							<li>
+								<input type="radio"> D：CV = -120.000美元，SV = -100,000美元<br>CV = -US$120,000, and SV--US$100,000 </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：BAC=100万，PV=623000, EV=523000,AC=643000，CV=EV-AC=523000-643000=-120000, SV=EV-PV=523000-623000=-100000。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm13">
+					<div class="st_content_txt_tm">
+						<span>13、</span>
+
+						根据一个工程项目的合同条款，付款与项目总体进度的百分比挂钩，项目经理必须提交月度进度报告，以促进发票开具流程，在项目团队成员每月报告其分配的活动时，项目经理应该如何保持健康的现金流？<br>Per an
+						engineering project’s contract terms, payment are linked to the project’s percentage of the overall progress.
+						The project manager must submit monthly progress reports to facilitate the invoicing process. As project team
+						members report monthly on their assigned activities,what should the project manager do to maintain a healthy
+						cash flow? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：分配一位团队成员来整合数据<br>Assign A team member to integrate the data </li>
+							<li>
+								<input type="radio"> B：提供项目报告<br>Provide project reports </li>
+							<li>
+								<input type="radio"> C：执行定量分析<br>Perform a quantitative analysis </li>
+							<li>
+								<input type="radio"> D：应用挣值(EV)原则<br>Apply earned value (EV) principle </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：“付款和进度挂钩”即业主按挣值来给供应商付款。题目中项目经理是供应商，要获得健康现金流，就要向业主提供挣值数据。“在项目团队成员每月报告其分配的活动时”,此句是干扰项。题意不是说PM要向团队成员怎么做,而是为了获得健康现金流,PM自已应该怎么做,或者说对客户应该怎么做。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm14">
+					<div class="st_content_txt_tm">
+						<span>14、</span>
+
+						在收尾项目之前，项目经理进行了挣值分析（EVA）,分析表明，进度绩效指数（SPI)为0.7，成本绩效指数（CPI）为1.0，这些结果说明项目处于什么状态？<br>Just prior to closing a
+						project, the project manager conducted an earned value analysis (EVA). The analysis shows that the schedule
+						performance index (SPI) is 0.7 and the cost performance index (CPI) is 1.0. What do these results indicate
+						about the project? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：该项目落后于进度计划，在预算范围内，但在完成所有可交付成果之前被取消的<br>The project was behind schedule and within
+								budget, but was canceled before all deliverables were finished </li>
+							<li>
+								<input type="radio"> B：该项目符合进度计划，超出预算，但在完成所有可交付成果之前被取消了<br>The project was on schedule and over budget,
+								but was canceled before all deliverables were finished </li>
+							<li>
+								<input type="radio"> C：所有可交付成果均已完成，项目已提前完成，并符合预算范围<br>All deliverables were finished, and the project was
+								completed ahead of schedule and within budget </li>
+							<li>
+								<input type="radio"> D：所有可交付成果均已完成，项目按进度计划完成，但超出预算<br>All deliverables were finished, and the project was
+								completed on schedule and over budget </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：题干信息表明进度落后，成本正好。用排除法选项，BCD说明符合进度或提前完成，都是错误判断，只有A相对正确，A的后半句不影响。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm15">
+					<div class="st_content_txt_tm">
+						<span>15、</span>
+
+						公司的标准政策是为项目预算中的每个单项增加5%的应急费用，财务部门要求对某一特定单项增加10%的应急费用，因为它涉及一个新的可交付成果，该单项的主题专家(SME)认为15%的应急费用更为合适,发起人要求项目经理将预算中的平均应急费用降低到3%,项目经理应该为该特定单项增加多少百分比的应急费用？<br>The
+						company's policy is to add a 5 percent contingency to each line item in the project budget, the financial
+						department requirements a 10 percent contingency on a specific line item because it involves a new
+						deliverables, A subject matter expert (SME) for this line item believes that a 15 percent contingency is more
+						appropriate, The sponsor asks the project manager to reduce the average contingency across the budget to 3
+						percent，what contingency percentage should the project manager add to the specific line item? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：3%<br>3 percent </li>
+							<li>
+								<input type="radio"> B：5%<br>5 percent </li>
+							<li>
+								<input type="radio"> C：10%<br>10 percent </li>
+							<li>
+								<input type="radio"> D：15%<br>15 percent </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：本题考专家判断，不同人有多种估算结果时，主题专家意见更可靠。注意与三点估算区分。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm16">
+					<div class="st_content_txt_tm">
+						<span>16、</span>
+
+						项目发起人要去立即对具有明确任务的新项目进行估算。项目经理认为这个项目与另一个最近完成的项目类似。项目经理应该使用什么来确定估算？<br>A project sponsor requests immediate
+						estimates for a new project with well-defined tasks.The project manager determines that this project is
+						similar to another recently completed project.What should the project manager use to determine the estimates?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：储备分析和成本汇总<br>Reserve analysis and cost aggregation </li>
+							<li>
+								<input type="radio"> B：专家判断和成本估算<br>Expert judgment and cost estimating </li>
+							<li>
+								<input type="radio"> C：资金平衡和储备分析<br>Funding reconciliation and reserve analysis </li>
+							<li>
+								<input type="radio"> D：类比估算和成本汇总<br>Analogous estimating and cost aggregation </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：本题考估算方法，出现了关键词“另一个项目”、“相似”，是类比估算的关键词。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm17">
+					<div class="st_content_txt_tm">
+						<span>17、</span>
+
+						最新项目报告显示进度绩效指数(SPI)为1.1，成本绩效指数(CPI)为0.9。项目经理应该怎么做？<br>The latest project report shows a schedule performance
+						index(SPI)of 1.1 and a cost performance index (CPI)of 0.9.What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：对进度计划赶工，让项目回到正轨<br>Crash the schedule to put the project back on track. </li>
+							<li>
+								<input type="radio"> B：确定成本偏差的原因，并选择纠正措施<br>Determine the cause of the cost variance and choose a
+								corrective action. </li>
+							<li>
+								<input type="radio"> C：识别机会，减少项目范围<br>Identify opportunities to reduce the project scope. </li>
+							<li>
+								<input type="radio"> D：继续监控成本和进度<br>Continue to monitor cost and schedule. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：进度提前，成本超支。用排除法，A判断错误；C没有必要且没有遵守变更流程；D忽略了成本超支问题。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm18">
+					<div class="st_content_txt_tm">
+						<span>18、</span>
+
+						项目发起人要求项目经理确保在预算范围内交付产品，项目经理应使用什么技术？<br>A project sponsor ask a project manager to ensure that a product is
+						delivered within budget. What technique should the project manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：成本效益分析<br>cost-benefit analysis </li>
+							<li>
+								<input type="radio"> B：预防成本<br>Prevention costs </li>
+							<li>
+								<input type="radio"> C：面向X的设计<br>Design for X </li>
+							<li>
+								<input type="radio"> D：统计抽样<br>Statistical sampling </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK(6)P295- 8.2.2.6
+						面向X的设计。这题相当于项目最高优先级的目标是成本不超预算。但是四个选项都是质量工具，从成本角度来讲，ABC与成本有关，排除D。A成本效益分析是对备选方案进行选择，排除。B质量成本中的预防成本并不能控制成本。C面向X（DFx)的设计比较合适,其中可以选择低成本设计（DFC），在满足用户需求的前提下，尽可能地降低成本
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm19">
+					<div class="st_content_txt_tm">
+						<span>19、</span>
+
+						在预算批准过程中，项目经理进行了一些初步估算，包括范围和潜在的风险储备。在提交预算以供批准后，要求项目经理提交更准确的预算。项目经理下一步应该怎么做？<br>During the budget approval
+						process, the project manager makes some initial estimations that include scope and potential risk reserves.
+						After submitting the budget for approval,the project manager is asked to submit one that is more accurate.
+						What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：进行自下而上估算并提供新的预算<br>Run a bottom up Estimate and provide A new budget </li>
+							<li>
+								<input type="radio"> B：执行成本效益分析以支持当前的预算估算<br>Perform a cost-benefit analysis to support the current budget
+								estimations </li>
+							<li>
+								<input type="radio"> C：进行自上而下的估算并提供新的预算<br>Conduct a top-down estimates and provide new budget </li>
+							<li>
+								<input type="radio"> D：审查估算的合理性，以确保其准确和最新<br>Review the rationalisation of the estimates to ensure that
+								they are accurate and current </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK7.2.2.4
+						自下而上估算是对工作组成部分进行估算的一种方法。首先对单个工作包或活动的成本进行最具体、细致的估算 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm20">
+					<div class="st_content_txt_tm">
+						<span>20、</span>
+
+						在趋势分析过程中，项目经理得出结论，项目绩效已经恶化。这个结论是基于什么信息得出的？<br>During the trend analysis,the project manager concluded that the
+						project performance has deteriorateOn What information is this conclusion based? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：挣值分析(EVA) <br>Earned value analysis (EVA) </li>
+							<li>
+								<input type="radio"> B：完工估算(EAC)<br> Estimate at Completion (EAC) </li>
+							<li>
+								<input type="radio"> C：质量成本(COQ)<br>Cost of Quality (COQ) </li>
+							<li>
+								<input type="radio"> D：计划价值(PV)<br>Planned value (PV) </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK(6)P264-
+						7.4.2.2趋势分析。趋势分析，答案只有EAC是趋势分析，而趋势分析包括（EAC/ETC/TCPI等），偏差分析包括（SV/CV/SPI/CPI)，挣值分析包括（EV/PV/AC)其他选项：A挣值分析包括计算（EV/PV/AC)
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm21">
+					<div class="st_content_txt_tm">
+						<span>21、</span>
+
+						项目经理正在为刚刚进入第三次迭代的项目使用混合方法。完工预算(BAC)为500,000美元，已经完成100个故事点中的50个，每个故事点价值5,000美元，项目实际成本(AC)为400,000美元。管理层要求在下一次指导委员会会议上提交成本状态报告。项目经理应该使用什么来提交该报告？<br>A
+						project manager is using a hybrid approach for a project that has just entered its third iteration. The budget
+						at completion (BAC) is $500,000 and 50 story points out of 100 have been complete Each story point is worth
+						$5,000 and the actual cost (AC) of the project is $400,000. Management requests that a cost status report be
+						presented of the next steering committee meeting. What should the project manager use to present this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：信息发射源<br> Information rediator </li>
+							<li>
+								<input type="radio"> B：S曲线<br>S curve </li>
+							<li>
+								<input type="radio"> C：燃尽图<br>Bum-down chart </li>
+							<li>
+								<input type="radio"> D：燃起图<br>Bum-up chart </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：7.4控制成本。图表。在挣值分析中，对计划价值、挣值和实际成本这三个参数，既可以分阶段（通常以周或月为单位）进行监督和报告，也可以针对累计值进行监督和报告。图7-12以S曲线展示了某个项目EV数据，该项目预算超支且进度落后。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm22">
+					<div class="st_content_txt_tm">
+						<span>22、</span>
+
+						项目团队正通过估算每个工作包来制定项目预算。团队使用过往项目的统计值和历史数据。这使用的是什么估算工具或技术？<br>A project team is developing a project budget by
+						estimating each work package.The team uses statistical values and historical data from past projects.
+						What estimating tool or technique is being used? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：储备分析<br>Reserve analysis </li>
+							<li>
+								<input type="radio"> B：类比估算<br>Analogous estimating </li>
+							<li>
+								<input type="radio"> C：专家判断<br>Expert judgment </li>
+							<li>
+								<input type="radio"> D：参数估算<br>Parametric estimating </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK7.2.2.3 参数估算。参数估算强调统计关系、统计分析。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm23">
+					<div class="st_content_txt_tm">
+						<span>23、</span>
+
+						供应商建议项目经理,为了满足要求的规格,需要更换特定材料。为确保成本基准不受影响,项目经理应该审查下列哪一项?<br>A supplier activates the project manager that,to
+						meet the requested
+						specifications,replacement of a specific material is required,What should the project manager to ensure that
+						the cost baseline is unaffected? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：管理储备<br>Management reserve. </li>
+							<li>
+								<input type="radio"> B：应急储备<br>Contingency reserve. </li>
+							<li>
+								<input type="radio"> C：成本预测<br>Cost forecast. </li>
+							<li>
+								<input type="radio"> D：挣值(EV)分析<br>Earned value(EV)analysis. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：考点：7.4 控制成本。确保成本符合特定要求，需要确认成本绩效与绩效测量基准是否一致。最好的工具就是挣值分析，通过挣值分析来持续监控偏差。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm24">
+					<div class="st_content_txt_tm">
+						<span>24、</span>
+
+						项目经理正在监督一个不可避免、不可控制、也无法转移的严重风险,由于这个风险需要额外的资金,项目经理应该做什么?<br>A project manager is overseeing a serious risk that
+						is neither avoidable,controllable,nor transferable.Since this risk requires extra funding,what should the
+						project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：执行定性风险分析<br>Perform a qualitative risk analysis. </li>
+							<li>
+								<input type="radio"> B：将该风险升级上报给一个外部方<br>Escalate the risk to an external party. </li>
+							<li>
+								<input type="radio"> C：减轻风险<br>Mitigate the risk. </li>
+							<li>
+								<input type="radio"> D：使用应急储备<br>Use the contingency reserve. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：由题意得，对于“已知-未知”的风险，使用应急储备。见PMBOK6版7.2.2.6 储备分析，题干可知，不可避免控制和转移，所以C不对，同时因为正在监督，说明已经完成了风险分析。B上报给一个外部方不正确。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm25">
+					<div class="st_content_txt_tm">
+						<span>25、</span>
+
+						一个项目开始时,项目经理必须准备一份快速、高层级的成本估算,该项目经理之前管理过一个具有类似规模和复杂性的项目。
+						项目经理应该使用下列哪项工具或技术来准备估算?<br>At the beginning of a project,a project manager must prepare a quick,high-level
+						cost estimate.The project manager previously worked a project ofsimilar size and complexity
+						What tools and techniques should the project manager use to develop the estimate? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：专家判断和类比估算<br>Expert judgment and analogous estimating. </li>
+							<li>
+								<input type="radio"> B：自下而上估算和储备分析<br>Bottom-up estimating and reserve analysis. </li>
+							<li>
+								<input type="radio"> C：三点估算和质量成本(COQ)<br>Three-point estimating and cost of quality(COQ). </li>
+							<li>
+								<input type="radio"> D：自上而下估算和制定决策<br>Top-down estimating and decision making. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参见PMBOK第6版7.2.2估算成本的工具和技术。题干中明确指出需要的是快速和高层级的成本估算，即需要使用粗量级的成本估算方法。并且该项目经理之前管理过类似的项目。所以选择A专家判断和类比估算。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm26">
+					<div class="st_content_txt_tm">
+						<span>26、</span>
+
+						一家组织正在一个新兴市场启动一个项目。这个市场的法规将在项目的生命周期中快速而持续地发生变化,项目发起人要求项目经理提供预算估测。
+						项目经理应使用什么工具或技术来提供预算预测?<br>An organization is kick-starting a project in an emerging market whereregulation
+						will rapidly and continuously change during its life cycle.The projectsponsor asks the project manager for a
+						budget forecast.
+						What tools and techniques should the project manager use to provide this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：鱼骨图<br>Fish bone diagram. </li>
+							<li>
+								<input type="radio"> B：三点估算<br>Three-point estimating. </li>
+							<li>
+								<input type="radio"> C：备选方案分析<br>Alternatives analysis. </li>
+							<li>
+								<input type="radio"> D：蒙特卡洛分析<br>Morite Cario analysis. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参见PMBOK第6版7.2.2.5三点估算。题干中提到该项目随着项目周期会快速，持续产生变化。正好符合三点估算需要考虑项目的不确定性和风险。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm27">
+					<div class="st_content_txt_tm">
+						<span>27、</span>
+
+						项目经理确定项目的进度绩效指数(SPI)为1.2,成本绩效指数(CPI)为0.8。项目目前的状态是什么?<br>A project manager determines that the a project's
+						schedule performanceindex(SPI)is 1.2,and its cost performance index(CPI)is 0.8.What is the project a current
+						status? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：落后于进度,但低于预算<br>Behind schedule and under budget. </li>
+							<li>
+								<input type="radio"> B：超前于进度,并低于预算<br>Ahead of schedule and under budget. </li>
+							<li>
+								<input type="radio"> C：落后于进度,并超出预算<br>Behind schedule and over budget. </li>
+							<li>
+								<input type="radio"> D：超前于进度,但超出预算<br>Ahead of schedule and over budget. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：SPI大于1，进度提前；CPI小于1，成本超支。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm28">
+					<div class="st_content_txt_tm">
+						<span>28、</span>
+
+						项目经理正在执行一个历时数年的大型跨国项目,除了一个地区外,项目经理确定所在地区的成本偏差(CV)均低于10%。若要避免这个问题,项目经理应该事先做什么?<br>A project manager is
+						executing a larger-scale,multi-national project that will span several years.The project manager identifies
+						that the cost variance (CV)is under 10 percent in all regions except one.
+						What should the project manager have done to avoid do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：考虑所有地区的汇率和通货膨胀率<br>Considered exchange and inflation rates in all regions. </li>
+							<li>
+								<input type="radio"> B：将汇率和通货膨胀率记录在风险登记册中<br>Logged exchange and the inflation rates in the risks
+								register. </li>
+							<li>
+								<input type="radio"> C：为该地区包含应急费用<br>Included contingencies for that region. </li>
+							<li>
+								<input type="radio"> D：请求额外的资源<br>Requested additional resources. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK第6版7.2.2.6数据分析-储备分析 进行风险分析之后，需要为应对风险进行储备分析，规划相关应急储备。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm29">
+					<div class="st_content_txt_tm">
+						<span>29、</span>
+
+						在一个施工项目期间,由于大雨影响了混凝土的一致性,混凝土无法使用。这种可能性及其估算成本已在风险登记册中确定。项目经理应该如何提供额外成本的资金?<br>During a construction
+						project,concrete is unable to be used because heavy rain affected its consistency:This possibility and its
+						estimated cost werealready identified in the risk register.
+						How should the project manager fund the additional costs? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：应用预算储备<br>Apply the budget reserve. </li>
+							<li>
+								<input type="radio"> B：向客户索取储备<br>Request reserves from the client. </li>
+							<li>
+								<input type="radio"> C：使用管理储备<br>Use the management reserve. </li>
+							<li>
+								<input type="radio"> D：评估应急储备<br>Access the contingency reserve. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：首先考量该可能性及估算已在风险登记册中确定，这个是应急储备的标志。（成本中已知的未知）应该先评估应急储备，以确定用什么方式提供额外成本资金。PMBOK第6版7.2.2.6数据分析-储备分析
+						进行风险分析之后，需要为应对风险进行储备分析，规划相关应急储备。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm30">
+					<div class="st_content_txt_tm">
+						<span>30、</span>
+
+						项目经理将一个大型项目划分为三个区域,并为每个区域分配一个区域协调员。远程站点的一个协调员报告说,由于难以找到技术熟练的资源,他们产生了高额成本。
+						项目经理应该做什么?<br>A project manager divided a large project into three regions,with a
+						regional coordinator assigned to each one.One coordinator at a remote site
+						reports they are incurring high costs because skilled resources are difficult to
+						fin
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：进行成本效益分析<br>Conduct a cost-benefit analysis. </li>
+							<li>
+								<input type="radio"> B：估算外包远程站点任务的成本<br>Estimate the cost of outsourcing the remote site's tasks. </li>
+							<li>
+								<input type="radio"> C：分析增加的成本对总体预算的影响<br>Analyze the effect of the increased costs on the overall budget.
+							</li>
+							<li>
+								<input type="radio"> D：执行挣值分析(EVA)<br>Perform an earned value analysis(EVA). </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：本题用排除法。识别成本偏差，可以预测一下，分析完成时的影响。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm31">
+					<div class="st_content_txt_tm">
+						<span>31、</span>
+
+						项目团队正在估算一个新项目的成本,希望利用之前项目的成本估算。若要获得最准确和可靠的估算,团队应审查哪一份文件?<br>A project team is estimating a new project' s cost
+						and wants to use cost
+						estimates from a previews project.To obtain the most accurate and reliable
+						estimate,what document should the team review? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目章程<br>Project charter. </li>
+							<li>
+								<input type="radio"> B：商业论证<br>Business case. </li>
+							<li>
+								<input type="radio"> C：项目范围说明书<br>Project scope statement. </li>
+							<li>
+								<input type="radio"> D：项目收尾报告<br>Project close-out report. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：考察项目成本估算的输入，项目范围说明书提供了关于项目预算以及可交付成果等具体信息。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm32">
+					<div class="st_content_txt_tm">
+						<span>32、</span>
+
+						在审查所有项目的财务业绩时,项目管理办公室(PMO)提出对一个项目感到担忧,根据项目所有者和相关方的反馈,项目经理确信项目表现良好。项目经理可以应用哪一个指标来量化其假设?<br>While reviewing the
+						financial performance of all projects,the project management office(PMO)raises one project as a concern.The
+						project manager is confident that this project is performing well based on project owner and stakeholder
+						feedback.
+						What metric should the project manager apply to quantify their assumption?Earned value(EV) </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：成本绩效指数(CPI)<br>Cost performance index(CPI). </li>
+							<li>
+								<input type="radio"> B：财务绩效<br>Financial performance. </li>
+							<li>
+								<input type="radio"> C：挣值(EV)<br>Earned value(EV). </li>
+							<li>
+								<input type="radio"> D：成本基准对比<br>Cost baseline comparison. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：哪一个能判断项目绩效？A可以。C单独不判断；B不是项目指标；D是杜撰说法。 </div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+
+</html>

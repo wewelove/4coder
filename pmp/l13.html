@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>远程模考（一）</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<input id="bb" type="hidden" value="l13" />
+
+		<div class="fixed-top bg-white border-bottom">
+			<div class="container">
+				<a href="./index.html" class="float-left text-secondary">首页</a>
+				<a href="#dingbu" class="float-right text-secondary">顶部</a>
+				<h5 class="st_content_tit">相关方管理</h5>
+				<div class="input-group mb-3">
+					<input type="number" class="form-control" id="search" placeholder="输入题号查询" />
+					<div class="input-group-append">
+						<button id="search-btn" class="btn btn-outline-secondary" type="button">查询</button>
+						<button id="reset-btn" class="btn btn-outline-secondary" type="button">重置</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="check_answer">
+			<div class="btn-group btn-group-sm">
+				<button id="czst" type="button" class="btn btn-danger">重做</button>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-secondary" id="check_wei">未</button>
+				<button type="button" class="btn btn-secondary" id="check_quan">全</button>
+				<button type="button" class="btn btn-secondary" id="check_dui">对</button>
+				<button type="button" class="btn btn-secondary" id="check_cuo">错</button>
+				<button type="button" class="btn btn-secondary" id="check_tong" data-toggle="modal" data-target="#tongji">统</button>
+			</div>
+		</div>
+
+		<div class="modal" id="tongji">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">统计信息</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>正确：<span id="t_dui"></span></p>
+						<p>错误：<span id="t_cuo"></span></p>
+						<p>未做：<span id="t_wei"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="dingbu" class="container">
+			<div class="st_danxuan" id="radio_anchor">
+				<div class="st_content_txt" id="tm1">
+					<div class="st_content_txt_tm">
+						<span>1、</span>
+
+						在收尾会议上，项目发起人表示根据项目评估,项目取得成功。但一位相关方却不同意,因为没有实现他们的需求。项目经理指出，相关方的需求在项目范围说明书中被称为项目除外情况。项目经理下一步应该怎么做？<br>During the
+						close-out meeting the project sponsor slates that the project is a success based on its evaluating.A
+						stakeholder disagrees because their requirements were unfilleThe project manager states that the stakeholder’s
+						requirements were mentioned as project exclusions in the project scope statement What should the project
+						manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：忽略该相关方的争论并继续进行收尾会议<br>Ignore the stakeholder’s argument and continue the close-out
+								meeting </li>
+							<li>
+								<input type="radio"> B：建议进行项目评估以确保项目已完成<br>Propose conducting a project assessment to ensure that the
+								project is complete </li>
+							<li>
+								<input type="radio"> C：建议将这些需求作为另一个项目的范围<br>Suggest using these requirements as scope for another project
+							</li>
+							<li>
+								<input type="radio"> D：在问题日志中添加该问题<br>Add the issue to the issue log </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：注意，该相关方的需求是明确列为除外项，所以本项目坚决不考虑。排除D。
+						A，强迫，一般非紧急情况不采用。
+						B,妥协，此时没必要妥协。
+						C，缓和，保留双方的关系，以后在别的项目再考虑。当前最好的措施。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm2">
+					<div class="st_content_txt_tm">
+						<span>2、</span>
+
+						—个项目的规模已经大到由指导委员会取代单一的项目发起人。项目经理应该怎么做来适应这种新发展？<br>A project has become to large that the single sponsor is
+						replaced by a steering committee.What should the project manager do to accommodate the new development? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：认识到相关方结构发生了变化，并量身定做与这个团队的沟通<br>Recognize that there is a change in stakeholders
+								structure and tailor communications to this group </li>
+							<li>
+								<input type="radio"> B：按照最初的计划继续工作，同时认识到该项目现在包括其他相关方<br>Continue to work according to the initial plan
+								while recognizing that the project now includes additional stakeholders. </li>
+							<li>
+								<input type="radio"> C：为团队组织一次与新的指导委员会一起召开的会议，继续进行项目工作<br>Organize a meeting for the team with the new
+								steering committee and continue work on the project </li>
+							<li>
+								<input type="radio"> D：与新的委员会分享当前的状态报告<br>Share the current status report with the new committee </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：监督项目相关方关系，并通过修订参与策略和计划来引导相关方合理参与项目的过程。监督相关方参与输出包含更新相关方登记册、沟通管理计划。题目强调相关方结构发生变化，不是新识别相关方。
+						A,沟通是建立在相关方的基础上，相关方结构发生变化，沟通需求，上报步骤，信息流向等等都会发生变化。是必需的。
+						B,识别其他相关方，题目没有描述。不选
+						C，管理相关方参与。是可以的。
+						D，在A之后才能做。
+						优先级最高的是答案A。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm3">
+					<div class="st_content_txt_tm">
+						<span>3、</span>
+
+						项目经理正在制定相关方参与计划，并识别到一位权力等级较高但在项目中兴趣较低的相关方，项目经理应该如何对待该相关方？<br>A project manager is developing the stakeholder
+						engagement plan and identifies a stakeholder with a high level of power and a low level of interest in the
+						project. How should the project manager deal with this stakeholder? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：重点管理<br>Manage closely </li>
+							<li>
+								<input type="radio"> B：随时告知<br>Keep informed </li>
+							<li>
+								<input type="radio"> C：监督<br>Monitor </li>
+							<li>
+								<input type="radio"> D：令其满意<br>Keep satisfied </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案 D
+						解析：权力/利益方格，对于权力大利益小的相关方，需要“令其满意
+						权力大利益大：重点管理
+						权力小利益小：监督
+						权力小利益大：随时告知 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm4">
+					<div class="st_content_txt_tm">
+						<span>4、</span>
+
+						项目经理加入一个备受瞩目的项目，该项目将为公司带来重大效益，项目发起人告诉项目经理，一些关键相关方不赞同项目的效益，并且可能抵制该项目的工作。项目经理该怎么做？<br>A project manager joins a
+						high-profile project that will create significant benefits for the company .The project sponsor tells the
+						project manager that some key stakeholders disagree on the project’s benefits and may be resistant to working
+						on it.What should the project manager do ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：制定责任分配矩阵(RAM)<br>Develop a responsibility assignment matrix(RAM). </li>
+							<li>
+								<input type="radio"> B：要求发起人获得相关方的支持<br>Ask the sponsor to obtain support from the stakeholders. </li>
+							<li>
+								<input type="radio"> C：与相关方开会展示该项目<br>Meet with stakeholders to present the project. </li>
+							<li>
+								<input type="radio"> D：更新相关方登记册，添加这项信息<br>Update the stakeholder register with this information </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案 D
+						解析：
+						通过发起人的说明可以识别出目前关键相关方的信息，应将其更新至相关方登记册。
+						A属于规划资源管理的工具
+						B 选项错误排除
+						C 会议是识别相关方的一项工具，不能影响相关方 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm5">
+					<div class="st_content_txt_tm">
+						<span>5、</span>
+
+						—个相关方认为最近一个项目的可交付成果没有实现，若要获得该相关方的批准，项目经理应该怎么做？<br>A stakeholder believes that a recent project’s deliverables
+						were not achieveWhat should the project manager do to gain this stakeholder’s approval? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：分析该相关方的需求和期望并审查项目范围<br>Analyze this stakeholder’s needs and expectations and review
+								the project scope. </li>
+							<li>
+								<input type="radio"> B：与该相关方一起审查项目章程<br>Review the project charter with this stakeholder. </li>
+							<li>
+								<input type="radio"> C：与该相关方一起审查质量管理计划<br>Examine the quality management plan with this stakeholder. </li>
+							<li>
+								<input type="radio"> D：获得该相关方的新需求并执行风险分析<br>Obtain the stakeholder’s new requirements and perform a risk
+								analysis </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：相关方的期望没有实现，应该首先分析相关方的需求与期望、处理问题，并促进相关方参与。也可用排除法。题干中没有说明发生的质量问题和出现了风险，C,D排除。项目章程已确立，无需再和该相关人审阅，B排除。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm6">
+					<div class="st_content_txt_tm">
+						<span>6、</span>
+
+						一位相关方要求更频繁，更详细地更新项目状态。该相关方也表示有兴趣协助该项目。项目经理下一步该怎么做？<br>A stakeholder requests more frequent and detailed
+						updates on the project’s status.The stakeholder also expresses interest in helping with the project. What
+						should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：尽快发送详细的状态报告并更新相关方登记册<br>Send detailed status reports as soon as possible and update
+								the stakeholder register </li>
+							<li>
+								<input type="radio"> B：将该相关方包含在所有详细的项目状态沟通中,并将该相关方的参与度更新为支持<br>Include this stakeholder in all detailed
+								project status communications and update the stakeholder’s engagement level to supportive </li>
+							<li>
+								<input type="radio"> C：与团队开会以审查相关方登记册并重新评估角色和报告要求<br>Meet with the team to review the stakeholder register
+								and reassess the roles and reporting requirements </li>
+							<li>
+								<input type="radio"> D：更新具有同样参与程度的所有相关方的详细状态报告<br>Update the detailed status report for all stakeholders
+								with the same engagement level </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：相关方的期望发生了变化，首先应该登记与分析，C是最佳答案 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm7">
+					<div class="st_content_txt_tm">
+						<span>7、</span>
+
+						一个工厂扩建项目已接近完成50%,这时一群当地居民组成一个维权组织来抗议该项目。项目经理应该怎么做？<br>An factory expansion project is nearly 50 percent
+						complete,when a group of local residents forms an activist group to protest it.What should the project manager
+						do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：执行相关方分析，并相应调整相关方参与计划<br>Perform a stakeholder analysis,and adjust the stakeholder
+								engagement plan accordingly </li>
+							<li>
+								<input type="radio"> B：通知项目发起人，该维权组织体现了项目进度的一个风险<br>Inform the project sponsor that the activist group
+								represents a risk to the project schedule </li>
+							<li>
+								<input type="radio"> C：与该维权组织开会，将其需求添加到该项目中<br>Meet with the activist group to add its requirements to:the
+								project </li>
+							<li>
+								<input type="radio"> D：教育该维权组织，让其了解该项目将为社区带来的好处<br>Educate the activist group on the benefits that the
+								project will bring to the community </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：解析：
+						PMBOK（6）P523-13.3管理相关方参与。相关方的参与度发生变化，需执行相关方分析，以及调整相关方参与计划。选项B，对相关方的管理责任在于项目经理。选项C，未经变更就添加需求是错误的。选项D，“教育”很难实现。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm8">
+					<div class="st_content_txt_tm">
+						<span>8、</span>
+
+						在一个项目的用户验收阶段，一些用户抱怨他们的期望未得到满足，项目经理事先应该釆取哪一个不同做法？<br>During a project's user acceptance stage,some user's
+						complain that their expectations have been unmet.What should the project manager have done differently? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：考虑相关方的反馈<br>Considered stakeholder feedback </li>
+							<li>
+								<input type="radio"> B：执行风险评估<br>Conducted risk assessments </li>
+							<li>
+								<input type="radio"> C：实施冲突管理技术<br>Implemented conflict management techniques </li>
+							<li>
+								<input type="radio"> D：与用户建立一种专业关系<br>Established a professional relationship with the users </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：解析：PMBOK（6）P523-13.3管理相关方参与。管理相关方参与是与相关方进行沟通和协作，以满足其需求与期望，处理
+						问题，并促进相关方合理参与的过程。在执行阶段管理相关方的期望，而并非到验收阶段才获取到相关方的意见。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm9">
+					<div class="st_content_txt_tm">
+						<span>9、</span>
+
+						在每周一次的项目会议上，一位团队成员表示在修订一项可交付成果时，一名销售经理对客户服务过程做出一项重要评论，影响到整个项目。项目经理对销售经理参与项目可交付成果感到吃惊。
+						若要预防这个问题，项目经理应该事先做什么？<br>During a weekly project meeting, a team member states that during a deliverable
+						revision, a sales manager made an important remark regarding a customer care process that impacts the entire
+						project. The project manager Is surprised that the sales manager is involved in the project deliverables.
+						What should the project manager have done to prevent this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：完善风险审查会议，制定风险登记册<br>Improved the risk review meetings and developed the risk
+								register. </li>
+							<li>
+								<input type="radio"> B：执行相关方分析，并制定相关方参与计划<br>Performed a stakeholder analysis and developed the
+								stakeholder engagement plan. </li>
+							<li>
+								<input type="radio"> C：将职能团队过程包含进问题日志中，并制定预防措施<br>Included functional team processes in the issue log and
+								developed preventive.actions. </li>
+							<li>
+								<input type="radio"> D：识别项目范围并通知相关方<br>Identified the scope of the project and informed the stakeholders
+							</li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：识别相关方是定期识别项目相关方，分析和记录他们的利益、参与度、相互依赖性、影响力和对 项目成功的潜在影响的过程。本过程的主要作用是，使项目团队能够建立对每个相关方或相关方群 体的适度关注。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm10">
+					<div class="st_content_txt_tm">
+						<span>10、</span>
+
+						项目经理必须管理潜在的相关方利益冲突，相关方参与评估矩阵识别到一个反对项目且有影响力的相关方。项目经理应该如何调整符合该相关方的期望？<br>A project manager must manage potential
+						conflicting stakeholders interests.The stakeholder engagement assessment matrix identifies an influential
+						stakeholder who is resistant to the project. What should the project manager do to sign the stakeholder’s
+						expectations? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：创建相关方参与计划<br>Create the stakeholder engagement plan. </li>
+							<li>
+								<input type="radio"> B：与其沟通相关方参与计划<br>Communicate the stakeholder engagement plan. </li>
+							<li>
+								<input type="radio"> C：与所有相关方开会，对项目目标达成共识<br>Meet with all stakeholders to gain consensus on project
+								objectives. </li>
+							<li>
+								<input type="radio"> D：更新相关方登记册<br>Updates the stakeholder register. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：相关方登记册有助于识别对质量有特别兴趣或影响的相关方，尤其注重客户和项目发起人的需求和期望。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm11">
+					<div class="st_content_txt_tm">
+						<span>11、</span>
+
+						项目发起人任命一位高级工程师到指导委员会，来帮助监督项目管理计划。该工程师经常不同意由项目团队制定的计划，并在提交标准之前对项目管理计划表达严重关切。项目经理应该怎么做？<br>The project sponsor
+						appoints a senior engineer to the steering committee to help oversee the project management plan.The engineer
+						often disagree with the plans produced by the project team,and expresses critical concerns about the project
+						management plan before it is submitted for approval.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：通知项目发起人，该工程师延迟了规划过程<br>Inform the project sponsor that the engineer is delaying the
+								planning process </li>
+							<li>
+								<input type="radio"> B：与指导委员会一起审查项目计划，并解决该工程师提出的任何问题<br>Review the project plan with the steering
+								committee,and address any concerns that are raised by the engineer </li>
+							<li>
+								<input type="radio"> C：与工程师进行私下会议，了解并解决他关切的问题<br>Conduct a private meeting with the engineer to understand
+								and address their concerns </li>
+							<li>
+								<input type="radio"> D：提交项目管理计划，并在以后通过遵循变更管理程序解决该工程的关切问题<br>Submit the project management plan,and address
+								the engineer's concerns at a better time by following change management procedures </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：人际交往是通过与他人互动交流信息，建立联系。人际交往有利于项目经理及其团队通过非正式组织解决问题，影响相关方的行动，以及提高相关方对项目工作和成果的支持，从而改善绩效。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm12">
+					<div class="st_content_txt_tm">
+						<span>12、</span>
+
+						—个更换关键应用程序的项目将影响多个内部和外部服务。在规划过程中，拥有这些服务的项目相关方未能承诺履行约定活动。项目经理应该如何改进项目相关方的参与程度？<br>A project that replaces
+						critical applications will affect multiple internal and external services. During the planning process,
+						project stakeholders with these services fail to commit to carrying out the agreed activities. How should the
+						project manager improve the participation of the project stakeholders? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：用谈判和沟通<br>To negotiate and communicate </li>
+							<li>
+								<input type="radio"> B：将这种情况上报给指导委员会<br>To report this to the Steering Committee </li>
+							<li>
+								<input type="radio"> C：准备一份概率和影响矩阵<br>To prepare a Probability and Impact Matrix </li>
+							<li>
+								<input type="radio"> D：将这种情况记录在问题日志中<br>To record this situation in the Problem Log </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析:相关方没有按照既定的要求执行，导致项目出现了明显的偏差，需要通过谈判了解原因并纠正。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm13">
+					<div class="st_content_txt_tm">
+						<span>13、</span>
+
+						公司的首席执行官每半年视察某个项目一次，若确保与首席执行官的期望保持一致，项目团队应该确认哪一项？<br>The company's CEO visits a project once every six months.
+						To ensure consistency with the CEO's expectations, which of the following items should the project team
+						confirm? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：相关方登记册<br>Register of Stakeholders </li>
+							<li>
+								<input type="radio"> B：工作说明书<br>(SOW)Statement of Work (SOW) </li>
+							<li>
+								<input type="radio"> C：团队沟通模板<br>Team Communication Template </li>
+							<li>
+								<input type="radio"> D：项目预测文件<br>Project Forecast Document </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：相关方登记册记录项目相关方识别、评估和分类结果的项目文件，各相关方对于项目的期望。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm14">
+					<div class="st_content_txt_tm">
+						<span>14、</span>
+
+						项目经理识别到项目相关方具有不同的需求和期望。为确保项目成功，项目经理应该怎么做去确保项目的成功？<br>The project manager identifies that project stakeholders
+						have different requirements and expectations. What should the project manager do to ensure the success of the
+						project? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：应用推进技术<br>To use progress technology </li>
+							<li>
+								<input type="radio"> B：创建权力/影响方格<br>To create power/influence grids </li>
+							<li>
+								<input type="radio"> C：执行风险分析<br>To perform risk analysis </li>
+							<li>
+								<input type="radio"> D：定义角色和职责<br>To define roles and responsibilities </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK 13.1.2.4
+						数据表现-权力影响方格。权力影响方格基于相关方的职权级别（权力）、对项目成果的关心程度（利益）、对项目成果的影响能力（影响），或改变项目计划或执行的能力，以方格的形式对相关方进行分类。题目强调项目经理识别到项目相关方具有不同的需求和期望。为了保证项目的成功，我们需要对这些相关方的权利及影响力进行分类，便于后期对于他们的需求及期望的实现进行相对应的规划。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm15">
+					<div class="st_content_txt_tm">
+						<span>15、</span>
+
+						项目经理研究报纸文章，以确定哪些团体可能影响项目。项目经理执行的是哪一个过程?<br>The project manager studies newspaper articles to determine which
+						group will affect the project. Which process is the project manager performing? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：控制风险<br>Control risk </li>
+							<li>
+								<input type="radio"> B：识别相关方<br>Identify stakeholders </li>
+							<li>
+								<input type="radio"> C：控制相关方参与程度<br>Control stakeholders' participation </li>
+							<li>
+								<input type="radio"> D：识别风险<br>Identify risks </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：项目经理确定哪些团体可能影响项目，属于识别相关方阶段。识别相关方是定期识别项目相关方，分析和记录他们的利益、参与度、相互依赖性、影响力和对项目成功的潜在影响的过程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm16">
+					<div class="st_content_txt_tm">
+						<span>16、</span>
+
+						项目经理正在领导一个项目,扩建一个小镇上的制造工厂。在上次市议会会议期间，当地居民对该项目表示担忧。项目经理将当地居民添加到相关方参与计划中,项目经理接下来应该做什么?<br>A project manager is
+						leading a project to expand a manufacturing plant in a small town.During the last city council meeting,local
+						residents raised about the project.The project manager adds the local residents to the stakeholder engagement
+						plan.What should the project manager do to address their concerns? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：向当地的报纸提交一份文件,解释该扩建及其对社区的好处。<br>Submit an article to the local newspaper explaining
+								the expansion and how it will benefit the community. </li>
+							<li>
+								<input type="radio"> B：在市议会厅外安装一个滚动屏幕以提供项目进度更新。<br>Place a bulletin board outside the city hall to provide
+								project progress updates. </li>
+							<li>
+								<input type="radio"> C：在下次市议会会议期间召开互动问答会议<br>Hold an interactive question and answer session during the
+								next city council
+								meeting. </li>
+							<li>
+								<input type="radio"> D：使用电视和广播点让他们了解项目及其担忧的问题<br>Use TV and radio spots to keep them informed about the
+								project and their
+								concerns. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：本题为相关方问题，需要管理相关方参与。BC影响范围太小，AD之间D影
+						响力更大。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm17">
+					<div class="st_content_txt_tm">
+						<span>17、</span>
+
+						一家公司正在进行重组，虽然并不是所有新职位都是已知的，但是组织变更情况已经传达,项目经理应该怎么做？<br>A company is going through a reorganization.Although not
+						all new positions are known yet,organizational changes are already being communicate
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：在风险管理计划中更新潜在的未来相关方变更<br>Update the risk management plan with potential future
+								stakeholder changes, </li>
+							<li>
+								<input type="radio"> B：在相关方登记册中更新已知的信息<br>Update the stakeholder register with the information that is
+								already available. </li>
+							<li>
+								<input type="radio"> C：与关键相关方的期望保持一致<br>Align expectations with key stakeholders. </li>
+							<li>
+								<input type="radio"> D：通知所有相关方当前项目状态<br>Inform all stakeholders about the current project status. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P507-13.1 识别相关方。定期识别相关方，分析和记录他们的利益，参与度，相互依赖度等，在整个项目期间定期开展。项目的相关方发生改变，应该首先更新相关方登记册。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm18">
+					<div class="st_content_txt_tm">
+						<span>18、</span>
+
+						一家组织在一个发展中国家启动一个大型项目。项目经理同时也是当地的一位相关方，非常支持这个项目。在项目执行期间，该项目经理调到另一个国家工作，新项目经理对该项目的支持较少，因为使用了许多专注于其他日常职责的当地资源。项目经理应该审查哪份文件？<br>An
+						organization initiates a large project in a developing country. The project manager, who is also the local
+						stakeholder, is very supportive of this project. During project execution, the project manager is transferred
+						to another country. The new project manager is less supportive of the project because it uses many local
+						resources that could be focusing on other daily responsibilities. What document should the project manager
+						review? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：组织过程资产<br>Organizational process assets </li>
+							<li>
+								<input type="radio"> B：相关方参与评估矩阵<br>Stakeholder engagement assessment matrix </li>
+							<li>
+								<input type="radio"> C：项目管理计划<br>Project management plan </li>
+							<li>
+								<input type="radio"> D：相关方参与计划<br>Stakeholder engagement plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P521-13.2.2.5相关方参与度评估矩阵用于将相关方当前参与水平与期望参与水平进行比较。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm19">
+					<div class="st_content_txt_tm">
+						<span>19、</span>
+
+						一位相关方经常错过计划每两周举行一次的相关方会议。项目经理首先应该怎么做？<br>One stakeholder regularly misses scheduled biweekly Stakeholder
+						meeting. What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：开始记录每两周举行一次的会议，并与所有预期的与会者分享记录<br>Start recording the biweekly meetings , and share
+								the recordings with all the intended attendees. </li>
+							<li>
+								<input type="radio"> B：请项目发起人与该相关方进行交涉<br>Ask the project sponsor to intervene with the stakeholder. </li>
+							<li>
+								<input type="radio"> C：与该相关方会面，讨论其未能参加会议的问题<br>Meet with the stakeholder to discuss his failure to attend
+								meetings. </li>
+							<li>
+								<input type="radio"> D：审查相关方参与评估矩阵，以了解该相关方的参与程度<br>Review the stakeholder engagement assessment matrix to
+								understand the engagement level of the stakeholder. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK（6）P521-13.2.2.5相关方参与度评估矩阵用于将相关方当前参与水平与期望参与水平进行比较。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm20">
+					<div class="st_content_txt_tm">
+						<span>20、</span>
+
+						公司进行重组，导致项目团队发生变化。项目经理应该怎么做？<br>A company restructures, which results in changes to the project team. What
+						should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与新的团队成员确认商业论证<br>Validate the business case with the new team members. </li>
+							<li>
+								<input type="radio"> B：参阅组织分解结构(OBS)<br>Reference the organizational breakdown structure(OBS) </li>
+							<li>
+								<input type="radio"> C：执行相关方分析<br>Perform a stakeholder analysis. </li>
+							<li>
+								<input type="radio"> D：与新的团队成员审查项目需求<br>Review the project requirements with the new team members. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P512-13.1.2.3团队有变化，有新的相关方加入，需要进行相关方分析。相关方分析会产生相关方清单和关于相关方的各种信息。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm21">
+					<div class="st_content_txt_tm">
+						<span>21、</span>
+
+						一位项目经理加入一个现有项目。第一天，由于可交付成果质量差，一位相关方威胁说停止该项目。
+						项目经理应该如何解决这个问题？<br>A project manager joins an existing project. In their first day , a stakeholder threatens
+						to stop the project due to the poor quality of its deliverables.
+						How should the project manager address this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：检查组织图以了解所有相关方的角色<br>Check the organizational chart to understand the role of all
+								stakeholders. </li>
+							<li>
+								<input type="radio"> B：更新问题日志，并将问题升级上报给项目发起人<br>Update the issue log, and escalate it to the project
+								sponsor. </li>
+							<li>
+								<input type="radio"> C：查询权力/利益方格以评估相关方的职权<br>Consult the power interest grid to assess the stakeholder's
+								authority. </li>
+							<li>
+								<input type="radio"> D：修订沟通管理计划，将该相关方包含进质量报告中<br>Revise the communications management plan to include the
+								stakeholder in quality reporting. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P512-13.1.2.4权力利益方格。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm22">
+					<div class="st_content_txt_tm">
+						<span>22、</span>
+
+						在执行相关方分析时，项目经理识别出两个关键项目相关方之间的负面关系，其中一个相关方正在为项目提供资金。另一个相关方是用户端-客户，他希望包含出资相关方拒绝考虑的其他功能。
+						项目经理应该如何处理相关方的关系？<br>While performing the stakeholder analysis, the project manager identifies negative
+						relationships between two key stakeholders, one of which is funding the project. Another relevant party is the
+						client-client, who wants to include other functions that the relevant party refuses to consider.
+						How should the project manager handle stakeholder relationships? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：只解决提供项目资金的相关方目标<br>Exclusively address the goals of the stakeholder providing
+								project funding. </li>
+							<li>
+								<input type="radio"> B：只解决用户端-客户的目标<br>Solely address the goal of the client-client. </li>
+							<li>
+								<input type="radio"> C：在平等基础上对待所有相关方并进行沟通以克服冲突<br>Address all stakeholders on an equal footing and
+								communicate to overcome conflicts. </li>
+							<li>
+								<input type="radio"> D：战略上只解决问题较少相关方的问题，并避免冲突<br>Strategically address only the problems of less relevant
+								parties and avoid conflicts. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：项目经理管理需求，要客观、公正对待相关方的需求，C最好。本题也可以当成冲突问题，C即面对。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm23">
+					<div class="st_content_txt_tm">
+						<span>23、</span>
+
+						项目团队正在研究一个项目的新批准范围，监管团队在变更方面提供的意见是不可或缺的。但是，该团队发现监管部门未被列为项目相关方。
+						项目经理下一步应该怎么做？<br>A project team is working on a project’s new approved scope. The regulatory team was integral
+						in providing input that necessitated this change. However, the team discovers that the regulatory department
+						was not listed as a project stakeholder.
+						What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：指示项目团队确认是否需要进行这项变更<br>Instruct the project team to verify the need for this change.
+							</li>
+							<li>
+								<input type="radio"> B：创建一项新的变更请求并确保监管团队参与这个过程<br>Create a new change request and ensure that the
+								regulatory team is involved in the process. </li>
+							<li>
+								<input type="radio"> C：收集监管团队的进一步意见,并更新现有变更请求以反映新信息<br>Gather further input from the regulatory team and
+								update the existing change request to
+								reflect the new information. </li>
+							<li>
+								<input type="radio"> D：确保监管团队包含在变更控制委员(CCB) 中<br>Ensure that the regulatory team is included in the change
+								control boar </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK(6) 4.6 整体变更控制。监管部门作为不可或缺的关键方未被列为项目相关方，需要采取变更请求进行变更。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm24">
+					<div class="st_content_txt_tm">
+						<span>24、</span>
+
+						一个关键的项目决策需要所有相关方的支持。项目经理现在得知之前未识别到一名关键相关方。
+						项目经理应该做什么来防止这个问题成为项目进展和成功的障碍？<br>A key project decision requires the support of all stakeholders. The project
+						manager now learns that one key stakeholder was not previously identifie What should the project manager do to
+						prevent this from being an obstacle to the project's progress and success? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查相关方登记册<br>Review the stakeholder register. </li>
+							<li>
+								<input type="radio"> B：与项目发起人会面<br>Meet with the project sponsor. </li>
+							<li>
+								<input type="radio"> C：更新相关方参与评估矩阵<br>Update the stakeholder engagement assessment matrix. </li>
+							<li>
+								<input type="radio"> D：定期及时审查沟通策略<br>Conduct regular and timely reviews of the communication strategy.
+							</li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P514-13.1.3.1题目问的是如何防止未识别到一个关键相关方对未来的项目造成后续影响和障碍，应该更新相关方参与评估矩阵来对该相关方进行管理。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm25">
+					<div class="st_content_txt_tm">
+						<span>25、</span>
+
+						一位经验丰富的项目经理加入了一个已经执行六个月的项目。在与相关方的第一次会议期间，项目经理了解到客户担心他们的期望没有得到满足。
+						项目经理应该查阅哪一份文件来解决这个问题？<br>An experienced project manager joins a project that has been ongoing for six
+						months.During their first meeting with stakeholder, the project manager learns of a customer concern that
+						their expectations are not being met.
+						What should the project manager refer to address this concern? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目章程<br>Project charter </li>
+							<li>
+								<input type="radio"> B：假设日志<br>Assumption log </li>
+							<li>
+								<input type="radio"> C：范围管理计划<br>Scope management plan </li>
+							<li>
+								<input type="radio"> D：相关方参与计划<br>Stakeholder engagement plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK（6）P522-13.2.3.1属于相关方问题，根据相关参与计划来解决。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm26">
+					<div class="st_content_txt_tm">
+						<span>26、</span>
+
+						团队根据原型评审会上的客户反馈意见实施了一项变更，一位关键相关方现在担心项目可交付成果不符合验收标准。
+						项目经理应该如何防止再次发生这种情况？<br>A team implemented a change based on client feedback from the prototype review. A key
+						stakeholder is now concerned that a project deliverable fails to meet the acceptance criteri
+						What should the project manager do to prevent this from reoccurring? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：检查工作分解结构（WBS）以确定哪些相关方的可交付成果受到影响<br>Check the work breakdown structure ( WBS ) to
+								identify which stakeholder’s deliverable is being impacte </li>
+							<li>
+								<input type="radio"> B：评审相关方参与过程并利用相关信息更新相关方参与计划<br>Review the stakeholder engagement process and update
+								the stakeholder engagement plan with relevant information. </li>
+							<li>
+								<input type="radio"> C：与发起人讨论制定相关方参与计划的相关事宜<br>Have a discussion with the sponsor about developing the
+								stakeholder engagement plan. </li>
+							<li>
+								<input type="radio"> D：使用一个来自以前类似项目的相关方参与过程<br>Use the stakeholder engagement process from a similar,
+								previous project. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：相关方没有参与变更导致的问题，应该确保相关方参与变更过程，B相对最好。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm27">
+					<div class="st_content_txt_tm">
+						<span>27、</span>
+
+						一名新项目经理加入一个正在执行中的项目。该项目经理不清楚哪些环境因素可能影响向关键相关方进行有效的信息报告。
+						项目经理应该查阅下列哪份文件来了解这些影响？<br>A new project manager joins a project in progress. The project manager is unclear
+						about what environmental factors may impact effective information reporting to key stakeholders.
+						What should the project manager referent to understand these impacts? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：沟通管理计划<br>Communications management plan </li>
+							<li>
+								<input type="radio"> B：相关方参与计划<br>Stakeholder engagement plan </li>
+							<li>
+								<input type="radio"> C：采购管理计划<br>Procurement management plan </li>
+							<li>
+								<input type="radio"> D：风险管理计划<br>Risk management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P516-13.2规划相关方参与。注意题干的描述是了解能够影响到相关方的因素，而不是强调的信息。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm28">
+					<div class="st_content_txt_tm">
+						<span>28、</span>
+
+						一个项目有五名主要发起人，其中三名常常向项目经理质疑项目的状态。项目经理应如何确保获取所有发起人的持续支持？<br>A project has five main sponsors,three of whom often
+						challenge the project manager on the project’s status.What should the project manager do to ensure continuous
+						support from all sponsors? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将该问题记录在问题日志中<br>Document this in the issue log. </li>
+							<li>
+								<input type="radio"> B：将该问题上报给项目管理办公室(PM0)主管<br>Escalate the issue to the project management office(PMO)
+								director. </li>
+							<li>
+								<input type="radio"> C：与发起人开会，以了解他们的期望<br>Meet with the sponsors to understand their expectations. </li>
+							<li>
+								<input type="radio"> D：与团队开会，以设定期望<br>Meet with the team to set expectations. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：考答案：C
+						解析：pmbok6的522页13.2.3.1相关方参与计划：相关方问题，管理相关方参与，C是的。题目问如何确保支持,A不能满足，所以不选。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm29">
+					<div class="st_content_txt_tm">
+						<span>29、</span>
+
+						在一个系统升级项目的早期阶段，两位关键相关方由新加入公司的人员所取代，导致项目延期。项目经理首先应该怎么做？<br>In the early stage of a system upgrade project,two
+						key stakeholders are replaced by people new to the company causing project delays.What should the project
+						manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新相关方登记册<br>Update the stakeholder register. </li>
+							<li>
+								<input type="radio"> B：与新相关方分享项目进度计划<br>Share the project schedule with the new stakeholders. </li>
+							<li>
+								<input type="radio"> C：与新相关方审查项目章程<br>Review the project charter with the new stakeholders. </li>
+							<li>
+								<input type="radio"> D：为新相关方提供系统相关培训<br>Train the new stakeholders on the system- </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK（13），P514，识别了新的相关方，首先更新到相关方登记册中。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm30">
+					<div class="st_content_txt_tm">
+						<span>30、</span>
+
+						项目经理正在为一个项目工作，该项目的相关方分布在多个国家，为确保有效沟通并获得相关方批准项目管理计划，项目经理应该怎么做？<br>A project manager is working on a project
+						with stakeholders distributed across multiple multiple countries.
+						What should the project manager do to ensure effective communication and to obtain stakeholder approval of the
+						project management plan? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：提供有关该项目的详细信息，包括风险、升级上报途径、进度计划、成本和所有可交付成果<br>Provide detailed information about the
+								project, including risk, escalation approach, schedule, cost and all deliverables. </li>
+							<li>
+								<input type="radio"> B：请求项目发起人协助<br>Request assistance from the project sponsor. </li>
+							<li>
+								<input type="radio"> C：准备相关方参与计划和相关方登记<br>Prepare the relevant party's participation plan and register
+							</li>
+							<li>
+								<input type="radio"> D：沟通PMO (项目管理办公室)的项目知识和期望，已取得相关方的支持<br>Communicate the project instructions and
+								expectations of the PMO (office of project management) to obtain the relevant parties' support. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：参见PMBOK第6版 13.2 规划相关方参与。确保有效沟通和希望相关方支持并批准项目管理计划，同时是相关方问题和沟通问题。用C是解决这两个问题的前提。用排除法A、B、是错的，C更恰当。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm31">
+					<div class="st_content_txt_tm">
+						<span>31、</span>
+
+						由于升职，一位新相关方加入到一个项目中。该相关方对其新角色的操作责任有良好的认识，但未接受过与该项目角色相关的培训。项目经理应该怎么做？<br>As the result of a promotion,a new
+						stakeholder is added to a project. The stakeholder has a good sense of the operational responsibilities of
+						their new role, but has no training related to this role on project. What should the project manager do?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与新相关方开会，审查相关项目文件并收集背景信息，然后更新相关方登记册<br>Meet with the new stakeholder to review
+								relevant project documents and and collect background information，then update the stakeholder register.
+							</li>
+							<li>
+								<input type="radio"> B：请新相关方书面确认他们对新角色的理解，然后更新项目章程<br>Ask the new stakeholder for written confirmation of
+								their understanding of the new role, then update the project charter. </li>
+							<li>
+								<input type="radio"> C：更新项目治理计划以添加这位新相关方，并包含相关责任的描述以反映这项变更<br>Update the project governance plan to add
+								the new stakeholder and include a description of the associated responsibilities to reflect this change.
+							</li>
+							<li>
+								<input type="radio"> D：修订工作分解结构（WBS）,以包含这位新相关方的相关可交付成果<br>Revise the work breakdown structure(WBS)to
+								include the associated deliverables of the new stakeholder. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK（6）P507-13.1识别相关方。定期识别项目相关方，分析和记录他们的利益、参与度、相互依赖性、影响力和对项目成功的潜在影响。应根据需要在整个项目期间定期开展。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm32">
+					<div class="st_content_txt_tm">
+						<span>32、</span>
+
+						在项目中途，一个挑剔的客户要求提供定期报告，包含比沟通管理计划中批准的更详细信息。这项请求将导致生产成本超出预算，项目经理不能承受让客户生气的后果，但客户又拒绝见面讨论此事。项目经理应该怎么做？<br>Middle
+						through a project, a difficult customer demands periodic reports that contain much greater detail than what
+						was approved in the communication management plan. This request will cause production cost to exceed the
+						budget, the project manager cannot afford to upset this customer, but the customer refuses to meet to discuss
+						this matter. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：提醒客户注意相关方参与计划中列出的要求并请求采取纠正措施<br>Remind the customer of the requirements outlined in
+								the stakeholder engagement plan and request corrective actions </li>
+							<li>
+								<input type="radio"> B：要求在该相关方组织中有影响的人物帮助指导客户的期望，使其与商定的计划保持一致<br>Ask someone with influential in the
+								stakeholder organization to help guide the customer’s expectations to align with the agreed-upon plan
+							</li>
+							<li>
+								<input type="radio"> C：提交变更请求以支付制作报告的额外费用<br>Submit a change requests to cover the additional cost of
+								producing the reports </li>
+							<li>
+								<input type="radio"> D：接受该请求，让客户满意并更新沟通管理计划<br>Accept the request to keep the customer satisfied and
+								update the communications </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK11.5.2.4，相关方问题，客户提出了项目经理无法满足的信息要求，且客户拒绝和项目经理沟通，超出了项目经理能力范围，求助发起人。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm33">
+					<div class="st_content_txt_tm">
+						<span>33、</span>
+
+						项目经理向指导委员会展示项目章程，指导委员会非常担心预先分配的资源，因为相关方不了解他们在项目中的参与情况。若要避免这个问题，项目经理应该事先做什么？<br>A project manager presents the
+						project charter to the steering committee.The steering committee is concerned about preassigned resource
+						allocation because the stakeholders are unaware of their participation in the project.
+						What should the project manager have done to avoid this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：获得相关方的期望<br>Obtained stakeholders’ expectations </li>
+							<li>
+								<input type="radio"> B：管理相关方参与程度<br>Managed stakeholder engagement </li>
+							<li>
+								<input type="radio"> C：完成相关方登记册<br>Completed the stakeholder register </li>
+							<li>
+								<input type="radio"> D：定义每个相关方的角色与职责<br>Defined roles and responsibilities for each stakeholder </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P507-13.1识别相关方，分析记录他们的利益、参与度、相互依赖性等，对项目成功潜在的影响。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm34">
+					<div class="st_content_txt_tm">
+						<span>34、</span>
+
+						项目经理正与多位相关方一起管理一个庞大而复杂的项目。一些相关方反对项目的效益, 而另一些则非常支持。项目经理应该使用什么来澄清并正确管理这些相关方？<br>A project manager is leading a
+						large,complex project with several stakeholders.Some stakeholders are against the project benefits,while some
+						are very supportive.
+						What should the project manager use to classify and properly manage the stakeholders? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：凸显模型<br>Salience model </li>
+							<li>
+								<input type="radio"> B：权力/利益方格 <br>Power/interest grid </li>
+							<li>
+								<input type="radio"> C：影响/影响力方格 <br>Impact/influence grid </li>
+							<li>
+								<input type="radio"> D：相关方立方体<br>Stakeholder cube </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：考答案：A
+						解析：PMBOK（6）P513-13.1.2.4凸显模型适用于复杂的相关方大型社区。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm35">
+					<div class="st_content_txt_tm">
+						<span>35、</span>
+
+						由于项目落后于进度,超出了项目经理控制。一名有影响力但很少参加项目更新会议的高级经理抱怨项目延期。项目经理应该怎么做？<br>A project is behind schedule for reasons beyond
+						the project manager’s control.An influential senior manager,who rarely participates in project update
+						meetings,complains about the delay.What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：管理沟通并签发变更请求<br>Manage communications and issue a change request. </li>
+							<li>
+								<input type="radio"> B：更新相关方登记册和风险日志<br>Update the stakeholder register and risk log. </li>
+							<li>
+								<input type="radio"> C：控制沟通并更新项目文件 <br>Control communications and update project documents. </li>
+							<li>
+								<input type="radio"> D：更新问题日志并控制相关方的参与程度<br>Update the issue log and control stakeholder engagement. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：13.3 管理相关方参与
+						相关方支持问题，管理相关方参与，记录问题日志而非风险日志。项目延期,应更新问题日志；某个高层表达不满,且很少参加更新会议,说明对相关方的管理有问题,应使用各种方法及技术使他们多参与项目,从而更好地支持项目。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm36">
+					<div class="st_content_txt_tm">
+						<span>36、</span>
+
+						在一个项目中途，项目团队意识到他们低估了交付一部分产品的工作。因此该项目将推迟两个月。项目经理下一步应该怎么做？<br>Midway through a project, the project team
+						realized that they underestimated the effort for delivering one part of the product. As a result, the project
+						will be delayed by two months. What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与项目发起人沟通该推迟情况，并请求批准新的交付日期<br>Communicate the delay to the project sponsor and ask
+								for approval of the new delivery date </li>
+							<li>
+								<input type="radio"> B：修改相关方参与计划以反映该变更，并请求相关方的批准<br>Modify the stakeholder engagement plan to reflect the
+								change and request stakeholder approval </li>
+							<li>
+								<input type="radio"> C：通知相关方并管理他们的期望<br>Inform the stakeholders and manage their expectations </li>
+							<li>
+								<input type="radio"> D：修改风险管理计划以反映该变更，并请求相关方的批准<br>Modify the risk management plan to reflect the change
+								and request stakeholder approval </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：排除法，BD排除，AC之间C好于A。推迟的工作有可能不是很重要,不需要去找发起人协商,只是通知一下各相关方,看看他们对延期的反应再做进一步处理。因此C好于A。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm37">
+					<div class="st_content_txt_tm">
+						<span>37、</span>
+
+						按照既定的变更管理程序，一项变更请求获得批准，在实施该变更过程中一位高级管理人员对其未参与批准变更表示很惊讶，因为该变更的规模和成本都很大。若要避免这个问题，项目经理应该事先做什么？<br>A change
+						request was approved according to established change management procedures, during its implementation.a senior
+						executive expresses surprise at not being involved in this approval, since the size and cost of the change was
+						significant. What should the project manager have done to prevent this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：制定变更管理流程，要求根据成本估算需要不同的审批级别<br>Established a change management process, the required
+								different approval levels depending upon cost estimates </li>
+							<li>
+								<input type="radio"> B：确保项目团队接受培训，以识别该高级管理人员应该参与变更管理流程的情况<br>Ensured that the project team was trained to
+								identify situations in which the senior executive should be involved in the change management process
+							</li>
+							<li>
+								<input type="radio"> C：在项目的规划阶段，让该高级管理人员参与变更管理流程的设计<br>Involve the senior executive in the design of the
+								change management process during the project’s planning phase </li>
+							<li>
+								<input type="radio"> D：在提交变更请求之前先咨询该高级管理人员的意见<br>Consulted with the senior executive prior to submitting
+								the change request </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：相关方参与问题，管理相关方参与是与相关方进行沟通和协作以满足其需求与期望、处理问题，并促进相关方合理参与的过程。为避免相关方有意见，应该让相关方参与制定计划。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm38">
+					<div class="st_content_txt_tm">
+						<span>38、</span>
+
+						项目经理希望确保相关方能充分参与项目的整个生命周期，项目经理应该在相关方参与计划中包含下列哪一项？<br>A Project manager want to ensure sufficient stakeholder
+						participation throughout a project’s in cycle. What should the project manager include in the stakeholder
+						engagement plan? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：相关方的权力/利益方格<br>Stakeholder power/interests grid </li>
+							<li>
+								<input type="radio"> B：由相关方提出的变更请求<br>Change Request initiated by Stakeholders </li>
+							<li>
+								<input type="radio"> C：期望的当前相关方参与水平<br>Desired and current stakeholder engagement levels </li>
+							<li>
+								<input type="radio"> D：相关方对项目运作的反馈<br>Feedback from stakeholder on project operations </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：13.2.2.5 数据表现-相关方参与度评估矩阵
+						相关方参与度评估矩阵用于将相关方当前参与水平与期望参与水平进行比较。
+						制定相关方参与计划时，AC都要考虑，但A是一个工具，不是结果，C是结果，可以是相关方参与计划的内容。此题考查相关方参与度评估矩阵,在相关方参与计划中评估出对某相关方参与水平的期望。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm39">
+					<div class="st_content_txt_tm">
+						<span>39、</span>
+
+						一家组织在项目执行阶段发生变化，结果，一位关键相关方离开项目，两位新的项目主管加入项目，项目经理首先应该怎么做？<br>During a project’s execution phase. An
+						organization change occurs, As a result, a key stakeholder leaves the project and two new project executive
+						join it. What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：评估新的沟通需求<br>Evaluate the new communication requirements </li>
+							<li>
+								<input type="radio"> B：更新相关方登记册<br>Update the stakeholder register </li>
+							<li>
+								<input type="radio"> C：分析潜在的沟通问题<br>Analyze potential communication issues </li>
+							<li>
+								<input type="radio"> D：修订相关方参与计划<br>Revise the stakeholder engagement plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：出现了新的相关方，应首先更新相关方登记册。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm40">
+					<div class="st_content_txt_tm">
+						<span>40、</span>
+
+						新任命的项目经理得知，因为有太多相关方意见不一致，项目可能会失败。项目经理应该怎么做？<br>A newly assigned project manager learns that the project likely
+						to fail because there are too many stakeholder who all disagree. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与所有相关方开会，尝试调整他们的差异<br>Meet with all project stakeholder to try and align their
+								differences </li>
+							<li>
+								<input type="radio"> B：与每位相关方分别开会，尝试理解他们各自的观点<br>Separately meet with each stakeholder to try and
+								understand their individual viewpoints </li>
+							<li>
+								<input type="radio"> C：制定相关方参与计划并解决相关方的顾虑<br>Develop a stakeholder engagement plan and address stakeholder
+								concerned </li>
+							<li>
+								<input type="radio"> D：更新相关方参与计划，并将其发送给所有相关方<br>Update the stakeholder engagement plan and send it to all
+								stakeholder </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：相关方问题，C的做法最专业，最符合PMBOK思想。D的说法错误，相关方参与计划更多时候是对相关方保密的。相关方意见不一致,要分别分析,并制定相关方参与计划。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm41">
+					<div class="st_content_txt_tm">
+						<span>41、</span>
+
+						项目经理正在审查状态报告，该报告显示进度延迟和成本超支，该报告必须在两周内提交给指导委员会，根据过去的经验，项目经理知道哪些相关方会很挑剔，项目经理应该怎么做？<br>A project manager is
+						reviewing a status report that shows a schedule delay and cost overruns. This report must be presented to the
+						steering committee in two weeks.From past experience, the project manager knows which stakeholders will be
+						very difficult, what should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与挑剔的相关方开会，解释延迟和成本超支的原因<br>Meet with difficult stakeholders to explain the reasons
+								for the delays and cost overrun </li>
+							<li>
+								<input type="radio"> B：收集项目团队的其他详细信息，以澄清延迟和成本超支的原因<br>Collect additional details from the project team to
+								clarify the reasons for the delay and cost overruns </li>
+							<li>
+								<input type="radio"> C：快速识别可以实施的纠正措施，以改进状态报告<br>Quickly identify corrective actions that can be
+								implemented to improve the status report </li>
+							<li>
+								<input type="radio"> D：联系管理层寻求如何与挑剔的相关方打交道的帮助<br>Contact management to seek help with dealing with the
+								difficult stakeholders </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：相关方问题，要主动管理潜在的相关方问题，要面对。B当成了沟通问题；C当绩效问题处理；D麻烦管理层了（如同麻烦发起人）。问题发生了,最合理的措施是面对,获得相关方的支持。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm42">
+					<div class="st_content_txt_tm">
+						<span>42、</span>
+
+						一个在实施中的项目对公司的成功至关重要，项目总监不相信该项目将按时交付，项目经理应该怎么做？<br>A project in implementation is critical to a company’s
+						success. The project director is unconvinced that the project will be delivered on time. What should the
+						project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查相关方参与评估矩阵，并更新风险登记册<br>Review the stakeholders engagement assessment matrix and
+								update the risk register </li>
+							<li>
+								<input type="radio"> B：与项目总监开会，提供基准数据并解决问题<br>Meet with the project director to provide benchmark data and
+								address concerns </li>
+							<li>
+								<input type="radio"> C：制定相关方参与计划，定期提供项目更新并鼓励反馈<br>Develop a stakeholders engagement plan that provides
+								regular project updates and encourages </li>
+							<li>
+								<input type="radio"> D：修改风险登记册，以应对未能达到项目总监期望的风险<br>Amend the risk register to address the risks of failing
+								to meet the project director's expectations </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：相关方问题和沟通问题，可能是杞人忧天而未必是事实，应管理相关方参与。C最主动最好；AD都不如C；B的理解错误。项目总监不相信,不代表项目不能成功,要让其积极参与,及时更新项目动态,给其信心。 </div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+
+</html>

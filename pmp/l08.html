@@ -1,0 +1,2277 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>远程模考（一）</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<input id="bb" type="hidden" value="l08" />
+
+		<div class="fixed-top bg-white border-bottom">
+			<div class="container">
+				<a href="./index.html" class="float-left text-secondary">首页</a>
+				<a href="#dingbu" class="float-right text-secondary">顶部</a>
+				<h5 class="st_content_tit">质量管理</h5>
+				<div class="input-group mb-3">
+					<input type="number" class="form-control" id="search" placeholder="输入题号查询" />
+					<div class="input-group-append">
+						<button id="search-btn" class="btn btn-outline-secondary" type="button">查询</button>
+						<button id="reset-btn" class="btn btn-outline-secondary" type="button">重置</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="check_answer">
+			<div class="btn-group btn-group-sm">
+				<button id="czst" type="button" class="btn btn-danger">重做</button>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-secondary" id="check_wei">未</button>
+				<button type="button" class="btn btn-secondary" id="check_quan">全</button>
+				<button type="button" class="btn btn-secondary" id="check_dui">对</button>
+				<button type="button" class="btn btn-secondary" id="check_cuo">错</button>
+				<button type="button" class="btn btn-secondary" id="check_tong" data-toggle="modal" data-target="#tongji">统</button>
+			</div>
+		</div>
+
+		<div class="modal" id="tongji">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">统计信息</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>正确：<span id="t_dui"></span></p>
+						<p>错误：<span id="t_cuo"></span></p>
+						<p>未做：<span id="t_wei"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="dingbu" class="container">
+			<div class="st_danxuan" id="radio_anchor">
+				<div class="st_content_txt" id="tm1">
+					<div class="st_content_txt_tm">
+						<span>1、</span>
+
+						由于所需的验收标准未得到满足，客户停止了里程碑付款。公司应该采用哪一种质量管理过程来阻止再次发生这个问题？<br>A milestone payment was stopped by a customer because
+						required acceptance criteria were unmet. What quality management process should the company use to prevent
+						this issue from reoccurring? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：质量保证(QA)<br>Quality assurance (QA) </li>
+							<li>
+								<input type="radio"> B：质量控制(QC)<br>Quality control (QC) </li>
+							<li>
+								<input type="radio"> C：质量规划<br>Quality planning </li>
+							<li>
+								<input type="radio"> D：质量反馈<br>Quality feedback </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：阻止再次发生，强调将来，就是要过程改进，需要审计，总结经验教训，建议选A。质量管理包括了质量保证工作。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm2">
+					<div class="st_content_txt_tm">
+						<span>2、</span>
+
+						—位新项目经理加入了由高级项目经理监督的项目，发起人要求新项目经理制定质量管理计划，项目经理应该怎么做？<br>A new project manager joins a project overseen by a
+						senior project manager.The sponsor asks the new project manager to develop the quality management plan. What
+						should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：向高级项目经理咨询已制定的质量过程和计划，并在选择适当的标准时寻求指导<br>Consult with the senior project manager for
+								established quality processes and plans ask for guidance in selecting the appropriate standards. </li>
+							<li>
+								<input type="radio"> B：与客户开会收集需求<br>Meet with the customer to collect requirements. </li>
+							<li>
+								<input type="radio"> C：要求发起人提供成本效益分析和标杆对照样本<br>Ask the sponsor for cost-benefits analyses and
+								bench-marking samples. </li>
+							<li>
+								<input type="radio"> D：提交变更请求推迟了质量管理计划的发展计划直到质量测量指标和质量检查表被创造<br>Submit a change request to postpone the
+								development of the quality management plan until quality metrics and quality checklists are create </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：A，对于新来的项目经理，高级项目经理就是专家，咨询专家意见。虽然规划质量管理需要输入需求文件，但B是收集需求，与题目距离太远。发起人在项目生命周期中，只做三件事，一授权项目经理，二为项目提供奖金支持，三验收项目。特殊情况偶尔露面，如变更影响到项目目标，或处理风险问题时项目经理权限不足，像答案C，需要项目文件或组织过程资产，不找发起人。D排除。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm3">
+					<div class="st_content_txt_tm">
+						<span>3、</span>
+
+						在生产环境中实施后识别到一个项目问题。若要识别发生这种问题的原因，项目经理应该使用什么工具或技术？<br>A project issue is identified after implementation in the
+						production environment. What tool or technique should the project manager use to identify the reason for the
+						issue? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：帕累托图<br>Pareto diagram </li>
+							<li>
+								<input type="radio"> B：直方图<br>Histogram </li>
+							<li>
+								<input type="radio"> C：石川图<br>Ishikawa diagram </li>
+							<li>
+								<input type="radio"> D：控制图<br>Control chart </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：石川图、因果图、鱼骨图，将问题陈述的原因分解为离散的分支，有助于识别问题的主要原因或根本原因。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm4">
+					<div class="st_content_txt_tm">
+						<span>4、</span>
+
+						项目经理加入一个已经在进行当中的项目。质量审计报告显示，由一个供应商提供的一些材料在材料检查员没有出具批准文件的情况下，获得付款批准。项目经理得知检查员口头表达了批准意见，然后再提供批准文件。哪一份计划可以帮助项目经理评估这种批准方式是否符合项目管理计划？<br>A
+						project manager joins a project that is already in progress.The quality audit report shows that some materials
+						provided by a vendor were approved for payment without documentation of approval by the material inspector.The
+						project manager learns that the inspector verbally communicates approval,then later provides the approval
+						documentation.
+						What plan will help the project manager evaluate whether this approval approach is compliant with the project
+						management plan? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：需求管理计划<br>Requirements management </li>
+							<li>
+								<input type="radio"> B：相关方参与计划<br>Stakeholder engagement </li>
+							<li>
+								<input type="radio"> C：沟通管理计划<br>Communications management </li>
+							<li>
+								<input type="radio"> D：质量管理计划<br>Quality management </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：明确的控制质量动作，而选项中只有质量管理计划是质量控制的输入项。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm5">
+					<div class="st_content_txt_tm">
+						<span>5、</span>
+
+						团队利用最新技术完成了新产品的原型。在测试期间，产品不符合性能规格。项目经理应该怎么做？<br>A team completes a prototype of a new product utilizing the
+						latest technology. During testing, it fails to meet performance specifications,
+						What should the project manager do ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与项目发起人重新协商性能规格<br>Renegotiate the performance specifications with the project
+								sponsor. </li>
+							<li>
+								<input type="radio"> B：执行根本原因分析，找出原因<br>Perform a root cause analysis to Identify the reason. </li>
+							<li>
+								<input type="radio"> C：向变更控制委员会(CCB )提出偏差请求<br>Submit a deviation request to the change control
+								board(CCB). </li>
+							<li>
+								<input type="radio"> D：通知发起人，并实施纠正措施<br>Inform the sponsor, and implement corrective actions </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：排除法，B最合适。质量问题首先应该做登记，告知，分析。B更合适，D为干扰项通知相关方，但没有做分析直接实施了纠正措施。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm6">
+					<div class="st_content_txt_tm">
+						<span>6、</span>
+
+						由于质量过程的问题，一个项目明显落后于进度计划。项目相关方坚持要求项目经理采取任何必要的行动来满足初始时间表。项目经理下一步应该怎么做？<br>Due to issue with the quality process,
+						a project is significantly behind schedule. Project stakeholders insist that the project manager take any
+						action necessary to meet the original timeline.What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与相关方谈判质量标准并更新质量管理计划<br>Negotiate the quality standards with the stakeholders and
+								update the quality management plan. </li>
+							<li>
+								<input type="radio"> B：重新确定客户的需求清单优先级并调整项目范围<br>Reprioritize the customer’s list of requirements and
+								adjust the project scope. </li>
+							<li>
+								<input type="radio"> C：在风险登记册中记录所有问题并接受质量过程<br>Document all issues in the risk’s register and accept the
+								quality process. </li>
+							<li>
+								<input type="radio"> D：审查质量核对单以确定根本原因并实施所需的变更<br>Review quality checklists to determine the root causes
+								and implement the required changes. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：项目质量管理包括把组织的质量政策应用于规划、管理、控制项目和产品质量要求，以满足相关方的期望的各个过程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm7">
+					<div class="st_content_txt_tm">
+						<span>7、</span>
+
+						在一个新项目的规划阶段，质量保证经理坚持要求将精度和准确度标准添加进质量管理计划中。项目经理可以从哪里找到这个信息？<br>During a new project’s planing phase，the quality
+						assurance manager insists that standard for precision and accuracy be added to the quality management plan,
+						where can the project manager find this infomiation? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：事业环境因素<br>Enteiprise environmental factors </li>
+							<li>
+								<input type="radio"> B：需求文件<br>Requirements documentation </li>
+							<li>
+								<input type="radio"> C：变更控制过程文档<br>Change control process documentation </li>
+							<li>
+								<input type="radio"> D：组织过程资产<br>Organizational process assets </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：需求文件记录项目和产品为满足相关方的期望应达到的要求，它包括针对项目和产品的质量要求。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm8">
+					<div class="st_content_txt_tm">
+						<span>8、</span>
+
+						在项目状态审查会议期间，显而易见的是，整体项目效绩低于预期的项目目标，并且一些关键的可交付成果未能满足客户的需求。项目经理应该怎么做？<br>During a project status review meeting,
+						it becomes apparent that overall project performance fails short of excepted project objectives and that some
+						key deliverables fail to meet customer requirements. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新范围管理计划并执行备选方案分析<br>Update the scope management plan and perform an alternative
+								analysis. </li>
+							<li>
+								<input type="radio"> B：使用德尔菲技术并执行备选方案分析<br>Use the Delphi technique and perform an alternative analysis.
+							</li>
+							<li>
+								<input type="radio"> C：执行趋势分析并更新质量管理计划<br>Conduct a trend analysis and update the quality management plan.
+							</li>
+							<li>
+								<input type="radio"> D：执行根本原因和备选方案分析<br>Perform root cause and alternatives analysis. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：根本原因分析关注识别问题的主要原因，它可用于识别出现偏差的原因以及项目经理为达成项目目标应重点关注的领域。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm9">
+					<div class="st_content_txt_tm">
+						<span>9、</span>
+
+						项目经理正在与质量保证(QA)专家合作，以确定生产线中许多质量偏差和缺陷背后的原因。项目经理应该使用下列哪一项来确定问题的根源？<br>The project manager is working with
+						quality assurance (QA) experts to determine the reasons behind many of the quality deviations and defects in
+						the production line. What should the project manager use to identify the problem’s origin? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：直方图<br>Histograra </li>
+							<li>
+								<input type="radio"> B：散点图<br>Scatter diagram </li>
+							<li>
+								<input type="radio"> C：矩阵图<br>Matrix diagram </li>
+							<li>
+								<input type="radio"> D：鱼骨图<br>Fishbone </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：因果图，又称“鱼骨图”、“why-why分析图”和“石川图”，将问题陈述的原因分解为离散的分支，有助于识别问题的主要原因或根本原因。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm10">
+					<div class="st_content_txt_tm">
+						<span>10、</span>
+
+						由于技术已在其他工厂运行，省略了一个项目的用户验收测试。但是，在该技术实施后不能按预期起作用。项目经理应该怎么做？<br>User acceptance tests on a project have been
+						omitted since the technology is operational at other factories.However,after implementation,the technology is
+						not working as expecte
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：查看缺陷报告以确定并解决问题<br>Review the defect report ti identify and solve issue. </li>
+							<li>
+								<input type="radio"> B：提交变更请求<br>Submit a change request. </li>
+							<li>
+								<input type="radio"> C：执行根本原因分析，以确定纠正措施<br>Conduct a root cause analysis to identify corrective actions.
+							</li>
+							<li>
+								<input type="radio"> D：使用测试脚本来解决问题<br>Use test scripts to resolve the issue. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析:由于是不能按预期起作用，说明绩效有偏差，选C，根本原因分析后，采到“纠正”措施。A干扰性很大，但题目没说是缺陷。B在C之后，D是具体的解决措施，在B之后。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm11">
+					<div class="st_content_txt_tm">
+						<span>11、</span>
+
+						在开发软件解决方案期间，测试团队检测到一个错误。在采取任何纠正措施之前，项目经理应该怎么做？<br>The test team detects an error during the development of a
+						software solution. What should the project manager do before taking any corrective action? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：分析所需纠正措施的影响并将其记录在问题日志中<br>To analyze the impact of the required corrective actions
+								and record them in the Problem Log </li>
+							<li>
+								<input type="radio"> B：与项目相关方重新谈判需求，并更新项目管理计划<br>To re-negotiate the needs with the project stakeholders
+								and update the project management plan </li>
+							<li>
+								<input type="radio"> C：检查经验教训并识别减轻策略<br>To review lessons learned and identify mitigation strategies </li>
+							<li>
+								<input type="radio"> D：审查项目管理计划并检查质量要求<br>To review the project management plan and check the quality
+								requirements </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：识别到质量问题后，应先更新问题日志。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm12">
+					<div class="st_content_txt_tm">
+						<span>12、</span>
+
+						在项目第一个里程碑的阶段退出会议期间，质量管理团队只提出一些缺陷。当被问及测试过程程序时，团队确认只有一个批准的测试要求。项目经理应该怎么做？<br>During the exit phase of the first
+						project milestone, the quality control team only raises some defects. When asked about the test process, the
+						team confirms that there is only one approved test requirement. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：执行实施管理质量过程<br>To execute and implement the management of quality process </li>
+							<li>
+								<input type="radio"> B：考虑更换项目的测试主管<br>To consider replacing the testing supervisor </li>
+							<li>
+								<input type="radio"> C：更新测试要求<br>To update test requirements </li>
+							<li>
+								<input type="radio"> D：部署自动化测试工具<br>To deploy automated test tools </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：由于是一个阶段结束，仍存在缺陷以及程序不完善，应开展质量审计，以持续改善，但答案里没有审计，可选管理质量。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm13">
+					<div class="st_content_txt_tm">
+						<span>13、</span>
+
+						一份绩效报告显示产品规格有偏差。项目经理召开一次紧急会议，会议期间,所有团队成员都就这种偏差可能的原因提供建议。团队使用的是什么工具或技术？<br>A performance report indicates a
+						variation from a product's specifications.The project manager calls an emergency meeting during which all team
+						members offer suggestions for the possible cause of the variance.
+						What tool or technique is the team using? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：因果图<br>Cause-and-effect diagram </li>
+							<li>
+								<input type="radio"> B：根本原因分析<br>Root cause analysis(RCA) </li>
+							<li>
+								<input type="radio"> C：散点图<br>Scatter diagram </li>
+							<li>
+								<input type="radio"> D：矩阵图<br>Matrix diggram </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P292-8.2.2.2数据分析-根本原因分析。根本原因分析是确定引起偏差、缺陷或风险的根本原因的一种分析技术。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm14">
+					<div class="st_content_txt_tm">
+						<span>14、</span>
+
+						项目经理正在对产品属性进行测试。项目经理应该使用什么来确认合规性？<br>A project manager is conducting testing on product attributes.What should
+						the project manager use to validate compliance? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：质量审计<br>Quality audits </li>
+							<li>
+								<input type="radio"> B：质量报告<br>Quality reports </li>
+							<li>
+								<input type="radio"> C：质量核对单<br>Quality checklists </li>
+							<li>
+								<input type="radio"> D：质量测量指标<br>Quality metrics </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK（6）P287-8.1.3.2质量测量指标专用于描述项目或产品属性，以及控制质量过程将如何验证符合程度。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm15">
+					<div class="st_content_txt_tm">
+						<span>15、</span>
+
+						一位项目经理加入一个正在进行的项目。在一次每周状态会上，团队通知项目经理，项目计划中规定将在收尾阶段执行质量保证。项目经理应该怎么做？<br>A project manager joins an ongoing
+						project. At a weekly status meeting, the team informs the project manager that quality assurance will be
+						carried out at the end of the project plan. What should a project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：继续执行当期的质量保证计划，并确保项目按时、按预算完成<br>Continue to implement the current quality assurance
+								plan and ensure that the project is completed on time and on budget. </li>
+							<li>
+								<input type="radio"> B：重新审视质量保证并在完成每个可交付成果时更新项目计划<br>Review quality assurance activities and update the
+								proj t plan as each deliverable is complete </li>
+							<li>
+								<input type="radio"> C：使用质量保证来衡量项目团队绩效<br>Use quality assurance to measure project team performance. </li>
+							<li>
+								<input type="radio"> D：在整个项目的生命周期中定期执行质量保证<br>Perform quality assurance periodically throughout the
+								project’s life cycle. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK288 8.2管理质量
+						管理质量是把组织的质量政策用于项目，并将质量管理计划转化为可执行的质量活动的过程。本过程的主要作用是，提高实现质量目标的可能性，以及识别无效过程和导致质量低劣的原因。本过程需要在整个项目期间开展。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm16">
+					<div class="st_content_txt_tm">
+						<span>16、</span>
+
+						项目经理在安排一次站会时得知，为项目采购的产品和选定的软件版本不兼容，需要进行大量操作才能使产品兼容。项目经理首先应该怎么做？<br>While facilitating a stand-up, the project
+						manager learns that a product acquired for the project is incompatible with the selected software version.
+						There is a considerable amount of work required to make the product compatible.
+						What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：向项目团队成员发送一封电子邮箱指示他们加班工作以满足截止日期<br>Email project team members instructing them to
+								work overtime to meet the deadline. </li>
+							<li>
+								<input type="radio"> B：执行根本原因分析，并更新项目文件<br>Perform a root cause analysis, and update project docuroents.
+							</li>
+							<li>
+								<input type="radio"> C：与团队开会以确定合适的纠正措施<br>Meet with the team to determine the appropriate corrective
+								action. </li>
+							<li>
+								<input type="radio"> D：将该问题通知所有相关方，并提交变更请求<br>Inform all stakeholders of the issue, and submit a change
+								request. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：先确定根本原因，再确定纠正措施。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm17">
+					<div class="st_content_txt_tm">
+						<span>17、</span>
+
+						—家公司想要设计和制造其第一款机器人产品。项目团队成员对机器人的了解有限，不知道如何定义和控制产品性能。若要确保产品性能，项目经理应该怎么做？<br>A company wants to design and build
+						the first rbbotic product. The project team members have limited knowledge in robotics, and do not know how to
+						define and control product performance.
+						What should the project manager do to ensure product performance? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：使用专家判断<br>Use expert judgment. </li>
+							<li>
+								<input type="radio"> B：更新质量测量指标<br>Update the quality metrics. </li>
+							<li>
+								<input type="radio"> C：开展统计抽样<br>Conduct statistical sampling. </li>
+							<li>
+								<input type="radio"> D：执行标杆对照<br>Perform bench-marking. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：8.1.2.2 标杆对照。标杆对照是将实际或计划的项目实践或项目的质量标准与可比项目的实践进行比较，以便识别最佳实践，形成改进意见，并为绩效考核提供依据。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm18">
+					<div class="st_content_txt_tm">
+						<span>18、</span>
+
+						—家组织中标一大型施工项目。项目团队正在实施一种不断优化执行效率的方法。项目团队应该使用什么方法作为改进基础？<br>An organization is awarded a large construction
+						project .The project team is implementing an approach to continuously optimize execution efficiency.
+						What approach should the project team use a basis for improvement ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：全面质量管理(TQM)<br>Total quality management（TQM） </li>
+							<li>
+								<input type="radio"> B：计划一实施一检查一行动(PDCA)循环<br>Plan-do-check-act ( PDCA ) cycle </li>
+							<li>
+								<input type="radio"> C：六西格玛<br>Six Sigma </li>
+							<li>
+								<input type="radio"> D：精益六西格玛<br>Lean Six Sigma </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：题目出处见 PMBOK275页倒数第三段第1-2行。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm19">
+					<div class="st_content_txt_tm">
+						<span>19、</span>
+
+						一位项目团队成员决定，如果所有功能都已经交付那么让客户参与一些替代设计是不必要的，整个团队决定只让技术部门参与进行最好的产品设计。用户验收测试后，客户对所选的设计有所抱怨。为了确保客户接受项目可交付成果，项目经理应该做什么？<br>A
+						project team member decides that engaging the customer on some alternative designs is unnecessary if all
+						functionalities are delivere The entire team decides only to engage the technical department on the designing
+						for best product. After user acceptance testing, the customer complains about the selected design.
+						To ensure that the customer accepts the project deliverables, what should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与客户沟通产品设计是由技术团队决定的<br>Communicate to the customer that the project design is
+								determined by the technical team. </li>
+							<li>
+								<input type="radio"> B：要求客户接受项目可交付成果，因为它们符合所有约定的功能要求<br>Ask the customer to accept the project
+								deliverables, as they meet all agreed functional requirements. </li>
+							<li>
+								<input type="radio"> C：确保客户和技术团队协作选择新产品设计<br>Ensure that both the customer and technical team
+								collaboratively selects the new product design. </li>
+							<li>
+								<input type="radio"> D：将设计问题更新到问题日志中并继续执行项目<br>Update the issues long with the design issue and continue
+								with project execution. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：pmbok6的286页8.1.3.1质量管理计划-质量管理（包括产品设计），应倾听客户的声音（客户满意）。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm20">
+					<div class="st_content_txt_tm">
+						<span>20、</span>
+
+						项目经理希望供应商完成他们生产的每个组件的测试，但惊讶地发现并没有进行任何测试。为了恢复，项目团队对组件进行统计抽样。应该在哪里记录测试需求？<br>A project manager expected a vendor
+						to complete testing of each component they produced,and was surprised to discover that no testing was done.To
+						recover,the project team conducts a statistical sampling of the components.
+						Where should the testing requirements have been recorded? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：采购管理计划<br>Procurement management plan </li>
+							<li>
+								<input type="radio"> B：质量管理计划<br>Quality management plan </li>
+							<li>
+								<input type="radio"> C：合同变更文档<br>Contract changes documentation </li>
+							<li>
+								<input type="radio"> D：需求管理计划<br>Requirements management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P302-8.3.2.1统计抽样。应将测试需求记录在质量管理计划中。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm21">
+					<div class="st_content_txt_tm">
+						<span>21、</span>
+
+						—个大型项目包含将由分包商执行的许多阶段。团队成员各自负责一个阶段。项目经理应该使用什么来执行质量管理计划？<br>A large project contains many phases that will be
+						performed by subcontractors. Individual team members are each responsible for one phase.
+						What should the project manager use to enforce the quality management plan? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：质量测量指标<br>Quality metrics </li>
+							<li>
+								<input type="radio"> B：质量审计<br>Quality audits </li>
+							<li>
+								<input type="radio"> C：根本原因分析<br>Root cause analysis </li>
+							<li>
+								<input type="radio"> D：因果分析<br>Cause-and-effect analysis </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P288-8.2.2.5管理质量-审计。管理质量过程是把组织的质量政策用于项目，将质量管理计划转化为可执行的质量活动的过程。审计用于确定项目活动是否遵循了组织和项目的政策、过程与程序的一种结构化且独立的过程。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm22">
+					<div class="st_content_txt_tm">
+						<span>22、</span>
+
+						客户对产品质量不满意。项目经理收到一份质量团队提供的图表，图表表明少量的原因导致大部分的问题。质量团队向项目经理提供的是下列哪一项？<br>A client is dissatisfied with a
+						product's quality. The project manager receives a chart from the quality team indicating that a small number
+						of sourced caused most of the problems, The quality team provided the project manager with which of the
+						following? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：散点图<br>Scatter diagram </li>
+							<li>
+								<input type="radio"> B：趋势图<br>Run chart </li>
+							<li>
+								<input type="radio"> C：帕累托图<br>Pareto diagram </li>
+							<li>
+								<input type="radio"> D：控制图<br>Control chart </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：大部分的问题是少数原因导致的，帕累托法则，二八法则。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm23">
+					<div class="st_content_txt_tm">
+						<span>23、</span>
+
+						在测试期间，一位团队成员将某个质量缺陷上报给项目经理，在与团队进行头脑风暴时，项目经理得知问题的原因不止一个，项目经理应该使用哪一项来识别主要原因？<br>During testing, a team member
+						escalates a quality defect to the project manager. While brainstorming with the team, the project manager
+						realizes there is more than one cause of the problem. Which should the project manager use to identify the
+						primary cause? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：散点图<br>Scatter diagram </li>
+							<li>
+								<input type="radio"> B：统计抽样<br>Statistical sampling </li>
+							<li>
+								<input type="radio"> C：石川图<br>ishikawa diagram </li>
+							<li>
+								<input type="radio"> D：定性风险分析<br>qualitative risk analysis </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：8.3.2.5控制质量：工具与技术-数据表现-因果图。众多原因中识别主要原因，即识别根本原因。石川图,也叫鱼骨图,是在众多原因中识别根本原因。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm24">
+					<div class="st_content_txt_tm">
+						<span>24、</span>
+
+						在项目执行期间，由于行业趋势下滑和产品价格下降，客户重新协商定价，这导致项目预算减少，项目经理确定必须大大改造类似项目中遵循的业务流程才能使项目取得成功。项目经理应该做些什么来确定改进的领域？<br>During
+						project execution,the client renegotiates pricing due to a downward industry trend and falling prices for
+						their product,this results in a decrease in the project’s budget, the project manager determines that business
+						processes followed in similar projects must be dramatically improved for the success of this one.What should
+						the project manager do to identify areas for improvement? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：检查风险报告<br>Examine the risk report </li>
+							<li>
+								<input type="radio"> B：审查经验教训<br>Review the lessons learned </li>
+							<li>
+								<input type="radio"> C：使用精益六西格玛方法<br>Use the lean six sigma method </li>
+							<li>
+								<input type="radio"> D：执行成本效益分析<br>Perform a cost-benefit analysis </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：8.2.2.8 质量改进方法
+						计划—实施—检查—行动和六西格玛是最常用于分析和评估改进机会的两种质量改进工具。此题是通过精益生产的方法降低成本,提高效率。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm25">
+					<div class="st_content_txt_tm">
+						<span>25、</span>
+
+						公司推出一项新产品，预估实施质量控制系统将花费100万美元，预期的故障和潜在维修成本估计为50万美元。项目经理应该提出什么建议？<br>A company launching a new product
+						estimates that implementing a quality control system will cost $1 million, Expected failures and potential
+						repair costs are estimated at US$500,000. What should the project manager propose? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：在做出决定之前考虑声誉损失成本<br>Factoring in the loss of reputation costs before making A
+								decision </li>
+							<li>
+								<input type="radio"> B：实施质量控制系统，因为这是质量成本(COQ)<br>Implementing a quality control system, as this is the
+								cost of quality (COQ) </li>
+							<li>
+								<input type="radio"> C：不实施质量控制系统，因为非一致性成本较低<br>Not implemented a quality control system, as the cost of
+								nonconformance is less </li>
+							<li>
+								<input type="radio"> D：实施质量控制系统，因为质量控制是最佳实践<br>Implement a quality control system, as quality control is a
+								best practice </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：8.1.2.3 数据分析
+						成本效益分析是用来估算备选方案优势和劣势的财务分析工具，以确定可以创造最佳效益的备选方案。成本效益分析可帮助项目经理确定规划的质量活动是否有效利用了成本。达到质量要求的主要效益包括减少返工、提高生产率、降低成本、提升相关方满意度及提升赢利能力。对每个质量活动进行成本效益分析，就是要比较其可能成本与预期效益。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm26">
+					<div class="st_content_txt_tm">
+						<span>26、</span>
+
+						从事一个直接项目的项目经理收到现场经理关于设计团队施工图纸质量的反复投诉，项目经理希望确定可能的行动，以确保不再发生这个问题，项目经理首先应该怎么做？<br>A project manager working on a
+						straightforward project receives repeated complaints from the site manager about the quality of the design
+						team’s construction drawings. The project manager wants to identify possible actions to ensure that this
+						problem will not recur. What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查质量报告<br>Review the quality reports </li>
+							<li>
+								<input type="radio"> B：开展质量审计<br>Conduct a quality audit </li>
+							<li>
+								<input type="radio"> C：执行根本原因分析<br>Perform a root cause analysis </li>
+							<li>
+								<input type="radio"> D：创建并分析因果图<br>Create and analyze a causal-and-effect diagram </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：8.2.2 管理质量：工具与技术
+						一个具体问题反复出现，用��本原因分析能彻底解决问题，依据见PMBOK292页最后一段最后一行。 知识点扩充，注意区分“根本原因分析（YYHH图）”和“因果图（YY图）” </div>
+
+				</div>
+				<div class="st_content_txt" id="tm27">
+					<div class="st_content_txt_tm">
+						<span>27、</span>
+
+						在项目的质量审查期间，团队讨论了对当前质量管理计划的必要变更，以满足相关方的期望，目前的计划包括产品的特定事项和特征，但缺少一个重要方面。若要完成质量管理计划，项目经理应该怎么做？<br>During a
+						project’s quality review , the team discusses necessary changes to the current quality management plan to meet
+						stakeholder expectations. The current plan includes product-specific items and characteristic, but is missing
+						a vital aspect. What should the project manager do to complete the quality management plan? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：评估交付团队的绩效<br>Evaluate the delivery team’s performance </li>
+							<li>
+								<input type="radio"> B：评估产品的性能<br>Assess the product’s performance </li>
+							<li>
+								<input type="radio"> C：考虑产品等级<br>Consider the product grade </li>
+							<li>
+								<input type="radio"> D：分析提供给客户的价值<br>Analyze the value provided to the customer </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：8.1.3.1 质量管理计划
+						题意中心思想是制定质量管理计划,且已有产品的质量标准(“包括特定产品的事项和特征”),那么就要开始考虑等级水平了。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm28">
+					<div class="st_content_txt_tm">
+						<span>28、</span>
+
+						项目经理正在执行一个项目，该项目中包含简短的任务以及技能非常熟练的人员，在测试阶段，项目经理注意到很高的失败率和许多缺陷，若要避免这个问题，项目经理应该事先做什么？<br>A project manager is
+						working on a project with short and simple tasks and very skilled resources. During the testing phase, the
+						project manager notices a high rate of failure and many defects.what should the project manager have done to
+						avoid this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：实施质量保证计划<br>Implement a quality assurance plan </li>
+							<li>
+								<input type="radio"> B：要求所有人员都遵循质量保证<br>Required that quality assurance was followed by all resources
+							</li>
+							<li>
+								<input type="radio"> C：在测试阶段期间执行质量控制任务<br>Conducted quality control tasks during the testing phase </li>
+							<li>
+								<input type="radio"> D：在所有任务中使用六西格玛程序<br>Employed six sigma procedures on all tasks </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：“很多缺陷”、“避免这个问题”，都要通过质量保证（管理质量）来解决，选B，确保做的都正确。A是本来就要进行的。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm29">
+					<div class="st_content_txt_tm">
+						<span>29、</span>
+
+						项目经理了解到，由于生产过程不稳定，产品的拒收率很高，哪个工具或技术可以帮助项目经理快速分析并确定纠正措施？<br>A Project managers learns that a product’s rejection
+						rate high due to an unstable production process, what tool or technique will help the project manager to make
+						a quick analysis and decide on corrective measures? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：因果图<br>Cause and effect diagram </li>
+							<li>
+								<input type="radio"> B：控制图<br>Control chart </li>
+							<li>
+								<input type="radio"> C：直方图<br>Histogram </li>
+							<li>
+								<input type="radio"> D：散点图<br>scatter diagram </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：过程不稳定，应进行过程改进，改进过程首先要进行根本原因分析，再确定纠正措施，A最合适。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm30">
+					<div class="st_content_txt_tm">
+						<span>30、</span>
+
+						在项目执行期间，一位高绩效团队成员离职。在此损失之后，进行了计划的质量审计,发现工作产品质量标准未达到。项目经理下一步应该怎么做？<br>During project execution, a
+						high-performance team member leaves.Following this loss, a planned quality audit is conducted that indicates
+						the work products quality standards are unmet. What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：赶工<br>Crash the schedule </li>
+							<li>
+								<input type="radio"> B：创建一份因果图<br>Create a causal-and-effect diagram </li>
+							<li>
+								<input type="radio"> C：查阅资源管理计划<br>Consult the resource management plan </li>
+							<li>
+								<input type="radio"> D：执行工作绩效数据的储备分析<br>Perform a reserve analysis of the work performance data </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK8.2.2.4因果图，又称“鱼骨图”、“why-why分析图”和“石川图”。产品有缺陷，必须修复。修复缺陷可以先找缺陷原因。本题用排除法，只有B可以选。关键在于质量标准未达到，是管理质量过程，赶工针对进度，查阅资源管理计划是针对人力资源，执行工作数据。绩效数据的储备分析也是人员的绩效数据，B为最合适答案，因果图来识别质量问题根本原因。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm31">
+					<div class="st_content_txt_tm">
+						<span>31、</span>
+
+						产品不符合规范，一名项目相关方要求更换产品并纠正生产过程。若要确定这个失败的类型和成本，应使用“计划质量管理”过程中的哪个工具或技术？<br>A product fails to meet
+						specifications.A stakeholder demands the replacement of the product and a correction to the production
+						process.What tool or technique in the Plan Quality Management process should be used to determine the type and
+						cost of this failure? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：成本效益分析<br>Cost-benefit analysis </li>
+							<li>
+								<input type="radio"> B：力场分析<br>Force field analysis </li>
+							<li>
+								<input type="radio"> C：质量成本(COQ)<br>Cost of quality(COQ) </li>
+							<li>
+								<input type="radio"> D：预期货币价值(EMV)分析<br>Expected monetary value(EMV)analysis </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK8.1.3失败成本（内部/外部）。 因产品、可交付成果或服务与相关方需求或期望不一致而导致的相关成本。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm32">
+					<div class="st_content_txt_tm">
+						<span>32、</span>
+
+						客户强调项目输出必须符合IS014000规范。为了理解这项要求的含义，项目经理应该查阅下列哪一项？<br>A customer emphasizes that the project output must meet
+						IS014000 specifications. What should the project manager consult to understand the implications of this
+						requirement? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：质量管理计划<br>Quality management plan </li>
+							<li>
+								<input type="radio"> B：成本基准<br>Cost baseline </li>
+							<li>
+								<input type="radio"> C：范围管理计划<br>Scope management plan </li>
+							<li>
+								<input type="radio"> D：需求规范<br>Requirements specifications </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：8.1规划质量管理，质量管理计划包括（但不限于）项目采用的质量标准。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm33">
+					<div class="st_content_txt_tm">
+						<span>33、</span>
+
+						在核实可交付成果期间，项目经理识别到不同影响级别的多个质量问题。项目经理应该使用什么基本质量工具来对这些问题进行优先级排序？<br>During deliverables verification, the
+						project manager identifies several quality issues with differing impact levels. What basic quality tool should
+						the project manager use to prioritize the issues? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：直方图<br>Histogram </li>
+							<li>
+								<input type="radio"> B：帕累托图<br>Pareto diagram </li>
+							<li>
+								<input type="radio"> C：控制图<br>Control chart </li>
+							<li>
+								<input type="radio"> D：石川图<br>ishikawa diagram </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK8.2.2.4，质量问题即缺陷，为缺陷排序用帕累托。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm34">
+					<div class="st_content_txt_tm">
+						<span>34、</span>
+
+						由于紧急情况，一位分配到具有两天总浮动时间活动的团队成员从项目上离开，这可能会影响活动和整个项目。项目团队目前已经难以实现下一个里程碑。将该问题添加到问题日志后，项目经理下一步应该做什么？<br>Due to an
+						emergency, a team member assigned to an activity with two-day total float leaves a project, The could impact
+						that activity and the overall project. The project team is already having difficulty achieving an upcoming
+						milestone. After adding this to the issue log, what should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：评估对项目的影响并创建选项<br>Evaluate the impact on the project and create options </li>
+							<li>
+								<input type="radio"> B：更新风险登记册<br>Update the risk register </li>
+							<li>
+								<input type="radio"> C：请求额外资源<br>Request an additional resource </li>
+							<li>
+								<input type="radio"> D：从具有更多浮动时间的另一个活动中分配一名人员<br>Assign a resource from another activity that has more
+								float </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK8.2.2.7
+						定义问题；识别根本原因；生成可能的解决方案 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm35">
+					<div class="st_content_txt_tm">
+						<span>35、</span>
+
+						在创建质量管理计划时，项目经理确定预防和质量评估的成本非常高，然而，增加预算不会减少公司未来的故障维修费用。项目经理应该怎么做？<br>While creating a quality management plan,
+						a project manager determines that the cost of prevention and quality assessment is very high, however,
+						increasing the budget will not reduce the company's future failure repair costs. What should a project manager
+						do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：修改预算以增加预防和质量评估活动 <br>Revise the budget to increase preventive and quality appraised
+								activities </li>
+							<li>
+								<input type="radio"> B：保持当前的质量活动<br>Maintain current quality activities </li>
+							<li>
+								<input type="radio"> C：修改预算以解决故障成本问题<br>Revise the budget to address failure costs </li>
+							<li>
+								<input type="radio"> D：变更制造过程以减少缺陷<br>Change the manufacturing process to reduce defects </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：pmbok
+						p277-规划质量管理。规划质量管理的工具与技术中有质量成本，8.1.2.3数据分析（p282），质量成本包括预防成本，评估成本和失败成本（内部/外部）。题目已经说到质量评估的成本非常高，但是也不会带来效益，如果得不偿失就不要进行了。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm36">
+					<div class="st_content_txt_tm">
+						<span>36、</span>
+
+						在执行挣值分析(EVA)时，项目经理注意到成本绩效指数(CPI)与预期不符。项目经理进行了调查，但无法找到项目中所使用产品的采购订单或收据。应该使用下列哪一项来防止这种情况发生？<br>While performing
+						an earned value analysis(EVA), a project manager noticed that the cost performance index (CPI) is not what was
+						expecte The project manager investigates and is unable to locate purchase orders or receipts for items used in
+						the project. What should have been used to prevent this from occurring? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审计<br>Audit </li>
+							<li>
+								<input type="radio"> B：检查<br>Inspections </li>
+							<li>
+								<input type="radio"> C：数据分析<br>Data analysis </li>
+							<li>
+								<input type="radio"> D：风险管理<br>Risk management </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：8.2管理质量。“防止”、“确保”、“避免”都只能通过质量保证来实现，A是质量保证工作。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm37">
+					<div class="st_content_txt_tm">
+						<span>37、</span>
+
+						项目经理正在管理一个由跨职能团队执行的软件重新设计项目。该公司正在进行敏捷转型，项目管理办公室(PMO)发布了更新后的政策和程序，要求当前项目迭代开发整合到项目管理方法中。若要确保每次迭代交付都考虑质量，项目经理应该怎么做？<br>A
+						project manager is leading a software redesign project with a cross-functional team. The company is undergoing
+						an agile transformation, and the project management office (PMO) has released updated policies and procedures
+						that require current projects to integrated iterative development into project management approaches. What
+						should the project manager do to ensure that quality is incorporated into each iteration of delivery? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与相关方以及和项目团队合作，以确保有明确定义的“已完成”定义(DoD)<br>Work with stakeholders and the project team
+								to ensure that there is a clearly a defined definition of done(DoD) </li>
+							<li>
+								<input type="radio"> B：将测试和验证活动分配给具有功能背景的团队成员<br>Assign testing and validation activities to team members
+								with a functional background </li>
+							<li>
+								<input type="radio"> C：安排该项目最后一次迭代的所有测试活动，以便整个团队可以关注同一目标<br>Schedule all testing activities for the last
+								iteration of the project so the entire team can focus on the same goal </li>
+							<li>
+								<input type="radio"> D：分配专门的软件测试人员，以确保在整个项目生命周期中进行测试<br>Assign a dedicated software tester to ensure that
+								testing occurs throughout the project’s life cycle </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：DoD是在敏捷中对质量的要求的描述。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm38">
+					<div class="st_content_txt_tm">
+						<span>38、</span>
+
+						在一个IT项目的第二个交付里程碑中执行了质量评估。由于提出了许多问题，项目经理希望了解质量趋势以及是否存在相关变量。项目经理应该使用哪一项工具？<br>At the second delivery milestone
+						of an IT project. A quality assessment is Performed ,A number of issues are raised, and the project manager
+						wants to understand the trend about quality and whether or not there are related variables. What tool or
+						technique should the project manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：石川图<br>Ishikawa diagram </li>
+							<li>
+								<input type="radio"> B：散点图<br>Scatter diagram </li>
+							<li>
+								<input type="radio"> C：帕累托图<br>Pareto chart </li>
+							<li>
+								<input type="radio"> D：统计分析<br>Statistical sampling </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：8.2管理质量：散点图。找相关性，用散点图。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm39">
+					<div class="st_content_txt_tm">
+						<span>39、</span>
+
+						一个项目可交付成果已交付给客户,但未能满足质量标准,项目经理下一步应该做什么?<br>A project deliverable has been delivered to the client,but it falls
+						to meet quality standards.What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查可接受的公差水平<br>Review acceptable tolerance levels. </li>
+							<li>
+								<input type="radio"> B：调整下一个可交付成果的参数。<br>
+								Adjust the parameters for the next deliverable. </li>
+							<li>
+								<input type="radio"> C：对可交付成果进行补救工作<br>Conduct remedial work on the deliverable. </li>
+							<li>
+								<input type="radio"> D：执行根本原因分析,并识别纠正方案<br>Perform a root analysis,and identify a corrective solution.
+							</li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参见PMBOK第6版8.3.2.2 控制质量：工具技术—数据分析。质量控制出了问题，可使用根本原因分析。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm40">
+					<div class="st_content_txt_tm">
+						<span>40、</span>
+
+						一个开发软件产品的项目包含几个不同的组件。在实施项目之前,项目经理审查了从之前的类似项目中汲取的经验教训。项目经理发现,质量保证团队经常要求开发团队对未达到验证标准的产品组件进行返工。项目经理应该在项目中加入什么来防止这种情况再发生?<br>A
+						project develop a software product encompasses several different components.Before implementing the
+						project,the project manager reviewsthe lessons learned from previous,similar projects.The project manager
+						identifies that quality assurance teams frequently requested rework by thedevelopment team on product
+						components that failed to meet acceptancecriteriWhat should the project manager include in the project to
+						prevent this fromreoccurring? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：充足的质量保证团队资源,确保质量保证任务的执行更加高效<br>Adequate quality assurance team resources to ensure
+								that the execution ofquality assurance tasks is more efficient. </li>
+							<li>
+								<input type="radio"> B：进度计划中的充足时间,来完成所需的开发和质量保证任务<br>Sufficient time in the schedule to complete the
+								required development andquality assurance tasks. </li>
+							<li>
+								<input type="radio"> C：质量管理计划,包含每个组件的开发任务、验收标准和质量保证任务<br>A quality management plan that incorporates
+								development tasks,acceptancecriteria,and quality assurance tasks foe each component. </li>
+							<li>
+								<input type="radio"> D：充足的开发团队资源,用于质量保证任务,确保以更高的质量交付产品<br>Sufficient development team resource for quality
+								assurance tasks to ensure
+								that the product is delivered with higher quality. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：从经验教训登记册中得知，质量水平是一个问题，提升质量需要提升生产（开发）流程，检查不解决根本问题。而提升质量是一个系统工程，需要各个环节的合作，单纯增加某一项资源是不可取的，因此选择C。
+						PMBOK 8.1.3.1 质量管理计划是项目管理计划的组成部分，描述如何实施适用的政策、程序和指南以实现质量目标。它描述了项目管理团队为实现一系列项目质量目标所需的活动和资源。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm41">
+					<div class="st_content_txt_tm">
+						<span>41、</span>
+
+						一个分包商虽然工作速度非常快,但却未能完成项目可交付成果的正式验收程序。客户的质量团队检查了可交付成果,并创建了一份很长的缺陷清单。若要避免这个问题,项目经理应该事先做什么?<br>A
+						subcontractor,working at a very fast pace,falls to complete official acceptance procedures for project
+						deliverables.The client's team inspects thedeliverables and creates a long list of defects.What should the
+						project manager have done to avoid this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：经常与客户举行状态会议<br>Held frequent status meetings with the client. </li>
+							<li>
+								<input type="radio"> B：让一个内部质量团队检查可交付成果<br>Had an internal quality team check the deliverables. </li>
+							<li>
+								<input type="radio"> C：实施质量管理计划<br>Implemented a quality management plan. </li>
+							<li>
+								<input type="radio"> D：要求客户提供原型<br>Requested a prototype from the client. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：为了保证质量水平，需要有完整的质量管理计划。PMBOK 8.1.3.1
+						质量管理计划是项目管理计划的组成部分，描述如何实施适用的政策、程序和指南以实现质量目标。它描述了项目管理团队为实现一系列项目质量目标所需的活动和资源。B只关注检查结果，不能保证避免质量问题。A举行会议，不一定能暴露出质量问题。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm42">
+					<div class="st_content_txt_tm">
+						<span>42、</span>
+
+						项目经理从团队收到一份报告,称正在创建的新组件未能符合项目规范的要求,这份报告列出了各个问题领域中不合格的多种原因,而这可能识别出问题的根本原因。团队使用的是哪一种数据表示工具或技术类型?<br>A project
+						manager receives a report from the team that new widgets being created fail to meet the requirements of the
+						project specifications .The report lists multiple causes for the non-conformance under several problem areas,
+						which could lead to the problem's root cause.
+						What type of data representation tool or technique did the team use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：流程图<br>Flowchart. </li>
+							<li>
+								<input type="radio"> B：直方图<br>Histogram. </li>
+							<li>
+								<input type="radio"> C：亲和图<br>Affinity diagram. </li>
+							<li>
+								<input type="radio"> D：石川图<br>Ishikawa diagram. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK 6版 8.2.24 因果图，根本原因分析，又叫石川图，鱼骨图。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm43">
+					<div class="st_content_txt_tm">
+						<span>43、</span>
+
+						一个项目相关方对某些可交付成果的质量颇有微词。项目经理认为,这些可交付成果符合项目的质量标准。项目经理应使用什么工具或技术来支持这一点?<br>A project stakeholder complains about
+						the quality of deliverables.The
+						project manager believes that these deliverables meet the project's quality
+						standards.
+						What tool or technique should the project manager use to support this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：散点图<br>Scatter diagrams. </li>
+							<li>
+								<input type="radio"> B：因果图<br>Cause-and-effected diagrams. </li>
+							<li>
+								<input type="radio"> C：控制图<br>Control charts. </li>
+							<li>
+								<input type="radio"> D：直方图<br>Histograms. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK第6版8.3.2.5数据表现，C控制图用于确定一个过程是否稳定，或者是否具有可预测的绩效，D按来源或组成部分展示缺陷数量，A散点图可在一支轴上展示计划的绩效，在另一支轴上展示实际绩效，B因果图用于识别质量缺陷和错误可能造成的结果。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm44">
+					<div class="st_content_txt_tm">
+						<span>44、</span>
+
+						在向客户移交之前,对项目可交付成果的一部分进行核实。负责质量审计的团队成员在其中一项可交付成果中找到一些有缺陷的部分,他们将其发回给装配线团队返工,这将增加成本。
+						这种质量成本(COQ)如何分类?<br>A portion of a project's deliverable are being validated point to client handover.Team
+						members responsible for quality audits fined some defective
+						parts in one of the items.They send them to the reworked by the assembly-lineteam,which will increase coats.
+						How is this coast of quality(COQ)categorized? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：内部失败成本<br>Internal failure coasts </li>
+							<li>
+								<input type="radio"> B：外部失败成本<br>External failure coasts </li>
+							<li>
+								<input type="radio"> C：预防成本<br>Prevention coasts </li>
+							<li>
+								<input type="radio"> D：评估成本<br>Appraisal costs </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：内部返工成本属于内部失败成本，参见PMBOK第6版8.1.2.3质量成本。P283图8-5。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm45">
+					<div class="st_content_txt_tm">
+						<span>45、</span>
+
+						项目已完成并获得客户批准,IT部门计划对项目进行不定期审计。
+						项目经理应该怎么做?<br>A project is completed and customer approval is obtained,The IT department plans an unscheduled
+						audit of the project.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查公司政策并通知涉及的项目相关方<br>Review company policies and notify the stakeholders involved
+							</li>
+							<li>
+								<input type="radio"> B：允许审计,因为可以为项目提供更多价值<br>Allow the audit as it could provide more value for the
+								project </li>
+							<li>
+								<input type="radio"> C：请求审查IT部门的质量保证政策<br>Requests to review of the IT Department's quality assurance
+								policies </li>
+							<li>
+								<input type="radio"> D：告知项目发起人IT审计不是质量管理计划的一部分<br>Advise the sponsor that an IT audit is not part of the
+								quality management planReview company policies and notify the stakeholders involve </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：考点：质量审计，参见PMBOK第6版8.2.2.5，每次审计都应对组织经验教训知识库的积累做出贡献。B答案最佳。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm46">
+					<div class="st_content_txt_tm">
+						<span>46、</span>
+
+						虽然某个可交付成果已遵循质量控制过程,但客户对其质量表示不满,项目经理首先应该做什么?<br>Although the quality control process was followed for a
+						deliverable,thecustomers express displeasure with its quality.
+						What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将该问题升级上报给合同经理<br>EsAalate the issue to the AontraAt manager. </li>
+							<li>
+								<input type="radio"> B：继续执行该项目,因为可交付成果已通过质量控制检查<br>ProceeB with the project since the Beliverable passeB
+								quality control checks. </li>
+							<li>
+								<input type="radio"> C：审查内部质量控制流程<br>Review the internal quality control process </li>
+							<li>
+								<input type="radio"> D：将可交付成果的质量与验收标准进行比较<br>Compare the deliveraDle's quality against the acceptance
+								criteri </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：可交付成果已遵循质量控制过程说明内部质量控制流程没有问题，客户不满意应该是验收标准不符合客户要求。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm47">
+					<div class="st_content_txt_tm">
+						<span>47、</span>
+
+						公司正在开发一些新产品，在测试阶段，客户发现该产品的一个严重缺陷。项目经理应该使用什么来确定合适的解决方案？<br>A company is developing a new produci.During the
+						testing stage,customers identify a serious defect with it.
+						What should the project manager use to determine an appropriate solution? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：因果图<br>Cause-and-effect diagram </li>
+							<li>
+								<input type="radio"> B：六西格玛<br>Six Sigma </li>
+							<li>
+								<input type="radio"> C：专家判断<br>Expert judgement </li>
+							<li>
+								<input type="radio"> D：面向X的设计<br>Design for X </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：修复缺陷，要先找根本原因。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm48">
+					<div class="st_content_txt_tm">
+						<span>48、</span>
+
+						客户识别到一个新实施产品的性能问题。项目经理应使用哪一个质量成本(COQ)类别来估算这项成本？<br>A customer identifies performance issues on a newly
+						implemented product. What category of cost of quality(COQ)should the project manager have used to estimate
+						this cost? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：预防成本<br>Prevention costs </li>
+							<li>
+								<input type="radio"> B：外部失败成本<br>External failure costs </li>
+							<li>
+								<input type="radio"> C：评估成本<br>Appraisal costs </li>
+							<li>
+								<input type="radio"> D：内部失败成本<br>Internal failure costs </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：客户发现的性能问题，即质量缺陷，是外部失败。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm49">
+					<div class="st_content_txt_tm">
+						<span>49、</span>
+
+						项目已按时执行，项目经理现在必须确保可交付成果符合客户验收的质量标准。项目经理应使用什么工具或技术？<br>A project has been executed on time，and the project
+						manager must now ensure that the deliverables conform to quality standards for customer acceptance. What tool
+						or technique should the project manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：控制图<br>Control chart </li>
+							<li>
+								<input type="radio"> B：散点图<br>Scatter diagram </li>
+							<li>
+								<input type="radio"> C：帕累托图<br>Pareto diagram </li>
+							<li>
+								<input type="radio"> D：直方图<br>Histogram </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：标准参考答案应该是检查，选项没有检查，也没有抽样统计，可以选控制图，因为控制图中有规格线，可以检查可交付成果是否合格。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm50">
+					<div class="st_content_txt_tm">
+						<span>50、</span>
+
+						由于技术已在其他工厂运行，一个项目的用户验收测试被省略。但是，在实施后，该技术不能按预期起作用。项目经理应该怎么做？<br>User acceptance tests on a project have been
+						omitted since the technology is operational at other factories.However,after implementation,the technology is
+						not working as expected. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：查看缺陷报告以确定并解决问题<br>Review the defect report ti identify and solve issue </li>
+							<li>
+								<input type="radio"> B：提交变更请求<br>Submit a change request </li>
+							<li>
+								<input type="radio"> C：执行根本原因分析，以确定纠正措施<br>Conduct a root cause analysis to identify corrective actions
+							</li>
+							<li>
+								<input type="radio"> D：使用测试脚本来解决问题<br>Use test scripts to resolve the issue </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：说明解析：PMBOK（6）P304-8.3.2.5控制质量-因果图。识别质量缺陷或错误可能造成的原因。项目结果不正确，首先查找根本原因，再决定如何处理。确定纠正措施后，考虑提交变更请求。选项A：题干已知技术不能按预期起作用，缺陷报告也需要确定纠正措施，选A不正确。选项B：提交变更请求在确定纠正措施之后。
+						选项D：技术不能预期起作用，测试脚本解决不了问题，选D不正确。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm51">
+					<div class="st_content_txt_tm">
+						<span>51、</span>
+
+						在生产某个新产品时，确定某个过程的两个数据点超出控制界限上限。由于这个过程是项目管理计划中其它活动的依赖，所以如果没有得到适当控制，整个项目的绩效都将会受到影响。项目经理下一步应该怎么做？<br>During the
+						production of a new product, it is identified that two data points of a process are above the upper control
+						limit. Since this process is a dependency of other activities in the project management plan, performance of
+						the overall project could be impacted not properly controlle
+						What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将这个过程与其他类似产品的过程进行标杆对照，以提高绩效<br>Benchmark this process to others of similar products
+								to improve performance </li>
+							<li>
+								<input type="radio"> B：使用实验设计(DOE)方法来确定这些偏差的根本原因<br>Use the design of experiments(DOE)method to identify
+								the root cause of these deviations </li>
+							<li>
+								<input type="radio"> C：创建石川图来确定这些问题的根本原因<br>Create an Ishikawa diagram to determine the root cause of
+								these problems </li>
+							<li>
+								<input type="radio"> D：审查这一过程的强制性依赖关系，以评估对项目的影响<br>Review the mandatory dependencies of this process to
+								assess the impact on the project </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：可以判断过程失控，应该对过程进行修复、改进。改进过程首先需要识别过程失控的根本原因。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm52">
+					<div class="st_content_txt_tm">
+						<span>52、</span>
+
+						在职能团队交付产品后，项目经理使用统计抽样和检查来确定产品是否达到预期需求。
+						这个过程的输出是什么？<br>After a functional team delivers the product, the project manager uses statistical sampling
+						and inspection to determine if the product performs as expecte What is the output of this
+						process? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目范围说明书<br>Project scope statement </li>
+							<li>
+								<input type="radio"> B：质量测量指标<br>Quality metrics </li>
+							<li>
+								<input type="radio"> C：核实的可交付成果 <br>Verified deliverables </li>
+							<li>
+								<input type="radio"> D：质量审计报告<br>Quality audit report </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：本题考控制质量过程的输出，只有C正确。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm53">
+					<div class="st_content_txt_tm">
+						<span>53、</span>
+
+						客户需要批准的产品指南，以便在新的站点实施已完成的项目解决方案。但是，客户却无法实施解决方案，因为可交付成果不能按照已批准需求的规范执行。
+						若要避免这个问题，项目经理应该事先做什么？<br>Customer needs the approved product guidelines to implement a completed project
+						solution at a new site. However, the customer cannot implement the solution because the deliverables fail to
+						be executed in accordance with the specifications of the approved requirements.
+						To avoid this problem, what should the project manager do in advance? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：完成统计抽样分析<br>To complete the statistical sampling analysis </li>
+							<li>
+								<input type="radio"> B：应用质量检查<br>To use the quality check </li>
+							<li>
+								<input type="radio"> C：执行质量审计<br>To perform the quality audit </li>
+							<li>
+								<input type="radio"> D：核实变更<br>To verify changes </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：题目强调了“避免”，考管理质量（质量保证），只有C是管理质量（质量保证）工具。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm54">
+					<div class="st_content_txt_tm">
+						<span>54、</span>
+
+						为了确保满足质量标准，项目经理聘请外部资源来检查可交付成果的质量。这种检查的成本可以分为哪些成本类别？<br>To ensure quality standards are met, a project manager
+						invites external resources to inspect the quality of deliverables. The cost for this inspection can be
+						classified under what cost category? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：预防成本<br>Prevention </li>
+							<li>
+								<input type="radio"> B：评价成本<br>Appraisal </li>
+							<li>
+								<input type="radio"> C：外部成本<br>External </li>
+							<li>
+								<input type="radio"> D：失败成本<br>Failure </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：检查属于评估成本。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm55">
+					<div class="st_content_txt_tm">
+						<span>55、</span>
+
+						项目经理负责管理一个正在进行的项目，该项目存在质量问题。团队成员认为质量保证对项目没有增加任何价值。
+						此时项目经理应该怎么做？<br>The project manager is responsible for managing an ongoing project with quality problems. Team
+						members consider that quality assurance does not add any value to the project.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：修订项目管理计划<br>To revise the project management plan </li>
+							<li>
+								<input type="radio"> B：修订质量管理计划<br>To revise the quality control plan </li>
+							<li>
+								<input type="radio"> C：执行根本原因分析<br>To perform root cause analysis </li>
+							<li>
+								<input type="radio"> D：控制质量测量指标<br>To control quality measurement indicators </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：题目暗示：质量保证过程有问题。需要改进过程。改进过程需要使用过程分析改进不好的过程。过程分析包括根本原因分析——用于识别问题、探究根本原因，并制定预防措施的一种具体技术。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm56">
+					<div class="st_content_txt_tm">
+						<span>56、</span>
+
+						项目经理召开团队研讨会，讨论质量管理计划。三名团队成员认为质量保证无法为项目增值。
+						项目经理应该怎么做？<br>The project manager holds a group seminar to discuss the quality control plan. Three team
+						members consider that quality assurance could not add value to the project.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将这些团队成员介绍给发起人进行澄清<br>To introduce these team members to the sponsor for
+								clarification </li>
+							<li>
+								<input type="radio"> B：评估质量保证的绩效<br>To assess the performance of quality assurance </li>
+							<li>
+								<input type="radio"> C：提醒这些团队成员，执行质量保证可以降低项目成本<br>To remind these team members that quality assurance can
+								reduce project costs </li>
+							<li>
+								<input type="radio"> D：派这些团队成员参加质量管理培训<br>To send these team members to participate in the quality control
+								training </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：质量保证是有好处的，必须进行。团队成员有不正确认识，要影响、转变。C选项是首先要做的，如果仍然有不同的意见，需要提供培训等其他方法，再考虑其他选项。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm57">
+					<div class="st_content_txt_tm">
+						<span>57、</span>
+
+						项目团队正在对一家制造公司的原型进行质量检查，在控制图上连续七个点落在平均线上方，但处于控制界限内。
+						质量过程的绩效水平是什么？<br>The project team is conducting a quality check on the prototype of a manufacturing company,
+						seven consecutive points fall above the average line on the control chart, but within the control limits.
+						What is the performance level of the quality process? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：在规格界限内<br>Within the specification limits </li>
+							<li>
+								<input type="radio"> B：在规格界限外<br>Out of the specification limits </li>
+							<li>
+								<input type="radio"> C：失控<br>Out of control </li>
+							<li>
+								<input type="radio"> D：处于控制当中<br>Under control </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：连续七个点在均值线同侧，属于控制图的失控情况的七点法则。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm58">
+					<div class="st_content_txt_tm">
+						<span>58、</span>
+
+						在一个价值200万美元项目的测试阶段，团队发现了一些缺陷。由于截止期限很紧，团队成员承认他们可能无法修复所有缺陷。
+						若要确定应集中哪些工作，项目经理应该使用什么工具或技术？<br>During the testing phase of a US$2 million project, the team discovers several
+						defects. Since deadlines are tight， team members acknowledge that they may be unable to fix all of the
+						defects.
+						What tool or technique should the project manager use to identify where efforts should be concentrated? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：帕累托图<br>Pareto diagram </li>
+							<li>
+								<input type="radio"> B：矩阵图<br>Matrix diagram </li>
+							<li>
+								<input type="radio"> C：散点图<br>Scatter diagram </li>
+							<li>
+								<input type="radio"> D：专家判断<br>Expert judgement </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：缺陷太多不能都修复时，要优先修复主要缺陷，给缺陷排序用帕累托。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm59">
+					<div class="st_content_txt_tm">
+						<span>59、</span>
+
+						执行质量控制的项目经理希望了解一个变量是否会对另一个变量产生影响，项目经理应该使用什么基本质量工具来确定这个问题?<br>The project manager performing quality control
+						wants to know if one variable will affect another. What basic quality tools should the project manager use to
+						determine the problem? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：散点图<br>Scatter Diagram </li>
+							<li>
+								<input type="radio"> B：控制图<br>Control Chart </li>
+							<li>
+								<input type="radio"> C：帕累托图<br>Pareto Chart </li>
+							<li>
+								<input type="radio"> D：流程图<br>Flow Chart </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：两个变量之间的相关性，用散点图判断。或看到相关性，找散点图。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm60">
+					<div class="st_content_txt_tm">
+						<span>60、</span>
+
+						在项目执行期间，出现了一个无法识别根本原因的问题。项目经理可以使用什么工具来识别根本原因？<br>After project implementation, a problem that cannot be
+						identified happens. What tool could the project manager use to identify the root cause? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：核查表<br>Checklist </li>
+							<li>
+								<input type="radio"> B：石川图<br>Ishikawa Diagram </li>
+							<li>
+								<input type="radio"> C：散点图<br>Scatter Plot </li>
+							<li>
+								<input type="radio"> D：树图<br>Tree Diagram </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：找根本原因用石川图。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm61">
+					<div class="st_content_txt_tm">
+						<span>61、</span>
+
+						质量检查揭示了一个制造缺陷。若要继续该项目，项目经理必须快速确定深层原因。可以使用什么类型的分析来完成这项工作?<br>Quality inspection reveals a manufacturing defect.
+						To continue the project, the project manager must quickly determine the underlying cause. Which type of
+						analysis can be used to accomplish this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：帕累托图<br>Pareto Chart </li>
+							<li>
+								<input type="radio"> B：趋势<br>Trends </li>
+							<li>
+								<input type="radio"> C：优势、劣势、机会与威胁（SWOT<br>Strengths, Weaknesses, Opportunities and Threats (SWOT) </li>
+							<li>
+								<input type="radio"> D：根本原因<br>Root Cause </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：深层次原因就是根本原因。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm62">
+					<div class="st_content_txt_tm">
+						<span>62、</span>
+
+						在收到软件开发项目的可交付成果时，客户发现没有遵守他们的编码标准，最终产品不符合质量要求。项目经理下一步应该怎么做？<br>Upon receipt of a software development project
+						deliverable,the customer identifies that their coding standards, were not followed and that the final product
+						fails to meet quality requirements. What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：查看质量管理计划<br>Review the quality management plan </li>
+							<li>
+								<input type="radio"> B：开展质量审计<br>Conduct a quality audit </li>
+							<li>
+								<input type="radio"> C：审查项目基准<br>Review the project baseline </li>
+							<li>
+								<input type="radio"> D：与客户协商接受可交付成果<br>Negotiate with the customer to accept the deliverable </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：题目是两个问题：1、不遵守流程，2、最终产品不符合质量。第一个问题可以用质量审计，属于管理质量过程；第二个问题要修复缺陷，属于控制质量过程只有A同时指导管理质量过程和控制质量过程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm63">
+					<div class="st_content_txt_tm">
+						<span>63、</span>
+
+						地震已导致项目里程碑的截止日期推迟。项目团队现在面临着在不降低质量的情况下将影响降至最低的压力。若要确保维持质量,项目经理应该做什么?<br>An earthquake has delayed meeting a
+						project milestone deadline,and the project team is now under pressure to minimize the impact without
+						compromising quality.What should the project manager do to ensure the quality is maintained? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：确保团队遵循质量管理计划,同时快速跟进该项目。<br>Ensure that the team follows the quality management plan
+								while fast trackingthe project. </li>
+							<li>
+								<input type="radio"> B：专注于高质量完成高优先级工作包,以确保按时交付<br>Focus on quality completion of high-quality work
+								packages to ensure on-timedelivery. </li>
+							<li>
+								<input type="radio"> C：减少质量控制点,以更快完成项目<br>Reduce quality control points to achieve faster
+								project,completion. </li>
+							<li>
+								<input type="radio"> D：通过制定新的质量管理计划来适应这种情况<br>Adapt to situation by developing a new quality management
+								plan. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：本题关键词“确保维持质量”，是管理质量题目（QA），同时考察控制进度工具与技术，参见PMBOK228页，采用进度压缩技术使进度落后的项目活动赶上计划，可以对剩余工作使用快速跟进或赶工方法。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm64">
+					<div class="st_content_txt_tm">
+						<span>64、</span>
+
+						项目已准备好收尾,但审计认为组织归档程序存在缺陷。由于发起人对归档不感兴趣,项目经理接下来应该做什么?<br>A project is ready for closure,but adults determine
+						that there are defects in organizational archiving procedures.Since the sponsor is uninterested in
+						arching.What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与所有相关方开会<br>Meet with all stakeholders. </li>
+							<li>
+								<input type="radio"> B：更新组织归档标准<br>Update organizational archiving standards. </li>
+							<li>
+								<input type="radio"> C：项目收尾<br>Close the project. </li>
+							<li>
+								<input type="radio"> D：聘请归档专家<br>Hire archiving experts. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：解析：PMBOK 8.2.2.5 审计；8.2.2.8
+						质量改进方法。质量审计目标包括识别所有违规做法、差距及不足。质量改进的开展，可基于质量控制过程的发现和建议、质量审计的发现，或管理质量过程的问题解决。在进行审计的过程中，审计发现了组织归档程序有缺陷，正确的做法是要进行质量改进，对组织归档的标准进行更新，选择B。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm65">
+					<div class="st_content_txt_tm">
+						<span>65、</span>
+
+						一个项目正处于执行阶段,为了节省时间和获得奖金，团队成员希望快速交付一些已准备好的可交付成果，因此必须删去质量控制相关的任务。项目经理应该怎么做?<br>A project is in its execution
+						phase,and some deliverables are almost readyto go to the client.Team members want to quickly hand off these
+						deliverables to save time and receive their bonus.To achieve this quality-control-related basks will need to
+						be eliminateWhat should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：完成项目,签发变更请求,并而请求一支新资源替换不合规的部分<br>Finalize the project,issued a change request and
+								request a new team due to noncompliance. </li>
+							<li>
+								<input type="radio"> B：向项目发起人和管理层报告该问题,防止支付效率奖金<br>Reports the issue to the project sponsors and
+								management to prevent the efficiency bonus from being pai </li>
+							<li>
+								<input type="radio"> C：让团队成员查阅质量管理计划并向项目发起人报告道德问题<br>Refer the team members to the quality management plan
+								and report ethics to the project sponsor. </li>
+							<li>
+								<input type="radio"> D：将可能不满足客户要求的风险更新到风险登记册中<br>Update the risk register with potential unmet customer
+								requirements. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：质量问题不可偷工减料。为获得奖金而忽视质量的后果可能非常严重，因此需要向团队强调遵循质量管理计划并向高层提出此道德风险。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm66">
+					<div class="st_content_txt_tm">
+						<span>66、</span>
+
+						一个用于交付IT解决方案实施项目的工作包正在准备中,项目经理检查验收标准,注意到可交付成果不符合验收标准清单中的两项。若要避免这个问题,在项目开发期间,项目经理应事先完成下列哪个?<br>A work package
+						for delivering IT solution implementation projects is in preparation, and the project manager checks the
+						acceptance criteria, noting that deliverables do not meet two of the acceptance criteria list. To avoid this
+						problem, which of the following should the project manager complete in advance during project development?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：进行检查<br>Held inspections. </li>
+							<li>
+								<input type="radio"> B：检查核查表<br>Examined the check-sheets. </li>
+							<li>
+								<input type="radio"> C：进行测试<br>Conducted testing. </li>
+							<li>
+								<input type="radio"> D：重新审查清单<br>Reviewed the checklist. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK8.3.2.4 测试/产品评估；见PMOK303页最后一段最后一句话，早期测试有预防作用。旨在根据项目需求提供有关被测产品或服务质量的客观信息。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm67">
+					<div class="st_content_txt_tm">
+						<span>67、</span>
+
+						在生产环境中执行后识别到一个项目问题。若要识别发生这种问题的原因，项目经理应该使用什么工具或技术？<br>A project issue is identified after implementation in the
+						production environment.What tool or technique should the project manager use to identify the reason for the
+						issue? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：帕累托图<br>Pareto </li>
+							<li>
+								<input type="radio"> B：直方图<br>Histogram </li>
+							<li>
+								<input type="radio"> C：石川图<br>Ishikawa map </li>
+							<li>
+								<input type="radio"> D：控制图<br>Control Charts </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：定位：（理念）因果图。&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						&nbsp;说明解析：PMBOK（6）P736术语表。因果图用于追溯造成非预期结果的根本原因。采用因果图查找一个项目问题的原因。选项A：帕累托图用于查找众多原因中的主要原因。选项B：直方图记录项目所有原因造成问题的数量。选项D：控制图按时间顺序展示过程数据，与既定控制界限相比较的一种图形。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm68">
+					<div class="st_content_txt_tm">
+						<span>68、</span>
+
+						由于项目涉及一个他们不熟悉的行业,项目经理很难定义其产品的质量标准和测量指标。项目经理应该做什么?<br>Because a project involves an industry with which they
+						are unfamiliar,aproject manager is having difficulty defining the quality standards and metricsfor its
+						project.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：查询类似项目的经验教训<br>Consult the lessons learned registers of similar projects </li>
+							<li>
+								<input type="radio"> B：密切监督项目质量<br>Closely monitor the project's quality </li>
+							<li>
+								<input type="radio"> C：拒绝项目经理的职位<br>Decline the project manager position </li>
+							<li>
+								<input type="radio"> D：带一位专家到项目团队<br>Bring an expert to the project team </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：考点：规划质量管理的工具-专家判断。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm69">
+					<div class="st_content_txt_tm">
+						<span>69、</span>
+
+						一个主要可交付成果即将被发送给客户。团队成员对作为质量保证过程一部分而需要执行的任务量和时间有所抱怨,项目经理需要尽快将可交付成果准备就绪,以获得第一次项目付款。项目经理应该做什么去确保按时获得可交付成果？<br>A
+						key deliverable is about to be sent to the customer.Team members complain about the time and number of tasks
+						that need to be performed as part of the quality assurance process.The Project manager needs the deliverable
+						to be ready soon to obtain the first project payment.
+						What should the project manager do to get the deliverable on time? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：执行因果分析<br>Perform a cause-and-effect analysis. </li>
+							<li>
+								<input type="radio"> B：对使用的过程和方法进行项目审计<br>Conduct a Project audit on the process and methods use </li>
+							<li>
+								<input type="radio"> C：让团队成员查阅项目管理计划<br>Refer team members to the project management plan. </li>
+							<li>
+								<input type="radio"> D：确定客户需求和相关方的期望<br>Determine customer requirements and stakeholder expectations.
+							</li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：质量保证过程的任务量太大，耗费了太多时间，可能是过程本身有问题，通过对过程和方法的审计，提升该环节效率。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm70">
+					<div class="st_content_txt_tm">
+						<span>70、</span>
+
+						一项可交付成果的最新质量报告显示了质量标准方面的重大不合规问题,在团队会议期间,职能经理指出预算将不支持这些标准的实施,并称这些问题在项目的这个阶段并不重要。项目经理应该做什么?<br>The latest
+						quality report for a deliverable show major non-compliance issues with quality standards.During a team
+						meeting,a functional manager points out that the budget will not support implementation of these standards,and
+						claims that they are unimportant at this stage of the project.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：接受职能经理的专家判断,并修改质量管理计划<br>Accept the expert judgement of the functional manager,and
+								revise the quality
+								management. </li>
+							<li>
+								<input type="radio"> B：要求项目发起人增加预算以实施质量标准<br>Ask the project sponsor for a budget increase to important
+								the quality
+								standards. </li>
+							<li>
+								<input type="radio"> C：更新项目管理计划,以包括与质量合规相关的新风险<br>Update the project management plan to include a new risk
+								associated with
+								quality compliance. </li>
+							<li>
+								<input type="radio"> D：审查质量管理计划,并对预算采取适当的纠正措施<br>Review the quality management plan,and apply appropriate
+								corrective actionsregarding the budget. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：质量问题优先审查质量管理计划。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm71">
+					<div class="st_content_txt_tm">
+						<span>71、</span>
+
+						项目经理正在管理一个旨在减少有缺陷和受损产品的自动化项目。实施新的自动化生产线三周后，最终产品中增加的缺陷已超过目标水平，若要确定导致缺陷增加的原因。项目经理可以使用什么工具或技术？<br>A project
+						manager is managing an automation project designed to reduce defective and damaged products. Three weeks after
+						the implementation of the new automated production line, the added defects in the final product have exceeded
+						the target level.
+						What tools or techniques can the project manager use to identify what is causing this increase? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：控制图<br>Control chart </li>
+							<li>
+								<input type="radio"> B：散点图<br>Scatter diagram </li>
+							<li>
+								<input type="radio"> C：石川图<br>Ishikawa diagram </li>
+							<li>
+								<input type="radio"> D：过程分析<br>Process analysis </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：找缺陷原因，用石川图。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm72">
+					<div class="st_content_txt_tm">
+						<span>72、</span>
+
+						项目经理意识到数据收集不足并且不符合质量管理计划，这种疏忽将严重影响项目的制约因素。项目经理下一步应该怎么做？<br>A project manager realizes that data gathering is
+						insufficent and does not conform to the quality management plan. This oversight will seriously affect the
+						project's constraints.
+						What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：提交变更请求，以修订质量管理计划<br>Submit a change request to revise the quality management plan.
+							</li>
+							<li>
+								<input type="radio"> B：遵行因果分析，并将结果报告给项目发起人<br>Conduct a cause-and-effect analysis, and report the results
+								to the project sponsor. </li>
+							<li>
+								<input type="radio"> C：确定不合格的根本原因<br>Determine the root cause of the nonconformance. </li>
+							<li>
+								<input type="radio"> D：通知项目发起人，并要求与相关方开会，以修订质量管理计划<br>Inform the project sponsor, and request a meeting
+								with stakeholder to revise the quality
+								management plan. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：没有遵守质量管理计划，要改正的是行为，不是质量管理计划，AD错误，B排除，只能选C，纠正之前先找原因。 </div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+
+</html>

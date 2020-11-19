@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>远程模考（一）</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<input id="bb" type="hidden" value="l06" />
+
+		<div class="fixed-top bg-white border-bottom">
+			<div class="container">
+				<a href="./index.html" class="float-left text-secondary">首页</a>
+				<a href="#dingbu" class="float-right text-secondary">顶部</a>
+				<h5 class="st_content_tit">进度管理</h5>
+				<div class="input-group mb-3">
+					<input type="number" class="form-control" id="search" placeholder="输入题号查询" />
+					<div class="input-group-append">
+						<button id="search-btn" class="btn btn-outline-secondary" type="button">查询</button>
+						<button id="reset-btn" class="btn btn-outline-secondary" type="button">重置</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="check_answer">
+			<div class="btn-group btn-group-sm">
+				<button id="czst" type="button" class="btn btn-danger">重做</button>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-secondary" id="check_wei">未</button>
+				<button type="button" class="btn btn-secondary" id="check_quan">全</button>
+				<button type="button" class="btn btn-secondary" id="check_dui">对</button>
+				<button type="button" class="btn btn-secondary" id="check_cuo">错</button>
+				<button type="button" class="btn btn-secondary" id="check_tong" data-toggle="modal" data-target="#tongji">统</button>
+			</div>
+		</div>
+
+		<div class="modal" id="tongji">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">统计信息</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>正确：<span id="t_dui"></span></p>
+						<p>错误：<span id="t_cuo"></span></p>
+						<p>未做：<span id="t_wei"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="dingbu" class="container">
+			<div class="st_danxuan" id="radio_anchor">
+				<div class="st_content_txt" id="tm1">
+					<div class="st_content_txt_tm">
+						<span>1、</span>
+
+						进度计划经理注意到由于数据录入错误，低估了关键路径上某项任务的完成时间。进度计划经理应该怎么做？<br>The schedule manager notices that the completion time of a
+						task on the critical path is underestimated due to data entry errors. What should the schedule manager do?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：立即将该错误报告给项目发起人<br>To report the error to the project sponsor
+								immediately </li>
+							<li>
+								<input type="radio"> B：调整所有任务，保持计划的完成日期<br>To adjust all tasks and meet the planned completion date </li>
+							<li>
+								<input type="radio"> C：立即与项目经理讨论该错误以及可能的纠正措施<br>To discuss the error with the project manager and possible
+								corrective actions
+								immediately </li>
+							<li>
+								<input type="radio"> D：制定方法，确保客户不会产生有关进度影响的担忧<br>To lay down the method to ensure that the customer has no
+								concerns about the impact on schedule </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：关键路径的任务时间错误，意味着项目的整体进度受到影响，应与项目经理沟通，看是需要进行项目进度变更还是通过技术手段追回进度。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm2">
+					<div class="st_content_txt_tm">
+						<span>2、</span>
+
+						项目发起人通知项目经理，最关键的项目标准是按时交付产品，客户对资源可用性没有时间限制，哪个行动会减少时间表，但会增加风险?<br>The project sponsor informs the project
+						manager that the most critical project standard is to deliver the product on time. There is no time limit for
+						the availability of resources. Which action will reduce the timetable but will add to the risk? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：添加团队成员<br>To add team members </li>
+							<li>
+								<input type="radio"> B：并行执行活动<br>To execute activities in parallel </li>
+							<li>
+								<input type="radio"> C：外包项目执行<br>To outsource project execution </li>
+							<li>
+								<input type="radio"> D：聘请高薪专家<br>To hire high-salaried experts </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：题目强调项目标准是按时交付产品，时间要求严格。选择快速跟进压缩技术，将正常情况下按顺序进行的活动或阶段改为至少是部分并行开展。但是快速跟进可能造成返工和风险增加。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm3">
+					<div class="st_content_txt_tm">
+						<span>3、</span>
+
+						项目经理发现由于一名资源过度承诺而导致一些任务未完成。项目经理意识到如果使用其他资源，将不影响到关键路径。项目经理应该采用什么来满足进度计划?<br>The project manager finds that some
+						resources were not completed due to an over-commitment of resources. The project manager is aware that if
+						other resources are used, it will not impact the critical path. What should the project manager use to meet
+						the schedule? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：假设情景分析<br>To assume the scenario analysis </li>
+							<li>
+								<input type="radio"> B：资源平衡<br>To balance resources </li>
+							<li>
+								<input type="radio"> C：快速跟进<br>To make a quick follow-up </li>
+							<li>
+								<input type="radio"> D：资源平滑<br>To smooth resources </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：题目强调将不影响到关键路径，即锁定答题区域为资源优化。其中资源平滑是一种资源优化技术，在不影响关键路径的情况下使用自由浮动时间和总浮动时间。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm4">
+					<div class="st_content_txt_tm">
+						<span>4、</span>
+
+						项目经理了解到项目进度的绩效指数(SPI)为0.77。项目经理应该怎么做？<br>The project manager knows that the schedule performance index (SPI)
+						is 0.77. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新成本基准<br>To update the cost baseline </li>
+							<li>
+								<input type="radio"> B：更新进度基准<br>To update the schedule baseline </li>
+							<li>
+								<input type="radio"> C：分析关键路径上的绩效<br>To analyze the performance on critical paths </li>
+							<li>
+								<input type="radio"> D：分析项目管理计划<br>To analyze the project management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：SPI即为进度绩效指数测量进度效率的一种指标，表示为挣值与计划价值之比。SPI小于1，为进度落后，需要分析关键路径上的绩效，进行相应的措施改进。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm5">
+					<div class="st_content_txt_tm">
+						<span>5、</span>
+
+						一个项目已完成工作的预算值低于经批准的计划工作预算。这描述的是哪一种项目情景？<br>A project work completed budget is lower than the value of the
+						approved work plan budget.What project scenario does this describe? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目的挣值(EV)大于计划价值(PV)<br>The earned value(EV) of the project is greater than the
+								planned value(PV). </li>
+							<li>
+								<input type="radio"> B：项目提前于进度<br>The project is ahead of schedule. </li>
+							<li>
+								<input type="radio"> C：项目活动落后于进度<br>Project activity is behind schedule. </li>
+							<li>
+								<input type="radio"> D：项目符合进度<br>The project is on schedule. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P226-6.6.2.1挣值分析。EV
+
+					</div>
+				</div>
+				<div class="st_content_txt" id="tm6">
+					<div class="st_content_txt_tm">
+						<span>6、</span>
+
+						项目团队正在识别和评估一个项目的风险，该项目在范围和预算方面与上一个实施的一个项目类似。当前项目的主要区别在于可用资源更少。
+						在评估风险时，项目经理应该特别注意什么？<br>A project team is identifying and assessing risks of a project with similar scope and
+						budget of the one they implemented in the previous year. The primary difference in the current project is that
+						fewer resources will be available.
+						To what should the project manager pay particular attention when assessing the risk? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：进度计划<br>Schedule </li>
+							<li>
+								<input type="radio"> B：范围<br>Scope </li>
+							<li>
+								<input type="radio"> C：设计<br>Design </li>
+							<li>
+								<input type="radio"> D：风险登记册<br>Risk register </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK（6）P207-6.5制定进度计划。根据项目经验，组织过程资产作为制定进度计划的输入，资源不足，对进度影响最大。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm7">
+					<div class="st_content_txt_tm">
+						<span>7、</span>
+
+						在施工现场可被验收之前，正为一个关键项目活动寻求获得当地主管部门的批准，项目经理在为项目制定进度计划时应该做什么？<br>A key project activity is to seek approval from
+						local authorities before a construction site can be accepted .What should the project manager do when
+						scheduling the project? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：避免将该活动放在关键路径上<br>Avoid putting the activity on the critical path. </li>
+							<li>
+								<input type="radio"> B：执行确定和整合依赖关系<br>Perform dependency determination and integration. </li>
+							<li>
+								<input type="radio"> C：获得专家判断<br>Obtain expert judgment. </li>
+							<li>
+								<input type="radio"> D：在风险登记册中添加一个新风险<br>Add a new risk to the risk register. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P191-6.3.2.2关键活动需要当地政府批准，这描述的是外部依赖关系,B对应。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm8">
+					<div class="st_content_txt_tm">
+						<span>8、</span>
+
+						在为一个有预算限制的项目生成状态报告时，项目经理发现该项目比进度计划落后一周。若要将项目拉回正轨，项目经理应该怎么做？<br>While generating the status report for a
+						budget-constrained project, the project manager identifies that the project is one week behind schedule.
+						What should the project manager do to bring the project back on track? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：重新分配关键路径活动的团队成员<br>Reallocate team members on critical-path activities. </li>
+							<li>
+								<input type="radio"> B：向项目发起人要求额外的时间<br>Request additional time from the project sponsor. </li>
+							<li>
+								<input type="radio"> C：请求项目管理办公室(PMO)增加团队成员。<br>Ask the project management office (PMO) for additional
+								team members. </li>
+							<li>
+								<input type="radio"> D：执行资源优化<br>Perform resource optimization. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：时间不够，要赶工或进度压缩。D选项，资源平衡的工期会变长，资源平滑工期不变。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm9">
+					<div class="st_content_txt_tm">
+						<span>9、</span>
+
+						一个项目由五个任务组成。
+						—任务A将需要五天时间才能完成，且可以立即开始。
+						—任务B将需要四天才能完成，但只能在任务A完成后才能开始。
+						—任务C将需要三天才能完成，并且在开始之前独立于任何其他任务。
+						—任务D将需要七天才能完成，但只能在任务C完成后才能开始。
+						—任务E将需要五天才能完成，但只能在任务B和D完成后才能开始。
+						项目的关键路径是什么？<br>A project consists of five tasks.
+						-Task A will take five days to complete and can begin immediately.
+						-Task B will take four days to complete, but can begin only after task A has finishe
+						-Task C will take three days to complete, and is independent of any other tasks before it can begin.
+						-Task D will take seven days to complete, but can begin only after task C is finishe
+						-Task E will take five days to complete, but can begin only after both tasks B and D have finishe What is
+						the project's critical path ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：A—B—E<br>A—B—E </li>
+							<li>
+								<input type="radio"> B：C—D—E<br>C—D—E </li>
+							<li>
+								<input type="radio"> C：A—B—D—E<br>A—B—D—E </li>
+							<li>
+								<input type="radio"> D：C—B—D—E<br>C—B—D—E </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：pmbok6的210页6.5.2.2关键路径法：两条路径，A-B-E14 天，C-D-E15 天，后者是关键路径。选B </div>
+
+				</div>
+				<div class="st_content_txt" id="tm10">
+					<div class="st_content_txt_tm">
+						<span>10、</span>
+
+						一个新项目完工所需成本的不确定性很高。项目经理应该用什么方法来确定预期成本？<br>A new project has high uncertainly in the cost required for
+						completion.What approach should the project manager use to determine the expected costs? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：类比估算<br>Analogous estimating </li>
+							<li>
+								<input type="radio"> B：统计技术估算<br>Statistical techniques estimating </li>
+							<li>
+								<input type="radio"> C：参数估算<br>Parametric estimating </li>
+							<li>
+								<input type="radio"> D：三点估算<br>Three-Point estimating </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：不确定情况下估算方法，三点估算。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm11">
+					<div class="st_content_txt_tm">
+						<span>11、</span>
+
+						项目经理正在为一个新项目制定项目进度计划，根据项目经理的经验，该项目需要两年才能完成。然而，公司总监要求该项目在18个月内完成。项目经理应该怎么做？<br>A project manager has prepared
+						project schedule for a new project. According to the project manager’s experience, the project will take two
+						years to complete. However, the company director requests that the project is to be completed in 18 months.
+						What should &nbsp;the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：根据总监的要求修订项目进度计划<br>Revise the project schedule based on the director’s request.
+							</li>
+							<li>
+								<input type="radio"> B：使用资源平衡，来平均项目团队成员的任务<br>Use resource leveling to even out project team member tasks.
+							</li>
+							<li>
+								<input type="radio"> C：减少项目范围以满足修订的项目进度计划<br>Reduce the project scope to meet the revised project
+								schedule. </li>
+							<li>
+								<input type="radio"> D：保持项目进度计划不变，但显示这种变更对其他制约因素的影响<br>Keep the project schedule unchanged, but show the
+								impact this change would have on other constraints. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						&nbsp;解析：PMBOK（6）P207-6.5.1.2制定进度计划-项目文件-假设日志。记录的假设条件和制约因素可能造成影响项目进度的单个风险等。将该项目总监的需求作为制约因素登记。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm12">
+					<div class="st_content_txt_tm">
+						<span>12、</span>
+
+						在一次迭代结束时，一位团队成员告诉项目经理，由于几天前出现了无法解决的问题， 一个计划任务未完成。若要在将来避免这种情况，项目经理应该怎么做？<br>At the end of an iteration, a team
+						member tells the project manager that a planned task is unfinished because of an issue that appeared several
+						days ago but unable to be resolved. What should the project manager do to prevent this type of situation in
+						the future? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：在回顾总结会议上讨论该问题<br>Discuss the issue during the retrospective </li>
+							<li>
+								<input type="radio"> B：在演示中说明该问题<br>Address the issue in the demo </li>
+							<li>
+								<input type="radio"> C：在下一次迭代规划会上讨论该问题<br>Discuss the issue during the next iteration planning meeting
+							</li>
+							<li>
+								<input type="radio"> D：在下一次迭代每日站立会上审查该问题<br>Review the issue in the next daily standup meeting </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：pmbok6的230页6.6.3.5项目文件更新：避免未来发生，要总结经验教训并更新到组织过程资产中。A 是总结经验教训。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm13">
+					<div class="st_content_txt_tm">
+						<span>13、</span>
+
+						项目经理通过将工作包分解到活动中去，识别并记录产生项目可交付成果的具体行动，
+						结果将产生哪一份文件？<br>A project manager identifies and documents the specific actions that produce project
+						deliverables by breaking down work packages into activities. What document will be produced as a result?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：资源分解结构(RBS)<br>Resource breakdown structure (RBS) </li>
+							<li>
+								<input type="radio"> B：活动资源需求<br>Activity resource requirements </li>
+							<li>
+								<input type="radio"> C：里程碑清单<br>Milestone list </li>
+							<li>
+								<input type="radio"> D：活动持续时间估算<br>Activity duration estimates </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C。
+						解析：PMBOK（6）P185，考点为定义活动的输出（活动清单，活动属性，里程碑清单）。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm14">
+					<div class="st_content_txt_tm">
+						<span>14、</span>
+
+						项目经理正在多个国家领导一项产品部署工作，最终部署时间非常紧迫，项目经理必须快速准备估算，项目经理应该使用什么估算技术？<br>A project manager is leading a product
+						deployment effort in several countries. The final deployment has a tight schedule and the project manager must
+						prepare an estimate quickly.what estimating technique should the project manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：类比估算<br>Analogous estimating </li>
+							<li>
+								<input type="radio"> B：参数估算<br>Parametric estimating </li>
+							<li>
+								<input type="radio"> C：自下而上估算<br>Bottom-up estimating </li>
+							<li>
+								<input type="radio"> D：三点估算法<br>Three-point estimating </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：7.2.2 估算成本：工具与技术
+						7.2.2.2 类比估算
+						A最快速。时间紧迫，PM根据经验做类比估算，速度最快。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm15">
+					<div class="st_content_txt_tm">
+						<span>15、</span>
+
+						项目任务落后于进度。为了确保项目按时完成，项目经理聘请另一名工程师来完成任务。项目经理使用的是什么技术？<br>A project task is behind schedule.To ensure that the
+						project completes on time,the project manager hires another engineer to work on the task.What technique did
+						the project manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：快速跟进<br>Fast tracking </li>
+							<li>
+								<input type="radio"> B：资源平衡<br>Resource leveling </li>
+							<li>
+								<input type="radio"> C：资源平滑<br>Resource smoothing </li>
+							<li>
+								<input type="radio"> D：赶工<br>Crashing </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：时间不够，增加资源，是赶工。
+						6.6.2.6 进度压缩
+						赶工。通过增加资源，以最小的成本代价来压缩进度工期的一种技术。赶工只适用于那些通过增加
+						资源就能缩短持续时间的，且位于关键路径上的活动。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm16">
+					<div class="st_content_txt_tm">
+						<span>16、</span>
+
+						新聘用的项目经理加入一个正在进行的项目，而该项目已经落后于进度，在规划阶段未考虑到几个时间制约因素，并且批准的基准进度计划具有不灵活的完工期限，项目经理首先应该怎么做？<br>A newly hired
+						project manager joins an ongoing project that is already behind schedule, several time constraints were not
+						considered during the planning phase, and the approved baseline schedule has an inflexible completion
+						deadline. What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：制定进度计划<br>Develop the schedule </li>
+							<li>
+								<input type="radio"> B：控制进度计划<br>Control the schedule </li>
+							<li>
+								<input type="radio"> C：为项目活动排序<br>Sequence project activities </li>
+							<li>
+								<input type="radio"> D：快速跟进进度计划<br>Fast track the schedule </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：进度规划有误，且工期很紧，项目经理应该调整进度计划以确保按时完成，属于控制进度。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm17">
+					<div class="st_content_txt_tm">
+						<span>17、</span>
+
+						在监督项目进度的同时，项目经理发现第一阶段里程碑将超过进度计划的期限并延续到第二阶段开始。但是，在达到第一阶段里程碑并提交其结果之前，无法开始第二阶段，若要满足第一阶段的时间表并交付预期的结果，项目经理应该怎么做？<br>While
+						monitoring the project schedule, the project manager realizes that the phase one milestone will exceed the
+						schedule deadline and run over into the start of phase two, However, phase two cannot start until the phase
+						one milestone is reached and its results presented,What should the project manager do to meet phase one’s
+						timeline and deliver the expected results? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与项目团队进行头脑风暴并审查几个假设情景<br>Brainstorm with the project team and review several
+								what-if scenarios </li>
+							<li>
+								<input type="radio"> B：使用项目日历来计算有限的资源和项目的不确定性<br>Use the project calendar to calculate for limited
+								resources and project uncertainties </li>
+							<li>
+								<input type="radio"> C：制定关键路径，以确定完成第一阶段的最长时间<br>Develop the critical path to Identify the longest time
+								for completing phase one </li>
+							<li>
+								<input type="radio"> D：考虑快速跟进第一阶段，尽管这会增加风险<br>Consider fast tracking phase one. although it would
+								increases the risk </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：本题用排除法。问题的核心是前一阶段延误，时间不够，要赶工或快速跟进。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm18">
+					<div class="st_content_txt_tm">
+						<span>18、</span>
+
+						项目经理必须为政府编制一份工厂生产能力报告。这份报告将通过对400家工厂的总经理进行调查而创建，并且必须在四个月内完成，然而，根据现有资源以及调查每位总经理所需的时间，该项目预计需要一年时间。项目经理应使用什么工具或技术来满足预期期限？<br>A
+						project manager must compile a factory productivity for government.The report will be created by surveying
+						general managers across 400 factories and must be completed in four mouths.However 9based on the available
+						resources and the time needed to survey each general manager,the project is expected to take one year.
+						What tool or technique should the project manager use to meet the expected deadline? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：进度压缩<br>Schedule compression </li>
+							<li>
+								<input type="radio"> B：快速跟进<br>Fast tracking </li>
+							<li>
+								<input type="radio"> C：标杆对照<br>Benchmarking </li>
+							<li>
+								<input type="radio"> D：统计抽样<br>Statistical sampling </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：时间不够，要进度压缩。题目没有任何赶工或快速跟进的暗示，所以选进度压缩。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm19">
+					<div class="st_content_txt_tm">
+						<span>19、</span>
+
+						任务B依赖于任务A，而任务A延迟了。任务B的资源可用性有限，必须按时开始任务B。项目经理应该如何重新安排进度计划以确保最终期限保持不变？<br>Task B is dependent upon task
+						A,which is delayed,resources for task B have limited availability and must begin task B on time. What should
+						the project manager do to replan the schedule so that the deadline is unchanged? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：快速跟进任务B并立即开始工作<br>Fast track task B and immediately begin work </li>
+							<li>
+								<input type="radio"> B：对任务A赶工，并在计划的时候开始任务B<br>Crash task A and start task B at the planned time </li>
+							<li>
+								<input type="radio"> C：重新计划任务B的开始日期，让其可以在A任务完成后开始<br>Replan task B’s start date，so it begins after the
+								completion of task A </li>
+							<li>
+								<input type="radio"> D：快速跟进任务A并移动任务B的开始日期<br>Fast track task A and move task B’s start date </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK6.5.2.6 前面工作延误导致后面工作的资源不可用，或者赶工恢复进度，或者调整后面工作的资源安排。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm20">
+					<div class="st_content_txt_tm">
+						<span>20、</span>
+
+						要求在某个特定日期提供某个产品。项目经理测量了项目绩效，并意识到关键路径活动没有实现预期进展，因此，进度计划将被延迟。项目经理应该怎么做？<br>A product is required on a specific
+						date. The project manager measures project performance and realizes that the critical path activities are not
+						progressing as expected, As a result, the schedule will be delaye What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：执行资源平滑并评估潜在的免费资源是否会提高这些活动的绩效<br>Performing resource smoothing and evaluate if
+								potential free resources will improve performance on these activities? </li>
+							<li>
+								<input type="radio"> B：向职能经理提交变更请求以添加更多资源<br>Submit a change request to the functional manager to add more
+								resources </li>
+							<li>
+								<input type="radio"> C：在项目章程中包含储备，以确保涵盖此风险并创建应急计划<br>Include reserves in the project charter to ensure
+								that this risk is covered and contingency plans are created </li>
+							<li>
+								<input type="radio"> D：要求项目发起人实施应急计划
+								<br>Ask the project sponsor to implement the contingency plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK：6.5.2.3，关键路径被延误，A是向非关键路径要资源，不改变关键路径； B是赶工。相比之下A更主动，A不行再考虑B。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm21">
+					<div class="st_content_txt_tm">
+						<span>21、</span>
+
+						一家公司必须实施一项产品来解决监管问题。项目经理必须让来自几个国家的不同团队参与进来���并使他们与承诺的里程碑保持一致。项目发起人要求项目经理在本周创建并分发项目进度计划。项目经理应该怎么做？<br>A company
+						must implement a product to resolve regulatory issues. The Project managers must involve different teams
+						from several countries and align them with the committed milestones. The sponsor asks the project manager to
+						create and circulate the project schedule this week. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：根据所需的里程碑创建进度计划并发布<br>Create the schedule based on the required milestones and
+								publish it </li>
+							<li>
+								<input type="radio"> B：要求团队提供意见，并根据团队可用性创建进度计划<br>Request input from the leams and create the schedule
+								based on their availability </li>
+							<li>
+								<input type="radio"> C：获得团队的估算，并使用进度计划工具来调整和满足里程碑<br>Obtain the estimates from the leams and use the
+								scheduling tools to adjust and meet milestones </li>
+							<li>
+								<input type="radio"> D：使用暂定日期分发活动清单和相应属性<br>Circulate the list of activities and respective attributes
+								with tentative dates </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK6.5
+						制定进度计划是分析活动顺序、持续时间、资源需求和进度制约因素，创建进度模型，从而落实
+						项目执行和监控的过程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm22">
+					<div class="st_content_txt_tm">
+						<span>22、</span>
+
+						在将项目投入生产之前，一名新项目经理加入团队，项目经理了解到运营问题妨碍任务按时完成。
+						项目经理应该审查哪个过程？<br>Prior to moving a project into production,a new project manager joins the team.The project
+						manager learns that operational issues prevented tasks from being completed on time.
+						what process should the project manager review? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：控制风险<br>Control Risks </li>
+							<li>
+								<input type="radio"> B：控制范围<br>Control Scope </li>
+							<li>
+								<input type="radio"> C：控制质量<br>Control Quality </li>
+							<li>
+								<input type="radio"> D：控制进度<br>Control Schedule </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：6.6控制进度，进度受到影响，应该控制进度。运营不是项目经理的权力范围，在进度控制中，这属于假设情景分析。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm23">
+					<div class="st_content_txt_tm">
+						<span>23、</span>
+
+						客户要求项目经理在60天内交付项目,而之前原本计划在90天内交付,没有可以并行执行的活动,请求的变更已经获得变更控制委员会(CCB)的批准。若要满足这项要求,项目经理应该做什么?<br>A customer
+						asked the project manager to deliver a project in 60 days thatwas previously scheduled for delivery in 90
+						days.No activities can be performed in parallel.The requested change is approved by the change
+						controlboard(CCB).What should the project manager do to fulfill this request? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：为项目进度计划创建应急储备<br>Create a contingency reserve for the project schedule. </li>
+							<li>
+								<input type="radio"> B：对项目进度计划赶工<br>Crash the project schedule. </li>
+							<li>
+								<input type="radio"> C：在项目进度计划中创建项目阶段<br>Create phases in the project schedule. </li>
+							<li>
+								<input type="radio"> D：快速跟进项目进度计划<br>Fast track the project schedule. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：在不缩减项目范围的前提下，加快进度工期，是进度压缩。因没有可以并行执行的活动，只采用赶工，不能采用快速跟进。参见6.5.2.6章节-进度压缩。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm24">
+					<div class="st_content_txt_tm">
+						<span>24、</span>
+
+						在项目执行期间,项目经理了解到一个资源的角色已经从为该项目进行风险分析扩展到也为其他组织的项目进行风险分析。因此,该资源在该项目的工作和持续时间都有所增加,而这会影响进度。
+						项目经理应该做什么?<br>During project execution,a project manager learns that a resources role.
+						has expanded from conducting risk analysis for this project to conducting risk
+						analysis foe other organizational projects as well.As a result,the resource`s
+						effort and duration have increased for this project.Which impacts the
+						schedule.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：进行影响评估,并根据变更管理计划进行处理<br>Conduct an impact assessment,and process it according to
+								the change
+								management plan. </li>
+							<li>
+								<input type="radio"> B：按照项目管理计划中的说明强制执行该角色的定义<br>Enforce the definition of that role as outlined in the
+								project management plan. </li>
+							<li>
+								<input type="radio"> C：要求更多的项目资源来处理额外工作<br>Request more project resource to handle the additional effort.
+							</li>
+							<li>
+								<input type="radio"> D：更新项目进度计划,以反映额外工作,并通知发起人<br>Update the project schedule to reflect the additional
+								effort,and inform the
+								sponsor. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：因资源扩展为其他组织项目服务，导致影响进度。项目经理首先应评估此对项目影响，从而遵循变更管理计划进行相应变更请求以调整进度。参见PMBOK 6.6.3.3变更请求。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm25">
+					<div class="st_content_txt_tm">
+						<span>25、</span>
+
+						在项目进度计划确认会议上，项目发起人要求比原计划提前一个月交付一项重要的软件功能，项目经理建议快速加快跟进进度。哪一个解决方案与项目经理的建议相对应？<br>During a project schedule
+						validation meeting, the project sponsor requests that an important software feature be delivered one month
+						earlier than planne The project manager suggests task tracking the schedule.
+						Which solution corresponds with the project manager's suggestion? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：推迟文档活动<br>Postponing documentation activities </li>
+							<li>
+								<input type="radio"> B：为测试和文档活动增加资源<br>Adding resources to testing and documentation activities </li>
+							<li>
+								<input type="radio"> C：减少测试和文档活动的持续时间<br>Reducing the durations of testing and documentation </li>
+							<li>
+								<input type="radio"> D：测试和文档阶段并行<br>Overtopping the testing and documentation phases </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：快速跟进，即并行关键路径上本来串行的活动，D正确。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm26">
+					<div class="st_content_txt_tm">
+						<span>26、</span>
+
+						前两个一直处于正常进度轨道的项目开始经历严重延期。项目经理已经识别到重大问题。项目经理应在哪里报告项目状态？<br>The first two projects that have always been on
+						the normal progress track experience serious delays. The project manager has identified significant issues.
+						Where should the project manager report the project status? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目进度计划<br>Project Schedule </li>
+							<li>
+								<input type="radio"> B：工作绩效报告<br>Working Performance Report </li>
+							<li>
+								<input type="radio"> C：问题日志<br>Problem Log </li>
+							<li>
+								<input type="radio"> D：相关方会议<br>Stakeholders' Meeting </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：工作绩效报告中包含状态报告和进展报告，B选项为最佳参考答案。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm27">
+					<div class="st_content_txt_tm">
+						<span>27、</span>
+
+						一个大型项目的工作分解结构(WBS)显示,2级项目计划几乎没有提供有关活动,依赖关系以及所需资源的信息。若要评估项目持续时间,项目经理应该做什么?<br>The work breakdown
+						structure(WBS)for a large project shows that level 2plans provide little information on
+						activities,dependencies,and required
+						resources.What should the project manager do to assess the project's
+						duration? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：制定WBS字典<br>Develop a WBS dictionary. </li>
+							<li>
+								<input type="radio"> B：执行自下而上估算<br>Perform bottom-up estimating. </li>
+							<li>
+								<input type="radio"> C：分析资源分解结构(RBS)<br>Analyze the resource breakdown structure(RBS). </li>
+							<li>
+								<input type="radio"> D：制定资源日历<br>Develop the resource calendar. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：考察估算活动持续时间的依据，项目管理计划--进度管理计划规定了用于估算活动持续时间的方法和准确度，以及所需的其他标准；范围基准包含WBS词典。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm28">
+					<div class="st_content_txt_tm">
+						<span>28、</span>
+
+						项目主管担心一个计划驱动的项目可能无法实现其完成日期。若要减轻这个问题,项目经理应该做什么?<br>A project director is concerned that a schedule-driven
+						project may not achieve its completion date.What should the project manager do to mitigate this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：制定资源分解结构(RBS)<br>Develop a resource breakdown structure(RBS). </li>
+							<li>
+								<input type="radio"> B：应用资源平衡<br>Apply resource leveling. </li>
+							<li>
+								<input type="radio"> C：采用开始到开始(SS)任务关系来加速关键路径活动<br>Adopt start-to-start(SS)task relationships to
+								expedite critical-path activities. </li>
+							<li>
+								<input type="radio"> D：重定进度基准和资源管理计划<br>Re-baseline the schedule and resource management plans. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：考点：6.6控制进度
+						解析：项目可能延期完成，需要减轻风险。需使用进度压缩技术。
+						C，即快速跟进，符合题意。
+						D，需要经过变更后才可进行，且改变了原有计划，不符合题意。
+						A，在规划阶段估算活动资源输出，不符合题意。
+						B，题干情景与资源平衡无关，且资源平衡针对关键路径，会延长工期。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm29">
+					<div class="st_content_txt_tm">
+						<span>29、</span>
+
+						在一个季度末,项目发起人要求进度报告中包含一个指标,以确定项目是否将按时完成或将延迟多长时间。项目经理应该在这份报告中包含哪个指标?<br>At the end of the quarter,a project
+						sponsor requests that the progress
+						report include a metric to determine if the project will be finished on time or
+						how long it will be delayeWhat should the project manager include in this
+						report? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：成本绩效指数(CPI)<br>Cost performance index(CPI). </li>
+							<li>
+								<input type="radio"> B：完工偏差(VAC)<br>Variance at completion(VAC). </li>
+							<li>
+								<input type="radio"> C：进度偏差(SV)<br>Schedule variance(SV). </li>
+							<li>
+								<input type="radio"> D：完工估算(EAC)<br>Estimate at completion(EAC). </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：1. 概念分辨题。
+						2. A,B,C均是成本相关指标
+						3. 参考：PMBOK第六版，P226，控制进度：工具与技术-数据分析-挣值分析，进度绩效测量指标（如进度偏差（SV）和进度绩效指数（SPI））用于评价偏离初始进度基准的程度。） </div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+
+</html>

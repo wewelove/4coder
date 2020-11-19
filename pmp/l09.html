@@ -1,0 +1,3354 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>远程模考（一）</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<input id="bb" type="hidden" value="l09" />
+
+		<div class="fixed-top bg-white border-bottom">
+			<div class="container">
+				<a href="./index.html" class="float-left text-secondary">首页</a>
+				<a href="#dingbu" class="float-right text-secondary">顶部</a>
+				<h5 class="st_content_tit">资源管理</h5>
+				<div class="input-group mb-3">
+					<input type="number" class="form-control" id="search" placeholder="输入题号查询" />
+					<div class="input-group-append">
+						<button id="search-btn" class="btn btn-outline-secondary" type="button">查询</button>
+						<button id="reset-btn" class="btn btn-outline-secondary" type="button">重置</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="check_answer">
+			<div class="btn-group btn-group-sm">
+				<button id="czst" type="button" class="btn btn-danger">重做</button>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-secondary" id="check_wei">未</button>
+				<button type="button" class="btn btn-secondary" id="check_quan">全</button>
+				<button type="button" class="btn btn-secondary" id="check_dui">对</button>
+				<button type="button" class="btn btn-secondary" id="check_cuo">错</button>
+				<button type="button" class="btn btn-secondary" id="check_tong" data-toggle="modal" data-target="#tongji">统</button>
+			</div>
+		</div>
+
+		<div class="modal" id="tongji">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">统计信息</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>正确：<span id="t_dui"></span></p>
+						<p>错误：<span id="t_cuo"></span></p>
+						<p>未做：<span id="t_wei"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="dingbu" class="container">
+			<div class="st_danxuan" id="radio_anchor">
+				<div class="st_content_txt" id="tm1">
+					<div class="st_content_txt_tm">
+						<span>1、</span>
+
+						项目经理与一个由15人组成的团队召开会议，会议不断发生中断，会议目标几乎没有完成。若要解决这个问题，项目经理应该利用以下哪一项？<br>A project manager holds a meeting with a
+						15-member team.There are constant interruption,and little is being accomplishe What should the project manager
+						use to resolve this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：冲突管理<br>Conflict management </li>
+							<li>
+								<input type="radio"> B：政治意识<br>Political awareness </li>
+							<li>
+								<input type="radio"> C：非语言沟通<br>Nonverbal awareness </li>
+							<li>
+								<input type="radio"> D：积极倾听<br>Active listening </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：概念题，出现冲突，用冲突管理。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm2">
+					<div class="st_content_txt_tm">
+						<span>2、</span>
+
+						项目经理识别到本地和虚拟团队成员之间的进度优先级存在冲突，项目经理安排了一次电话会议来管理这个冲突。项目经理使用的是哪种冲突解决技巧?<br>A project manager identifies scheduling
+						priority conflicts among local and virtual team members.The project manager schedules a conference call to
+						manage this conflict.
+						What conflict resolution technique did the project manager user? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：缓和/包容<br>Smooth/accommodate </li>
+							<li>
+								<input type="radio"> B：合作/解决问题<br>Collaborate/problem solve </li>
+							<li>
+								<input type="radio"> C：强迫/命令重新制定项目计划<br>Force/command to re-engineer the project plan </li>
+							<li>
+								<input type="radio"> D：妥协/调解<br>Compromise/reconcile </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：题目无过多参考信息，首选优先级最高的B。安排电话会议来处理冲突，属于合作/解决问题。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm3">
+					<div class="st_content_txt_tm">
+						<span>3、</span>
+
+						项目经理作为项目团队的一位替代项目经理人选加入一个项目。在最初的会议中，项目经理发现关于如何解决技术决策存在不同的意见。团队成员不尊重彼此的意见，这种环境起到反效果。该团队处于团队建设的哪个阶段？<br>A
+						project manager joins a project as a replacement on a project team.During initial meetings,the project manager
+						realize there are many differing opinions about how to address technical decisions.Team members do not respect
+						each other ideas,and the environment is becoming counterproductive.In what phase of development is the team?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：震荡阶段<br>Storming </li>
+							<li>
+								<input type="radio"> B：形成阶段<br>Forming </li>
+							<li>
+								<input type="radio"> C：规范阶段<br>Norming </li>
+							<li>
+								<input type="radio"> D：成熟阶段<br>Performing </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案 A
+						解析：概念题。团队成员之间存在不同意见，且不尊重彼此的意见；说明团队处于震荡阶段。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm4">
+					<div class="st_content_txt_tm">
+						<span>4、</span>
+
+						由于项目资源的专业水平不同，项目经理注意到进度计划绩效问题，一些经验丰富的资源会检查不必要的细节,而一些初级资源则需要很长时间才能完成任务。项目经理应该怎么做来增强团队绩效？<br>A project manager
+						notices schedule performance schedule issues due to the expertise levels of project resources.Some experience
+						resources check unnecessary details,and some junior-level resources take a long time to complete tasks. What
+						should the project manager do to enhance team performance? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：根据需要提供培训，并为所有团队成员实施一份核对单<br>Provided training where required,and implement a
+								checklist for all team members </li>
+							<li>
+								<input type="radio"> B：请高级资源为初级资源提供协助<br>Ask the senior resources to provide assistance to the junior
+								resources </li>
+							<li>
+								<input type="radio"> C：更换初级资源，并通知高级资源<br>Replace the junior resources,and advise the senior resources
+							</li>
+							<li>
+								<input type="radio"> D：对初级员工进行培训<br>Conduct training with the junior staff </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：1. 针对初级资源，项目经理应提供培训，以帮助其掌握必备的知识和技能。
+						2. 针对所有团队成员，应提供项目团队派工单或者核对单），让团队成员了解个人职责。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm5">
+					<div class="st_content_txt_tm">
+						<span>5、</span>
+
+						因为一些团队成员不合作，一个拥有多元化团队的项目经理需要处理冲突，项目经理应该怎么做？<br>A project manager with a diverse team is faced with handing
+						coonflicts，as some team members are uncooperative. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：定期召开电话会议反复重申共同目标，并向该团队成员解释应该作为一个团队共同合作<br>Conduct regular conference calls to
+								iterate the common goals，and to explain that members should work together as a team. </li>
+							<li>
+								<input type="radio"> B：与不合作的团队成员开会<br>Meet with the uncooperative team members. </li>
+							<li>
+								<input type="radio"> C：与所有团队成员一起进行团队建设活动<br>Conduct a team-building exercise with all team members. </li>
+							<li>
+								<input type="radio"> D：向所有团队成员发送一封电子邮件解释说，这种行为是不能容忍的<br>Email team members explaining that such behavior
+								will nit be tolerate </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：团队建设是通过举办各种活动，强化团队的社交关系，打造积极合作的工作环境。
+						团队建设活动既可以是状态审查会上的五分钟议程，也可以是为改善人际关系而设计的、在非工作场所专门举办的专业提升活动。团队建设活动旨在帮助各团队成员更加有效地协同工作。
+						如果团队成员的工作地点相隔甚远，无法进行面对面接触，就特别需要有效的团队建设策略。
+						非正式的沟通和活动有助于建立信任和良好的工作关系。团队建设在项目前期必不可少，但它更是个持续的过程。项目环境的变化不可避免，要有效应对这些变化，就需要持续不断地开展团队建设。项目经理应该持续地监督团队技能和绩效，确定是否需要采取措施来预防或纠正各种团队问题。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm6">
+					<div class="st_content_txt_tm">
+						<span>6、</span>
+
+						项目团队包括组织内各部门的职能经理，该项目落后于进度计划，因为职能经理将他们的日常责任优先于项目责任。
+						项目经理应该使用下列哪一项来管理团队？<br>A project team includes functional managers from various departments across an
+						organization. The project has fallen behind schedule because functional managers are prioritizing their daily
+						responsibilities over their project responsibilities.
+						What should the project manager use to manage the team? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：认可与奖励<br>Recognition and rewards </li>
+							<li>
+								<input type="radio"> B：人际关系技能<br>Interpersonal skills </li>
+							<li>
+								<input type="radio"> C：个人和团队评估<br>Individual and team assessments </li>
+							<li>
+								<input type="radio"> D：制定决策<br>Decision making </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：进度优先级排序为项目管理中常见的冲突之一，AC属于建设团队的工具技术，不是管理团队的工具。D属于管理团队工具技术中人际关系与团队技能的其中一种方法。B包含D，所以答案选B。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm7">
+					<div class="st_content_txt_tm">
+						<span>7、</span>
+
+						在项目经理里程碑评审期间，项目经理与项目团队讨论从上一阶段获得的经验教训，由于存在许多技术难题和冲突，项目团队要求项目经理将经验教训讨论会推迟到所有项目里程碑都完成之后。
+						项目经理应该怎么做？<br>During a project milestone review , a project manager discusses lessons learned from the
+						previous phase with the project team.Since there were many technical difficulties and conflicts ;the team asks
+						the project manager to defer the learned discussion until after all project milestones are complete
+						What should the project manager do ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：营造一种信任氛围，让个人可以讨论经验教训并分享知识<br>Create an atmosphere of trust where individual can
+								discuss lessons learned and share knowledge </li>
+							<li>
+								<input type="radio"> B：由于该项目正处于落后于进度的危险之中，因此取消经验教训讨论会<br>Remove lessons learned since the project is in
+								jeopardy of being behind schedule </li>
+							<li>
+								<input type="radio"> C：在问题日志中添加经验教训<br>Add lessons learned to the issue log </li>
+							<li>
+								<input type="radio"> D：独立收集经验教训<br>Capture lessons learned independently </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：鼓励和引导团队成员进行经验教训总结。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm8">
+					<div class="st_content_txt_tm">
+						<span>8、</span>
+
+						在项目执行期间，某些任务所花的时间比预期长，团队成员之间存在一些分歧，并且发起人要求迅速采取行动来解决这个问题。项目经理应该怎么做？<br>During project execution, some tasks arc
+						taking longer than expecte There is some divisiveness among team members, and the sponsor is demanding quick
+						action to resolve the issue.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：制定团队章程<br>Develop a team charter. </li>
+							<li>
+								<input type="radio"> B：与团队一起审查团队章程<br>Review the team charter with the team </li>
+							<li>
+								<input type="radio"> C：与人力资源部门和团队一起开会讨论这个问题<br>Meet with human resource department and the team to discuss
+								the issue. </li>
+							<li>
+								<input type="radio"> D：实施冲突管理过程<br>Implement the conflict engagement process. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：通过冲突管理的方法，选择适当的解决办法快速处理，达到期望 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm9">
+					<div class="st_content_txt_tm">
+						<span>9、</span>
+
+						对于一个新项目，公司要求项目经理识别潜在的项目团队成员。项目经理下一步应该怎么做？<br>For a new project,a company asks the project manager to identify
+						potential project team members. What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：请职能经理提供项目团队成员<br>Ask functional managers for project team members </li>
+							<li>
+								<input type="radio"> B：创建一份资源管理计划<br>Create a resource management plan </li>
+							<li>
+								<input type="radio"> C：制定一份具有岗位描述的组织结构图<br>Develop an organization chart with position descriptions </li>
+							<li>
+								<input type="radio"> D：使用专家判断<br>Use expert judgement </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：识别潜在团队成员，即找寻相应的资源。作为项目管理计划的一部分，资源管理计划提供了关于如何分类、分配、管理和释放项目资源的指南。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm10">
+					<div class="st_content_txt_tm">
+						<span>10、</span>
+
+						在一个项目中，一位关键项目团队成员因私事请假两个月，项目经理首先应该怎么做？<br>Midway through a project,a key project team member requests two
+						months leave for personal matters. What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：询问这位关键团队成员是否可以推迟请假<br>Ask this key team member if the leave can be postponed </li>
+							<li>
+								<input type="radio"> B：与职能经理协商替换一名团队成员<br>Negotiate with the functional manager for a replacement </li>
+							<li>
+								<input type="radio"> C：评估对项目的影响<br>Evaluate the impact on the project </li>
+							<li>
+								<input type="radio"> D：审查资源管理计划<br>Review the resource management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：遇到问题需要先分析影响。看是否团队成员的请假对项目产生了影响。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm11">
+					<div class="st_content_txt_tm">
+						<span>11、</span>
+
+						几个子团队正在为一个具有固定工期的项目工作，实施团队经常延迟向质量保证(QA)团队提供工作产品，从而导致关系紧张。项目经理应该怎么做？<br>Several sub-teams are working on a
+						project with a fixed duration.The implementation team is frequently late providing work products to the
+						quality assurance(QA)team,which causes stress. What should the project manager do ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与两个团队一起，以便质量保证团队可以说明实施团队延迟交付的影响,并讨论可能的解决方案<br>Make with both teams so the QA team
+								can explain the impact of the implementation team’s late deliveries and to discuss possible solutions
+							</li>
+							<li>
+								<input type="radio"> B：将提供给实施团队进行质量保证任务的实际预期时间加倍，确保在交付延迟的情况下有足够的时间进行全面测试<br>Double the actual expected
+								time of QA tasks that are provided to the implementation team to ensure enough time to fully test when
+								deliveries are late </li>
+							<li>
+								<input type="radio"> C：指示质量保证团队在可用时间内完成尽可能多的测试<br>Instruct the QA team to complete as many of its tests as
+								they can in the time available </li>
+							<li>
+								<input type="radio"> D：为质量保证团队增加人员，以便即使由于延迟交付而压缩进度计划，也可以完成测试<br>Add staff to the QA team so that it can
+								complete testing even when the schedule is compressed by late delivery </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：通过冲突管理的方法，选择适当的解决办法快速处理，达到期望。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm12">
+					<div class="st_content_txt_tm">
+						<span>12、</span>
+
+						—个项目团队成员已经延迟两次交付一个工作包，其职能经理已经通知项目经理，该团队成员资历较新，需要时间学习。项目经理应该怎么做？<br>A project team member has delayed the
+						delivery of a work package twice. Its functional manager has notified the project manager that the team member
+						is a green hand and needs time to learn. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：要求职能经理替换该团队成员<br>To ask the functional manager to replace the team member </li>
+							<li>
+								<input type="radio"> B：与该团队成员私下讨论该问题<br>To discuss the problem privately with the team member </li>
+							<li>
+								<input type="radio"> C：向该团队成员提供培训<br>To deliver training to the team members </li>
+							<li>
+								<input type="radio"> D：在团队会议上讨论该问题<br>To discuss the problem at the team meeting </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析:技能不足，需提供培训支持。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm13">
+					<div class="st_content_txt_tm">
+						<span>13、</span>
+
+						—位团队成员通知项目经理他们必须完成项目之外的一项关键任务。这将对项目进度产生风险。项目经理应该怎么做来消除这个风险？<br>A team member informs the project manager that
+						they must complete a critical outside of the project.This will pose a schedule risk to the project.What should
+						the project manager do to eliminate the risk?<br> </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与该团队成员的经理协商另外一个时间来完成这项其他任务<br>To negotiate another time with the member’s manager
+								to complete this other task. </li>
+							<li>
+								<input type="radio"> B：从另一个部门获得一位替代资源<br>To gain an alternative resource from another department </li>
+							<li>
+								<input type="radio"> C：向项目发起人汇报该团队成员的经理不遵守规定<br>To report to the project sponsor that the member's manager
+								does not comply with the regulations </li>
+							<li>
+								<input type="radio"> D：指示该团队成员的经理释放该团队成员以完成预定的项目活动<br>To instruct the member's manager to release the team
+								member to complete the predefined project activity </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：团队成员被其他项目占用影响项目进程，造成风险。项目经理应与其他项目的经理进行谈判协商，保证本项目于正常完成。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm14">
+					<div class="st_content_txt_tm">
+						<span>14、</span>
+
+						在第一次团队会议期间，一名新任命的项目经理在讨论项目问题时发现了一些问题。项目经理可以从哪里获得有关团队建设的信息？<br>During the first team meeting, a newly appointed
+						project manager finds some problems when discussing the project problems. Where can the project manager get
+						information about team building? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：团队绩效评价<br>Team performance evaluation </li>
+							<li>
+								<input type="radio"> B：项目资源管理计划<br>Project Resources Management Plan </li>
+							<li>
+								<input type="radio"> C：问题日志<br>Problem log </li>
+							<li>
+								<input type="radio"> D：工作绩效报告<br>Working performance report </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：项目管理计划，是指导性的文件，资源管理计划里有关于如何团建的指导信息。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm15">
+					<div class="st_content_txt_tm">
+						<span>15、</span>
+
+						在项目执行阶段，由于缺乏承诺、对结果和责任漠不关心，团队成员之间发生冲突。成本绩效指数(CPI)开始下降。项目经理应该怎么做？<br>In the project implementation phase, due to
+						lack of commitment, indifference to results and responsibilities, and conflicts between team members, the cost
+						performance index (CPI) begins to decline. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：鼓励建设性讨论，与团队开会, 解决项目目标的合理性，并定期开展团队绩效评估<br>To encourage constructive discussions,
+								meet with the team, solve the rationality of the project objectives, and perform team performance
+								evaluation on a regularly basis </li>
+							<li>
+								<input type="radio"> B：将这种情况上报给指导委员会<br>To report this to the Steering Committee </li>
+							<li>
+								<input type="radio"> C：鼓励建设性讨论，在问题日志中添加该冲突，并记录纠正措施<br>To encourage constructive discussions, add these
+								conflicts to the Problem Log, and document corrective actions </li>
+							<li>
+								<input type="radio"> D：与管理层和同事讨论该问题，并更新经验教训<br>To discuss this problem with the management and colleagues
+								and update lessons learned </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析:A面对解决问题。当目标过高，缺乏信息时，就没人敢承诺，所以解决目标合理性是没有毛病的。因未超出项目经理权限，B排除，C不如A全面，D不符合冲突解决的原则，先私下后公开正式。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm16">
+					<div class="st_content_txt_tm">
+						<span>16、</span>
+
+						一个复杂项目拥有100多名内部和外部团队成员。在项目过程中，团队成员不断向项目经理询问有哪些资源分配给高层级以及低层级活动的相关信息。他们还要求内部和外部团队成员之间更明确的分工。
+						哪一项将对项目经理有帮助？<br>A complex project has more than 100 internal and external team members.During the
+						project,team members constantly ask the project manager for information on which resources are assigned to
+						high-and low-level activities.They also request clearer divisions between internal and external members.
+						What would help the project manager? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：责任分配矩阵(RAM)<br>Responsibility assignment matrix(RAM) </li>
+							<li>
+								<input type="radio"> B：资源管理计划<br>Resource management plan </li>
+							<li>
+								<input type="radio"> C：资源日历<br>Resource calendars </li>
+							<li>
+								<input type="radio"> D：资源分配技能<br>Resource allocation skills </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：PMBOK（6）P317-9.1.2.2 当团队成员不清楚职责时，应查看三分文件：（1）资源管理计划中的角色与职责，（2）责任分配矩阵，（3）WBS字典。选项C，资源日历只反映资源何时可用，无法体现分工。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm17">
+					<div class="st_content_txt_tm">
+						<span>17、</span>
+
+						实践敏捷方法的开发负责人被任命为一个项目的迭代经理，该负责人与使用瀑布式方法的业务分析师密切合作，但这两个方法的差异已经开始对团队绩效产生负面影响，项目经理分别与开发负责人和业务分析师就这种情况进行会面，但未能解决问题。
+						项目经理下一步应该怎么做？<br>A development leader, who practices agile methodology, is assigned as the iteration manager
+						for a project.This leader works closely with a business analyst who uses the waterfall methodology. The
+						differences in these methodologies have begun to negatively impact team performance. The project manager meets
+						individually with the development lead and business analyst about the situation, but fails to resolve the
+						issue. </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与业务分析师的经理谈话<br>Speak with the business analyst’s manager. </li>
+							<li>
+								<input type="radio"> B：请求提供一位具有敏捷方法经验的新业务分析师<br>Request a new business analyst with experience in the
+								agile methodology. </li>
+							<li>
+								<input type="radio"> C：为业务分析师提供敏捷方法团队的培训<br>Train the business analyst on the agile methodology. </li>
+							<li>
+								<input type="radio"> D：与业务分析师和开发负责人一起召开一次联合会议<br>Conduct a joint meeting with the business analyst and
+								development team. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK（6）P348-9.5.2.1冲突管理-合作/解决问题。利用合作/解决问题的方法解决项目中的冲突，选项D比较合适。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm18">
+					<div class="st_content_txt_tm">
+						<span>18、</span>
+
+						一名新聘用的团队成员难以适应其角色。这导致项目活动落后于进度。
+						项目经理应该如何帮助解决这个问题？<br>A newly hired team member is experience difficulty adjusting to his role .This is causing
+						project activities to lag behind schedule.
+						What should the project manager do to help resolve this issue? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：允许其他团队成员决定最佳方法<br>Allow other team members to decide the best approach. </li>
+							<li>
+								<input type="radio"> B：支持团队成员并提供任何必要的建议<br>Support the team member and provide any necessary suggestions.
+							</li>
+							<li>
+								<input type="radio"> C：将该团队成员的一些工作委派给其他团队的成员<br>Delegate some of this team member’s work to other
+								teammember. </li>
+							<li>
+								<input type="radio"> D：提醒该团队成员其工作职责和项目时间表<br>Remind this team member of his work responsibilities and
+								project timelines. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P341-9.4.2.4团队成员无法进入角色，应考虑采取人际关系与团队技能，为团队成员提供支持。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm19">
+					<div class="st_content_txt_tm">
+						<span>19、</span>
+
+						一个外部项目资源告知项目经理他们的合同即将到期。项目经理应该查看哪份文件来确认该信息并解决这个问题？<br>An outside project resource advises the project manager
+						that their contract is about to expire.What document should the project manager review to check this
+						information and resolve the issue? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：组织图<br>Organization chart. </li>
+							<li>
+								<input type="radio"> B：资源管理计划<br>Resouce management plan. </li>
+							<li>
+								<input type="radio"> C：项目合同<br>Project contract. </li>
+							<li>
+								<input type="radio"> D：组织过程资产<br>Organizational process assets. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：PMBOK（6）P318-9.1.3.1资源管理计划。作为项目管理计划的一部分，资源管理计划提供了关于如何分类、分配、管理和释放项目资源的指南。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm20">
+					<div class="st_content_txt_tm">
+						<span>20、</span>
+
+						相关方指示项目经理将项目A团队的一位关键资源调到项目B的团队，项目经理首先应该怎么做？<br>A stakeholder instructs a project manager to transfer a key
+						resource from project A's team to project B's team.What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与该相关方协商，以使用该关键资源<br>Negotiate with the stakeholder to use the key resource. </li>
+							<li>
+								<input type="radio"> B：咨询其他相关方以反驳该提议<br>Consult with other stakeholders to counter the proposal. </li>
+							<li>
+								<input type="radio"> C：评估该请求的影响，并签发一项变更请求<br>Assess the impact of the request,and issue a change request.
+							</li>
+							<li>
+								<input type="radio"> D：如果该关键资源不可用，建议取消该项目<br>Propose canceling the project if the key resources is
+								unavailable. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P357-9.6.3.2如果控制资源过程出现变更请求，或者推荐的纠正措施或预防措施影响了项目管理计划的任何组成部分或项目文件，项目经理应提交变更请求。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm21">
+					<div class="st_content_txt_tm">
+						<span>21、</span>
+
+						项目的团队成员正在执行工作，但由于工作超负荷而无法满足截止日期。为了缓解这种情况，团队又增加了五个资源。
+						这描述的是哪个团队建设阶段？<br>Team members on a project are performing, but fail to meet deadlines due to work overloaFive
+						more resources are added to the team to ease the situation.
+						What development stage does this describe? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：成熟阶段 <br>Performing </li>
+							<li>
+								<input type="radio"> B：规范阶段<br>Norming </li>
+							<li>
+								<input type="radio"> C：震荡阶段<br>Storming </li>
+							<li>
+								<input type="radio"> D：形成阶段<br>Forming </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：新人加入团队，属于形成阶段。PMBOK（6）P338-9.4在本阶段，团队成员相互认识，并了解项目情况及他们在项目中的正式角色与职责。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm22">
+					<div class="st_content_txt_tm">
+						<span>22、</span>
+
+						—名团队成员感到很担心，因为一名关键技术专家对一项关键的依赖关系不配合。项目经理与该专家会面，了解情况并制定解决方案。
+						项目经理使用了什么技术来解决这种情况？<br>A team member is concerned because a key techniques expert is uncooperative with a
+						critical dependency. The project manager meets with the expert to understand the situation and develop a
+						solution.
+						What technical did the project manager use to resolve this situation? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：缓和/包容<br><br>Smooth/accommodate </li>
+							<li>
+								<input type="radio"> B：妥协/调解<br>Compromise/reconcile </li>
+							<li>
+								<input type="radio"> C：合作/解决<br>Collaborate/problem solve </li>
+							<li>
+								<input type="radio"> D：强迫/命令<br>Force/direct </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：PMBOK（6）P348-9.5.2.1合作/解决问题是冲突管理的首选方式。“...会面，了解情况并制定解决方案”，说明用的是“合作/解决”策略。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm23">
+					<div class="st_content_txt_tm">
+						<span>23、</span>
+
+						一位关键资源在项目执行期间辞职。项目经理首先应该怎么做？<br>A key resource resigns during project execution.What should the project
+						manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新进度计划<br>Update the schedule. </li>
+							<li>
+								<input type="radio"> B：执行影响分析<br>Conduct an impact analysis. </li>
+							<li>
+								<input type="radio"> C：通知相关方<br>Inform the stakeholders. </li>
+							<li>
+								<input type="radio"> D：提交变更请求<br>Submit a change request. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：应首先更新资源管理计划，选项没有，可以选分析影响。A错；C，未必需要；D未必需要。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm24">
+					<div class="st_content_txt_tm">
+						<span>24、</span>
+
+						一位新项目经理在项目规划阶段加入项目。在审核项目文件后，项目经理发现项目管理计划是最后一份创建的文件。
+						项目经理应该查阅哪一份文件来分配资源以实施该计划？<br>A new project manager joins a project during its planning phase. Upon reviewing
+						the project documents, the project manager discovers that the project management plan was the last document
+						create
+						What should the project manager reference to assign resources to implement the plan? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：资源日历<br>Resource calendars </li>
+							<li>
+								<input type="radio"> B：范围管理计划<br>Scope management plan </li>
+							<li>
+								<input type="radio"> C：项目组织图<br>Project organization chart </li>
+							<li>
+								<input type="radio"> D：资源管理计划<br>Resource management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK（6）P318-9.1.3.1作为项目管理计划的一部分，资源管理计划提供了关于如何分类、分配、管理和释放项目资源的指南。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm25">
+					<div class="st_content_txt_tm">
+						<span>25、</span>
+
+						一位团队成员在要求的时间内工作，但是交付的工作成果不足，项目经理首先应该怎么做？<br>A team member is working the required hours, but is delivering
+						inadequate output. What should the project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：通知人力资源部门，该团队成员表现不佳<br>Notify the human resource department that the team member is
+								under performing. </li>
+							<li>
+								<input type="radio"> B：与该团队成员会面，以确定低绩效的原因<br>Meet with the team member to determine the reasons for low
+								performance. </li>
+							<li>
+								<input type="radio"> C：将该团队成员的一些工作分配给其他队成员<br>Allocate some of the team member's work to other team
+								members. </li>
+							<li>
+								<input type="radio"> D：告知该团队成员不交付工作的后果<br>Advise the team member of the consequences for not delivermg the
+								work. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：团队成员工作不力，先了解原因，再决定措施。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm26">
+					<div class="st_content_txt_tm">
+						<span>26、</span>
+
+						一家跨国公司正在本地开发一款实用新技术平台数字产品。该平台的唯一一名专家位于公司总部，负责向不同国家提供支持。
+						本地项目经理如何能够确保这位专家的参与?<br>A multinational company is locally developing a digital product,using a new technology
+						platform. The only expert on this platform is located in the company’s headquarters, and they are responsible
+						for providing support to different countries.
+						How can the local project manager ensure the involvem i of this expert? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：设计一份旅行时间表，以便及时提供现场支持<br>Design a travel schedule so that timely,onsite assistance
+								can be provide </li>
+							<li>
+								<input type="radio"> B：使用虚拟环境将该专家包含在团队中<br>Include the expert on the team using a virtual environment.
+							</li>
+							<li>
+								<input type="radio"> C：要求项目发起人任命该专家为团队的全职成员<br>Ask the project sponsor to assign the expert as a full-time
+								member of the team. </li>
+							<li>
+								<input type="radio"> D：要求团队成员根据需要与该专家联系，作为一种外部专业知识来源<br>Ask team members to contact the expert as an
+								extemal T rtise so%ce on an as-needed bal . </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：9.3.2.4 虚拟团队
+						虚拟团队的使用为招募项目团队成员提供了新的可能性。虚拟团队可定义为具有共同目标、在完成角色任务的过程中很少或没有时间面对面工作的一群人。现代沟通技术（如电子邮件、电话会议、社交媒体、网络会议和视频会议等）使虚拟团队成为可行。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm27">
+					<div class="st_content_txt_tm">
+						<span>27、</span>
+
+						一位项目经理正在领导一位位于三个不同国家的多元文化项目团队。最近，任务延后变得很常见，团队成员经常发生争论而不合作。
+						若要减少潜在的冲突，并改善团队沟通和交付，项目经理应该怎么做？<br>A project manager is leading a multi-culture project team based in
+						different countries.
+						Recently, task slippage has become common, and team members often argue rather than collaborate.
+						What should the project manager do to reduce the urperlyin conflicts, and improve team communication and
+						delivery? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：使用批准的虚拟工具安排每周一次的重新调整会议，以确保团队充分参与<br>Set up a weekly realignment meeting with an
+								approved virtual tool to ensure full team participation. </li>
+							<li>
+								<input type="radio"> B：与每个团队安排一次电话会议，并进行团队建设练习<br>Schedule a conference call with each team, and conduct a
+								team-building exercise. </li>
+							<li>
+								<input type="radio"> C：为团队成员发送一封电子邮件，鼓励他们一起工作<br>Email team members encouraging them to work together.
+							</li>
+							<li>
+								<input type="radio"> D：将该问题升级上报给高级管理层<br>Escalate the issue to senior management. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：9.4.2.2 虚拟团队
+						虚拟团队的使用能带来很多好处，例如，使用更多技术熟练的资源、降低成本、减少出差及搬迁费用，以及拉近团队成员与供应商、客户或其他重要相关方的距离。虚拟团队可以利用技术来营造在线团队环境，以供团队存储文件、使用在线对话来讨论问题，以及保存团队日历。BC都是分别进行不解决问题，D还没有必要。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm28">
+					<div class="st_content_txt_tm">
+						<span>28、</span>
+
+						一个项目落后于进度，并超出预算。由于相关方压力增大，项目团队是在高压下工作，这导致了质量与生产经理之间的冲突，每一方都为项目延误和成本超支而指责对方。
+						项目经理应该怎么做？<br>A project is behind schedule and over budget. As a result of increased stakeholder pressure, the
+						project team has been placed under serious duress. This causes a conflict between the quality and production
+						managers, with each blaming the other for the delays and cost overruns. What should the project manager do?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与两位经理会面，并要求他们立即结束冲突，以避免对项目造成负面影响<br>Meet with both managers, and ask them to
+								immediately and end the conflict to avoid negatively impacting the project. </li>
+							<li>
+								<input type="radio"> B：与相关方讨论该情况，并遵照他们的建议处理冲突<br>Discuss the situation with the stakeholders, and follow
+								their suggestions for dealing with the conflict. </li>
+							<li>
+								<input type="radio"> C：与两位经理的主管会面，讨论可能的行动<br>Meet with the managers' supervisors to discuss possible
+								actions. </li>
+							<li>
+								<input type="radio"> D：查阅团队章程以了解如何处理这个冲突的指导方针<br>Refer to the team charter for guidelines on how to deal
+								with this conflict. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：9.5.2.1 人际关系与团队技能
+						成功的冲突管理可提高生产力，改进工作关系。同时，如果管理得当，意见分歧有利于提高创造力和改进决策。假如意见分歧成为负面因素，应该首先由项目团队成员负责解决；如果冲突升级，项目经理应提供协助，促成满意的解决方案，采用直接和合作的方式，尽早并且通常在私下处理冲突。A虽然是面对，但属于强迫措施，题目中没有看到紧迫性，另外强迫是迫不得已的选择。C相对更好。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm29">
+					<div class="st_content_txt_tm">
+						<span>29、</span>
+
+						项目经理识别到一项需要特殊知识的任务，但团队成员都没有这方面的知识，项目经理认为即将开展的项目也会出现类似的情况。
+						项目经理下一步应该怎么做？<br>The project manager identifies a task that will require special knowledge but none of the
+						team members have this knowledge. The project manager believes a similar situation will occur in an upcoming
+						project.
+						What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：为团队准备一个培训课程，并考虑到成本和时间<br>Prepare a training session for the team, taking into
+								consideration cost and time. </li>
+							<li>
+								<input type="radio"> B：请客户修改需要这些特殊知识的可交付成果<br>Ask the client to modify deliverables that require this
+								special knowledge. </li>
+							<li>
+								<input type="radio"> C：将团队成员更换为更有经验的人员<br>Replace members of the learn with more experienced individuals.
+							</li>
+							<li>
+								<input type="radio"> D：提交变更请求，以修改项目范围<br>Submit a change request to modify the project scope. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A。
+						解析：PMBOK（6），P336。团队没有特殊知识或技能处理项目任务时，应积极处理，采用培训的方式提升团队的能力。BCD均不恰当，A更合适。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm30">
+					<div class="st_content_txt_tm">
+						<span>30、</span>
+
+						一项批准的项目变更将需要一名IT部门的专用资源。该资源的经理没有空提供批准,但马上需要该资源以确保项目保持进度。
+						项目经理应该怎么做？<br>An approved project change will require dedicated resources from an IT department. The
+						resource’s manager is unavailable to provide approval, but the resource is needed immediately to ensure that
+						the project stays on schedule.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将新工作分配给现有团队成员<br>Assign the new work to existing team members. </li>
+							<li>
+								<input type="radio"> B：寻求项目发起人的指导<br>Seek guidance from the project sponsor. </li>
+							<li>
+								<input type="radio"> C：告诉该资源开始工作，并在经理有空时获得批准<br>Tell the resource to start working and get approval when
+								the manager is available. </li>
+							<li>
+								<input type="radio"> D：查阅变更管理计划<br>Refer to the change management plan. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：pmbok6的318页9.1.3.1资源管理计划-获取资源；项目经理目为获取资源，首先应用到沟通，如果承诺的资源无法满足，且超出项目经理能力范围的，应选择上报。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm31">
+					<div class="st_content_txt_tm">
+						<span>31、</span>
+
+						在批准一位团队成员的紧急请假请求之前，项目经理需要确保计划的项目活动不会被延迟。项目经理首先应该审查哪份文件？<br>Before approving a team member's request for an
+						urgent leave, a project manager needs to ensure that scheduled activities will not be delaye
+						What should the project manager first review? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：责任分配矩阵(RAM)<br>Responsibility assignment matrix(RAM) </li>
+							<li>
+								<input type="radio"> B：资源日历<br>Resource calendars </li>
+							<li>
+								<input type="radio"> C：资源分解结构(RBS)<br>Resource breakdown structure(RBS) </li>
+							<li>
+								<input type="radio"> D：项目进度计划<br>Project schedule plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D。解析：PMBOK（6）P352。资源日历影响项目日历，现在资源日历将发生改变，要对照项目日历（项目计划开展活动的时间，即项目进度计划）分析对进度的影响。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm32">
+					<div class="st_content_txt_tm">
+						<span>32、</span>
+
+						项目经理聘请一位资源开发一个网站。该资源在没有完成工作的情况下突然离职，项目经理必须聘请另一位资源来完成这项工作，新聘请的资源更改网络设计，覆盖了原有设计。应如何描述与第一位资源工作相关的成本？<br>A project
+						manager hires resource to develop website.The resource abruptly quits without completing the work,and the
+						project manager must hire another resource to complete the jo The newly hired resource changes the website’s
+						design,which overrides the original design.
+						How should the cost associated with the first resourced work be described? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：间接成本<br>Indirect cost </li>
+							<li>
+								<input type="radio"> B：直接成本<br>Direct cost </li>
+							<li>
+								<input type="radio"> C：沉没成本<br>Sunk cost </li>
+							<li>
+								<input type="radio"> D：可变成本<br>Variable cost </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：pmbok6的357页9.6.3.1控制资源输出-工作绩效信息：另一位资源更改了网络设计，且覆盖了原有设计，第一位资源的工作在目前节点成为无效工作，所花费的成本不再计算。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm33">
+					<div class="st_content_txt_tm">
+						<span>33、</span>
+
+						项目经理A认识到需要额外资源来按时完成项目，并请求项目经理B提供资源方面的协助。
+						如果项目经理B同意，应审查哪一份文件？<br>Project manager A realizes that additional resources are required to complete their
+						project on time and asks project manager B for assistance with resources.If project manager B agrees, what
+						document should be reviewed? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目人员配备<br>Project staff assignment </li>
+							<li>
+								<input type="radio"> B：资源日历<br>Resource calendar </li>
+							<li>
+								<input type="radio"> C：项目组织图<br>Project organization chart </li>
+							<li>
+								<input type="radio"> D：团队绩效评估<br>Team performance assessments </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B。
+						解析：PMBOK（6）P322-9.2.1.2资源日历显示每种资源的可用工作日和工作班次。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm34">
+					<div class="st_content_txt_tm">
+						<span>34、</span>
+
+						重新分配人员将导致项目延期。项目经理应该怎么做？<br>The reassignment of personnel will cause a project delay. What should the project
+						manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：查阅人员配备管理计划<br>Consult the staffing management plan. </li>
+							<li>
+								<input type="radio"> B：提出变更请求<br>Initiate a change request. </li>
+							<li>
+								<input type="radio"> C：招募新资源<br>Acquire a new resource. </li>
+							<li>
+								<input type="radio"> D：修订项目进度计划<br>Revise the project schedule. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A。
+						解析：pmbok6的358页9.6.3.3项目管理计划更新-资源管理计划：重新分配人员可能导致进度延期，可以通过谈判、招募等获得资源，应该参考人员配备管理计划。人员配备管理计划：说明将在何时、以何种方式获得项目团队成员，以及他们需要在项目中工作多久。它描述了如何满足项目对人力资源的需求。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm35">
+					<div class="st_content_txt_tm">
+						<span>35、</span>
+
+						项目经理需要从不同职能经理招募团队成员，项目经理应使用什么？<br>A project manager needs to acquire team members from various functional
+						managers.
+						What should the project manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：资源日历<br>Resource calendars </li>
+							<li>
+								<input type="radio"> B：协商<br>Negotiation </li>
+							<li>
+								<input type="radio"> C：募集<br>Acquisition </li>
+							<li>
+								<input type="radio"> D：技能图<br>Skill mapping </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A。解析：PMBOK（6）P322，从其他项目获取资源应估算活动资源的可用时间，用到的工具是资源日历。故选A。此题A和B容易混淆，A在B前面，按照选前不选后原则，这题选A，先根据资源日历选择好需要的资源，然后和职能经理协商。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm36">
+					<div class="st_content_txt_tm">
+						<span>36、</span>
+
+						两名团队成员拒绝一起参加同一个项目，两名团队成员的参与对实现项目目标是必要的。若要确保两名团队成员一起合作获得项目章程的签署，项目经理应该怎么做?<br>Two team members refuse to
+						participate in the same project together.Parlicipalion of both team members is necessary to achieve project
+						goals.What should the project manager do to ensure that both team members work together to obtain project
+						charter sign-off. </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：鼓励两位成员发挥团队精神，并在需要时获得职能经理的支持<br>Encourage team spirit between both members，and
+								obtain support form their functional managers if neede </li>
+							<li>
+								<input type="radio"> B：让两位成员参阅团队章程，并在需要时获得职能经理的支持<br>Refer both team members to the team charter,and
+								obtain support from their functional managers if neede </li>
+							<li>
+								<input type="radio"> C：鼓励两位团队成员从其职能经理那里获得支持<br>Encourage both team members to obtain support from their
+								functional managers. </li>
+							<li>
+								<input type="radio"> D：鼓励团队成员自行解决冲突<br>Encourage the team members to resolve their conflict. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B。解析：PMBOK（6）P348，团队中两人有矛盾，应使用冲突管理技术。把私人恩怨带入了项目，是一个违反底线问题，可以用规则来强制。必要时通过他们的职能经理来管束。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm37">
+					<div class="st_content_txt_tm">
+						<span>37、</span>
+
+						—家公司转向采用跨职能团队进行项目开发的敏捷方法，并将项目经理分配到一个关键的项目。项目经理应该如何避免员工辞职的可能性？<br>A company switches to an agile approach for
+						project development with cross-functional teams,and assigns a project manager to a critical project.What
+						should the project manager use to avoid any possibility of employees resigning? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：进行圆桌讨论、研讨会和一对一的会议<br>Conduct roundtable discussions，workshops，workshops，and
+								one-on-one meetings. </li>
+							<li>
+								<input type="radio"> B：成立一个委员会来确定敏捷方法<br>Establish a committee to work on defining agile approaches. </li>
+							<li>
+								<input type="radio"> C：要求人力资源部门参与该项目以协助员工管理<br>Ask the human resource department to become involved in the
+								project to assist with employee management. </li>
+							<li>
+								<input type="radio"> D：为所有项目团队成员协商更好的工资或项目奖金<br>Negotiate better salaries or project bounses for all
+								project team members. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：pmbok6的342页9.4.2.8建设团队工具技术-会议：项目经理主要是为团队创造环境，提供支持并信任团队完成工作。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm38">
+					<div class="st_content_txt_tm">
+						<span>38、</span>
+
+						项目经理发现没有关于需要哪些部门资源的信息，应该在哪一份文件中更新该信息？<br>A project manager discovers that there is no information on what
+						department resources are requirewhat document should be updated with this information? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目章程<br>Project charter </li>
+							<li>
+								<input type="radio"> B：组织结构图<br>Organizational chart </li>
+							<li>
+								<input type="radio"> C：项目管理计划<br>Project management plan </li>
+							<li>
+								<input type="radio"> D：风险管理计划<br>Risk management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：9.1 规划资源管理
+						资源信息应该包含在资源管理计划中，属于项目管理计划一部分。此题容易错选B,组织结构图也是一种资源信息。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm39">
+					<div class="st_content_txt_tm">
+						<span>39、</span>
+
+						一个项目的团队成员正在使用问题管理程序，但问题描述经常填写不正确，从而导致减慢速度，项目经理已经与团队进行交谈，但没有观察到任何改进。项目经理应该怎么做？<br>Team member on a project are
+						using issue management procedures, but issue description are often completed incorrectly, which slows
+						progress. The project manager has spoken with the team, but not improvement has been observe What should the
+						project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：创建一个小组委员会，以改进编写问题描述的过程<br>Create a subcommittee to improve the process for writing
+								issue descriptions </li>
+							<li>
+								<input type="radio"> B：跟踪表现差的人并在下次绩效评审中说明该问题<br>Track poor performers and address the issue at their next
+								performance review </li>
+							<li>
+								<input type="radio"> C：向团队提供有关此问题导致的返工量反馈<br>Provide feedback to the team regarding the amount of rework
+								that has resulted from this problem </li>
+							<li>
+								<input type="radio"> D：增加团队检查的频率<br>Increase the frequency of team inspections </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：9.5.2 管理团队：工具与技术
+						团队经常犯小错误且屡教不改，可能是不了解该错误带来的后果，所以应该提供反馈，以便大家重视并积极改正。排除法，A,不是流程问题；B“下次”没有及时解决问题，避免造成更多问题；C用后果说服他；D检查只能发现，不能防止。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm40">
+					<div class="st_content_txt_tm">
+						<span>40、</span>
+
+						一位新项目经理负责管理一个处于规划阶段之后的项目。新项目经理应该审查什么以确定团队的角色和职责？<br>A new project manager assumes a project after its planning
+						phase, what should the new project manager review To identify the team’s roles and responsibilities ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：组织结构图<br>Organizational chart </li>
+							<li>
+								<input type="radio"> B：资源管理计划<br>Resource management plan </li>
+							<li>
+								<input type="radio"> C：项目章程<br>project charter </li>
+							<li>
+								<input type="radio"> D：工作分解结构(WBS)<br>Work breakdown structure (WBS) </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：资源管理计划中包含角色和职责，如果有RAM或RACI则更好。制定资源管理计划时用到的一个工具是RACI矩阵。规划阶段完成,表示资源管理计划应该也已经完成,因此PM应该审阅当时做规划时用到的材料。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm41">
+					<div class="st_content_txt_tm">
+						<span>41、</span>
+
+						一个虚拟团队正在为一个全球客户开发一个项目。由于组织重组，团队将从70人减少到58人，项目经理应该怎么做？<br>A virtual team is working on a project for a customer
+						with global presence. Due to organizational restructuring, the team will be reduced from 70 to 58 members.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将剩余的团队成员集中在一起办公，以提高他们作为团队执行工作的能力<br>Co-location the remaining team members to
+								enhance their ability to perform as A team </li>
+							<li>
+								<input type="radio"> B：获得额外资金以改善沟通技术，以便在团队成员之间建立更好的共识<br>Obtain additional funds to improve communication
+								technology to build better understanding among team members </li>
+							<li>
+								<input type="radio"> C：通过使用新的可用信息更新项目管理计划来采取预防措施<br>Take preventive actions by updating the project
+								management plan with the newly available information </li>
+							<li>
+								<input type="radio"> D：更新工作分解结构（WBS）并确保所有活动按时完成<br>Update the work breakdown structure (WBS) and ensure
+								that all activities are completed on time </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：虚拟团队，关注沟通。题干已说明是虚拟团队,这是限制条件,因此不能集中办公,A不对；C和D都要走变更流程,因此不选；B获取资金已包含走流程的含义。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm42">
+					<div class="st_content_txt_tm">
+						<span>42、</span>
+
+						一个敏捷团队拥有11名集中办公的团队成员，他们以一个稳定的速度执行工作，在第九次迭代中，有些团队成员离职，并由分布在不同地理位置的成员代替。敏捷项目管理者应对新团队有何期待？<br>One agile team has
+						11 team members who work together. They implement the work stably. In the ninth iteration, some team members
+						quit the job and are taken over by the members in different geographical locations. What expectations should
+						agile practitioner place on the new team? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：团队将经历形成阶段，并将以之前项目团队的相同的速度水平进行工作<br>The team will experience the stage of formation
+								and implement work at the speed the same with that of the previous project team </li>
+							<li>
+								<input type="radio"> B：在团队以稳定的速度执行工作之前，团队将经历震荡阶段，并在更为频繁的沟通中规范化<br>Before the team implements work stably,
+								the team will experience the stage of fluctuations and become standardized in the more frequent
+								communication </li>
+							<li>
+								<input type="radio"> C：团队将处理和解决所发生的任何团队冲突<br>The team will handle and solve any possible team conflicts
+							</li>
+							<li>
+								<input type="radio"> D：团队成员将关注他们自己的可交付成果和进度<br>Team members will focus on their deliverable results and
+								progress </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：团队所处的阶段：震荡阶段，以及该阶段中需要做的事情。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm43">
+					<div class="st_content_txt_tm">
+						<span>43、</span>
+
+						项目经理收到设备采购的两份标书。采购部门坚持接受最低报价，而制造部门更愿意选择性能最好但价格更高的设备。为了满足项目预算，项目经理选择最便宜的报价。项目经理使用的是哪种冲突管理技巧？<br>A project
+						manager receives two bids for the purchase of equipment.The procurement department insists on accepting the
+						least expensive biwhile the manufacturing department prefers to choose the best performing.but more
+						expensive.equipment.To meet the project budget,the project manager selects the least expensive biWhat conflict
+						management technique did the project manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：妥协/调解<br>Compromise/reconcile </li>
+							<li>
+								<input type="radio"> B：撤退/回避<br>Withdraw/avoid </li>
+							<li>
+								<input type="radio"> C：缓和/包容<br>Smooth/accommodate </li>
+							<li>
+								<input type="radio"> D：强迫/命令<br>Force/direct </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：9.5.2.1 人际关系与团队技能
+						冲突管理。
+						强迫/命令。以牺牲其他方为代价，推行某一方的观点；只提供赢—输方案。通常是利用权力来强行解决紧急问题，这种方法通常会导致“赢输”局面。赢输方式处理冲突，属于D。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm44">
+					<div class="st_content_txt_tm">
+						<span>44、</span>
+
+						采购部门通知项目经理项目管理软件已更新。团队成员没有使用此更新过的软件经验，但需要此项技能来完成项目。项目经理应该怎么做？<br>A procurement department notifies a project
+						manager that the project management software has been updateTeam members have on experience working with this
+						update,but will need the skills to complete the project.What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：请求额外的时间来培训资源<br>Request additional time to train resources. </li>
+							<li>
+								<input type="radio"> B：更新资源管理计划<br>Update the resource management plan. </li>
+							<li>
+								<input type="radio"> C：聘请熟悉这项更新的外部资源来完成工作<br>Hire an external resource familiar with the update to
+								complete the jo </li>
+							<li>
+								<input type="radio"> D：要求供应商提供主题专家(SME )来培训团队<br>Ask the vendor to supply a subject matter expert(SME)to
+								train the team. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：团队成员能力不够，要临时安排培训，首先要记录在资源管理计划中。
+						9.1.3.1 资源管理计划
+						作为项目管理计划的一部分，资源管理计划提供了关于如何分类、分配、管理和释放项目资源的指南。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm45">
+					<div class="st_content_txt_tm">
+						<span>45、</span>
+
+						一个项目跨越不同国家，且时间紧迫，公司未来的成功取决于是否满足最后期限。项目经理应该使用什么工具或技术来提高团队执行能力？<br>A project spans different countries and has a
+						tight schedule.The company’s future success depends on meeting the deadline.
+						What tool or technique should the project manager use to enhance the team’s ability to
+						perform? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：基本规则<br>Ground rules </li>
+							<li>
+								<input type="radio"> B：集中办公<br>Collocation </li>
+							<li>
+								<input type="radio"> C：虚拟团队<br>Virtual teams </li>
+							<li>
+								<input type="radio"> D：培训<br>Training </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：虚拟团队是团队建设工具，B不现实。不属于技能不足，所以不选D。9.4.2.2 虚拟团队 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm46">
+					<div class="st_content_txt_tm">
+						<span>46、</span>
+
+						一位具有独特和关键技能的主题专家(SME)不愿接受项目经理的指令，项目经理首先应该怎么做？<br>A subject matter expert (SME) with unique and critical skills
+						will not accept the authority of the project manager. What should the project manager do first ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与该主题专家的直线经理开会以解决该冲突<br>Meet with the SME line manager to resolve the conflict </li>
+							<li>
+								<input type="radio"> B：与该主题专家一起审查项目管理计划以核实所有团队角色<br>Review the project management plan with the SME to
+								validate all team roles </li>
+							<li>
+								<input type="radio"> C：要求项目发起人替换该主题专家<br>Ask the project sponsor to replace the SME </li>
+							<li>
+								<input type="radio"> D：新资源管理计划和风险登记册<br>Update the resource management plan and the risk register </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：团队成员不听指挥，首先应该用规则来管理，即选B。本题也可以当成冲突管理，有冲突要面对，也是B。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm47">
+					<div class="st_content_txt_tm">
+						<span>47、</span>
+
+						一个软件开发项目的截止日期即将来临，只有在产品通过质量控制测试之后才能交付产品，但是由于与质量控制团队的关系不佳，开发人员反对测试。项目经理应该怎么做？<br>A software development project
+						deadline is approaching, the product cannot be delivered until it has been tested and passes by quality
+						control, However, the developers are resisting the tests as they have a poor relationship with the quality
+						control team. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：分析即将发生的延迟影响并通知客户<br>Analyze the impact of the impending delays and inform the
+								client </li>
+							<li>
+								<input type="radio"> B：立即与两个团队开会，以确保达到质量标<br>Immediately meet with both teams to ensure that quality
+								standards are met </li>
+							<li>
+								<input type="radio"> C：聘请分包商进行质量管理任务<br>Hire a subcontractor for to quality management tasks </li>
+							<li>
+								<input type="radio"> D：根据团队意见更新质量管理计划<br>Update the quality management plan based on team inputs </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：可以当成冲突问题，有冲突要面对，选B；也可以当成相关方问，管理相关方，也是选B。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm48">
+					<div class="st_content_txt_tm">
+						<span>48、</span>
+
+						在执行一个大型软件实施项目期间，服务器管理团队必须设置解决方案的基础架构。但是，该团队需要比预期更长的时间来完成工作，这延长了整个项目进度。因此，最初分配给项目的开发人员不可用。项目经理应该怎么做？<br>During
+						execution of a large software implementation project, the server administration team must set up the
+						solution’s infrastructure. However, this team takes much longer than expected to complete the work, which
+						extended the entire project schedule。As a result, the developers originally assigned to the project are
+						unavailable. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与相关方讨论资源制约因素，以确定更改资源管理计划的方案<br>Discuss the resource constraints with stakeholders
+								to identify options for changing the resource management plans </li>
+							<li>
+								<input type="radio"> B：在下一个状态报告中包含资源制约因素，并根据开发人员的可用性更新需求<br>Include the resource constraints in the next
+								status report and update the requirements based on developers5 availability </li>
+							<li>
+								<input type="radio"> C：使用资源制约因素作为雇佣和培训其他开发人员的正当理由<br>Use the resource constraints as justification to hire
+								and train additional developers </li>
+							<li>
+								<input type="radio"> D：包含非工作日，以便可以在最初定义的时间表内交付项目<br>Include non-working days so that the project can be
+								delivered within the originally defined timeline </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：解析：pmbok
+						9.3获取资源。获取资源的输入有9.3.3.4变更请求。如果获取资源过程中出现变更请求（例如影响了进度），或者推荐措施、纠正措施或预防措施影响了项目管理计划的任何组成部分或项目件，项目经理应提交变更请求，且应该通过实施整体变更控制过程（见
+						4.6
+						节）对变更请求进行审查和处理。由题干得知，此时的进度延误导致实现安排的资源无法使用，所以要尽快调整安排，先讨论影响来确定初步方案。排除法也可，B选项，“在下一个状态报告中”，由于题干中为提到状态报告的发生时间，因此在一下次的报告中再提及问题的话，可能会为时已晚。C选项，用制约因素作为其他要求的理由不妥，因首先想办法解决，而不是以制约因素当做理由去进行要求。D选项，包含非工作日指周末加班，按中国劳动法规定，周末加班双倍工资，此时首先要看公司是否同意，再者西方公司未必可行。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm49">
+					<div class="st_content_txt_tm">
+						<span>49、</span>
+
+						项目经理正在管理一个交付日期非常紧张的关键项目。由于某些团队成员位于其他国家/地区，因此项目经理希望确保明确定义角色、职责和工作日历。项目经理应该参考哪一个过程？<br>A project manager is
+						leading a critical project with an aggressive delivery date. Since some project team members are located in
+						other countries, the project manager wants to ensure that roles, responsibilities, and work calendars are will
+						define To what process should the project manager refer? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：规划进度管理 <br>Plan schedule management </li>
+							<li>
+								<input type="radio"> B：规划资源管理<br>Plan resource management </li>
+							<li>
+								<input type="radio"> C：规划风险管理<br>Plan risk management </li>
+							<li>
+								<input type="radio"> D：规划沟通管理<br>Plan communication management </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK9.1
+						规划资源管理，资源管理计划中包含角色和职责，B生成资源管理计划。题目关键词希望确保明确定义角色，职责和工作日历，即为希望输出资源管理计划，对应为规划资源管理过程组。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm50">
+					<div class="st_content_txt_tm">
+						<span>50、</span>
+
+						一个项目正处于在客户工厂的最终测试和验收阶段。若要满足项目期限，项目经理应使用哪一项？<br>A project is in the final testing and acceptance stages at a
+						customer's factory。To meet the project deadline,What tool or technique should the project manager use? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：观察/对话<br>Observation/conversation </li>
+							<li>
+								<input type="radio"> B：集中办公<br>Co-location </li>
+							<li>
+								<input type="radio"> C：强迫/指导<br>Force/direct </li>
+							<li>
+								<input type="radio"> D：基本规则<br>Ground rules </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK9.4建设团队是提高工作能力，促进团队成员互动，改善团队整体氛围，以提高项目绩效的过程。本过程的主要作用是，改进团队协作、增强人际关系技能、激励员工、减少摩擦以及提升整体项目绩效。也可用排除法，可以当成常识题目。B集中办公可以提高效率。C是冲突解决策略，没有提到冲突；D是预防冲突的措施；A是绩效考核方法。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm51">
+					<div class="st_content_txt_tm">
+						<span>51、</span>
+
+						自项目开始以来，一些关键相关方因各种原因被替换，而又没有与项目团队适当地沟通这种情况，导致了项目团队产生挫败感，并将很快影响到项目结果。若要改善这种情况，项目经理应该怎么做？<br>Some key
+						stakeholders have been replaced for various reasons since the project’s beginning, this was not properly
+						communicated to the project team, which is causing frustration and will soon impact project results. What
+						should the project manager do to improve the situation? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：统一相关方的期望<br>Align stakeholder expectations </li>
+							<li>
+								<input type="radio"> B：向团队成员提供一份组织结构图<br>Provide the team with an organizational chart </li>
+							<li>
+								<input type="radio"> C：提升项目团队的兴趣<br>Promote the interest of the project team </li>
+							<li>
+								<input type="radio"> D：增加相关方对项目的承诺<br>Increase stakeholder commitment to the project </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK9.1.3.1 项目组织图:项目组织图以图形方式展示项目团队成员及其报告关系。问题核心是换人了不知道，组织结构图显示团队成员及其汇报关系，可以解决该问题。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm52">
+					<div class="st_content_txt_tm">
+						<span>52、</span>
+
+						在项目执行期间，项目经理发现由于团队成员在可交付成果交付到期日之前休假而导致延期。为避免这个问题，应事先更新下列哪一项？<br>During project execution,the project manager
+						discovers delays due to team members taking vacations before the deliverables’due dates.What should have been
+						updated to avoid this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：资源管理计划<br>Resource management plan </li>
+							<li>
+								<input type="radio"> B：人员配备管理计划<br>Staffing management plan </li>
+							<li>
+								<input type="radio"> C：沟通管理计划<br>Communications management plan </li>
+							<li>
+								<input type="radio"> D：风险管理计划<br>Risk management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK9.1
+						规划资源管理，资源日历支持项目日历，资源日历是资源管理计划的一部分。没有考虑资源休假，是资源管理计划没做好。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm53">
+					<div class="st_content_txt_tm">
+						<span>53、</span>
+
+						一项任务花费的时间比预期长，经审查，项目经理确定所分配的人员不具备必要的技能。若要将项目任务拉回正轨，项目经理应该怎么做？<br>A task is taking longer than expected, upon
+						review, the project manager identifies that the assigned resource does not process the necessary skills. What
+						should the project manager do to get the task back on schedule? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：制定并管理一份技能不熟练人员的纠正措施计划，以获得必要的技能<br>Establish and manage A corrective action plan for
+								the unskilled resource to gain the necessary skills. </li>
+							<li>
+								<input type="radio"> B：分配技能熟练的人员以帮助不熟练人员获得必要的技能<br>Assign a skilled resource to help the unskilled
+								personnel acquire necessary skills </li>
+							<li>
+								<input type="radio"> C：与职能经理会面，请求协助培训技能不熟练的人员<br>Meet with functional managers and request assistance in
+								training unskilled personnel </li>
+							<li>
+								<input type="radio"> D：与职能经理一起合作，以替换该人员<br>Work with the functional manager to replace this person </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK9.4.2.6
+						培训包括旨在提高项目团队成员能力的全部活动团队成员培训由项目经理负责。团队成员能力不够，培训。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm54">
+					<div class="st_content_txt_tm">
+						<span>54、</span>
+
+						一位关键团队成员犯了一个严重错误，将导致项目严重延迟。按照相关方参与计划，项目经理与相关方开会讨论此问题。在会议上，项目经理应该提供什么信息？<br>A key team member makes a critical
+						mistake that will result in a significant project delay.In accordance with the stakeholders engagement plan,
+						The project manager meets with stakeholders to discuss this issue. What information should the project manager
+						present during the meeting? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：团队的培训计划，以避免类似错误<br>Training plan for the team to avoid similar mistakes </li>
+							<li>
+								<input type="radio"> B：说明防止类似问题发生的新规定<br>Description of new provisions to prevent similar issue from
+								occurring </li>
+							<li>
+								<input type="radio"> C：修改范围以保持项目进度计划的方案<br>Options for amending the scope to maintain the project schedule
+							</li>
+							<li>
+								<input type="radio"> D：根本原因分析，解释错误发生的原因<br>Root cause analysis, explaining why the mistake occurred </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：9.4.2.6
+						培训。培训包括旨在提高项目团队成员能力的全部活动，可以是正式或非正式的。题目里面表示，因为一个关键成员的失误而导致了项目延迟，那么在会议上面，我们需要提供这个问题的解决方案。这个问题是因为团队成员引起的，我们需要对该团队成员进行培训，避免之后出现类似的情况。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm55">
+					<div class="st_content_txt_tm">
+						<span>55、</span>
+
+						在错过第二个项目里程碑后，项目经理进行了调查以确定原因。结果显示任务分布不均，大部分工作量由一个小组执行，主要是因为他们经验丰富且熟悉流程。若要解决这个问题，项目经理首先应该做什么？<br>After the
+						second project milestone was missed, the project manager performed an investigation to determine the reason.
+						The outcome revealed that takes were uneven distribution ,The bulk of the workload was performed by a small
+						ground, mainly because they were experienced and familiar with the process. To address this, what should the
+						project manager do first? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：要求运营和职能经理根据所需的技能和知识水平重新分配项目人员<br>Ask the operational and functional managers to
+								reassign project resource based on required levels of skill and knowledge </li>
+							<li>
+								<input type="radio"> B：查看工作分解结构(WBS)上的任务，并在团队成员之间更均匀地重新分配职责<br>Review the tasks on the work breakdown
+								structure (WBS) and reallocate responsibilities more evenly among team members </li>
+							<li>
+								<input type="radio"> C：评估每个团队成员的经验和专业知识，以确定过程改造、培训要求和指导技术，帮助缩小团队内部的知识差距<br>Assess the experience and
+								expertise of each team member to identify process improvements, training requirements, and mentoring
+								techniques that will help close the knowledge gap within the team </li>
+							<li>
+								<input type="radio"> D：与相应的相关方和职能经理开会，了解项目人员配置时的初步决策，包括所使用的基本原理和标准
+								<br>Meet with appropriates stakeholders and functional managers to understand the initial decisions made
+								when staffing the project,.'including the retionale and criteria used </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK9.4.2.6
+						培训包括旨在提高项目团队成员能力的全部活动优化资源。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm56">
+					<div class="st_content_txt_tm">
+						<span>56、</span>
+
+						在一个时间紧迫的项目期间，项目经理注意到两名团队成员之间的冲突让项目进度停滞不前。项目经理应该做些什么来恢复工作和管理冲突？<br>During a project with a tight timeline, the
+						project manager observes a conflict between two team members that is halting progress. What should the project
+						manager do to resume work and manage the conflicts? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将这两名团队成员分开以防止冲突影响项目<br>Separate the team members to prevent the conflicts from
+								impacting the project </li>
+							<li>
+								<input type="radio"> B：请求相关方帮助团队成员达成妥协<br>Request that stakeholder help the team members reach a
+								compromise </li>
+							<li>
+								<input type="radio"> C：要求双方通过分析情况来解决冲突，并与他们合作找到共同解决方案<br>Ask Both parties to resolve the conflict by
+								analysing the situation and collaborate with them on finding a common solution </li>
+							<li>
+								<input type="radio"> D：指示团队成员采取一致观点并继续项目<br>Direct the team members to take one point of view and proceed
+								with the project </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK9.5.2.1 人际关系与团队技能。考冲突策略，没有特殊提示，都选合作/解决问题。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm57">
+					<div class="st_content_txt_tm">
+						<span>57、</span>
+
+						项目经理得知，因为未得到足够的支持，一位团队成员无法满足指定的截止日期。原计划由另一个部门的职能经理直接管理的一位人员能支持该团队成员，但因其超负荷无法完成，组织内没有其他资源可用。项目经理应该怎么做？<br>A
+						project manager learn member could not meet assigned deadline because adequate support was not receive An
+						overloaded resource, who is directly managed by a functional manager in another department was scheduled to
+						support this team member, but was unable,no other resources are available within the organization. What should
+						the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：联系该超负荷人员的职能经理，并审查该资源日程计划<br>Engage with the overloaded resource’s functional
+								manager,and review the resource scheduling plan </li>
+							<li>
+								<input type="radio"> B：要求该团队成员与该超负荷人员联系，以解决该问题<br>Ask the team member to engage with the overloaded
+								resource to resolve the problem </li>
+							<li>
+								<input type="radio"> C：要求该超负荷人员的职能经理解决该问题<br>Ask the overloaded resource’s functional manager to resolve
+								the issue </li>
+							<li>
+								<input type="radio"> D：与团队开会，以解决该问题<br>Meet with the team to resolve the issue </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOKP47-表2-1、9.3.2.2人际关系与团队技能：职能经理。确保项目在要求的时限内获得最佳资源，直到完成职责。9.6.2.3
+						人际关系与团队技能，矩阵型组织，已经分派的资源因故不到位，先找对应的职能经理协商并一起审查该资源计划。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm58">
+					<div class="st_content_txt_tm">
+						<span>58、</span>
+
+						在与新组建的团队启动项目后不久，项目经理发现团队成员对意见分歧极为直言不讳。若要在团队建设过程中鼓励进展，项目经理应该怎么做？<br>Shortly after kicking off a project with a
+						newly formed team, the project manager discovers that team members are extremely vocal about differences of
+						opinion. To encourage progression through the team building process,What should the project manager do ?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：要求团队成员专注于完成任务<br>Ask team members to focus on task completion </li>
+							<li>
+								<input type="radio"> B：营造一个反馈和肯定的环境，巩固支持团队的习惯<br>Foster an environment of feedback and affirmation to
+								solidify habit that support the team </li>
+							<li>
+								<input type="radio"> C：强调团队成员之间达成共识以尽量减少冲突的重要性<br>Stress the importance of consensus among team members to
+								minimize conflict </li>
+							<li>
+								<input type="radio"> D：经常审查并评团队和项目绩效<br>Frequently review and evaluate team and project performance </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK9.4建设团队是提高工作能力，促进团队成员互动，改善团队整体氛围，以提高项目绩效的过程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm59">
+					<div class="st_content_txt_tm">
+						<span>59、</span>
+
+						在系统升级后，客户向支持团队抱怨他们无法使用该系统。支持团队没有从负责升级的项目团队那里接受过培训。若要解决这个问题，项目经理应该怎么做？<br>Following an upgrade, customer
+						complain to the support team that they are unable to use the system. The support team failed to receive
+						training from the project team that work on the upgrade. What should the project manager do to resolve this?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：查看支持团队的培训计划，并安排培训课程<br>Review the training plan for the support team and schedule a
+								training session </li>
+							<li>
+								<input type="radio"> B：应将问题升级上报给项目发起人，并建议项目团队接管支持职能<br>Escalate the issue to the project sponsor and
+								recommended that the project team take over the support function </li>
+							<li>
+								<input type="radio"> C：遵循变更管理计划，采取必要的纠正措施以满足客户的期望<br>Follow the change management plan to take the
+								corrective actions necessary to meet customer expectations </li>
+							<li>
+								<input type="radio"> D：与部署团队合作，安排修复升级问题<br>Work with the deployment team to schedule the fixes to the
+								upgrade </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK9.4.2.6 培训
+						成员缺乏必要的管理或技术技能，可以把对这种技能的培养作为项目工作的一部分。题目中说到团队没有接受过培训，那么要解决这个问题，当然是先建议安排培训。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm60">
+					<div class="st_content_txt_tm">
+						<span>60、</span>
+
+						一个长期项目已经错过几个里程碑了。高级管理层与项目经理开会讨论以解决该问题,但会议引发了争论。这导致高级管理层在未经项目经理同意的情况下,聘请顾问重新制定进度计划的基准。
+						这描述的是哪一种冲突解决技术?<br>A long-term project has missed several milestones.Senior management
+						met with the project manager to resolve the issues,but the meeting resulted inargument.The leads senior
+						management hires consultants to re-baseline the
+						schedule without the project manager's consent.
+						What conflict-resolution technique does this describe? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：强迫/指令<br>Force/direct. </li>
+							<li>
+								<input type="radio"> B：妥协/调解<br>Compromise/reconcile. </li>
+							<li>
+								<input type="radio"> C：撤退/回避<br>Withdraw/avoi </li>
+							<li>
+								<input type="radio"> D：合作/解决问题<br>Collaborate/problem solve. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：冲突策略题目。
+						强迫/命令：以牺牲其他方为代价，推行某一方的观点，只提供赢-输方案，通常是利用权力来强行解决紧急问题，这种方法通常会导致“赢输”局面。高管的做法是“赢输”结局，是强迫命令。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm61">
+					<div class="st_content_txt_tm">
+						<span>61、</span>
+
+						在项目中途,一位关键团队成员离开并被替换,项目经理应该让新资源首先查阅什么?<br>Midway throughout a project,a key team member leaves and is
+						replaced.What is the first thing the project manager should have the new resource review? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目管理计划<br>Project management plan. </li>
+							<li>
+								<input type="radio"> B：项目状态报告<br>Project status report. </li>
+							<li>
+								<input type="radio"> C：问题日志<br>Issue log. </li>
+							<li>
+								<input type="radio"> D：项目章程<br>Project charter. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参见PMBOK第6版9.1.2.2 数据表现。责任分配矩阵展示项目资源在各个工作包中的任务分配。这个矩阵属于资源管理计划。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm62">
+					<div class="st_content_txt_tm">
+						<span>62、</span>
+
+						一个项目需要工程部门的专业技术知识。但是,高级工程师正在领导另一个单独项目的团队,唯一可用的资源是一位初级工程师。高级工程师受到客户的高度推崇,也受到项目经理的青睐。项目经理首先应该做什么才能让高级工程师参与这个项目?<br>A
+						project requires specialized technical expertise from the engineering department.However,the senior engineer
+						is leading a team on separate
+						project,and the only available resource is an entry-level engineer.The senior
+						engineer is highly regarded by the customer and the preferred by the project
+						manager.
+						What should the project manager do first to obtain the senior engineer's
+						participation in this project? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：使用高级工程师的师资拟定工作描述,以聘请一位资质相当的高级工程师<br>Develop a job description using the senior
+								engineer's qualifications to hire a
+								comparable senior engineer. </li>
+							<li>
+								<input type="radio"> B：立即要求项目发起人升级上报这项资源要求<br>Immediately ask the project sponsor to escalate this
+								resource requirement. </li>
+							<li>
+								<input type="radio"> C：与工程部门经理开会,讨论可让高级工程师参与的方案<br>Meet with the engineering department manager to discuss
+								options for making
+								the senior. </li>
+							<li>
+								<input type="radio"> D：要求分配高级工程师,以提高客户对交付优质产品的信息<br>Demand that the senior engineer is assigned to
+								increase customer confidence
+								in the delivery of a quality product. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：考点：9.3获取资源
+						解析：资源获取问题，先与职能经理讨论。9.3获取资源:工具与技术（P332）9.3.2.2人际关系与团队技能：适用于本过程的人际关系与团队技能包括（但不限于）谈判。项目管理团队需要与上列各方谈判：职能经理。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm63">
+					<div class="st_content_txt_tm">
+						<span>63、</span>
+
+						项目经理与团队定期举行虚拟会议。在执行阶段,项目经理注意到两名特定团队成员经常争辩和发生分歧,这导致会议超时并让团队其他成员分心。项目经理应该做什么?<br>A project manager runs regular
+						virtual meetings with the team,During the execution phase,the project manager notices that two particular team
+						members frequently argue and disagree,which causes meeting overruns and distractions for the rest of the
+						team.What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与团队成员讨论问题,如果继续存在该行为,则寻求管理层的决议<br>Discuss the issue with the team members,and seek
+								resolution from management if the behavior continues. </li>
+							<li>
+								<input type="radio"> B：告知这些团队成员他们的行为违反了团队章程,并将他们从团队中开除<br>Advise these team members that their behavior
+								violates the team charter,and
+								remove them from the team. </li>
+							<li>
+								<input type="radio"> C：要求这些团队成员的职能经理解决这种行为<br>Ask these team members' functional managers to address this
+								behavior. </li>
+							<li>
+								<input type="radio"> D：认识到这是震荡阶段的一部分,并安排团队建设活动<br>Recognize this as part of the storming stage,and arrange
+								a team-building
+								activity. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：有冲突属于团队发展震荡阶段,，需要进行团队建设，打造积极合作的工作环境。团队建设在项目前期必不可少。9.1.3.2团队章程对项目团队成员的可接受行为确定了明确的期望。尽早认可并遵守明确的规则，有助于减少误解，提高生产力，但并不是为了开除团队成员；其他选项都有错误，可以排除。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm64">
+					<div class="st_content_txt_tm">
+						<span>64、</span>
+
+						一个软件开发项目的项目章程已获批准,项目经理召集会议准备项目管理计划,项目经理得知开发团队成员对他们的角色和职责感到困惑。
+						若要避免这个问题,项目经理应该事先做什么?<br>Approval of the project charter for a software development project has
+						been obtained and the project manager calls a meeting to prepare the project management plan.The project
+						manager learns that the development team
+						members are confused about their roles and responsibilities.
+						What should the project manager have done to avoid this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：审查沟通管理计划<br>Reviewed the communication management plan. </li>
+							<li>
+								<input type="radio"> B：制定项目资源管理计划<br>Developed the project resource management plan. </li>
+							<li>
+								<input type="radio"> C：创建一份相关方登记册<br>Created a stakeholder register. </li>
+							<li>
+								<input type="radio"> D：分享工作分解结构(WBS)<br>Shared the work breakdown structure(WBS). </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK6版9.1.2.2 数据表现-责任分配矩阵(RAM) P317，责任不清楚，一般是找责任分配矩阵，责任分配矩阵包含在资源管理计划中。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm65">
+					<div class="st_content_txt_tm">
+						<span>65、</span>
+
+						一位团队成员称分配给其的任务无法在计划的一周时间内完成,但另一位团队成员却称其可以,项目经理应该做什么?<br>A team member claims that his assigned task cannot be
+						completed with the scheduled one-week time frame,but another team member asserts that he can.What should the
+						project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：坚持由分配到该任务的团队成员在一周内完成<br>Insist that the team member assigned with this task
+								complete it within one
+								week. </li>
+							<li>
+								<input type="radio"> B：将任务完成的时间表修改为两周<br>Revise the time frame for task completion to two weeks. </li>
+							<li>
+								<input type="radio"> C：将工作重新分配给可以按时完成任务的团队成员<br>Reassign the work to the team member who can complete the
+								task on time. </li>
+							<li>
+								<input type="radio"> D：让团队成员开会,就时间表达成一致意见<br>Have the team member meet to agree on a time frame. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：意见分歧，属于冲突。有冲突要面对。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm66">
+					<div class="st_content_txt_tm">
+						<span>66、</span>
+
+						项目经理从发起人处获悉,由于一项合同要求,必须为项目使用某项特定技术,项目经理发现,一名将被要求使用这项新技术的团队成员之前没有使用过这种技术的经验,公司限制禁止雇佣任何新的团队成员。
+						项目经理应该做什么?<br>A project manager learns from the sponsor that,due to a contact requirement,a specific
+						technology must be used for the project.The projec tmanager discovers that one team member who will be
+						required to use this new technology,has no previous experience working with it.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：参考资源管理计划,以确定是否有该团队成员可以参加的已经规划好的培训<br>Refer to the resource management plan to
+								determine if there is scheduled training in which the team member may participate. </li>
+							<li>
+								<input type="radio"> B：增加该团队成员的任务持续时间,并相应地调整进度计划<br>Increase the team member's task durations,and adjust
+								the schedule. </li>
+							<li>
+								<input type="radio"> C：修改合同以允许使用不同的技术解决方案,以便所有团队成员都感到舒适<br>Revise the contract to allow for a different
+								technology solution to be used so that all team members will feel comfortable. </li>
+							<li>
+								<input type="radio"> D：将所有与该技术相关的任务委派给具有该技术经验的团队成员<br>Delegate all technology-related tasks to a team
+								member who is experienced
+								with technology. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK342 9.4.2.6 如果项目团队
+						成员缺乏必要的管理或技术技能，可以把对这种技能的培养作为项目工作的一部分。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm67">
+					<div class="st_content_txt_tm">
+						<span>67、</span>
+
+						项目团队中两名最关键的资源私下告知项目经理他们已经辞职并将在一个月内离开项目,这两位成员非常受欢迎,团队中的其他成员也向他们寻求建议和支持。
+						项目经理应该做什么?<br>Two of the most critical resource on a project team privately informs theproject manager that
+						they have resigned and will leave the project within a
+						month.These member are very popular,and others in the team lock to themadvice and support.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：举行团队会议,宣布这两名成员辞职并解决任何疑虑<br>Conduct a team meeting to announce the resignations and
+								address any
+								concerns. </li>
+							<li>
+								<input type="radio"> B：要求团队成员不要讨论这两位成员辞职的信息,以免士气受到影响<br>Ask the team members to refrain from discussing
+								their resignations so thatmorale is not impacte </li>
+							<li>
+								<input type="radio"> C：推迟行动,因为这两名成员仍会在团队待一个月<br>Postpone action,since the two members are still on the
+								team for anothermonth. </li>
+							<li>
+								<input type="radio"> D：向所有团队成员发送一封电子邮件,告知这两名成员辞职的信息<br>Send an email to all team members to inform them of
+								the resignations. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：团队中两名最关键资源离职，会影响到团队完整性，项目经理召开团队会议并解答其他项目成员的问题，可以稳定团队士气，有利于项目继续进行。 参见PMBOK 9.4.2.8 会议。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm68">
+					<div class="st_content_txt_tm">
+						<span>68、</span>
+
+						在项目执行阶段,发现了一个缺陷,影响到一个弱矩阵组织中的两个职能团队。两个团队都不想承担修复缺陷的责任,因为他们忙于完成其他任务。项目经理应该做什么?<br>During a project's execution
+						phase,a defect is identified that affects two functional teams in a weak matrix organization.Neither team
+						wants to take responsibility for fixing the defect because they are busy with other tasks.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与两位职能经理讨论此事,就修复缺陷达成一致意见<br>Discuss the matter with both functional managers to
+								obtain agreement on fixing the defect. </li>
+							<li>
+								<input type="radio"> B：与两个职能团队开会,就修复缺陷的责任达成一致意见<br>Meet with both functional teams to obtain agreement on
+								the responsibility for
+								fixing the defect. </li>
+							<li>
+								<input type="radio"> C：将任务分配给修复缺陷更相关的团队<br>Assign the task to the team for which fixing the defect is more
+								pertinent. </li>
+							<li>
+								<input type="radio"> D：要求发起人澄清两位职能经理的修复责任<br>Ask the sponsor to clarify the responsibility for the fix
+								with the two functional
+								managers. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：PMBOK9.5.2.1 项目环境中，冲突的来源包括资源稀缺、进度优先级排序和个人工作风格差异等。有五种常见的冲突解决方法：
+						合作/解决问题，综合考虑不同的观点和意见，采用合作的态度和开放式的对话引导各方达成共识和承诺。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm69">
+					<div class="st_content_txt_tm">
+						<span>69、</span>
+
+						—位新团队成员加入一个项目。项目经理的纪律严明，并期待按时参加每周会议。这位新成员来自一个文化自由的组织，习惯性参加各种会议迟到，当问到为什么迟到，该团队成员回应说他们忙于处理可交付成果，他们认为应该优先处理可交付成果。项目经理应该怎么做？<br>A
+						new team member joins a project.The project manager is highly disciplined and expects timely participation in
+						weekly meetings. The new member comes from an organization with a liberal culture and,out of habit is
+						continually late for meettings.When asked why,the team member responds that they are busy working on
+						deliverables,which they believe have priority.What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：暂停该团队成员的工作并解释这种行为是不允许的<br>Suspend the leam member and explain that this behavior is
+								not permitte </li>
+							<li>
+								<input type="radio"> B：再次与该团队成员会面，解释守时至关重要<br>Meet with the team member again to explain that punctuality
+								is crucial. </li>
+							<li>
+								<input type="radio"> C：忽略这种行为，因为这名团队成员正在确保工作不受影响<br>Ignore the behavior,as this team member is ensuring
+								that work is not affected, </li>
+							<li>
+								<input type="radio"> D：强调基本规则并影响团队，以便所有人都了解并遵守这些规则<br>Highlight ground rules and influences the team so
+								that these rules arc understood and followed
+								by all. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：所有项目团队成员都分担责
+						任，确保遵守团队章程中规定的规则。可定期审查和更新团队章程，确保团队始终了解团队基本规则，并指导新成员融入团队。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm70">
+					<div class="st_content_txt_tm">
+						<span>70、</span>
+
+						项目经理拥有一个虚拟团队，资源位于三个不同的大陆。团队成员之间出现一些严重问题。项目经理应该如何重新控制局面?<br>A project manager has a virtual team with resources
+						located on three different continents. Serious issues among learn members.
+						What should the project manager do to regain control of the situation? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：跟踪每个团队成员的进展情况和生产力<br>Track each team member's progress and productivity. </li>
+							<li>
+								<input type="radio"> B：审查沟通管理计划，并解决团队问题<br>Review the communications management plan, and Address team
+								issues. </li>
+							<li>
+								<input type="radio"> C：将问题升级上报给团队成员的直线经理<br>Escalate the issues to the team member's line managers. </li>
+							<li>
+								<input type="radio"> D：将时间和精力投入在与团队成员进行一对一的互动<br>Invest time and effort on one-on-one interactions with
+								team members. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：书中原话“在解决集中办公或虚拟团队的团队建设问题方面，沟通技术至关重要。它有助于为集中办公团队营造一个融洽的环境，促进虚拟团队（尤其是团队成员分散在不同时区的团队）更好地相互理解。”
+						现在团队出问题，审查沟通管理计划，找出根本原因。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm71">
+					<div class="st_content_txt_tm">
+						<span>71、</span>
+
+						开发一款银行零售业务新产品的项目正在进行中，由于团队成员缺乏激励，该项目落后于进度。
+						项目经理应该如何激励项目团队？<br>A project to develop a new retail banking：product is in progress. The project has fallen
+						behind schedule because team members do to motivate the project team?
+						What should the project manager motivate the project team? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：提供认可与奖励<br>Offer recognition and rewards </li>
+							<li>
+								<input type="radio"> B：使用教练和指导技能<br>Use coaching and coaching skills </li>
+							<li>
+								<input type="radio"> C：授权<br>Delegate the responsibilities </li>
+							<li>
+								<input type="radio"> D：应用创造性的问题解决方法<br>Apply creative problem solving </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：只有A是激励。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm72">
+					<div class="st_content_txt_tm">
+						<span>72、</span>
+
+						—名新成员加入团队，该团队的报告结构发生多次变更。若要快速使这位新团队成员适应，项目经理应该查阅哪一份文件？<br>A new member joins the team and the team's reporting
+						structure has changed for several times. Which document should the project manager review to quickly get the
+						new team member adapted? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目组织图<br>Project Organization Chart </li>
+							<li>
+								<input type="radio"> B：层级资源图<br>Hierarchical Resources Map </li>
+							<li>
+								<input type="radio"> C：责任分配矩阵(RAM)<br>Responsibility Assignment Matrix (RAM) </li>
+							<li>
+								<input type="radio"> D：资源管理计划<br>Resources Control Plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：项目组织图以图形方式展示项目团队成员及其报告关系。基于项目的需要，项目组织图可以是正式或非正式的，非常详细或高度概括的。A选项最准确。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm73">
+					<div class="st_content_txt_tm">
+						<span>73、</span>
+
+						项目需要一位熟练的工程师来执行某个特定任务，但由于工作量大，该工程师不能参与这个项目。
+						项目经理下一步应该怎么做？<br>A project requires a skilled engineer to perform a specific task.However?due to high
+						workloads,the engineer cannot participate in the project.
+						What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：修改进度计划，以适应该资源<br>Modify the schedule to accommodate the resource. </li>
+							<li>
+								<input type="radio"> B：与职能经理协商该资源的参与<br>Negotiate with the flmctional manager for the resource's
+								participation. </li>
+							<li>
+								<input type="radio"> C：培训项目团队中的某个成员来执行所需的活动<br>Train someone on the project team to perform the needed
+								activity. </li>
+							<li>
+								<input type="radio"> D：要求发起人提供更多的时间来寻找其他资源来执行任务<br>Ask the sponsor for more time to find another resource
+								to perform the task. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：本题可以理解为获取资源，用谈判，选 B；也可以理解为相关方问题，要管理相关方参与，也选B。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm74">
+					<div class="st_content_txt_tm">
+						<span>74、</span>
+
+						项目经理从一个符合进度和预算的项目中辞职。在聘用替代的新项目经理后，团队反对新项目经理提出的意见。团队处于下列哪一个发展阶段？<br>The project manager resigns from a project
+						that meets the schedule and budget. After hiring an alternative new project manager, the team is opposed to
+						the comments from the new project manager. Which of the following development stages does the team have?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：形成<br>Forming </li>
+							<li>
+								<input type="radio"> B：规范<br>Specification </li>
+							<li>
+								<input type="radio"> C：成熟阶段<br>Mature stage </li>
+							<li>
+								<input type="radio"> D：震荡阶段<br>Storming </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：公开反对，冲突较多，属于震荡阶段的特点，D选项为最佳答案。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm75">
+					<div class="st_content_txt_tm">
+						<span>75、</span>
+
+						团队成员都在执行他们熟悉的任务，而避开他们不喜欢的任务，这造成团队成员之间的冲突。项目经理应该怎么做？<br>Team members are performing tasks that they are
+						familiar with while avoiding tasks they don't like, resulting in conflicts between team members. What should
+						the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：分配明确的角色和职责<br>To talk to the line manager of team members </li>
+							<li>
+								<input type="radio"> B：与团队成员的直线经理谈话<br>To talk to the line manager of team members </li>
+							<li>
+								<input type="radio"> C：与团队成员协商<br>To negotiate with team members </li>
+							<li>
+								<input type="radio"> D：获得项目发起人的澄清<br>To get clarification from the project sponsor </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：明确的团队成员的角色与职责能减少冲突。A选项为最佳参考答案。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm76">
+					<div class="st_content_txt_tm">
+						<span>76、</span>
+
+						项目经理加入一个项目，但项目团队缺乏必要的技能，来产生一个关键可交付成果。项目经理应该怎么做？<br>The project manager joins a project, but the project team
+						lacks the necessary skills to create a key deliverable. What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将该可交付成果分配给一名拥有学习新技能能力的团队成员<br>To assign the deliverables to a team member who is
+								capable of learning new skills </li>
+							<li>
+								<input type="radio"> B：与项目发起人协商，聘请拥有必要技能的外部资源<br>To negotiate with the project sponsor to hire external
+								resources with the necessary skills </li>
+							<li>
+								<input type="radio"> C：终止执行项目，直到必要的资源出现<br>To terminate the project execution until the necessary
+								resources appear </li>
+							<li>
+								<input type="radio"> D：将培训作为项目管理计划中项目工作的组成部分<br>To include training as part of the project works in the
+								project management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：缺乏必要技能的情况下，首先考虑通过培训的方式提升团队成员的能力。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm77">
+					<div class="st_content_txt_tm">
+						<span>77、</span>
+
+						项目经理需要从不同职能经理那里招募团队成员，查阅完资源日历后，项目经理接下来应使用什么？<br>Project manager needs to recruit team members from different
+						functional managers，after review the resource calendars.What should the project manager use next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：资源日历<br>Resource Calendar </li>
+							<li>
+								<input type="radio"> B：协商<br>Negotiation </li>
+							<li>
+								<input type="radio"> C：募集<br>Recruitment </li>
+							<li>
+								<input type="radio"> D：技能图<br>Skills Diagram </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B解析：结合资源日历梳理完所有资源需求后，运用谈判技能跟职能经理协商获取资源。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm78">
+					<div class="st_content_txt_tm">
+						<span>78、</span>
+
+						项目经理了解到，两名团队成员晋升并将离开项目。为了向新团队成员说明项目角色, 项目经理应该准备或更新什么文件？<br>The project manager learns that two team members
+						are promoted and will leave the project. What documents should the project manager prepare or update in order
+						to explain the project role to the new team members? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：人员配备管理计划<br>Staffing Management Plan </li>
+							<li>
+								<input type="radio"> B：组织图<br>Organization Chart </li>
+							<li>
+								<input type="radio"> C：项目章程<br>Project Charter </li>
+							<li>
+								<input type="radio"> D：责任分配矩阵<br>Responsibility Assignment Matrix </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：责任分配矩阵显示了分配给每个工作包的项目资源，用于说明工作包或活动与项目团队成员之间的关系。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm79">
+					<div class="st_content_txt_tm">
+						<span>79、</span>
+
+						项目团队成员将因杰出工作和满足项目成本目标而获得奖励，高级经理向项目经理询问团队成员可用性和旅行偏好，项目经理可以在哪里获得此奖励的定义标准和频率？<br>Project team members will be
+						rewarded for outstanding work and meeting project cost objectives. Senior manager asks the project manager
+						about the availability and travel preferences of team members. Where can the project manager find the
+						definition criteria and frequency of this award? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：责任分配矩阵（RAM）<br>Responsibility Assignment Matrix (RAM) </li>
+							<li>
+								<input type="radio"> B：项目管理计划<br>Project Management Plan </li>
+							<li>
+								<input type="radio"> C：人员解散计划<br>Staff Dissolution Plan </li>
+							<li>
+								<input type="radio"> D：资源管理计划<br>Resources Control Plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：资源管理计划中包含认可和奖励的相关规则。见PMBOK P319 “认可计划”。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm80">
+					<div class="st_content_txt_tm">
+						<span>80、</span>
+
+						项目经理注意到两名团队成员的矛盾正导致项目团队精神动力分散。项目经理应该怎么解决矛盾并恢复项目团队注意力？<br>The project manager notices that the conflict between
+						two team members is distracting the project team.How should the project manager resolve conflicts and restore
+						the project team's attention? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：给这两人签发口头警告<br>To issue a verbal warning to the two
+								members </li>
+							<li>
+								<input type="radio"> B：重新分配资源，避免将来冲突<br>To reallocate resources to avoid future conflicts </li>
+							<li>
+								<input type="radio"> C：与团队开会，确定关键问题所在，并允许公开讨论解决<br>To hold a meeting with the team to identify critical
+								problem and allow for the open discussion </li>
+							<li>
+								<input type="radio"> D：上报发起人<br>To report this to the sponsor </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：在众多的冲突解决方式中，采用合作/解决问题的解决方式，通常可以达到最好的效果。合作/解决问题通常综合考虑不同的观点和意见，采用合作的态度和开放式对话引导各方达成共识和承诺。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm81">
+					<div class="st_content_txt_tm">
+						<span>81、</span>
+
+						两个项目团队正在为同一个项目工作，一个团队在海外的客户现场工作，另一个团队在公司总部工作，客户要求新的文档格式以符合当地法律以及战略供应商的新要求，位于公司总部的团队抱怨说，公司已有程序和政策规定不允许对文档格式进行任何变更。客户现场的项目经理应该怎么做？<br>Two
+						project teams working on the same project.One team works overseas at the client site,and the other team works
+						at corporate headquarters.The client requests new documentation formats to comply with local legislation and a
+						new demand from strategic suppliers.The team located at corporate headquarters complains that there are
+						already corporate procedures and policies that do not permit anny changes to the documentation format.What
+						should the project manager from the client site do ? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：向前推进项目，并在问题日志中更新客户请求的详细信息<br>Move forward with the project,and the issue log with
+								the details of the client’s requests </li>
+							<li>
+								<input type="radio"> B：请求变更以获得公司总部的新格式<br>Request a change to obtain the new formats from corporate
+								headquarters </li>
+							<li>
+								<input type="radio"> C：根据客户请求修改格式，并通知公司团队<br>Modify the format according to the client request,and inform
+								the corporate team </li>
+							<li>
+								<input type="radio"> D：与公司总部的项目经理召开视频会议以解决该问题<br>Hold a video conference with the project manager from
+								corporate headquarters to address the issue </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：冲突问题，要面对，D最合适。B是D之后才考虑的。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm82">
+					<div class="st_content_txt_tm">
+						<span>82、</span>
+
+						一位项目团队成员临时离开项目，由具有类似技术技能的资源代替，由于新资源未参加过往项目会议，导致项目中断，项目经理应向新资源提供什么？<br>A project team member temporarily leaves
+						the project and is replaced by resources with similar technical skills. Since the new resources have not
+						participated in past project meetings, resulting in project disruption, what should the project manager
+						provide to the new resources? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：项目绩效报告<br>Project performance report </li>
+							<li>
+								<input type="radio"> B：定期培训以及项目文档的访问权<br>Regular training and access to project documents </li>
+							<li>
+								<input type="radio"> C：项目管理计划，包括范围和进度基准<br>Project management plan, including scope and schedule </li>
+							<li>
+								<input type="radio"> D：工作绩效报告<br>Work performance report </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：新团队成员不了解项目以往的情况，应该向新成员提供项目文件的访问权，并提供培训。选项A：项目绩效报告属于项目文档，选B更合适。 选项C：范围和进度基准及项目管理计划属于项目文档，选B更合适。
+						选项D：工作绩效报告属于项目文档，选B更合适。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm83">
+					<div class="st_content_txt_tm">
+						<span>83、</span>
+
+						一个项目正在多个国家执行，虚拟团队中共有七名区域项目经理。其中一名区域项目经理收到一份报告，显示他们团队的绩效低于平均水平。项目经理应使用什么工具或技术来提高团队绩效和项目绩效？<br>One project is
+						being implemented in multiple countries, and there are seven regional project managers in the virtual team.
+						One of the regional project managers receives a report showing that their team performance is below average.
+						What tools or techniques should the project manager use to improve team performance and project performance?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：团队建设活动<br>Team building activities </li>
+							<li>
+								<input type="radio"> B：质量审计<br>Quality audit </li>
+							<li>
+								<input type="radio"> C：偏差分析<br>Deviation analysis </li>
+							<li>
+								<input type="radio"> D：过程分析<br>Process analysis </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：团队建设的主要作用，就是通过团队建设提高团队绩效，进而提高项目绩效。建设团队是提高工作能力、促进团队成员互动、 改善团队整体氛围，以提高项目绩效的过程。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm84">
+					<div class="st_content_txt_tm">
+						<span>84、</span>
+
+						远程项目团队成员请求将项目会议时间更改为远程项目团队的工作时间内进行。然而,本地团队成员都不同意这项建议。项目经理下一步该怎么做？<br>Remote project members request that the
+						project meeting time should be changed to the working hours of the remote project team. However, the local
+						team members do not agree with this suggestion. What should the project manager do next? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：安排一次与所有各方的团队会议，确定一个适合的时间<br>To arrange a team meeting with all parties to determine
+								a suitable time </li>
+							<li>
+								<input type="radio"> B：与发起人讨论决定一个适合的时间<br>To discuss with the sponsor to decide a suitable time </li>
+							<li>
+								<input type="radio"> C：接受远程团队的请求，并试行一段时间<br>To accept the request from the remote team and run it for a
+								certain period </li>
+							<li>
+								<input type="radio"> D：拒绝远程团队的请求，因为不包含在沟通管理计划中<br>To reject the request from the remote team, because it
+								is not included in the communication management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：有冲突，要面对。或者按不同意见，用引导式研讨会来统一意见，都指向A。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm85">
+					<div class="st_content_txt_tm">
+						<span>85、</span>
+
+						在开发的最后一天，软件开发团队的项目主管宣布由于意外停电可能导致延期。由于测试时间有限，软件开发主管和测试主管之间展开激烈的讨论。下列哪一项冲突解决技术将提供长期解决方案？<br>On the last day of
+						development, the project leader of the software development team announces that an unexpected power outage
+						could result in an extension. Due to limited testing time, there is a heated discussion between the software
+						development director and the test supervisor. Which of the following conflict resolution techniques will
+						provide a long-term solution? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：妥协/调解<br>Compromise/Mediation </li>
+							<li>
+								<input type="radio"> B：合作/解决问题<br>Cooperation/Problem solving </li>
+							<li>
+								<input type="radio"> C：缓解/包容<br>Mitigation/Inclusion </li>
+							<li>
+								<input type="radio"> D：强迫/命令<br>Forcing/Commanding </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：长期解决方案选择正面的处理冲突的方法，合作/解决问题为最佳答案，答案选B。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm86">
+					<div class="st_content_txt_tm">
+						<span>86、</span>
+
+						在项目期间，一名关键团队成员决定离开团队。由于需要替换该资源，项目经理应该怎么做？<br>During the project, a key team member decides to leave the team.
+						What should the project manager do for the need to replace the resource? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：立即发布职位空缺<br>To post job vacancies
+								immediately </li>
+							<li>
+								<input type="radio"> B：查看项目资源管理计划<br>To view the project resources management plan </li>
+							<li>
+								<input type="radio"> C：通知项目发起人<br>To notify the project sponsor </li>
+							<li>
+								<input type="radio"> D：更新风险登记册<br>To update the Risk Register </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：B
+						解析：资源管理计划中包含角色、职责、职权、能力要求，应根据资源管理计划找替代资源。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm87">
+					<div class="st_content_txt_tm">
+						<span>87、</span>
+
+						在项目执行阶段，项目经理注意到初级团队成员和高级团队成员之间存在冲突。若要改善这种情况，项目经理应该怎么做?<br>In the project execution phase, the project manager
+						notices a conflict between the junior team members and the senior team members. What should the project
+						manager do to improve this situation? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：更新沟通管理计划<br>To update the communication management plan </li>
+							<li>
+								<input type="radio"> B：将该问题记录在风险登记册中<br>To record the problem in the Risk Register </li>
+							<li>
+								<input type="radio"> C：与初级团队成员开会，讨论该问题<br>To hold a meeting with junior team members to discuss the
+								problem </li>
+							<li>
+								<input type="radio"> D：组织一次团队建设活动<br>To organize a team building activity </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：PMBOK P336 9.4 建设团队-建设项目团队是提高工作能力，促进团队成员互动，改善团队整体氛围，以提高项目绩效的过程。9.4.2.4团队建设活动旨在帮助各团队成品更加有效地协同工作。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm88">
+					<div class="st_content_txt_tm">
+						<span>88、</span>
+
+						一个国际项目的团队由来自不同的背景，年龄和兴趣的个人组成。项目一开始后就发现他们未能齐心协力一起合作。项目经理如何才能促进更好的团队合作？<br>A team for an international project
+						is composed of individuals from different backgrounds, ages,and interests.As soon as the project starts.It
+						become clear that they struggling to work together.How can project managers promote better teamwork? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：举行正式的团队会议来讨论团队合作的重要性<br>Hold an official team meeting to discuss the importance of
+								teamwork. </li>
+							<li>
+								<input type="radio"> B：与团队开会以解释基本规则，共同愿景和价值观，并更好的理解团队成员的优先级<br>Meet with team to explain ground
+								rules5shared vision,and to better understand learn members5 priorities. </li>
+							<li>
+								<input type="radio"> C：请人力资源部门对团队进行多样性方面的教育和培训<br>Ask the human resource department to educate and train
+								the team on diversity. </li>
+							<li>
+								<input type="radio"> D：让团队自行建设，然后在下一次绩效评估会议上处理问题<br>Allow the team to develop on its own,and then address
+								issues at the next performance appraisal meeting. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：9.1.3.2 团队章程，明确团队规则，传递项目信息，有助于提升团队的凝聚力。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm89">
+					<div class="st_content_txt_tm">
+						<span>89、</span>
+
+						代表不同组织的两名项目团队成员分别制作了各自的初始需求文件,项目经理应该在沟通管理计划中添加什么内容以避免将来重复工作?<br>Two project team members representing
+						different organizations have separately developed their own initial requirement documents. What should the
+						project manager add to the communications management plan to avoid future duplication of efforts? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：责任分配矩阵(RAM)<br>Responsibility assignment matrix(RAM). </li>
+							<li>
+								<input type="radio"> B：报告方法<br>Reporting methods. </li>
+							<li>
+								<input type="radio"> C：相关方需求<br>Stakeholder requirements. </li>
+							<li>
+								<input type="radio"> D：升级上报需求<br>Escalation requirement. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参见PMBOK第6版9.1.2.2 数据表现。责任分配矩阵展示项目资源在各个工作包中的任务分配。RAM其实描述的人岗对应关系。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm90">
+					<div class="st_content_txt_tm">
+						<span>90、</span>
+
+						在项目执行过程中,一名相关方希望知道谁有权分配项目资源。为了解决这个问题,项目经理应该怎么做?<br>During project execution,a stakeholder wants to know who
+						has the authority to assign project resources.what should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与该相关方一起审查项目资源管理计划<br>Review the project resource management plan with the
+								stakeholders. </li>
+							<li>
+								<input type="radio"> B：获得相关方的一致同意,并更新相关方登记册<br>Obtains consensus form stakeholders and update the
+								stakeholders register. </li>
+							<li>
+								<input type="radio"> C：与该相关方一起审查项目章程<br>Review the project charter with the stakeholders. </li>
+							<li>
+								<input type="radio"> D：与该相关方一起检查沟通管理计划<br>Examine the communication management plan with the stakeholders.
+							</li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：解析：PMBOK（6）P318-9.1.3.1规划资源管理-资源管理计划-角色与职责。职权。使用项目资源、做出决策、签字批准、验收可交付成果并影响他人开展项目工作的权力。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm91">
+					<div class="st_content_txt_tm">
+						<span>91、</span>
+
+						在项目的规划阶段,所需的外部和内部资源会发生冲突,若要解决这个问题,项目经理应该做什么?<br>During a project's planning phase,required external and
+						internal
+						resources are conflicteWhat should the project manager do to receive this? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：根据经验教训建立结构<br>Develop a structure based on lessons learne </li>
+							<li>
+								<input type="radio"> B：创建责任分配矩阵(RAM)<br>Create a responsibility assignment matrix(RAM). </li>
+							<li>
+								<input type="radio"> C：生成执行、负责、咨询和知情(RACI)图<br>Generate a responsible.accountable,consult,and
+								inform(RACI)chart. </li>
+							<li>
+								<input type="radio"> D：查看传统的组织结构图<br>Review a traditional organizational chart. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：9.1.2.2责任分配矩阵--RACI矩阵，责任分配矩阵显示了分配给每个工作包的项目资源，用于说明工作包或活动与项目团队成员之间的关系。RACI（执行、负责、咨询和知情）矩阵是RAM的一个例子，在团队是由内部和外部人员组成的情况下，RACI
+						矩阵对明确划分角色和职责特别有用。此题选C </div>
+
+				</div>
+				<div class="st_content_txt" id="tm92">
+					<div class="st_content_txt_tm">
+						<span>92、</span>
+
+						项目经理接管了一个处于第二阶段的多阶段项目,其应该从之前的项目经理那里获得哪些来有效地管理当前和未来项目阶段的资源?<br>A project manager assumes a multi-phase project
+						during its second phase.What show they seek from the previous project manager to effectively manageresources
+						for current and future project phases? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：将在未来几个阶段交付的任务<br>Tasks that will be delivered in the next phase </li>
+							<li>
+								<input type="radio"> B：下一个阶段的资源日历<br>Resources calendar for the next phase </li>
+							<li>
+								<input type="radio"> C：已定义角色和职责的资源<br>Resources with defined roles and responsibilities </li>
+							<li>
+								<input type="radio"> D：资源分解结构(RBS)<br>Resources breakdown structure(RBS) </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：9.6.1 控制资源：输入 - 9.6.1.2项目文件 - 资源分解结构。资源分解结构为项目过程中需要替换或重新获取资源的情况提供了参考。答案C是资源本身。得到资源本身并不代表可以管理好资源。 &nbsp;
+						&nbsp; </div>
+
+				</div>
+				<div class="st_content_txt" id="tm93">
+					<div class="st_content_txt_tm">
+						<span>93、</span>
+
+						在测试新的网络基础设施时，供应商发现由于存在潜在硬件缺陷，一个组件必须升级。为确保团队有效参与项目，项目经理应该怎么做？<br>When testing a new network infrastructure, the
+						supplier finds that a component must be upgraded due to potential hardware defect. What should the project
+						manager do to ensure that the team is effectively involved in the project? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：生成变更请求<br>To generate a change request </li>
+							<li>
+								<input type="radio"> B：执行优势、劣势、机会与威胁（SWOT分析)<br>To perform the Strengths, Weaknesses, Opportunities and
+								Threats (SWOT) Analysis </li>
+							<li>
+								<input type="radio"> C：更新执行、负责、咨询和知情（RACI）矩阵<br>Update Responsible, Accountable, Consulted, and Informed
+								(RACI) Matrix </li>
+							<li>
+								<input type="radio"> D：修订相关方登记册<br>To revise the Register of Stakeholders </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：参见PMBOK第6版 9.1.2.2 数据表现。团队参与，用RACI矩阵查看角色与职责比较方便，D更多强调对外部和内部相关方的识别。相对来说C选项最佳。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm94">
+					<div class="st_content_txt_tm">
+						<span>94、</span>
+
+						在开发阶段结束时，一名关键开发人员因工作量繁重而想要辞职，但是，该开发人员的专业知识在用户验收测试和调试期间至关重要。
+						项目经理应该怎么做？<br>At the end of the development phase, a key developer wants to resign due to heavy workloads, but
+						the developer's expertise is critical during the user acceptance testing and trial run.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：查看资源日历，以获取资源平衡机会<br>To view the Resource Calendar for resource balancing
+								opportunities </li>
+							<li>
+								<input type="radio"> B：要求人力资源部门替换该开发人员<br>To require the HR Department to replace the developer </li>
+							<li>
+								<input type="radio"> C：将该问题上报给开发人员的直线经理<br>To report the issue to the developer's line manager </li>
+							<li>
+								<input type="radio"> D：将该问题上报给项目管理办公室(PMO)<br>To report the issue to the Project Management Office (PMO)
+							</li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：A
+						解析：答案A是获取资源的输入（9.3.1.2 项目文件 - 资源日历。资源日历记录了每个项目资源在项目中的可用时间段。6.5.2.3资源优化 -
+						资源平衡。为了在资源需要与资源供给之间取得平衡，根据资源制约因素(资源日历）对开始日期和完成日期进行调整的一种技术。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm95">
+					<div class="st_content_txt_tm">
+						<span>95、</span>
+
+						项目经理新加入一家公司，之前没有管理过具有国际团队成员的项目。项目经理应该如何培养文化敏感性？<br>A project manager is new to a company and has not led a
+						project with international team members.What should the project manager do to develop cultural sensitivity?
+					</div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：认识到需要学习文化，设法了解当地习俗，并在与团队成员一起工作时保持灵活性<br>Recognize that culture is learned，seek to
+								understand local customs5and maintain flexibility,when working with team members </li>
+							<li>
+								<input type="radio"> B：与人力资源部门开会，以获得这方面的正式培训<br>Meet with the human resource department to obtain formal
+								training in this area </li>
+							<li>
+								<input type="radio"> C：拒绝该项目，理由是与文化多样化人员一起工作存在困难<br>Decline the project,citing the difficulty of working
+								with culturally diverse people as the reason </li>
+							<li>
+								<input type="radio"> D：了解每个团队成员文化的每个细节，以便对他们的需求保持敏感<br>Learn every detail of each team member's culture to
+								be sensitive to their needs </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">A</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：说明解析：通过了解当地习俗，学习文化，可以培养文化敏感度。选项B：这是项目经理的责任，与人力资源部开会无用。 选项C：拒绝是不正确的。 选项D：了解每个个体成员的细节是不能培养文化敏感度的，必须通过学习。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm96">
+					<div class="st_content_txt_tm">
+						<span>96、</span>
+
+						一个按时按预算进展的项目距离实现其主要里程碑还有30天,然后项目经理了解到实现这一里程碑的关键组件将有45天不可用。项目经理应该做什么?<br>A project progressing on time and
+						within budget is 30 days away from achieving its main milestone.The project manager then learns that a key
+						component to achieve this milestone will be unavailable for 45 days.What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：在下一次项目状态会议上通知相关方<br>Notify stakeholders at the next project status meeting. </li>
+							<li>
+								<input type="radio"> B：向所有相关方发送修订后的进度报告<br>Send an amended progress report to all stakeholders. </li>
+							<li>
+								<input type="radio"> C：修订风险管理计划<br>Revise the risk management plan. </li>
+							<li>
+								<input type="radio"> D：更新问题日志<br>Update the issue log. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：问题日志用于记录和监督问题的解决。它可用来促进沟通，确保对问题的共同理解。问题日志强调的是相关方对项目上的关注和关心，这些关注和关心的英文是“Issue”，这些“issue”可能是项目的问题（Problem）也可能是项目的风险（risk）。PM在和关键相关方沟通时会借助问题日志进行沟通，例如针对这个issue已经提出了变更请求或者已经作为风险进行应对了等等，这些都是针对该issue的解决措施。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm97">
+					<div class="st_content_txt_tm">
+						<span>97、</span>
+
+						项目经理在一个平衡矩阵式组织中管理一个中等优先级项目。现在,更高优先级的项目需要该项目的一些团队成员。
+						若要确定哪些资源对其项目可用,项目经理应该做什么?<br>A project manager is leading a medium-priority project in a balanced
+						matrix company.Some of this project`s team members are now required for
+						higher-priority projects.
+						What should the project manager do to determine what resources are availablefor their project? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：与每个资源核对,以了解他们的工作量<br>Check with each resource to undermine their workload </li>
+							<li>
+								<input type="radio"> B：审查资源管理计划<br>Review the resource management plan. </li>
+							<li>
+								<input type="radio"> C：询问项目管理办公室(PMO)<br>Ask the project management office(PMO). </li>
+							<li>
+								<input type="radio"> D：与职能经理沟通<br>Communicate with the functional managers. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：项目资源管理计划包含如何管理分配项目资源。项目经理想要确定哪些资源可用，可查询项目管理计划中资源的能力，角色等信息。参见PMBOK 9.1.3.1 资源管理计划。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm98">
+					<div class="st_content_txt_tm">
+						<span>98、</span>
+
+						项目经理拥有一支由不同背景的不同专业人士组成的团队,在项目执行期间,项目经理注意到一个团队成员有困难按时完成任务并满足质量期望。若要解决这个问题,项目经理应该做什么?<br>A project manager has a
+						team of diverse professionals with different backgrounds.During project execution,the project manager notices
+						that one team member is struggling with completing tasks on time and meeting quality expectations.
+						What should the project manager do to address this issue? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：安排与团队召开每日会议,以获得所有成员的更新<br>Schedule daily meetings with the team to obtain updates
+								from all members. </li>
+							<li>
+								<input type="radio"> B：与该团队成员私下会面,讨论其绩效并确定解决方案<br>Meet privately with the team member to discuss their
+								performance and identify
+								a solution. </li>
+							<li>
+								<input type="radio"> C：将该绩效问题升级上报给管理层<br>Escalate the performance issue to management. </li>
+							<li>
+								<input type="radio"> D：为该团队成员提供更多时间来适应项目任务<br>Give the team member more time to project tasks. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">B</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：题目说的问题，应指团队成员完成任务很吃力这个问题，可能是能力问题
+						，也可能是任务安排不合理。B都优先，先了解情况。团队成员在完成项目绩效上有困难，项目经理应该帮助他找到原因并解决问题，从而提升整个团队绩效。参考PMBOK P345
+						9.5团队管理-管理团队是跟踪团队成员工作表现、提供反馈、解决问题并管理团队变更。PMBOK P346进行团队管理，需要综合运用各种技能，特别是沟通。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm99">
+					<div class="st_content_txt_tm">
+						<span>99、</span>
+
+						一个复杂项目包含对最终目标有不同看法的相关方。相关方就项目发起人确定的目标最终达成一致意见。之后,在项目执行阶段,发起人退休,相关方之间从此开始产生冲突。新任命的发起人希望知道如何才能根据目标重新调整相关方之间的关系。
+						项目经理应该做什么?<br>A complex project comprises stakeholders with differing views on thefinal
+						objective.Ultimately,the stakeholders agree on the objective defined bythe project sponsor.The sponsor then
+						retires during the execution phase,which begins to create conflict among stakeholders.The newly appointed
+						sponsor wants to know what can be done to realign stakeholders with the objective.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：密切关注相关方的误解<br>Closely monitor stakeholder misunderstandings </li>
+							<li>
+								<input type="radio"> B：重新审查沟通管理计划,以确定最佳策略<br>Review the communications management plan to identify the
+								best strategy </li>
+							<li>
+								<input type="radio"> C：修改项目章程以解决冲突<br>Revise the project charter to address the conflicts </li>
+							<li>
+								<input type="radio"> D：影响相关方以遵循约定的目标<br>Influence the stakeholders to follow the agreed-upon objective
+							</li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：相关方之间产生冲突，使用人际关系技术以影响相关方遵循约定的目标，参见PMBOK第6版9.5.2管理团队的工具与技术。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm100">
+					<div class="st_content_txt_tm">
+						<span>100、</span>
+
+						正在审查问题日志的项目经理注意到,分配给某些团队成员的活动明显落后于进度。项目经理应该怎么做?<br>A project manager reviewing the issue log,noticed that the
+						activities
+						assigned to certain team are significant gbehind schedule.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：要求负责的团队成员解释延迟的原因以及解决问题的策略<br>Request that the responsible team members provide an
+								explanation for thedelay and strategies to resolve theissue. </li>
+							<li>
+								<input type="radio"> B：要求负责的团队成员将他们的活动恢复到正常进度<br>Ask the responsible team members to bring their
+								activities back on scheBule. </li>
+							<li>
+								<input type="radio"> C：与相关团队成员一起审查活动,以确定解决策略<br>Review the activities with relevant team members to
+								identify strategies for </li>
+							<li>
+								<input type="radio"> D：将该问题升级上报给项目发起人解决<br>Escalate the issue to the project sponsor for resolution. </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：问题日志是管理团队的输入。当项目团队成员出现工作效率低时，项目经理应该协助团队成员，与其一起审查活动并确定解决方案。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm101">
+					<div class="st_content_txt_tm">
+						<span>101、</span>
+
+						在公司重组之后，一位团队成员现在向不同的职能经理报告。项目经理应该更新哪份文件以反映这种新的报告结构？<br>Following a company reorganization.a team member now
+						reports to a different functional manager.
+						What document should the project manager update to reflect this new reporting structure? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：相关方参与计划<br>Stakeholder engagement plan </li>
+							<li>
+								<input type="radio"> B：资源日历<br>Resource calendar </li>
+							<li>
+								<input type="radio"> C：项目团队任务分配<br>Project team assignments </li>
+							<li>
+								<input type="radio"> D：资源管理计划<br>Resource management plan </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">D</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：D
+						解析：“报告结构”即汇报关系，是项目组织图的主要作用，项目组织图是资源管理计划的一部分。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm102">
+					<div class="st_content_txt_tm">
+						<span>102、</span>
+
+						项目经理正在为必须遵循最终期限的项目制定人力资源计划。一名团队成员最近被分配到另外一个国家，该团队成员的专业水平对项目成功和实现最终期限至关重要。而可用的本地资源专业水平各不相同。
+						项目经理应该怎么做？<br>The project manager is developing a HR plan for the project that must follow deadlines. A team
+						member has recently been assigned to another country, and the professional level of the team members is
+						critical to the success of the project and deadline, but the available local resources vary in professional
+						levels.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：通知项目发起人可能产生的影响，并让他们决定最终的行动方案<br>To notify the project sponsors of the possible
+								impact and allow them decide the final action plan </li>
+							<li>
+								<input type="radio"> B：分配新资源并减少项目范围，以满足最终期限<br>To allocate new resources and reduce the scope of the
+								project to meet the deadline </li>
+							<li>
+								<input type="radio"> C：计划一个可行的虚拟团队环境，并确保时区的所有团队成员的承诺<br>To plan a viable virtual team environment and
+								ensure that all team members in the time zone
+								should make commitments </li>
+							<li>
+								<input type="radio"> D：使用更多本地资源来对项目进度赶工<br>To use more local resources to rush for the progress of the
+								project </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：不可或缺的关键资源在国外，可以建立虚拟团队。 排除A，不到万不得已别找发起人。 B不对，减少项目范围肯定不能选。 D，不是进度问题，赶工也不一定有效果。 </div>
+
+				</div>
+				<div class="st_content_txt" id="tm103">
+					<div class="st_content_txt_tm">
+						<span>103、</span>
+
+						—个处于执行阶段的项目经历资源流动，项目经理和职能经理对专用项目资源的意见不一致。
+						项目经理应该怎么做？<br>A project in the implementation phase experiences resource flows, the project manager and the
+						functional manager disagrees on the specific project resources.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：让关键资源集中办公<br>To concentrate the key resources </li>
+							<li>
+								<input type="radio"> B：使用专家判断<br>To use experts' judgment </li>
+							<li>
+								<input type="radio"> C：应用协商和冲突管理技能<br>To use negotiation and conflict management skills </li>
+							<li>
+								<input type="radio"> D：审查工作绩效报告<br>To review the working performance report </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：遇到资源冲突问题，使用冲突解决技术。获取资源、建设团队与管理团队均为执行阶段，谈判（协商）为获取资源的工具与技术；冲突管理为建设团队与管理团队过程的工具与技术。项目经理与职能经理在资源方面意见不一致，使用以上谈判（协商）及冲突管理技术。
+					</div>
+
+				</div>
+				<div class="st_content_txt" id="tm104">
+					<div class="st_content_txt_tm">
+						<span>104、</span>
+
+						项目经理建立了一个虚拟团队，尽量减少项目成本，然而，经过几个月缓慢进展和成本超支后，项目发起人开始抱怨。
+						项目经理应该怎么做？<br>The project manager builds a virtual team to minimize the project cost.However, after months of
+						slow progress and cost overruns, the project sponsor begins to complain.
+						What should the project manager do? </div>
+					<div class="st_content_txt_xx">
+						<ul>
+							<li>
+								<input type="radio"> A：增加与虚拟团队的沟通频率<br>To increase the frequency of communication with the virtual team
+							</li>
+							<li>
+								<input type="radio"> B：与项目发起人协商项目预算<br>To negotiate the project budget with the project sponsor </li>
+							<li>
+								<input type="radio"> C：使用挣值管理（EVM）技术评估项目绩效，然后采取适当行动<br>To evaluate the project performance using Earned
+								Value Management (EVM) technology and then take appropriate action </li>
+							<li>
+								<input type="radio"> D：终止虚拟团队并让团队成员集中办公<br>To terminate the virtual team and let the team members work
+								together </li>
+						</ul>
+					</div>
+					<div class="show_answer"><button type="button" class="btn btn-sm btn-primary">答案解析</button></div>
+					<div class="jxxq_answer">
+						<span>正确答案：<span class="answer_right">C</span></span>
+						<span>你的答案：<span class="answer_wrong"></span></span>
+					</div>
+					<div class="jxxq_jx_txt">
+						解析：参考答案：C
+						解析：9.4.2.1集中办公：把团队成员安排在同一物理地点办公，以增强团队工作能力。答案C挣值管理虽然涉及成本与进度问题，但其主要是对绩效进行评估、趋势分析与预测，并不能查明原因及解决问题。ABD直接采取措施，不够稳妥。而C是先找原因，再采取措施，符合问题解决程序。C优先于ABD。
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+
+</html>

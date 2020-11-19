@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>远程模考（一）</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+  <input id="bb" type="hidden" value="c01" />
+
+  <div class="fixed-top bg-white border-bottom">
+    <div class="container">
+      <a href="./index.html" class="float-left text-secondary">首页</a>
+      <a href="#dingbu" class="float-right text-secondary">顶部</a>
+      <h5 class="st_content_tit">考前冲刺200题（2020)</h5>
+      <div class="input-group mb-3">
+        <input type="number" class="form-control" id="search" placeholder="输入题号查询" />
+        <div class="input-group-append">
+          <button id="search-btn" class="btn btn-outline-secondary" type="button">查询</button>
+          <button id="reset-btn" class="btn btn-outline-secondary" type="button">重置</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="check_answer">
+    <div class="btn-group btn-group-sm">
+      <button id="czst" type="button" class="btn btn-danger">重做</button>
+    </div>
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-secondary" id="check_wei">未</button>
+      <button type="button" class="btn btn-secondary" id="check_quan">全</button>
+      <button type="button" class="btn btn-secondary" id="check_dui">对</button>
+      <button type="button" class="btn btn-secondary" id="check_cuo">错</button>
+      <button type="button" class="btn btn-secondary" id="check_tong" data-toggle="modal" data-target="#tongji">统</button>
+    </div>
+  </div>
+
+  <div class="modal" id="tongji">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">统计信息</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+        </div>
+        <div class="modal-body">
+          <p>正确：<span id="t_dui"></span></p>
+          <p>错误：<span id="t_cuo"></span></p>
+          <p>未做：<span id="t_wei"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dingbu" class="container">
+
+  </div>
+
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
