@@ -2,7 +2,8 @@ var search = window.location.search;
 if(search == '?t=1') {
 	$('.show_answer').hide();
 	$('#check_dui').hide();
-	$('#check_cuo').hide();
+  $('#check_cuo').hide();
+  $('#check_tong').hide();
 	$('#czst').hide();
 }
 
@@ -24,6 +25,12 @@ if (storage[bb]) {
     var answers = {};
 }
 
+if (storage['cts']) {
+  var cts = JSON.parse(storage['cts']);
+} else {
+  var cts = [];
+}
+
 /* 重做时清单 localStorage 中的答案 */
 $('#czst').click(function () {
     var ck = confirm('确定重做吗?')
@@ -32,6 +39,11 @@ $('#czst').click(function () {
         $('.st_content_txt').find('.answer_wrong').text('');
         $('.st_content_txt').find('input[type=radio]').prop('checked', false);
     }
+});
+
+// 回到顶部
+$('#gotop').click(function() {
+	$(document).scrollTop(0);
 });
 
 /* 处理选项 */
@@ -47,6 +59,12 @@ $('.st_content_txt_xx li').click(function () {
     var id = $parent.parents('.st_content_txt').attr('id');
     answers[id] = answer;
     storage[bb] = JSON.stringify(answers);
+    
+    var right = $parent.next().next().find('.answer_right').text();
+    if(answer != right) {
+      cts.push(bb + '.html#' + id);
+      storage['cts'] = JSON.stringify(cts);
+    }
 });
 
 // 显示解析和答案
@@ -60,23 +78,22 @@ $('.show_answer button').click(function () {
 $('#search').change(function () {
     var num = $('#search').val().trim();
     if (num == '') {
-        $('.st_content_txt').css('display', 'block');
+				$(document).scrollTop(0);
     } else {
-        var tm = '#tm' + num;
-				console.log(tm);
-        $('.st_content_txt').css('display', 'none');
-        $(tm).css('display', 'block');
+        var tm = '#tm' + num
+				var top = $(tm).offset().top - 115;
+				$(document).scrollTop(top);
     }
 });
 
 $('#search-btn').click(function () {
     var num = $('#search').val().trim();
     if (num == '') {
-        $('.st_content_txt').css('display', 'block');
+    		$(document).scrollTop(0);
     } else {
-        var tm = '#tm' + num;
-        $('.st_content_txt').css('display', 'none');
-        $(tm).css('display', 'block');
+        var tm = '#tm' + num
+    		var top = $(tm).offset().top - 115;
+    		$(document).scrollTop(top);
     }
 });
 
@@ -133,8 +150,7 @@ $('#check_tong').click(function () {
     $('.st_content_txt').each(function (i, ele) {
         var right = $(ele).find('.answer_right').text().trim();
         var wrong = $(ele).find('.answer_wrong').text().trim();
-        console.log($(ele).find('answer_right'));
-        console.log($(ele).find('answer_wrong'));
+        
         if (right == wrong) {
             dui++;
         } else if (wrong == '') {
@@ -174,22 +190,23 @@ $('.st_content_tit').remove();
 
 */
 
+/*
+$('.st_content_txt_xx').each(function (i, ele) {
+    $($(ele).find('input[type=radio]').get(0)).prop('checked', true);
+    $($(ele).find('input[type=radio]').get(0)).click();
+});
 
-// $('.st_content_txt_xx').each(function (i, ele) {
-//     $($(ele).find('input[type=radio]').get(0)).prop('checked', true);
-//     $($(ele).find('input[type=radio]').get(0)).click();
-// });
 
+var tms = [];
+$('.st_content_txt').each(function(i, ele){
+	var id = $(ele).attr('id').replace('tm', '') * 1 - 1;
+	tms[id] = $(ele);
+});
 
-// var tms = [];
-// $('.st_content_txt').each(function(i, ele){
-// 	var id = $(ele).attr('id').replace('tm', '') * 1 - 1;
-// 	tms[id] = $(ele);
-// });
+$('.st_content_txt').remove();
 
-// $('.st_content_txt').remove();
-
-// for(var i in tms) {
-// 	var tm =  tms[i];
-// 	$('#radio_anchor').append(tm);
-// }
+for(var i in tms) {
+	var tm =  tms[i];
+	$('#radio_anchor').append(tm);
+}
+*/
